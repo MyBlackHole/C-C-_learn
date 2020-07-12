@@ -5,3 +5,4 @@ a.out
 *.o
 *.obj
 cmake-build-debug/
+.idea/

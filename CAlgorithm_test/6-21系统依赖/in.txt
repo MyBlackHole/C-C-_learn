@@ -1,0 +1,12 @@
+DEPEND item1 item2 item3 item4
+INSTALL item1
+LIST
+DEPEND item6 item7 item8 item9
+DEPEND item5 item7
+INSTALL item6
+LIST
+INSTALL item5
+LIST
+REMOVE item6
+LIST
+END

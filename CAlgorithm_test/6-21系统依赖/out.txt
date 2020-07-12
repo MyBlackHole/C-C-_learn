@@ -1,0 +1,43 @@
+ item2安装成功！
+ item3安装成功！
+ item4安装成功！
+ item1安装成功！
+已安装组件
+0: item2
+1: item3
+2: item4
+3: item1
+ item7安装成功！
+ item8安装成功！
+ item9安装成功！
+ item6安装成功！
+已安装组件
+0: item2
+1: item3
+2: item4
+3: item1
+4: item7
+5: item8
+6: item9
+7: item6
+ item5安装成功！
+已安装组件
+0: item2
+1: item3
+2: item4
+3: item1
+4: item7
+5: item8
+6: item9
+7: item6
+8: item5
+item6: 已成功卸载!
+item8: 已成功卸载!
+item9: 已成功卸载!
+已安装组件
+0: item2
+1: item3
+2: item4
+3: item1
+4: item7
+5: item5
