@@ -5,6 +5,6 @@ cmake_minimum_required()
 project(C)
 
 # 指定生成目标
-add_executable(main CAlgorithm_test/两数之和/main.c)
+add_executable(main CAlgorithm_test/除数博弈/main.c)
 #add_executable(main string_learn/1.c)
 #add_executable(main 解密/main.cpp)

@@ -6,12 +6,12 @@
 #include <stdlib.h>
 
 int main() {
-    int nums[] = {2, 7, 11, 15};
-    int count = 4;
-    int target = 9;
+    int nums[] = {3, 2, 4};
+    int count = 3;
+    int target = 6;
     int *res = (int *) malloc(sizeof(int) * 2);
     int status = 0;
-    for (int i = 0; i < count; i++) {
+    for (int i = 0; i < count - 1; i++) {
         res[0] = nums[i];
         int sum = target - res[0];
         for (int j = i + 1; j < count; j++) {
