@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <string.h>
 
+// 动态规划
 int splitArray(int *nums, int numsSize, int m) {
     long long f[numsSize + 1][m + 1];
     memset(f, 0x3f, sizeof(f));
@@ -23,6 +24,42 @@ int splitArray(int *nums, int numsSize, int m) {
     }
     return (int) f[numsSize][m];
 }
+
+
+// 二分查找 + 贪心
+bool check(int *nums, int numsSize, int m, int x) {
+    long long sum = 0;
+    int cnt = 1;
+    for (int i = 0; i < numsSize; i++) {
+        if (sum + nums[i] > x) {
+            cnt++;
+            sum = nums[i];
+        } else {
+            sum += nums[i];
+        }
+    }
+    return cnt <= m;
+}
+
+int splitArray(int *nums, int numsSize, int m) {
+    long long left = 0, right = 0;
+    for (int i = 0; i < numsSize; i++) {
+        right += nums[i];
+        if (left < nums[i]) {
+            left = nums[i];
+        }
+    }
+    while (left < right) {
+        long long mid = (left + right) >> 1;
+        if (check(nums, numsSize, m, mid)) {
+            right = mid;
+        } else {
+            left = mid + 1;
+        }
+    }
+    return left;
+}
+
 
 int main() {
     int nums[] = {1, 3, 5, 2, 7};
