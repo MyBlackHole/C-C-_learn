@@ -1,0 +1,45 @@
+//
+// Created by BlackHole on 2020/7/27.
+//
+
+#include <stdio.h>
+#include <string.h>
+#include <z3.h>
+
+//bool isSubsequence(const char *s, const char *t) {
+//    int index = 0;
+//    for (int i = 0; s[i] != '\0'; i++) {
+//        int status = 0;
+//        for (int j = index; t[j] != '\0'; j++) {
+//            if (s[i] == t[j]) {
+//                status = 1;
+//                index = j + 1;
+//                continue;
+//            }
+//        }
+//        if (!status) {
+//            return false;
+//        }
+//    }
+//    return true;
+//}
+bool isSubsequence(char *s, char *t) {
+    int n = strlen(s), m = strlen(t);
+    int i = 0, j = 0;
+    while (i < n && j < m) {
+        if (s[i] == t[j]) {
+            i++;
+        }
+        j++;
+    }
+    return i == n;
+}
+
+int main() {
+    char str[] = "leeeeetcode";
+    char ttr[] = "leeeeetcode";
+    char *s = str;
+    char *t = ttr;
+    bool b = isSubsequence(s, t);
+    printf("%d", b);
+}
