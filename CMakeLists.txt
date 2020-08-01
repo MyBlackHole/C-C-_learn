@@ -5,8 +5,7 @@ cmake_minimum_required()
 project(C)
 
 
-
 # 指定生成目标
-add_executable(main CAlgorithm_test/最大子序列/main.c)
+add_executable(main CAlgorithm_test/魔术索引/main.c)
 #add_executable(main string_learn/1.c)
 #add_executable(main 解密/main.cpp)
