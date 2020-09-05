@@ -6,6 +6,6 @@ project(C)
 
 
 # 指定生成目标
-add_executable(main CAlgorithm_test/课程表/main.c)
+add_executable(main 逻辑运算/main.c)
 #add_executable(main string_learn/1.c)
 #add_executable(main 解密/main.cpp)
