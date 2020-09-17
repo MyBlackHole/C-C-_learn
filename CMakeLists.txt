@@ -4,8 +4,9 @@ cmake_minimum_required()
 # 项目信息
 project(C)
 
+#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -fexec-charset=GBK")
 
 # 指定生成目标
-add_executable(main 细节/类型大小.c)
+add_executable(main detail/type_count.c)
 #add_executable(main string_learn/1.c)
-#add_executable(main 解密/main.cpp)
+#add_executable(main Decrypt/main.cpp)

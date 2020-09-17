@@ -4,6 +4,7 @@
 #include "stdio.h"
 
 int main() {
-    printf("%ld", sizeof(long ));
+    printf("black hole");
+//    printf("%ld", sizeof(long ));
 }
 
