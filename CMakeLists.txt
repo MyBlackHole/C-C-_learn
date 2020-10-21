@@ -9,5 +9,6 @@ project(C)
 # 指定生成目标
 #add_executable(main network/main.c)
 #add_executable(main string_learn/1.c)
-add_executable(main process_learn/1.c stdlib_learn/api.c)
+add_executable(main stdlib_learn/api.c)
+#add_executable(main process_learn/1.c)
 #add_executable(main Decrypt/main.cpp)
