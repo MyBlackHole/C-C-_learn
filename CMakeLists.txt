@@ -9,5 +9,5 @@ project(C)
 # 指定生成目标
 #add_executable(main network/main.c)
 #add_executable(main string_learn/1.c)
-add_executable(main 传入参数与传出参数/populator.h 传入参数与传出参数/populator.c 传入参数与传出参数/main.c 传入参数与传出参数/redirect_ptr.h 传入参数与传出参数/redirecct_ptr.c 传入参数与传出参数/para_allocator.c)
+add_executable(main process_learn/1.c stdlib_learn/api.c)
 #add_executable(main Decrypt/main.cpp)
