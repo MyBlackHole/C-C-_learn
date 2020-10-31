@@ -29,10 +29,10 @@ public slots:
     void changeSkin(QString pixmap_name, QString skin_name, QString download_count);
 
 private:
-    QLabel *skin_label;           //ÏÔÊ¾Æ¤·ô
-    QLabel *skin_name_label;      //ÏÔÊ¾Æ¤·ôÃû³Æ
-    QLabel *download_count_label; //ÏÔÊ¾ÏÂÔØ´ÎÊı
-    QPushButton *use_skin_button; //Ê¹ÓÃ´ËÆ¤·ô°´Å¥
+    QLabel *skin_label;           //æ˜¾ç¤ºçš®è‚¤
+    QLabel *skin_name_label;      //æ˜¾ç¤ºçš®è‚¤åç§°
+    QLabel *download_count_label; //æ˜¾ç¤ºä¸‹è½½æ¬¡æ•°
+    QPushButton *use_skin_button; //ä½¿ç”¨æ­¤çš®è‚¤æŒ‰é’®
 
     QString pixmap_name;
     bool mouse_press;

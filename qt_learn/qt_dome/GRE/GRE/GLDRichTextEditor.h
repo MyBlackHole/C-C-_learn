@@ -85,7 +85,7 @@ private slots:
     void onZoomIn();
     void onZoomOut();
 
-    //¸ù¾İ»¬¿éÉèÖÃËõ·Å±ÈÀı
+    //æ ¹æ®æ»‘å—è®¾ç½®ç¼©æ”¾æ¯”ä¾‹
     void onSetZoomFactor(int nPos);
 
     void onActiveEdit(GLDRichTextEdit * edit);
@@ -101,8 +101,8 @@ private:
     GLDRichTextEdit * currentEdit();
 
     /*!
-     * @brief    ½«rtf±£´æÎªdoc
-     * @param    [i]rtfFileName rtfÎÄ¼şÃû
+     * @brief    å°†rtfä¿å­˜ä¸ºdoc
+     * @param    [i]rtfFileName rtfæ–‡ä»¶å
      * @param    [i]docFileName 
      * @param    [i]docAppType
      * @return   void
@@ -166,8 +166,8 @@ private:
     QAction                       *m_pacTableTest;
 #endif
 
-    QAction *m_zoomIn;  // ·Å´ó
-    QAction *m_zoomOut; // ËõĞ¡
+    QAction *m_zoomIn;  // æ”¾å¤§
+    QAction *m_zoomOut; // ç¼©å°
     QSlider *m_slider;
 };
 

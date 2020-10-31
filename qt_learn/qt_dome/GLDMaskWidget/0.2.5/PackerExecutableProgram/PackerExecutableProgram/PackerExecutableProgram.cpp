@@ -1,4 +1,4 @@
-// PackerExecutableProgram.cpp : ¶¨Òå¿ØÖÆÌ¨Ó¦ÓÃ³ÌĞòµÄÈë¿Úµã¡£
+// PackerExecutableProgram.cpp : å®šä¹‰æ§åˆ¶å°åº”ç”¨ç¨‹åºçš„å…¥å£ç‚¹ã€‚
 //
 
 #include "stdafx.h"
@@ -81,23 +81,23 @@ void executeMaskAndUserExe(LPCWSTR maskExeName, LPCWSTR userExeName)
 
 int main(int argc, _TCHAR* argv[])
 {
-    // Òş²Ø¿ØÖÆÌ¨´°¿Ú
+    // éšè—æ§åˆ¶å°çª—å£
     FreeConsole();
 
-    // iniÎÄ¼şÂ·¾¶
+    // iniæ–‡ä»¶è·¯å¾„
     LPCWSTR filePath = getPath(iniPath);
 
-    // ÃÉ°æEXEÃû×Ö
+    // è’™ç‰ˆEXEåå­—
     LPTSTR maskWidgetName = new TCHAR[MAX_PATH];
     ::GetPrivateProfileString(_T("Mask"), _T("MaskWidgetName"), _T(""), maskWidgetName, MAX_PATH, filePath); 
     lstrcat(maskWidgetName, _T(".exe"));
 
-    // ÓÃ»§EXEÃû×Ö
+    // ç”¨æˆ·EXEåå­—
     LPTSTR userExecutable = new TCHAR[MAX_PATH];
     ::GetPrivateProfileString(_T("User"), _T("UserExecutable"), _T(""), userExecutable, MAX_PATH, filePath); 
     lstrcat(userExecutable, _T(".exe"));
 
-    // ±êÖ¾Î»,ÓÃÓÚ±íÊ¾ÊÇ·ñÆô¶¯ÃÉ°æ;ÈôÎª1,ÔòÖ±½ÓÆô¶¯ÓÃ»§³ÌĞò,·ñÔò,ÏÈÆô¶¯ÃÉ°æ³ÌĞò,ÔÙÆô¶¯ÓÃ»§³ÌĞò
+    // æ ‡å¿—ä½,ç”¨äºè¡¨ç¤ºæ˜¯å¦å¯åŠ¨è’™ç‰ˆ;è‹¥ä¸º1,åˆ™ç›´æ¥å¯åŠ¨ç”¨æˆ·ç¨‹åº,å¦åˆ™,å…ˆå¯åŠ¨è’™ç‰ˆç¨‹åº,å†å¯åŠ¨ç”¨æˆ·ç¨‹åº
     int mask = ::GetPrivateProfileInt(_T("General"), _T("GLDMaskWidget"), 0, filePath);
 
     if (1 == mask)

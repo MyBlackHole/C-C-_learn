@@ -16,7 +16,7 @@ MainWindow::MainWindow(QWidget *parent) :
     QStandardItemModel *pModel = new QStandardItemModel(10, 10, pCornerTableView);
     pCornerTableView->setModel(pModel);
 
-    pCornerTableView->setCornerButtonText(QStringLiteral("²âÊÔ"));
+    pCornerTableView->setCornerButtonText(QStringLiteral("æµ‹è¯•"));
 
     QVBoxLayout* pLayout = new QVBoxLayout();
     pLayout->addWidget(pCornerTableView);

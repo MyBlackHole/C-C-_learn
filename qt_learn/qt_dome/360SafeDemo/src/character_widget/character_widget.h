@@ -44,11 +44,11 @@ private:
     bool mouse_move;
     bool label_move;
 
-    QLabel *background_label; //±³¾°Í¼Æ¬
-    int current_index;        //µ±Ç°Í¼Æ¬ÏÂ±ê
-    QLabel *total_label;      //Í¼Æ¬£¨½áºÏÌå£©
-    CLabel *label_array[4];   //´æ´¢Í¼Æ¬µÄÊı×é
-    PushButton *close_button; //¹Ø±Õ°´Å¥
+    QLabel *background_label; //èƒŒæ™¯å›¾ç‰‡
+    int current_index;        //å½“å‰å›¾ç‰‡ä¸‹æ ‡
+    QLabel *total_label;      //å›¾ç‰‡ï¼ˆç»“åˆä½“ï¼‰
+    CLabel *label_array[4];   //å­˜å‚¨å›¾ç‰‡çš„æ•°ç»„
+    PushButton *close_button; //å…³é—­æŒ‰é’®
 };
 
 #endif // PREVIEW360_H

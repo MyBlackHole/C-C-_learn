@@ -38,15 +38,15 @@ private slots:
 
 private:
     QRect location;
-    TitleWidget *title_widget; //±êÌâÀ¸
-    ContentWidget *content_widget; //Ö÷½çÃæÄÚÈİ
-    SystemTray *system_tray; //ÍĞÅÌÏî
-    SettingDialog *setting_dialog; //ÉèÖÃ½çÃæ
-    CharacterWidget *character_widget; //ĞÂ°æÌØĞÔ½çÃæ
-    AboutUsDialog *about_us_dialog; //¹ØÓÚÎÒÃÇ½çÃæ
-    QString skin_name;//Ö÷´°¿Ú±³¾°Í¼Æ¬µÄÃû³Æ
-    MainMenu *main_menu; //Ö÷²Ëµ¥
-    SkinWidget *skin_widget; //ÏÔÊ¾Æ¤·ô½çÃæ
+    TitleWidget *title_widget; //æ ‡é¢˜æ 
+    ContentWidget *content_widget; //ä¸»ç•Œé¢å†…å®¹
+    SystemTray *system_tray; //æ‰˜ç›˜é¡¹
+    SettingDialog *setting_dialog; //è®¾ç½®ç•Œé¢
+    CharacterWidget *character_widget; //æ–°ç‰ˆç‰¹æ€§ç•Œé¢
+    AboutUsDialog *about_us_dialog; //å…³äºæˆ‘ä»¬ç•Œé¢
+    QString skin_name;//ä¸»çª—å£èƒŒæ™¯å›¾ç‰‡çš„åç§°
+    MainMenu *main_menu; //ä¸»èœå•
+    SkinWidget *skin_widget; //æ˜¾ç¤ºçš®è‚¤ç•Œé¢
 
 };
 

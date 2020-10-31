@@ -12,19 +12,19 @@ ComboDelegate::ComboDelegate(QObject *parent)
 QWidget *ComboDelegate::createEditor(QWidget *parent,const QStyleOptionViewItem &/*option*/,const QModelIndex & index) const
 {
     QComboBox *editor = new QComboBox(parent);
-    editor->addItem(QStringLiteral("¹¤ÈË"));
-    editor->addItem(QStringLiteral("¹¤1"));
-    editor->addItem(QStringLiteral("¹¤2"));
-    editor->addItem(QStringLiteral("Å©Ãñ"));
-    editor->addItem(QStringLiteral("Ò½Éú"));
-    editor->addItem(QStringLiteral("ÂÉÊ¦"));
-    editor->addItem(QStringLiteral("¾üÈË"));
+    editor->addItem(QStringLiteral("å·¥äºº"));
+    editor->addItem(QStringLiteral("å·¥1"));
+    editor->addItem(QStringLiteral("å·¥2"));
+    editor->addItem(QStringLiteral("å†œæ°‘"));
+    editor->addItem(QStringLiteral("åŒ»ç”Ÿ"));
+    editor->addItem(QStringLiteral("å¾‹å¸ˆ"));
+    editor->addItem(QStringLiteral("å†›äºº"));
     if (index.data().isValid() && "" != index.data().toString())
     {
         editor->addItem(index.data().toString());
     }
     editor->setEditable(true);
-    // ÉèÖÃ×Ô¶¯²¹È«¹¦ÄÜ
+    // è®¾ç½®è‡ªåŠ¨è¡¥å…¨åŠŸèƒ½
     QCompleter *pCompleter = new QCompleter(editor);
     pCompleter->setModel(editor->model());
     pCompleter->setCaseSensitivity(Qt::CaseInsensitive);

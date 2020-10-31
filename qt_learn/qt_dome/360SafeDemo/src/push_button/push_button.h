@@ -1,10 +1,10 @@
 /**
-* @ÎÄ¼şÃû   push_button.h
-* @°æ±¾ĞÅÏ¢ copyright  2012-2013 Sugon. All rights reserved.
-* @¹¦ÄÜÃèÊö
-*           PushButtonÀà°üº¬×îĞ¡»¯¡¢×î´ó»¯¡¢¹Ø±Õ¡¢Ö÷²Ëµ¥µÈ°´Å¥µÄÌØĞ§
-* @×÷Õß     ÍõÁÁ<wangliang@sugon.com>
-* @ÈÕÆÚ     2012-01-06
+* @æ–‡ä»¶å   push_button.h
+* @ç‰ˆæœ¬ä¿¡æ¯ copyright  2012-2013 Sugon. All rights reserved.
+* @åŠŸèƒ½æè¿°
+*           PushButtonç±»åŒ…å«æœ€å°åŒ–ã€æœ€å¤§åŒ–ã€å…³é—­ã€ä¸»èœå•ç­‰æŒ‰é’®çš„ç‰¹æ•ˆ
+* @ä½œè€…     ç‹äº®<wangliang@sugon.com>
+* @æ—¥æœŸ     2012-01-06
 */
 
 #ifndef CS_CSVIEW_PUSHBUTTON_H
@@ -15,8 +15,8 @@
 #include <QMouseEvent>
 
 /**
-* @¹¦ÄÜÃèÊö   Ö÷ÒªÉèÖÃ°´Å¥ÑùÊ½¡¢ÌØĞ§
-* @×÷Õß  ÍõÁÁ <wangliang@sugon.com>
+* @åŠŸèƒ½æè¿°   ä¸»è¦è®¾ç½®æŒ‰é’®æ ·å¼ã€ç‰¹æ•ˆ
+* @ä½œè€…  ç‹äº® <wangliang@sugon.com>
 **/
 
 class PushButton : public QPushButton
@@ -27,42 +27,42 @@ public:
 
     /**
     *
-    * ¹¦ÄÜËµÃ÷
-    *    ¹¹Ôìº¯Êı
+    * åŠŸèƒ½è¯´æ˜
+    *    æ„é€ å‡½æ•°
     *
-    * ²ÎÊıËµÃ÷
-    *     QWidget *parent = 0    ¸¸´°Ìå
+    * å‚æ•°è¯´æ˜
+    *     QWidget *parent = 0    çˆ¶çª—ä½“
     *
-    * ·µ»ØÖµ
-    *     ÎŞ
+    * è¿”å›å€¼
+    *     æ— 
     *
     */
     explicit PushButton(QWidget *parent = 0);
 
     /**
     *
-    * ¹¦ÄÜËµÃ÷
-    *    Îö¹¹º¯Êı
+    * åŠŸèƒ½è¯´æ˜
+    *    ææ„å‡½æ•°
     *
-    * ²ÎÊıËµÃ÷
-    *     ÎŞ
+    * å‚æ•°è¯´æ˜
+    *     æ— 
     *
-    * ·µ»ØÖµ
-    *     ÎŞ
+    * è¿”å›å€¼
+    *     æ— 
     *
     */
     ~PushButton();
 
     /**
     *
-    * ¹¦ÄÜËµÃ÷
-    *	 ¼ÓÔØÍ¼±ê
+    * åŠŸèƒ½è¯´æ˜
+    *	 åŠ è½½å›¾æ ‡
     *
-    * ²ÎÊıËµÃ÷
-    *     QString pic_name Í¼±êÃû³Æ
+    * å‚æ•°è¯´æ˜
+    *     QString pic_name å›¾æ ‡åç§°
     *
-    * ·µ»ØÖµ
-    *     ÎŞ
+    * è¿”å›å€¼
+    *     æ— 
     *
     */
     void loadPixmap(QString pic_name);
@@ -71,84 +71,84 @@ protected:
 
     /**
     *
-    * ¹¦ÄÜËµÃ÷
-    *    Êó±êÒÆ½øÊÂ¼ş
+    * åŠŸèƒ½è¯´æ˜
+    *    é¼ æ ‡ç§»è¿›äº‹ä»¶
     *
-    * ²ÎÊıËµÃ÷
-    *     QEvent * event    ÊÂ¼ş
+    * å‚æ•°è¯´æ˜
+    *     QEvent * event    äº‹ä»¶
     *
-    * ·µ»ØÖµ
-    *     ÎŞ
+    * è¿”å›å€¼
+    *     æ— 
     *
     */
     void enterEvent(QEvent *);
 
     /**
     *
-    * ¹¦ÄÜËµÃ÷
-    *     Êó±êÒÆ³öÊÂ¼ş
+    * åŠŸèƒ½è¯´æ˜
+    *     é¼ æ ‡ç§»å‡ºäº‹ä»¶
     *
-    * ²ÎÊıËµÃ÷
-    *     QEvent * event    ÊÂ¼ş
+    * å‚æ•°è¯´æ˜
+    *     QEvent * event    äº‹ä»¶
     *
-    * ·µ»ØÖµ
-    *     ÎŞ
+    * è¿”å›å€¼
+    *     æ— 
     *
     */
     void leaveEvent(QEvent *);
 
     /**
     *
-    * ¹¦ÄÜËµÃ÷
-    *     Êó±ê°´ÏÂÊÂ¼ş
+    * åŠŸèƒ½è¯´æ˜
+    *     é¼ æ ‡æŒ‰ä¸‹äº‹ä»¶
     *
-    * ²ÎÊıËµÃ÷
-    *     QMouseEvent *event    Êó±êÊÂ¼ş
+    * å‚æ•°è¯´æ˜
+    *     QMouseEvent *event    é¼ æ ‡äº‹ä»¶
     *
-    * ·µ»ØÖµ
-    *     ÎŞ
+    * è¿”å›å€¼
+    *     æ— 
     *
     */
     void mousePressEvent(QMouseEvent *event);
 
     /**
     *
-    * ¹¦ÄÜËµÃ÷
-    *     Êó±êÊÍ·ÅÊÂ¼ş
+    * åŠŸèƒ½è¯´æ˜
+    *     é¼ æ ‡é‡Šæ”¾äº‹ä»¶
     *
-    * ²ÎÊıËµÃ÷
-    *     QMouseEvent *event    Êó±êÊÂ¼ş
+    * å‚æ•°è¯´æ˜
+    *     QMouseEvent *event    é¼ æ ‡äº‹ä»¶
     *
-    * ·µ»ØÖµ
-    *     ÎŞ
+    * è¿”å›å€¼
+    *     æ— 
     *
     */
     void mouseReleaseEvent(QMouseEvent *event);
 
     /**
     *
-    * ¹¦ÄÜËµÃ÷
-    *     »æÍ¼ÊÂ¼ş
+    * åŠŸèƒ½è¯´æ˜
+    *     ç»˜å›¾äº‹ä»¶
     *
-    * ²ÎÊıËµÃ÷
-    *     QPaintEvent * event    »æÍ¼ÊÂ¼ş
+    * å‚æ•°è¯´æ˜
+    *     QPaintEvent * event    ç»˜å›¾äº‹ä»¶
     *
-    * ·µ»ØÖµ
-    *     ÎŞ
+    * è¿”å›å€¼
+    *     æ— 
     *
     */
     void paintEvent(QPaintEvent *);
 
 private:
 
-    //Ã¶¾Ù°´Å¥µÄ¼¸ÖÖ×´Ì¬
+    //æšä¸¾æŒ‰é’®çš„å‡ ç§çŠ¶æ€
     enum ButtonStatus{NORMAL, ENTER, PRESS, NOSTATUS};
     ButtonStatus status;
     QPixmap pixmap;
 
-    int btn_width; //°´Å¥¿í¶È
-    int btn_height; //°´Å¥¸ß¶È
-    bool mouse_press; //°´Å¥×ó¼üÊÇ·ñ°´ÏÂ
+    int btn_width; //æŒ‰é’®å®½åº¦
+    int btn_height; //æŒ‰é’®é«˜åº¦
+    bool mouse_press; //æŒ‰é’®å·¦é”®æ˜¯å¦æŒ‰ä¸‹
 };
 
 #endif //CS_CSVIEW_PUSHBUTTON_H

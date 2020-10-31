@@ -457,7 +457,7 @@ void SettingDialog::paintEvent(QPaintEvent *)
     linear2.setColorAt(0, Qt::white);
     linear2.setColorAt(0.5, Qt::white);
     linear2.setColorAt(1, Qt::white);
-    painter2.setPen(Qt::white); //Éè¶¨»­±ÊÑÕÉ«£¬µ½Ê±ºî¾ÍÊÇ±ß¿òÑÕÉ«
+    painter2.setPen(Qt::white); //è®¾å®šç”»ç¬”é¢œè‰²ï¼Œåˆ°æ—¶ä¾¯å°±æ˜¯è¾¹æ¡†é¢œè‰²
     painter2.setBrush(linear2);
     painter2.drawRect(QRect(0, 60, this->width(), this->height()-60));
 
@@ -469,13 +469,13 @@ void SettingDialog::paintEvent(QPaintEvent *)
 
 void SettingDialog::mousePressEvent( QMouseEvent * event )
 {
-    //Ö»ÄÜÊÇÊó±ê×ó¼üÒÆ¶¯ºÍ¸Ä±ä´óÐ¡
+    //åªèƒ½æ˜¯é¼ æ ‡å·¦é”®ç§»åŠ¨å’Œæ”¹å˜å¤§å°
     if(event->button() == Qt::LeftButton)
     {
         mouse_press = true;
     }
 
-    //´°¿ÚÒÆ¶¯¾àÀë
+    //çª—å£ç§»åŠ¨è·ç¦»
     move_point = event->globalPos() - pos();
 }
 
@@ -486,7 +486,7 @@ void SettingDialog::mouseReleaseEvent(QMouseEvent *)
 
 void SettingDialog::mouseMoveEvent(QMouseEvent *event)
 {
-    //ÒÆ¶¯´°¿Ú
+    //ç§»åŠ¨çª—å£
     if(mouse_press)
     {
         QPoint move_pos = event->globalPos();

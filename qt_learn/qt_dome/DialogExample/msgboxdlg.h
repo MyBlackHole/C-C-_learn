@@ -1,4 +1,4 @@
-//添加的头文件
+//娣诲姞鐨勫ご鏂囦欢
 #include <QLabel>
 #include <QDialog>
 #include <QPushButton>

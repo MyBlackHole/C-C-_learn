@@ -4,8 +4,8 @@
 #include <QMainWindow>
 
 class MyMdi;
-class QMdiSubWindow;//¼ÓÈëÒ»¸öÀàÏàµ±ÓÚ¼ÓÈëÒ»¸öÍ·ÎÄ¼ş£¿
-class QSignalMapper;//ÕâÊÇ¸ö¸úĞÅºÅ·¢ÉäÏà¹ØµÄÀà
+class QMdiSubWindow;//åŠ å…¥ä¸€ä¸ªç±»ç›¸å½“äºåŠ å…¥ä¸€ä¸ªå¤´æ–‡ä»¶ï¼Ÿ
+class QSignalMapper;//è¿™æ˜¯ä¸ªè·Ÿä¿¡å·å‘å°„ç›¸å…³çš„ç±»
 
 namespace Ui {
 class MainWindow;
@@ -68,7 +68,7 @@ private:
     Ui::MainWindow *ui;
 
     QAction *actionSeparator;
-    QMdiSubWindow *FindMdiChild(const QString &file_name);//²éÕÒ×Ó´°¿Ú
+    QMdiSubWindow *FindMdiChild(const QString &file_name);//æŸ¥æ‰¾å­çª—å£
     MyMdi *GetActiveWindow();
     QSignalMapper *window_mapper;
     void read_settings();

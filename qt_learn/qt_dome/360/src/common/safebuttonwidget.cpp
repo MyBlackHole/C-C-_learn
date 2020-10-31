@@ -13,10 +13,10 @@ SafeButtonWidget::SafeButtonWidget(QWidget *parent)
 void SafeButtonWidget::setIconsInfo(const QString &animIcons, int animNum, const QString &normalIcons, int normalNum)
 {
     m_staticButton = new StaticButton(normalIcons, normalNum, this);
-    m_staticButton->setAttribute(Qt::WA_TransparentForMouseEvents); //ÆÁ±Î×Ó´°¿ÚÊÂ¼þ
+    m_staticButton->setAttribute(Qt::WA_TransparentForMouseEvents); //å±è”½å­çª—å£äº‹ä»¶
     m_dynamicWidget = new DynamicWidget(this);
     m_dynamicWidget->setInfo(QPixmap(animIcons), animNum);
-    m_dynamicWidget->setAttribute(Qt::WA_TransparentForMouseEvents); //ÆÁ±Î×Ó´°¿ÚÊÂ¼þ
+    m_dynamicWidget->setAttribute(Qt::WA_TransparentForMouseEvents); //å±è”½å­çª—å£äº‹ä»¶
     this->setFixedSize(m_staticButton->size());
 
     m_staticButton->move(0, 0);
@@ -36,7 +36,7 @@ void SafeButtonWidget::setAnimInfo(const QString &animIcons, int animNum)
         m_dynamicWidget = new DynamicWidget(this);
         m_dynamicWidget->setInfo(QPixmap(animIcons), animNum);
     }
-    m_dynamicWidget->setAttribute(Qt::WA_TransparentForMouseEvents); //ÆÁ±Î×Ó´°¿ÚÊÂ¼þ
+    m_dynamicWidget->setAttribute(Qt::WA_TransparentForMouseEvents); //å±è”½å­çª—å£äº‹ä»¶
     m_dynamicWidget->move(0, 0);
     m_dynamicWidget->hide();
 }
@@ -51,7 +51,7 @@ void SafeButtonWidget::setNormalInfo(const QString &normalIcons, int normalNum)
     {
         m_staticButton = new StaticButton(normalIcons, normalNum, this);
     }
-    m_staticButton->setAttribute(Qt::WA_TransparentForMouseEvents); //ÆÁ±Î×Ó´°¿ÚÊÂ¼þ
+    m_staticButton->setAttribute(Qt::WA_TransparentForMouseEvents); //å±è”½å­çª—å£äº‹ä»¶
     m_staticButton->move(0, 0);
     m_staticButton->setButtonStatus(BUTTON_LEAVE);
     this->setFixedSize(m_staticButton->size());

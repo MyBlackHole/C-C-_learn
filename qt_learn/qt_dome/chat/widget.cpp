@@ -33,17 +33,17 @@ Widget::Widget(QWidget *parent) :
 
 void Widget::currentFormatChanged(const QTextCharFormat &format)
 {
-    //µ±±à¼­Æ÷µÄ×ÖÌå¸ñÊ½¸Ä±äÊ±£¬ÎÒÃÇÈÃ²¿¼ş×´Ì¬Ò²ËæÖ®¸Ä±ä
+    //å½“ç¼–è¾‘å™¨çš„å­—ä½“æ ¼å¼æ”¹å˜æ—¶ï¼Œæˆ‘ä»¬è®©éƒ¨ä»¶çŠ¶æ€ä¹Ÿéšä¹‹æ”¹å˜
     ui->fontComboBox->setCurrentFont(format.font());
 
-    //Èç¹û×ÖÌå´óĞ¡³ö´í£¬ÒòÎªÎÒÃÇ×îĞ¡µÄ×ÖÌåÎª9
+    //å¦‚æœå­—ä½“å¤§å°å‡ºé”™ï¼Œå› ä¸ºæˆ‘ä»¬æœ€å°çš„å­—ä½“ä¸º9
     if(format.fontPointSize()<9)
     {
         ui->fontsizecomboBox->setCurrentIndex(3);
     }
     else
     {
-        //¼´ÏÔÊ¾12
+        //å³æ˜¾ç¤º12
         ui->fontsizecomboBox->setCurrentIndex(
                     ui->fontsizecomboBox->findText(QString::number(format.fontPointSize())));
     }
@@ -54,7 +54,7 @@ void Widget::currentFormatChanged(const QTextCharFormat &format)
     color = format.foreground().color();
 }
 
-//½ÓÊÕÊı¾İUDP
+//æ¥æ”¶æ•°æ®UDP
 void Widget::processPendingDatagrams()
 {
     while(udpSocket->hasPendingDatagrams())
@@ -116,7 +116,7 @@ void Widget::processPendingDatagrams()
     }
 }
 
-//´¦ÀíĞÂÓÃ»§¼ÓÈë
+//å¤„ç†æ–°ç”¨æˆ·åŠ å…¥
 void Widget::newParticipant(QString userName,QString localHostName,QString ipAddress)
 {
     bool bb = ui->tableWidget->findItems(localHostName,Qt::MatchExactly).isEmpty();
@@ -131,21 +131,21 @@ void Widget::newParticipant(QString userName,QString localHostName,QString ipAdd
         ui->tableWidget->setItem(0,2,ip);
         ui->textBrowser->setTextColor(Qt::gray);
         ui->textBrowser->setCurrentFont(QFont("Times New Roman",10));
-        ui->textBrowser->append(QStringLiteral("%1 ÔÚÏß£¡").arg(userName));
-        ui->onlineUser->setText(QStringLiteral("ÔÚÏßÈËÊı£º%1").arg(ui->tableWidget->rowCount()));
+        ui->textBrowser->append(QStringLiteral("%1 åœ¨çº¿ï¼").arg(userName));
+        ui->onlineUser->setText(QStringLiteral("åœ¨çº¿äººæ•°ï¼š%1").arg(ui->tableWidget->rowCount()));
         sendMessage(NewParticipant);
     }
 }
 
-//´¦ÀíÓÃ»§Àë¿ª
+//å¤„ç†ç”¨æˆ·ç¦»å¼€
 void Widget::participantLeft(QString userName,QString localHostName,QString time)
 {
     int rowNum = ui->tableWidget->findItems(localHostName,Qt::MatchExactly).first()->row();
     ui->tableWidget->removeRow(rowNum);
     ui->textBrowser->setTextColor(Qt::gray);
     ui->textBrowser->setCurrentFont(QFont("Times New Roman",10));
-    ui->textBrowser->append(QStringLiteral("%1 ÓÚ %2 Àë¿ª£¡").arg(userName).arg(time));
-    ui->onlineUser->setText(QStringLiteral("ÔÚÏßÈËÊı£º%1").arg(ui->tableWidget->rowCount()));
+    ui->textBrowser->append(QStringLiteral("%1 äº %2 ç¦»å¼€ï¼").arg(userName).arg(time));
+    ui->onlineUser->setText(QStringLiteral("åœ¨çº¿äººæ•°ï¼š%1").arg(ui->tableWidget->rowCount()));
 }
 
 Widget::~Widget()
@@ -165,14 +165,14 @@ void Widget::changeEvent(QEvent *e)
     }
 }
 
-//»ñÈ¡ipµØÖ·
+//è·å–ipåœ°å€
 QString Widget::getIP()
 {
     QList<QHostAddress> list = QNetworkInterface::allAddresses();
 
     foreach (QHostAddress address, list)
     {
-        //ÎÒÃÇÊ¹ÓÃIPv4µØÖ·
+        //æˆ‘ä»¬ä½¿ç”¨IPv4åœ°å€
         if(address.protocol() == QAbstractSocket::IPv4Protocol)
         {
             return address.toString();
@@ -182,7 +182,7 @@ QString Widget::getIP()
     return 0;
 }
 
-//·¢ËÍĞÅÏ¢
+//å‘é€ä¿¡æ¯
 void Widget::sendMessage(MessageType type, QString serverAddress)
 {
     QByteArray data;
@@ -208,7 +208,7 @@ void Widget::sendMessage(MessageType type, QString serverAddress)
     {
         if(ui->textEdit->toPlainText() == "")
         {
-            QMessageBox::warning(0,QStringLiteral("¾¯¸æ"),QStringLiteral("·¢ËÍÄÚÈİ²»ÄÜÎª¿Õ"),QMessageBox::Ok);
+            QMessageBox::warning(0,QStringLiteral("è­¦å‘Š"),QStringLiteral("å‘é€å†…å®¹ä¸èƒ½ä¸ºç©º"),QMessageBox::Ok);
             return;
         }
         out << address << getMessage();
@@ -233,7 +233,7 @@ void Widget::sendMessage(MessageType type, QString serverAddress)
 
 }
 
-//»ñÈ¡ÓÃ»§Ãû
+//è·å–ç”¨æˆ·å
 QString Widget::getUserName()
 {
     QStringList envVariables;
@@ -259,7 +259,7 @@ QString Widget::getUserName()
     return false;
 }
 
-//»ñµÃÒª·¢ËÍµÄĞÅÏ¢
+//è·å¾—è¦å‘é€çš„ä¿¡æ¯
 QString Widget::getMessage()
 {
     QString msg = ui->textEdit->toHtml();
@@ -280,7 +280,7 @@ void Widget::sentFileName(QString fileName)
     sendMessage(FileName);
 }
 
-//½ÓÊÕÎÄ¼ş
+//æ¥æ”¶æ–‡ä»¶
 void Widget::hasPendingFile(QString userName,QString serverAddress,
                             QString clientAddress,QString fileName)
 {
@@ -288,13 +288,13 @@ void Widget::hasPendingFile(QString userName,QString serverAddress,
 
     if(ipAddress == clientAddress)
     {
-        int btn = QMessageBox::information(this,QStringLiteral("½ÓÊÜÎÄ¼ş"),
-                                           QStringLiteral("À´×Ô%1(%2)µÄÎÄ¼ş£º%3,ÊÇ·ñ½ÓÊÕ£¿")
+        int btn = QMessageBox::information(this,QStringLiteral("æ¥å—æ–‡ä»¶"),
+                                           QStringLiteral("æ¥è‡ª%1(%2)çš„æ–‡ä»¶ï¼š%3,æ˜¯å¦æ¥æ”¶ï¼Ÿ")
                                            .arg(userName).arg(serverAddress).arg(fileName),
                                            QMessageBox::Yes,QMessageBox::No);
         if(btn == QMessageBox::Yes)
         {
-            QString name = QFileDialog::getSaveFileName(0,QStringLiteral("±£´æÎÄ¼ş"),fileName);
+            QString name = QFileDialog::getSaveFileName(0,QStringLiteral("ä¿å­˜æ–‡ä»¶"),fileName);
 
             if(!name.isEmpty())
             {
@@ -311,7 +311,7 @@ void Widget::hasPendingFile(QString userName,QString serverAddress,
     }
 }
 
-//·¢ËÍ
+//å‘é€
 void Widget::on_send_clicked()
 {
     sendMessage(Message);
@@ -321,7 +321,7 @@ void Widget::on_sendfile_clicked()
 {
     if(ui->tableWidget->selectedItems().isEmpty())
     {
-        QMessageBox::warning(0,QStringLiteral("Ñ¡ÔñÓÃ»§"),QStringLiteral("ÇëÏÈ´ÓÓÃ»§ÁĞ±íÑ¡ÔñÒª´«ËÍµÄÓÃ»§£¡"),QMessageBox::Ok);
+        QMessageBox::warning(0,QStringLiteral("é€‰æ‹©ç”¨æˆ·"),QStringLiteral("è¯·å…ˆä»ç”¨æˆ·åˆ—è¡¨é€‰æ‹©è¦ä¼ é€çš„ç”¨æˆ·ï¼"),QMessageBox::Ok);
         return;
     }
 
@@ -329,7 +329,7 @@ void Widget::on_sendfile_clicked()
     server->initServer();
 }
 
-//¹Ø±Õ
+//å…³é—­
 void Widget::on_close_clicked()
 {
     this->close();
@@ -354,7 +354,7 @@ bool Widget::eventFilter(QObject *target, QEvent *event)
     return QWidget::eventFilter(target,event);
 }
 
-//×ÖÌåÉèÖÃ
+//å­—ä½“è®¾ç½®
 void Widget::on_fontComboBox_currentFontChanged(QFont f)
 {
     ui->textEdit->setCurrentFont(f);
@@ -398,23 +398,23 @@ void Widget::on_textcolor_clicked()
     }
 }
 
-//±£´æÁÄÌì¼ÇÂ¼
+//ä¿å­˜èŠå¤©è®°å½•
 void Widget::on_save_clicked()
 {
     if(ui->textBrowser->document()->isEmpty())
     {
         QMessageBox::warning(0,
-                             QStringLiteral("¾¯¸æ"),
-                             QStringLiteral("ÁÄÌì¼ÇÂ¼Îª¿Õ£¬ÎŞ·¨±£´æ£¡"),
+                             QStringLiteral("è­¦å‘Š"),
+                             QStringLiteral("èŠå¤©è®°å½•ä¸ºç©ºï¼Œæ— æ³•ä¿å­˜ï¼"),
                              QMessageBox::Ok);
     }
     else
     {
-        //»ñµÃÎÄ¼şÃû
+        //è·å¾—æ–‡ä»¶å
         QString fileName = QFileDialog::getSaveFileName(this,
-                                                        QStringLiteral("±£´æÁÄÌì¼ÇÂ¼"),
-                                                        QStringLiteral("ÁÄÌì¼ÇÂ¼"),
-                                                        QStringLiteral("ÎÄ±¾(*.txt);;All File(*.*)"));
+                                                        QStringLiteral("ä¿å­˜èŠå¤©è®°å½•"),
+                                                        QStringLiteral("èŠå¤©è®°å½•"),
+                                                        QStringLiteral("æ–‡æœ¬(*.txt);;All File(*.*)"));
         if(!fileName.isEmpty())
         {
             saveFile(fileName);
@@ -422,14 +422,14 @@ void Widget::on_save_clicked()
     }
 }
 
-bool Widget::saveFile(const QString &fileName)//±£´æÎÄ¼ş
+bool Widget::saveFile(const QString &fileName)//ä¿å­˜æ–‡ä»¶
 {
     QFile file(fileName);
 
     if(!file.open(QFile::WriteOnly | QFile::Text))
     {
-        QMessageBox::warning(this,QStringLiteral("±£´æÎÄ¼ş"),
-                             QStringLiteral("ÎŞ·¨±£´æÎÄ¼ş %1:\n %2").arg(fileName)
+        QMessageBox::warning(this,QStringLiteral("ä¿å­˜æ–‡ä»¶"),
+                             QStringLiteral("æ— æ³•ä¿å­˜æ–‡ä»¶ %1:\n %2").arg(fileName)
                              .arg(file.errorString()));
         return false;
     }
@@ -441,7 +441,7 @@ bool Widget::saveFile(const QString &fileName)//±£´æÎÄ¼ş
     return true;
 }
 
-void Widget::on_clear_clicked()//Çå¿ÕÁÄÌì¼ÇÂ¼
+void Widget::on_clear_clicked()//æ¸…ç©ºèŠå¤©è®°å½•
 {
     ui->textBrowser->clear();
 }

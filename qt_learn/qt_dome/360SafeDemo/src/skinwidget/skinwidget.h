@@ -26,5 +26,5 @@ private:
 #endif // SKINWIDGET_H
 
 /*
-Æ¤·ô´°¿Ú
+çš®è‚¤çª—å£
 */

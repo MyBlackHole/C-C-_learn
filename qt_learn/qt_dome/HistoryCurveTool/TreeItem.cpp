@@ -3,7 +3,7 @@
 TreeItem::TreeItem(const QList<QVariant> &data, TreeItem *parent)
     :itemData(data)
     , parentItem(parent)
-	,isOpen(false)/*Ä¬ÈÏÎªÕÛµşÍ¼±ê*/
+	,isOpen(false)/*é»˜è®¤ä¸ºæŠ˜å å›¾æ ‡*/
 {
 
 }

@@ -1,6 +1,6 @@
 #include "GameWidget.h"
 
-// ÑÕÉ«Êı×é ´æ´¢Ã¿¸öÊı×Ö¶ÔÓ¦µÄ±³¾°É«
+// é¢œè‰²æ•°ç»„ å­˜å‚¨æ¯ä¸ªæ•°å­—å¯¹åº”çš„èƒŒæ™¯è‰²
 QColor digitBkg[11] = {QColor::fromRgb(0xFF, 0xFF, 0xCC), QColor::fromRgb(0xFF, 0xFF, 0x99),
                             QColor::fromRgb(0xFF, 0xCC, 0xCC), QColor::fromRgb(0xFF, 0xCC, 0x99),
                             QColor::fromRgb(0xFF, 0x99, 0x99), QColor::fromRgb(0xFF, 0x99, 0x66),
@@ -8,26 +8,26 @@ QColor digitBkg[11] = {QColor::fromRgb(0xFF, 0xFF, 0xCC), QColor::fromRgb(0xFF, 
                             QColor::fromRgb(0xCC, 0x33, 0x33), QColor::fromRgb(0xCC, 0x00, 0x33),
                             QColor::fromRgb(0xFF, 0x00, 0x00)};
 
-// Ã¿¸ö·½ÏòÎ»ÖÃµÄÔöÁ¿
+// æ¯ä¸ªæ–¹å‘ä½ç½®çš„å¢é‡
 QPointF dPos[5];
 
 GameWidget::GameWidget(QWidget *parent) :
     QGLWidget(QGLFormat(QGL::SampleBuffers), parent),
     timer(this)
 {
-    // Á¬½ÓÊÖÊÆÒÆ¶¯ĞÅºÅºÍÏàÓ¦µÄ²Ûº¯Êı
+    // è¿æ¥æ‰‹åŠ¿ç§»åŠ¨ä¿¡å·å’Œç›¸åº”çš„æ§½å‡½æ•°
     connect(this, SIGNAL(GestureMove(GestureDirect)), SLOT(onGestureMove(GestureDirect)));
-    // Á¬½ÓÊ±ÖÓĞÅºÅºÍ»­°å¸üĞÂµÄ²Û
+    // è¿æ¥æ—¶é’Ÿä¿¡å·å’Œç”»æ¿æ›´æ–°çš„æ§½
     connect(&timer, SIGNAL(timeout()), this, SLOT(update()));
-    // ³õÊ¼»¯boardÊı×é
+    // åˆå§‹åŒ–boardæ•°ç»„
     memset(board, 0, sizeof(board));
-    // ·ÖÊı³õÊ¼»¯Îª0
+    // åˆ†æ•°åˆå§‹åŒ–ä¸º0
     score = 0;
-    // ÊıÂë¸öÊı³õÊ¼»¯Îª2
+    // æ•°ç ä¸ªæ•°åˆå§‹åŒ–ä¸º2
     digitCount = 2;
-    // Ã»ÓĞÔÚ²¥·Å¶¯»­Ğ§¹û
+    // æ²¡æœ‰åœ¨æ’­æ”¾åŠ¨ç”»æ•ˆæœ
     isAnimating = false;
-    // ³õÊ¼»¯Á½¸ö·½¸ñ
+    // åˆå§‹åŒ–ä¸¤ä¸ªæ–¹æ ¼
     init2Block();
 }
 
@@ -43,19 +43,19 @@ void GameWidget::init2Block()
 
 void GameWidget::mousePressEvent(QMouseEvent *e)
 {
-    // »ñÈ¡Æğµã×ø±ê
+    // è·å–èµ·ç‚¹åæ ‡
     startPos = e->pos();
 }
 
 void GameWidget::mouseReleaseEvent(QMouseEvent *e)
 {
-    // Èç¹ûÔÚ²¥·Å¶¯»­Ğ§¹ûÔòÖ±½ÓÍË³ö·ÀÖ¹ÖØ¸´²úÉúÊÖÊÆÊÂ¼ş
+    // å¦‚æœåœ¨æ’­æ”¾åŠ¨ç”»æ•ˆæœåˆ™ç›´æ¥é€€å‡ºé˜²æ­¢é‡å¤äº§ç”Ÿæ‰‹åŠ¿äº‹ä»¶
     if (isAnimating)
         return;
-    // ¸ù¾İÖÕµã×ø±êºÍÆğµã×ø±ê¼ÆËãXY×ø±êµÄÔöÁ¿
+    // æ ¹æ®ç»ˆç‚¹åæ ‡å’Œèµ·ç‚¹åæ ‡è®¡ç®—XYåæ ‡çš„å¢é‡
     float dX = (float)(e->pos().x() - startPos.x());
     float dY = (float)(e->pos().y() - startPos.y());
-    // È·¶¨ÊÖÊÆ·½Ïò
+    // ç¡®å®šæ‰‹åŠ¿æ–¹å‘
     if (abs(dX) > abs(dY))
     {
         if (dX < 0)
@@ -76,72 +76,72 @@ void GameWidget::onGestureMove(GestureDirect direct)
 {
     int i, j, k;
     Animation a;
-    // ¼ÇÂ¼ÊÇ·ñÒÆ¶¯¹ı·½¸ñÒÔ¼°ÊÇ·ñÓĞ·½¸ñºÏ²¢
+    // è®°å½•æ˜¯å¦ç§»åŠ¨è¿‡æ–¹æ ¼ä»¥åŠæ˜¯å¦æœ‰æ–¹æ ¼åˆå¹¶
     bool move = false, combine = false;
-    // ¼ÇÂ¼Ä³¸ö¸ñ×ÓÊÇ·ñ²ÎÓë¹ıºÏ²¢
+    // è®°å½•æŸä¸ªæ ¼å­æ˜¯å¦å‚ä¸è¿‡åˆå¹¶
     bool isCombined[4][4];
     memset(isCombined, 0, sizeof(isCombined));
-    // ´¦Àí²»Í¬·½Ïò
+    // å¤„ç†ä¸åŒæ–¹å‘
     switch (direct)
     {
-    // Ïò×ó
+    // å‘å·¦
     case LEFT:
-        // Ñ­»·Ã¿Ò»ĞĞ
+        // å¾ªç¯æ¯ä¸€è¡Œ
         for (i = 0; i < 4; i++)
         {
-            /* ³õÊ¼»¯j kÎª0
-             * ÕâÀïj±íÊ¾Òª½»»»µÄÊı×ÖÁĞºÅ
-             * k±íÊ¾½»»»µ½µÄÎ»ÖÃµÄÁĞºÅ
+            /* åˆå§‹åŒ–j kä¸º0
+             * è¿™é‡Œjè¡¨ç¤ºè¦äº¤æ¢çš„æ•°å­—åˆ—å·
+             * kè¡¨ç¤ºäº¤æ¢åˆ°çš„ä½ç½®çš„åˆ—å·
              * */
             j = 0, k = 0;
             while (true)
             {
-                // Ñ­»·ÕÒµ½µÚÒ»¸ö²»ÊÇ0µÄÊı×Ö¶ÔÓ¦µÄÁĞºÅ
+                // å¾ªç¯æ‰¾åˆ°ç¬¬ä¸€ä¸ªä¸æ˜¯0çš„æ•°å­—å¯¹åº”çš„åˆ—å·
                 while (j < 4 && board[i][j] == 0)
                     j++;
-                // Èç¹û³¬¹ıÁË3ÔòËµÃ÷ËÑË÷Íê±Ï ÍÆ³öÑ­»·
+                // å¦‚æœè¶…è¿‡äº†3åˆ™è¯´æ˜æœç´¢å®Œæ¯• æ¨å‡ºå¾ªç¯
                 if (j > 3)
                     break;
-                // ½»»»Á½¸öÊı×Ö
+                // äº¤æ¢ä¸¤ä¸ªæ•°å­—
                 qSwap(board[i][k], board[i][j]);
                 if (j != k)
                     move = true;
-                // ¼ÇÂ¼¶¯»­ĞÅÏ¢
+                // è®°å½•åŠ¨ç”»ä¿¡æ¯
                 a.type = MOVE;
                 a.startPos = QPointF(7 * ratioW + (w + 5 * ratioW) * j, 7 * ratioH + (h + 5 * ratioH) * i);
                 a.endPos = QPointF(7 * ratioW + (w + 5 * ratioW) * k, 7 * ratioH + (h + 5 * ratioH) * i);
                 a.digit = a.digit2 = board[i][k];
                 a.direct = LEFT;
-                //Èç¹û½»»»ºóµÄÊı×ÖÓëÆäÇ°Ò»ÁĞµÄÊı×ÖÏàÍ¬
+                //å¦‚æœäº¤æ¢åçš„æ•°å­—ä¸å…¶å‰ä¸€åˆ—çš„æ•°å­—ç›¸åŒ
                 if (k > 0 && board[i][k] == board[i][k - 1] && !isCombined[i][k - 1])
                 {
-                    // Ç°Ò»ÁĞµÄÊı×Ö*2
+                    // å‰ä¸€åˆ—çš„æ•°å­—*2
                     board[i][k - 1] <<= 1;
-                    // i k-1 ·½¸ñ²ÎÓë¹ıºÏ²¢
+                    // i k-1 æ–¹æ ¼å‚ä¸è¿‡åˆå¹¶
                     isCombined[i][k - 1] = true;
-                    // ÕâÒ»ÁĞµÄÊı×ÖÖÃÎª0
+                    // è¿™ä¸€åˆ—çš„æ•°å­—ç½®ä¸º0
                     board[i][k] = 0;
-                    // ÓĞ·½¸ñºÏ²¢
+                    // æœ‰æ–¹æ ¼åˆå¹¶
                     combine = true;
-                    // ¼ÇÂ¼¶¯»­ĞÅÏ¢
+                    // è®°å½•åŠ¨ç”»ä¿¡æ¯
                     a.digit2 = board[i][k - 1];
                     a.endPos = QPointF(7 * ratioW + (w + 5 * ratioW) * (k - 1), 7 * ratioH + (h + 5 * ratioH) * i);
-                    // Ôö¼Ó·ÖÊı
+                    // å¢åŠ åˆ†æ•°
                     score += board[i][k - 1];
-                    // ·¢ÉäÔö¼Ó·ÖÊıµÄĞÅºÅ
+                    // å‘å°„å¢åŠ åˆ†æ•°çš„ä¿¡å·
                     emit ScoreInc(score);
-                    // ÊıÂë¸öÊı-1
+                    // æ•°ç ä¸ªæ•°-1
                     digitCount--;
                 }
                 else
                     k++;
                 j++;
-                // Ìí¼Óµ½¶¯»­Á´±í
+                // æ·»åŠ åˆ°åŠ¨ç”»é“¾è¡¨
                 animationList.append(a);
             }
         }
         break;
-        // ÆäÓàÈı¸ö·½ÏòÓë×óÏòÀàËÆ
+        // å…¶ä½™ä¸‰ä¸ªæ–¹å‘ä¸å·¦å‘ç±»ä¼¼
     case RIGHT:
         for (i = 0; i < 4; i++)
         {
@@ -255,71 +255,71 @@ void GameWidget::onGestureMove(GestureDirect direct)
         break;
     }
 
-    // Èç¹ûÊı×ÖÄ¾ÓĞÌîÂú
+    // å¦‚æœæ•°å­—æœ¨æœ‰å¡«æ»¡
     if ((move || combine) && digitCount != 16)
     {
-        // Ëæ»ú²úÉúĞĞºÅºÍÁĞºÅ
+        // éšæœºäº§ç”Ÿè¡Œå·å’Œåˆ—å·
         i = rand() % 4, j = rand() % 4;
-        // Ñ­»·Ö±µ½ĞĞºÍÁĞ¶ÔÓ¦µÄÔªËØÎª0
+        // å¾ªç¯ç›´åˆ°è¡Œå’Œåˆ—å¯¹åº”çš„å…ƒç´ ä¸º0
         while (board[i][j] != 0)
             i = rand() % 4, j = rand() % 4;
-        // ÌîÈë2
+        // å¡«å…¥2
         board[i][j] = (rand() % 2 + 1) * 2;
-        // ¼ÇÂ¼¶¯»­ĞÅÏ¢
+        // è®°å½•åŠ¨ç”»ä¿¡æ¯
         a.type = APPEARANCE;
         a.startPos = a.endPos = QPointF(7 * ratioW + (w + 5 * ratioW) * j, 7 * ratioH + (h + 5 * ratioH) * i);
         a.startPos += QPointF(w / 2, h / 2);
         a.digit = board[i][j];
         animationList.append(a);
-        // ÊıÂë¸öÊı¼ÓÒ»
+        // æ•°ç ä¸ªæ•°åŠ ä¸€
         digitCount++;
     }
 
-    // ¿ªÊ¼»æÖÆ¶¯»­Ğ§¹û
+    // å¼€å§‹ç»˜åˆ¶åŠ¨ç”»æ•ˆæœ
     isAnimating = true;
 
-    // Æô¶¯¼ÆÊ±Æ÷
+    // å¯åŠ¨è®¡æ—¶å™¨
     timer.start(10);
 }
 
 bool GameWidget::drawAnimation(QPainter &painter)
 {
-    // ¶¯»­ÁĞ±íµÄµü´úÆ÷
+    // åŠ¨ç”»åˆ—è¡¨çš„è¿­ä»£å™¨
     QList<Animation>::iterator it;
 
-    // ×ÖÌå
+    // å­—ä½“
     QFont font;
     font.setFamily("Consolas");
     font.setBold(true);
     font.setPixelSize(40 * ratioH);
     painter.setFont(font);
 
-    // ±êÊ¶ËùÓĞ·½¸ñ¶¯»­ÊÇ·ñ¶¼²¥·ÅÍê±Ï
+    // æ ‡è¯†æ‰€æœ‰æ–¹æ ¼åŠ¨ç”»æ˜¯å¦éƒ½æ’­æ”¾å®Œæ¯•
     bool ok = true;
 
-    // ¹¹ÔìÒ»¸ö»­Ë¢ ÑÕÉ«ÎªR G B·ÖÁ¿·Ö±ğÎª141 121 81µÄÑÕÉ«
+    // æ„é€ ä¸€ä¸ªç”»åˆ· é¢œè‰²ä¸ºR G Båˆ†é‡åˆ†åˆ«ä¸º141 121 81çš„é¢œè‰²
     QBrush brush(QColor::fromRgb(141, 121, 81));
-    // Ê¹painterÓ¦ÓÃÕâ¸ö»­Ë¢
+    // ä½¿painteråº”ç”¨è¿™ä¸ªç”»åˆ·
     painter.setBrush(brush);
 
-    // ÉèÖÃ»­±ÊÎª¿Õ±Ê Ä¿µÄÊÇÊ¹»æÖÆµÄÍ¼ĞÎÃ»ÓĞÃè±ß
+    // è®¾ç½®ç”»ç¬”ä¸ºç©ºç¬” ç›®çš„æ˜¯ä½¿ç»˜åˆ¶çš„å›¾å½¢æ²¡æœ‰æè¾¹
     painter.setPen(Qt::NoPen);
 
-    // »æÖÆÒ»¸ö¾ØĞÎ
+    // ç»˜åˆ¶ä¸€ä¸ªçŸ©å½¢
     painter.drawRoundedRect(QRectF(2 * ratioW, 2 * ratioH, width() - 4 * ratioW, height() - 4 * ratioH), rX, rY);
 
-    // ÉèÖÃ»­Ë¢ÑÕÉ«Îª RGB·ÖÁ¿Îª171 165 141µÄÑÕÉ«
+    // è®¾ç½®ç”»åˆ·é¢œè‰²ä¸º RGBåˆ†é‡ä¸º171 165 141çš„é¢œè‰²
     brush.setColor(QColor::fromRgb(171, 165, 141));
-    // Ó¦ÓÃÕâ¸ö»­Ë¢
+    // åº”ç”¨è¿™ä¸ªç”»åˆ·
     painter.setBrush(brush);
 
-    // Ñ­»·»æÖÆÓÎÏ·Ãæ°å
+    // å¾ªç¯ç»˜åˆ¶æ¸¸æˆé¢æ¿
     for (int i = 0; i < 4; i++)
         for (int j = 0; j < 4; j++)
-            // »æÖÆĞ¡·½¸ñ
+            // ç»˜åˆ¶å°æ–¹æ ¼
             painter.drawRoundedRect(QRectF(7 * ratioW + (w + 5 * ratioW) * j, 7 * ratioH + (h + 5 * ratioH) * i, w, h), rX, rY);
 
-    // Ñ­»·²¥·ÅÃ¿¸ö·½¸ñ¶¯»­
+    // å¾ªç¯æ’­æ”¾æ¯ä¸ªæ–¹æ ¼åŠ¨ç”»
     for (it = animationList.begin(); it != animationList.end(); it++)
         if (!playAnimation(*it, painter))
             ok = false;
@@ -333,7 +333,7 @@ bool GameWidget::playAnimation(Animation& a, QPainter& painter)
 
     QBrush brush(Qt::SolidPattern);
 
-    // ÒÆ¶¯·½¸ñÎ»ÖÃ
+    // ç§»åŠ¨æ–¹æ ¼ä½ç½®
     if (a.type == MOVE)
     {
         switch (a.direct)
@@ -362,7 +362,7 @@ bool GameWidget::playAnimation(Animation& a, QPainter& painter)
             else
                 a.startPos = a.endPos, rtn = true;
         }
-        // Èç¹û·½¸ñÒÆ¶¯µ½ÖÕµã
+        // å¦‚æœæ–¹æ ¼ç§»åŠ¨åˆ°ç»ˆç‚¹
         if (!rtn)
         {
             brush.setColor(digitBkg[getBitCount(a.digit)]);
@@ -385,7 +385,7 @@ bool GameWidget::playAnimation(Animation& a, QPainter& painter)
     }
     else
     {
-        // ·½¸ñ³öÏÖµÄ¶¯»­Ğ§¹û
+        // æ–¹æ ¼å‡ºç°çš„åŠ¨ç”»æ•ˆæœ
         if (a.startPos.x() > a.endPos.x())
             a.startPos += dPos[4];
         else
@@ -405,86 +405,86 @@ bool GameWidget::playAnimation(Animation& a, QPainter& painter)
 
 void GameWidget::paintEvent(QPaintEvent *)
 {
-    // ¹¹ÔìÒ»¸öQPainter¶ÔÏó Ê¹ÓÃËüÀ´½øĞĞ»æÍ¼
+    // æ„é€ ä¸€ä¸ªQPainterå¯¹è±¡ ä½¿ç”¨å®ƒæ¥è¿›è¡Œç»˜å›¾
     QPainter painter(this);
 
-    // ÉèÖÃ·´¾â³İ»æÍ¼
+    // è®¾ç½®åé”¯é½¿ç»˜å›¾
     painter.setRenderHint(QPainter::Antialiasing);
 
-    // Èç¹ûÕıÔÚ²¥·Å¶¯»­Ğ§¹ûÔò»æÖÆ»º´æÎ»Í¼
+    // å¦‚æœæ­£åœ¨æ’­æ”¾åŠ¨ç”»æ•ˆæœåˆ™ç»˜åˆ¶ç¼“å­˜ä½å›¾
     if (isAnimating)
     {
         if (drawAnimation(painter))
         {
             isAnimating = false;
             timer.stop();
-            //Çå³ıËùÓĞ¶¯»­
+            //æ¸…é™¤æ‰€æœ‰åŠ¨ç”»
             animationList.clear();
             if (digitCount == 16)
             {
-                // Èç¹ûÊı×ÖÌîÂúÁË ¼ì²âÓÎÏ·ÊÇ·ñover
+                // å¦‚æœæ•°å­—å¡«æ»¡äº† æ£€æµ‹æ¸¸æˆæ˜¯å¦over
                 if (checkGameOver())
-                    emit GameOver();// Èç¹ûÓÎÏ·overÁËÔò·¢ÉäGameOverĞÅºÅ
+                    emit GameOver();// å¦‚æœæ¸¸æˆoveräº†åˆ™å‘å°„GameOverä¿¡å·
             }
-            // ¼ì²âÓÎÏ·ÊÇ·ñ»ñÊ¤
+            // æ£€æµ‹æ¸¸æˆæ˜¯å¦è·èƒœ
             if (checkWin())
-                emit win();// Èç¹û»ñÊ¤Ôò·¢ÉäwinĞÅºÅ
+                emit win();// å¦‚æœè·èƒœåˆ™å‘å°„winä¿¡å·
         }
         return;
     }
 
-    // ¹¹ÔìÒ»¸ö»­Ë¢ ÑÕÉ«ÎªR G B·ÖÁ¿·Ö±ğÎª141 121 81µÄÑÕÉ«
+    // æ„é€ ä¸€ä¸ªç”»åˆ· é¢œè‰²ä¸ºR G Båˆ†é‡åˆ†åˆ«ä¸º141 121 81çš„é¢œè‰²
     QBrush brush(QColor::fromRgb(141, 121, 81));
-    // Ê¹painterÓ¦ÓÃÕâ¸ö»­Ë¢
+    // ä½¿painteråº”ç”¨è¿™ä¸ªç”»åˆ·
     painter.setBrush(brush);
 
-    // ÉèÖÃ»­±ÊÎª¿Õ±Ê Ä¿µÄÊÇÊ¹»æÖÆµÄÍ¼ĞÎÃ»ÓĞÃè±ß
+    // è®¾ç½®ç”»ç¬”ä¸ºç©ºç¬” ç›®çš„æ˜¯ä½¿ç»˜åˆ¶çš„å›¾å½¢æ²¡æœ‰æè¾¹
     painter.setPen(Qt::NoPen);
 
-    // »æÖÆÒ»¸ö¾ØĞÎ
+    // ç»˜åˆ¶ä¸€ä¸ªçŸ©å½¢
     painter.drawRoundedRect(QRectF(2 * ratioW, 2 * ratioH, width() - 4 * ratioW, height() - 4 * ratioH), rX, rY);
 
-    /* ¹¹ÔìÒ»¸ö×ÖÌå
-     * ×ÖÌåÃû×ÖÎªConsolas
-     * ×ÖÌåÉèÖÃÎª´ÖÌå
-     * ×ÖÌå´óĞ¡Îª40ÏñËØ
+    /* æ„é€ ä¸€ä¸ªå­—ä½“
+     * å­—ä½“åå­—ä¸ºConsolas
+     * å­—ä½“è®¾ç½®ä¸ºç²—ä½“
+     * å­—ä½“å¤§å°ä¸º40åƒç´ 
      * */
     QFont font;
     font.setFamily("Consolas");
     font.setBold(true);
     font.setPixelSize(40 * ratioH);
-    // Ê¹painterÓ¦ÓÃÕâ¸ö×ÖÌå
+    // ä½¿painteråº”ç”¨è¿™ä¸ªå­—ä½“
     painter.setFont(font);
 
-    // Ñ­»·»æÖÆÓÎÏ·Ãæ°å
+    // å¾ªç¯ç»˜åˆ¶æ¸¸æˆé¢æ¿
     for (int i = 0; i < 4; i++)
         for (int j = 0; j < 4; j++)
         {
-            // Èç¹û·½¸ñÖĞÓĞÊı×Ö
+            // å¦‚æœæ–¹æ ¼ä¸­æœ‰æ•°å­—
             if (board[i][j])
             {
-                // ÉèÖÃ»­Ë¢ÑÕÉ«ÎªÊıÂë¶ÔÓ¦µÄÑÕÉ«
+                // è®¾ç½®ç”»åˆ·é¢œè‰²ä¸ºæ•°ç å¯¹åº”çš„é¢œè‰²
                 brush.setColor(digitBkg[getBitCount(board[i][j])]);
-                // Ó¦ÓÃÕâ¸ö»­Ë¢
+                // åº”ç”¨è¿™ä¸ªç”»åˆ·
                 painter.setBrush(brush);
-                // »æÖÆÒ»¸öĞ¡·½¸ñ
+                // ç»˜åˆ¶ä¸€ä¸ªå°æ–¹æ ¼
                 painter.drawRoundedRect(QRectF(7 * ratioW + (w + 5 * ratioW) * j, 7 * ratioH + (h + 5 * ratioH) * i, w, h), rX, rY);
-                // ÉèÖÃ»­±ÊÎªºÚÉ«»­±Ê
+                // è®¾ç½®ç”»ç¬”ä¸ºé»‘è‰²ç”»ç¬”
                 painter.setPen(QColor::fromRgb(0, 0, 0));
-                // »æÖÆÊıÂë
+                // ç»˜åˆ¶æ•°ç 
                 painter.drawText(QRectF(7 * ratioW + (w + 5 * ratioW) * j, 7 * ratioH + (h + 5 * ratioH) * i, w, h), Qt::AlignCenter,
                                  QString::number(board[i][j]));
-                // ÉèÖÃ»­±ÊÎª¿Õ±Ê
+                // è®¾ç½®ç”»ç¬”ä¸ºç©ºç¬”
                 painter.setPen(Qt::NoPen);
             }
-            // Èç¹û·½¸ñÖĞÃ»ÓĞÊı×Ö
+            // å¦‚æœæ–¹æ ¼ä¸­æ²¡æœ‰æ•°å­—
             else
             {
-                // ÉèÖÃ»­Ë¢ÑÕÉ«Îª RGB·ÖÁ¿Îª171 165 141µÄÑÕÉ«
+                // è®¾ç½®ç”»åˆ·é¢œè‰²ä¸º RGBåˆ†é‡ä¸º171 165 141çš„é¢œè‰²
                 brush.setColor(QColor::fromRgb(171, 165, 141));
-                // Ó¦ÓÃÕâ¸ö»­Ë¢
+                // åº”ç”¨è¿™ä¸ªç”»åˆ·
                 painter.setBrush(brush);
-                // »æÖÆĞ¡·½¸ñ
+                // ç»˜åˆ¶å°æ–¹æ ¼
                 painter.drawRoundedRect(QRectF(7 * ratioW + (w + 5 * ratioW) * j, 7 * ratioH + (h + 5 * ratioH) * i, w, h), rX, rY);
             }
         }
@@ -493,7 +493,7 @@ void GameWidget::paintEvent(QPaintEvent *)
 void GameWidget::resizeEvent(QResizeEvent *)
 {
     ratioW = width() / 400.0, ratioH = height() / 400.0;
-    // ¼ÆËãÃ¿¸öĞ¡¸ñ×ÓµÄ¿í¶ÈºÍ¸ß¶È
+    // è®¡ç®—æ¯ä¸ªå°æ ¼å­çš„å®½åº¦å’Œé«˜åº¦
     w = width() - 4 * ratioW, h = height() - 4 * ratioH;
     w = (w - 25 * ratioW) / 4, h = (h - 25 * ratioH) / 4;
     rX = 15 * ratioW, rY = 15 * ratioH;
@@ -506,7 +506,7 @@ void GameWidget::resizeEvent(QResizeEvent *)
 
 void GameWidget::restart()
 {
-    // ³õÊ¼»¯Ïà¹Ø±äÁ¿ Í¬¹¹Ôìº¯Êı
+    // åˆå§‹åŒ–ç›¸å…³å˜é‡ åŒæ„é€ å‡½æ•°
     score = 0;
     digitCount = 2;
     memset(board, 0, sizeof(board));
@@ -517,7 +517,7 @@ void GameWidget::restart()
 
 bool GameWidget::checkGameOver()
 {
-    // Ñ­»·¼ì²âÊÇ·ñº¬ÓĞÏàÁÚµÄÏàÍ¬ÊıÂë
+    // å¾ªç¯æ£€æµ‹æ˜¯å¦å«æœ‰ç›¸é‚»çš„ç›¸åŒæ•°ç 
     for (int i = 0; i < 4; i++)
         for (int j = 0; j < 4; j++)
         {
@@ -531,7 +531,7 @@ bool GameWidget::checkGameOver()
 
 bool GameWidget::checkWin()
 {
-    // Ñ­»·¼ì²âÊÇ·ñÄ³¸ö·½¸ñµÄÊı×ÖÎª2048
+    // å¾ªç¯æ£€æµ‹æ˜¯å¦æŸä¸ªæ–¹æ ¼çš„æ•°å­—ä¸º2048
     for (int i = 0; i < 4; i++)
         for (int j = 0; j < 4; j++)
             if (board[i][j] == 2048)
@@ -541,11 +541,11 @@ bool GameWidget::checkWin()
 
 int GameWidget::getBitCount(int n)
 {
-    // Ñ­»·»ñÈ¡Êı×Ö¶ş½øÖÆÎ»Êı
+    // å¾ªç¯è·å–æ•°å­—äºŒè¿›åˆ¶ä½æ•°
     int c = 0;
     while (n >>= 1)
         c++;
-    // ·µ»ØÎ»Êı-1
+    // è¿”å›ä½æ•°-1
     return c - 1;
 }
 

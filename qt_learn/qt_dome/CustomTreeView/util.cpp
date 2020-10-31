@@ -44,7 +44,7 @@ QList<ToolUtil> Util::parse(QString file_name)
         QDomNode dom_node = list.item(i);
         QDomElement element = dom_node.toElement();
 
-        //获取子节点，数目为，包括：toolexename、tooltip、toolicon、website
+        //鑾峰彇瀛愯妭鐐癸紝鏁扮洰涓猴紝鍖呮嫭锛歵oolexename銆乼ooltip銆乼oolicon銆亀ebsite
         QDomNodeList child_list = element.childNodes();
         int child_count = child_list.count();
 

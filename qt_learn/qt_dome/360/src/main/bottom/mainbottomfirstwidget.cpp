@@ -19,21 +19,21 @@ MainBottomFirstWidget::MainBottomFirstWidget(QWidget *parent)
 void MainBottomFirstWidget::initUI()
 {
     m_safeButton = new StaticButton(":/main/safe_check");
-    QLabel *safeLabel = new QLabel(QStringLiteral("²éÉ±ÐÞ¸´"));
+    QLabel *safeLabel = new QLabel(QStringLiteral("æŸ¥æ€ä¿®å¤"));
     safeLabel->setObjectName("mainBottomLabel");
     QVBoxLayout *safeLayout = new QVBoxLayout;
     safeLayout->addWidget(m_safeButton, 0, Qt::AlignCenter);
     safeLayout->addWidget(safeLabel, 0, Qt::AlignCenter);
 
     m_cleanButton = new StaticButton(":/main/clean");
-    QLabel *cleanLabel = new QLabel(QStringLiteral("µçÄÔÇåÀí"));
+    QLabel *cleanLabel = new QLabel(QStringLiteral("ç”µè„‘æ¸…ç†"));
     cleanLabel->setObjectName("mainBottomLabel");
     QVBoxLayout *cleanLayout = new QVBoxLayout;
     cleanLayout->addWidget(m_cleanButton, 0, Qt::AlignCenter);
     cleanLayout->addWidget(cleanLabel, 0, Qt::AlignCenter);
 
     m_youhuaButton = new StaticButton(":/main/youhua");
-    QLabel *youhuaLabel = new QLabel(QStringLiteral("ÓÅ»¯¼ÓËÙ"));
+    QLabel *youhuaLabel = new QLabel(QStringLiteral("ä¼˜åŒ–åŠ é€Ÿ"));
     youhuaLabel->setObjectName("mainBottomLabel");
     QVBoxLayout *youhuaLayout = new QVBoxLayout;
     youhuaLayout->addWidget(m_youhuaButton, 0, Qt::AlignCenter);
@@ -45,13 +45,13 @@ void MainBottomFirstWidget::initUI()
     staticLayout->addLayout(youhuaLayout);
     staticLayout->setContentsMargins(10, 20, 10, 10);
 
-    QLabel *routerTitle = new QLabel(QStringLiteral("Â·ÓÉÆ÷ÎÀÊ¿"));
+    QLabel *routerTitle = new QLabel(QStringLiteral("è·¯ç”±å™¨å«å£«"));
     QFont font = routerTitle->font();
     font.setBold(true);
     font.setPixelSize(15);
     routerTitle->setFont(font);
 
-    QLabel *routerDes = new QLabel(QStringLiteral("°ïÄúÃâ·ÑÉý¼¶ÎªÖÇÄÜÂ·ÓÉÆ÷"));
+    QLabel *routerDes = new QLabel(QStringLiteral("å¸®æ‚¨å…è´¹å‡çº§ä¸ºæ™ºèƒ½è·¯ç”±å™¨"));
     QVBoxLayout *routerTextLayout = new QVBoxLayout;
     routerTextLayout->addWidget(routerTitle, 0, Qt::AlignRight);
     routerTextLayout->addWidget(routerDes, 0, Qt::AlignRight);
@@ -64,7 +64,7 @@ void MainBottomFirstWidget::initUI()
 
     QStringList advIconList, advNameList;
     advIconList << "360SoftManger" << "360JiShi" << "360MobileMgr" << "NetSpeed";
-    advNameList << QStringLiteral("Èí¼þ¹Ü¼Ò") << QStringLiteral("ÈË¹¤·þÎñ") << QStringLiteral("ÊÖ»úÖúÊÖ") << QStringLiteral("¿í´ø²âËÙÆ÷") ;
+    advNameList << QStringLiteral("è½¯ä»¶ç®¡å®¶") << QStringLiteral("äººå·¥æœåŠ¡") << QStringLiteral("æ‰‹æœºåŠ©æ‰‹") << QStringLiteral("å®½å¸¦æµ‹é€Ÿå™¨") ;
 
     QHBoxLayout *advLayout = new QHBoxLayout;
     for(int i=0; i<advIconList.size(); i++)
@@ -78,7 +78,7 @@ void MainBottomFirstWidget::initUI()
     m_advtoolMore = new StaticButton(":/main/advtool_more");
     ButtonLabel *advLabel = new ButtonLabel;
     advLabel->setStyleSheet("QLabel{color:blue;}");
-    advLabel->setText(QStringLiteral("¸ü¶à"));
+    advLabel->setText(QStringLiteral("æ›´å¤š"));
 
     QVBoxLayout *moreLayout = new QVBoxLayout;
     moreLayout->addStretch();

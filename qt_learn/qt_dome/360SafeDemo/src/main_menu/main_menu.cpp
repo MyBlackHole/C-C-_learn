@@ -9,7 +9,7 @@ MainMenu::MainMenu(QWidget *widget)
 
 void MainMenu::createActions()
 {
-    //´´½¨²Ëµ¥Ïî
+    //åˆ›å»ºèœå•é¡¹
     action_setting = new QAction(this);
     action_new_character = new QAction(this);
     action_check_update = new QAction(this);
@@ -25,7 +25,7 @@ void MainMenu::createActions()
     action_check_update->setIcon(QIcon(":/mainMenu/update"));
     action_setting->setIcon(QIcon(":/mainMenu/setting"));
 
-    //Ìí¼Ó²Ëµ¥Ïî
+    //æ·»åŠ èœå•é¡¹
     this->addAction(action_setting);
     this->addAction(action_new_character);
     this->addAction(action_check_update);
@@ -37,7 +37,7 @@ void MainMenu::createActions()
     this->addAction(action_protect);
     this->addAction(action_about_us);
 
-    //ÉèÖÃĞÅºÅÁ¬½Ó
+    //è®¾ç½®ä¿¡å·è¿æ¥
     QObject::connect(action_setting, SIGNAL(triggered()), this, SIGNAL(showSettingDialog()));
     QObject::connect(action_new_character, SIGNAL(triggered()), this, SIGNAL(showNewCharacter()));
     QObject::connect(action_about_us, SIGNAL(triggered()), this, SIGNAL(showAboutUs()));

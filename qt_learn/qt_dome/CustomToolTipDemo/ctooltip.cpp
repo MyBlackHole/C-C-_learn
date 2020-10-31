@@ -14,7 +14,7 @@ CToolTip::CToolTip(QWidget *parent)
 
     groupBox = new QGroupBox(this);
     groupBox->setGeometry(10, 10, 180, 80);
-    groupBox->setTitle(QStringLiteral("ÓÃ»§ĞÅÏ¢"));
+    groupBox->setTitle(QStringLiteral("ç”¨æˆ·ä¿¡æ¯"));
 
     labelIcon = new QLabel(groupBox);
     labelName = new QLabel(groupBox);
@@ -31,14 +31,14 @@ CToolTip::CToolTip(QWidget *parent)
     horLayout->addLayout(verlayout, 4);
 }
 
-// ÏÔÊ¾ToolTipÏûÏ¢
+// æ˜¾ç¤ºToolTipæ¶ˆæ¯
 void CToolTip::showMessage(const QPixmap *pixmap, QString name, QString info, QPoint point)
 {
     labelIcon->setPixmap(*pixmap);
     labelName->setText(name);
     labelInfo->setText(info);
 
-    // ÖØĞÂ¶¨ÒåCToolTipµÄ×ø±ê
+    // é‡æ–°å®šä¹‰CToolTipçš„åæ ‡
     int rectX;
     int rectY;
     if (point.rx() < 200)
@@ -54,19 +54,19 @@ void CToolTip::showMessage(const QPixmap *pixmap, QString name, QString info, QP
     QWidget::show();
 }
 
-// ÏÔÊ¾ToolTipÏûÏ¢
+// æ˜¾ç¤ºToolTipæ¶ˆæ¯
 void CToolTip::showMessage(const QPixmap *pixmap, QPoint point)
 {
     labelIcon->setPixmap(*pixmap);
 
-    labelName->setText(QStringLiteral("×Ô¼ºÏë°ì·¨»ñÈ¡"));
-    labelInfo->setText(QStringLiteral("×Ô¼º¶¯ÊÖ£¬·áÒÂ×ãÊ³"));
-    // ´Ë´¦¿ÉÒÔ×÷ÎªQToolTipÑùÊ½½øĞĞÏÔÊ¾
+    labelName->setText(QStringLiteral("è‡ªå·±æƒ³åŠæ³•è·å–"));
+    labelInfo->setText(QStringLiteral("è‡ªå·±åŠ¨æ‰‹ï¼Œä¸°è¡£è¶³é£Ÿ"));
+    // æ­¤å¤„å¯ä»¥ä½œä¸ºQToolTipæ ·å¼è¿›è¡Œæ˜¾ç¤º
     move(point);
     QWidget::show();
 }
 
-// µ±Êó±ê½øÈëÊÂ¼şÊ±,ÈÃ½çÃæÒş²Øµô
+// å½“é¼ æ ‡è¿›å…¥äº‹ä»¶æ—¶,è®©ç•Œé¢éšè—æ‰
 void CToolTip::hoverEvent(QHoverEvent *)
 {
     hide();

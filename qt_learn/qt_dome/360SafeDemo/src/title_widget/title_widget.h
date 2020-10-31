@@ -30,16 +30,16 @@ protected:
     void mouseDoubleClickEvent(QMouseEvent *);
 
 private:
-    QPoint press_point;//Êó±ê°´ÏÂÈ¥µÄµã
+    QPoint press_point;//é¼ æ ‡æŒ‰ä¸‹å»çš„ç‚¹
     bool is_move;
 
-    QLabel *version_title; //±êÌâ
-    QPushButton *medal_button; //Ñ«ÕÂÇ½
-    PushButton *skin_button; //»»·ô
-    PushButton *main_menu_button; //Ö÷²Ëµ¥
-    PushButton *min_button; //×îĞ¡»¯
-    PushButton *max_button; //×î´ó»¯
-    PushButton *close_button; //¹Ø±Õ
+    QLabel *version_title; //æ ‡é¢˜
+    QPushButton *medal_button; //å‹‹ç« å¢™
+    PushButton *skin_button; //æ¢è‚¤
+    PushButton *main_menu_button; //ä¸»èœå•
+    PushButton *min_button; //æœ€å°åŒ–
+    PushButton *max_button; //æœ€å¤§åŒ–
+    PushButton *close_button; //å…³é—­
 
     QList<ToolButton *> button_list;
 };

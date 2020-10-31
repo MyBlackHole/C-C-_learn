@@ -28,7 +28,7 @@ void PushButton::enterEvent(QEvent *)
 
 void PushButton::mousePressEvent(QMouseEvent *event)
 {
-    //Èôµã»÷Êó±ê×ó¼ü
+    //è‹¥ç‚¹å‡»é¼ æ ‡å·¦é”®
     if(event->button() == Qt::LeftButton)
     {
         mouse_press = true;
@@ -39,7 +39,7 @@ void PushButton::mousePressEvent(QMouseEvent *event)
 
 void PushButton::mouseReleaseEvent(QMouseEvent *)
 {
-    //Èôµã»÷Êó±ê×ó¼ü
+    //è‹¥ç‚¹å‡»é¼ æ ‡å·¦é”®
     if(mouse_press)
     {
         mouse_press = false;

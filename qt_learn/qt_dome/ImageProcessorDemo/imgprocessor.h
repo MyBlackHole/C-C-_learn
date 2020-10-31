@@ -27,9 +27,9 @@ public:
     explicit ImgProcessor(QWidget *parent = 0);
     ~ImgProcessor();
 
-    void createActions();                           //´´½¨¶¯×÷
-    void createMenus();                             //´´½¨²Ëµ¥
-    void createToolBars();                          //´´½¨¹¤¾ßÀ¸
+    void createActions();                           //åˆ›å»ºåŠ¨ä½œ
+    void createMenus();                             //åˆ›å»ºèœå•
+    void createToolBars();                          //åˆ›å»ºå·¥å…·æ 
 
     void loadFile(QString filename);
     void mergeFormat(QTextCharFormat);
@@ -37,7 +37,7 @@ public:
 private:
     Ui::ImgProcessor *ui;
 
-    QMenu *fileMenu;                                //¸÷Ïî²Ëµ¥À¸
+    QMenu *fileMenu;                                //å„é¡¹èœå•æ 
     QMenu *zoomMenu;
     QMenu *rotateMenu;
     QMenu *mirrorMenu;
@@ -46,37 +46,37 @@ private:
     QString fileName;
     ShowWidget *showWidget;
 
-    QAction *openFileAction;                        //ÎÄ¼ş²Ëµ¥Ïî
+    QAction *openFileAction;                        //æ–‡ä»¶èœå•é¡¹
     QAction *NewFileAction;
     QAction *PrintTextAction;
     QAction *PrintImageAction;
     QAction *exitAction;
 
-    QAction *copyAction;                            //±à¼­²Ëµ¥Ïî
+    QAction *copyAction;                            //ç¼–è¾‘èœå•é¡¹
     QAction *cutAction;
     QAction *pasteAction;
     QAction *aboutAction;
     QAction *zoomInAction;
     QAction *zoomOutAction;
 
-    QAction *rotate90Action;                        //Ğı×ª²Ëµ¥Ïî
+    QAction *rotate90Action;                        //æ—‹è½¬èœå•é¡¹
     QAction *rotate180Action;
     QAction *rotate270Action;
 
-    QAction *mirrorVerticalAction;                  //¾µÏñ²Ëµ¥Ïî
+    QAction *mirrorVerticalAction;                  //é•œåƒèœå•é¡¹
     QAction *mirrorHorizontalAction;
 
     QAction *undoAction;
     QAction *redoAction;
 
-    QToolBar *fileTool;                             //¹¤¾ßÀ¸
+    QToolBar *fileTool;                             //å·¥å…·æ 
     QToolBar *zoomTool;
     QToolBar *rotateTool;
     QToolBar *mirrorTool;
 
     QToolBar *doToolBar;
 
-    QLabel *fontLabel1;                             //×ÖÌåÉèÖÃÏî
+    QLabel *fontLabel1;                             //å­—ä½“è®¾ç½®é¡¹
     QFontComboBox *fontComboBox;
     QLabel *fontLabel2;
     QComboBox *sizeComboBox;
@@ -85,9 +85,9 @@ private:
     QToolButton *underlineBtn;
     QToolButton *colorBtn;
 
-    QToolBar *fontToolBar;                          //×ÖÌå¹¤¾ßÀ¸
+    QToolBar *fontToolBar;                          //å­—ä½“å·¥å…·æ 
 
-    QLabel *listLabel;                              //ÅÅĞòÉèÖÃÏî
+    QLabel *listLabel;                              //æ’åºè®¾ç½®é¡¹
     QComboBox *listComboBox;
     QActionGroup *actGrp;
     QAction *leftAction;
@@ -95,7 +95,7 @@ private:
     QAction *centerAction;
     QAction *justifyAction;
 
-    QToolBar *listToolBar;                          //ÅÅĞò¹¤¾ßÀ¸
+    QToolBar *listToolBar;                          //æ’åºå·¥å…·æ 
 
 protected slots:
     void ShowNewFile();

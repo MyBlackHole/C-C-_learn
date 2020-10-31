@@ -34,7 +34,7 @@ private:
     QLabel *label;
     QLabel *suggest_label;
     QLabel *system_safe_label;
-    QPushButton *power_button; //Á¢¼´Ìå¼ì°´Å¥
+    QPushButton *power_button; //ç«‹å³ä½“æ£€æŒ‰é’®
 
     QSplitter *right_splitter;
     QWidget *right_widget;
@@ -44,11 +44,11 @@ private:
     QProgressBar *progress_bar;
     QToolButton *grade_button;
 
-    QPushButton *login_button; //µÇÂ¼ÎÒµÄ360ÕÊºÅ
-    QLabel *priv_label; //»Ê×©Í¼±ê
-    QLabel *info_label; //¿ªÆôìÅ¶¯ÎÀÊÓÍ¼±ê
-    QLabel *privilege_label; //×ªÏíÌØÈ¨
-    QPushButton *register_button; //10ÃëÃâ·Ñ×¢²á
+    QPushButton *login_button; //ç™»å½•æˆ‘çš„360å¸å·
+    QLabel *priv_label; //çš‡ç –å›¾æ ‡
+    QLabel *info_label; //å¼€å¯ç‚«åŠ¨å«è§†å›¾æ ‡
+    QLabel *privilege_label; //è½¬äº«ç‰¹æƒ
+    QPushButton *register_button; //10ç§’å…è´¹æ³¨å†Œ
     QPushButton *safe_button;
     QPushButton *tab_button;
     QPushButton *pet_button;
@@ -57,30 +57,30 @@ private:
     QPushButton *caipiao_button;
 
     QWidget *right_center_widget;
-    QToolButton *fireproof_button; //360·À»ğÇ½
-    QToolButton *triggerman_button; //360±£ïÚ
-    QToolButton *net_shop_button; //Íø¹ºÏÈÅâ
-    QLabel *line_label_1; //ĞéÏß
-    QLabel *line_label_2; //ĞéÏß
+    QToolButton *fireproof_button; //360é˜²ç«å¢™
+    QToolButton *triggerman_button; //360ä¿é•–
+    QToolButton *net_shop_button; //ç½‘è´­å…ˆèµ”
+    QLabel *line_label_1; //è™šçº¿
+    QLabel *line_label_2; //è™šçº¿
 
     QWidget *right_center_function_widget;
-    QLabel *function_label; //¹¦ÄÜ´óÈ«
-    QPushButton *more_button; //¸ü¶à
-    QToolButton *recovery_button; //ÎÄ¼ş»Ö¸´
-    QToolButton *mobile_button; //ÊÖ»úÖúÊÖ
-    QToolButton *game_box_button; //ÓÎÏ·ºĞ×Ó
-    QToolButton *desktop_button; //°²È«×ÀÃæ
-    QToolButton *net_repair_button; //¶ÏÍø¼±¾ÈÏä
-    QToolButton *auto_run_button; //¿ª»ú¼ÓËÙ
-    QToolButton *net_speed_button; //¿í´ø²âËÙÆ÷
-    QToolButton *net_pretext_button; //360Íø¶Ü
-    QToolButton *first_add_button; //ÏµÍ³¼±¾ÈÏä
+    QLabel *function_label; //åŠŸèƒ½å¤§å…¨
+    QPushButton *more_button; //æ›´å¤š
+    QToolButton *recovery_button; //æ–‡ä»¶æ¢å¤
+    QToolButton *mobile_button; //æ‰‹æœºåŠ©æ‰‹
+    QToolButton *game_box_button; //æ¸¸æˆç›’å­
+    QToolButton *desktop_button; //å®‰å…¨æ¡Œé¢
+    QToolButton *net_repair_button; //æ–­ç½‘æ€¥æ•‘ç®±
+    QToolButton *auto_run_button; //å¼€æœºåŠ é€Ÿ
+    QToolButton *net_speed_button; //å®½å¸¦æµ‹é€Ÿå™¨
+    QToolButton *net_pretext_button; //360ç½‘ç›¾
+    QToolButton *first_add_button; //ç³»ç»Ÿæ€¥æ•‘ç®±
 
     QWidget *right_bottom_widget;
-    QLabel *icon_label; //ÔÆÍ¼±ê
-    QLabel *connect_label; //³É¹¦Á¬½ÓÔÆ°²È«
-    QLabel *version_label; //°æ±¾ºÅ
-    QPushButton *version_button; //°æ±¾Éı¼¶
+    QLabel *icon_label; //äº‘å›¾æ ‡
+    QLabel *connect_label; //æˆåŠŸè¿æ¥äº‘å®‰å…¨
+    QLabel *version_label; //ç‰ˆæœ¬å·
+    QPushButton *version_button; //ç‰ˆæœ¬å‡çº§
 };
 
 #endif // CONTENTWIDGET_H

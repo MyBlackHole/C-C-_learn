@@ -101,11 +101,11 @@ GLDMaskBox::GLDMaskBox(GLDMaskBoxParam & oTipBoxParam, QWidget *parent)
 
     //this->setContentsMargins(10, 5, 10, 15);
 
-    // ¹Ø±Õ¶¨Ê±Æ÷ÉèÖÃ
+    // å…³é—­å®šæ—¶å™¨è®¾ç½®
     m_timerClose = new QTimer(this);
     connect(m_timerClose, SIGNAL(timeout()), this, SLOT(slotCloseTimer()));
 
-    // ½¥ÒşĞ§¹û¶¯»­ÉèÖÃ
+    // æ¸éšæ•ˆæœåŠ¨ç”»è®¾ç½®
     m_effectOpacity = new QGraphicsOpacityEffect(this);
     this->setGraphicsEffect(m_effectOpacity);
     m_effectOpacity->setOpacity(1);
@@ -116,7 +116,7 @@ GLDMaskBox::GLDMaskBox(GLDMaskBoxParam & oTipBoxParam, QWidget *parent)
     m_animFadeOut->setEasingCurve(QEasingCurve::Linear);
     connect(m_animFadeOut, SIGNAL(finished()), this, SLOT(slotFadeout()));
 
-    // °²×°ÊÂ¼ş¹ıÂËÆ÷
+    // å®‰è£…äº‹ä»¶è¿‡æ»¤å™¨
     QWidget* wgt = m_oTipBoxParam.m_wgtOwner;
     while (wgt)
     {
@@ -198,7 +198,7 @@ QPoint GLDMaskBox::calcPosOfOwner()
 
     do
     {
-        // ¼ÆËãownerÎ»ÖÃ¶ÔÓ¦ÆÁÄ»ÖĞĞÄµÄÏóÏŞ
+        // è®¡ç®—ownerä½ç½®å¯¹åº”å±å¹•ä¸­å¿ƒçš„è±¡é™
         if (!m_oTipBoxParam.m_wgtOwner)
         {
             break;
@@ -211,34 +211,34 @@ QPoint GLDMaskBox::calcPosOfOwner()
 
         if (ptDelta.x() >= 0 && ptDelta.y() <= 0)
         {
-            // µÚÒ»ÏóÏŞ
+            // ç¬¬ä¸€è±¡é™
             pt = QPoint(ptGlobalOwnerCenter.x() - m_oTipBoxParam.m_wgtOwner->width()/2,
                             ptGlobalOwnerCenter.y() + m_oTipBoxParam.m_wgtOwner->height()/2);
             pt += QPoint(-this->width()/2, 0);
         }
         else if (ptDelta.x() <= 0 && ptDelta.y() <= 0)
         {
-            // µÚ¶şÏóÏŞ
+            // ç¬¬äºŒè±¡é™
             pt = QPoint(ptGlobalOwnerCenter.x() + m_oTipBoxParam.m_wgtOwner->width()/2,
                             ptGlobalOwnerCenter.y() + m_oTipBoxParam.m_wgtOwner->height()/2);
             pt += QPoint(-this->width()/2, 0);
         }
         else if (ptDelta.x() <= 0 && ptDelta.y() >= 0)
         {
-            // µÚÈıÏóÏŞ
+            // ç¬¬ä¸‰è±¡é™
             pt = QPoint(ptGlobalOwnerCenter.x() + m_oTipBoxParam.m_wgtOwner->width()/2,
                             ptGlobalOwnerCenter.y() - m_oTipBoxParam.m_wgtOwner->height()/2);
             pt += QPoint(-this->width()/2, -this->height());
         }
         else if (ptDelta.x() >= 0 && ptDelta.y() >= 0)
         {
-            // µÚËÄÏóÏŞ
+            // ç¬¬å››è±¡é™
             pt = QPoint(ptGlobalOwnerCenter.x() - m_oTipBoxParam.m_wgtOwner->width()/2,
                         ptGlobalOwnerCenter.y() - m_oTipBoxParam.m_wgtOwner->height()/2);
             pt += QPoint(-this->width()/2, -this->height());
         }
 
-        // ³¬³öÆÁÄ»·¶Î§µÄĞ£×¼
+        // è¶…å‡ºå±å¹•èŒƒå›´çš„æ ¡å‡†
         QRect rcThis(pt, pt + QPoint(this->width(), this->height()));
         QRect rcScreen = QApplication::desktop()->screenGeometry();
 
@@ -340,12 +340,12 @@ void GLDMaskBox::showEvent(QShowEvent* event)
     m_labelTextBody->setFont(m_oTipBoxParam.m_bodyFont);
     m_labelTextBody->setText(m_oTipBoxParam.m_strBody);
 
-    //ÎªÁËÉèÖÃĞĞ¸ß,²ÉÓÃHTML,html»»ĞĞÎª <br/>
+    //ä¸ºäº†è®¾ç½®è¡Œé«˜,é‡‡ç”¨HTML,htmlæ¢è¡Œä¸º <br/>
     m_oTipBoxParam.m_strBody.replace("\n", "<br/>");
     m_labelTextBody->setText(QString("<p style=\"line-height:%1px\">%2</p>")
         .arg(m_oTipBoxParam.m_nRowHeight).arg(m_oTipBoxParam.m_strBody));
 
-    // ÉèÖÃ¸ù¾İÄÚÈİµ÷ÕûÆøÅİÌáÊ¾µÄ´óĞ¡
+    // è®¾ç½®æ ¹æ®å†…å®¹è°ƒæ•´æ°”æ³¡æç¤ºçš„å¤§å°
     //this->layout()->setSizeConstraint(QLayout::SetFixedSize);
     m_labelTextBody->adjustSize();
 
@@ -433,7 +433,7 @@ void GLDMaskBox::paintEvent(QPaintEvent * event)
 
         this->move(calcPosOfOwner());
 
-        // ÉèÖÃ½¥±ä»­Ë¢
+        // è®¾ç½®æ¸å˜ç”»åˆ·
 //        QRect rc = this->rect();
 //        QLinearGradient linear(
 //            rc.topLeft(),
@@ -469,7 +469,7 @@ void GLDMaskBox::paintEvent(QPaintEvent * event)
 
 
 
-        // ½¨ÔìtipĞÎ×´
+        // å»ºé€ tipå½¢çŠ¶
         QPainterPath path = this->buildPathRoundRectTip();
 
         QPainter painter(this);
@@ -496,7 +496,7 @@ void GLDMaskBox::paintEvent(QPaintEvent * event)
 
 QPainterPath GLDMaskBox::buildPathRoundRectTip()
 {
-    // ½¨Á¢Ô²½Ç¾ØĞÎtipÂ·¾¶
+    // å»ºç«‹åœ†è§’çŸ©å½¢tipè·¯å¾„
     QPainterPath path;
 
     do
@@ -520,12 +520,12 @@ QPainterPath GLDMaskBox::buildPathRoundRectTip()
             break;
         }
 
-        // Ìí¼ÓÔ²½Ç¾ØĞÎ
+        // æ·»åŠ åœ†è§’çŸ©å½¢
         path.addRoundedRect(rc, 5, 5);
 
-        // ¼ÆËã¼ıÍ·£¨°´ÕÕÆÁÄ»×ø±ê½øĞĞ¼ÆËã£©
+        // è®¡ç®—ç®­å¤´ï¼ˆæŒ‰ç…§å±å¹•åæ ‡è¿›è¡Œè®¡ç®—ï¼‰
 
-        // ¼ÆËãµÚÒ»¸ö½»µã£¨ÓëÍâÎ§£©
+        // è®¡ç®—ç¬¬ä¸€ä¸ªäº¤ç‚¹ï¼ˆä¸å¤–å›´ï¼‰
         QPoint ptOwnerCenter = m_oTipBoxParam.m_wgtOwner->mapToGlobal(
                     m_oTipBoxParam.m_wgtOwner->rect().center());
         QPoint ptThisCenter = this->mapToGlobal(this->rect().center());
@@ -544,7 +544,7 @@ QPainterPath GLDMaskBox::buildPathRoundRectTip()
 
         QPoint ptArrow1 = pt1.isNull() ? pt2.toPoint() : pt1.toPoint();
 
-        // ¼ÆËãÊ£ÏÂÁ½¸ö½»µã£¨ÓëÄÚÎ§£©
+        // è®¡ç®—å‰©ä¸‹ä¸¤ä¸ªäº¤ç‚¹ï¼ˆä¸å†…å›´ï¼‰
         double dR = 0;
         double dAngle = 0;
 
@@ -624,7 +624,7 @@ GLDMaskBox* GLDMaskBox::showTipBox(QWidget* wgtOwner, const QString& strTitle, c
             break;
         }
 
-        // Èç¹ûownerºÍÄÚÈİÏàÍ¬,ÈÏÎªÊÇÍ¬Ò»¸ö,²»¿É·´¸´µ¯³ö
+        // å¦‚æœownerå’Œå†…å®¹ç›¸åŒ,è®¤ä¸ºæ˜¯åŒä¸€ä¸ª,ä¸å¯åå¤å¼¹å‡º
         if (!GLDMaskBox::m_pTipBox.isNull())
         {
             if (wgtOwner == GLDMaskBox::m_pTipBox->tipBoxParam().m_wgtOwner
@@ -676,7 +676,7 @@ GLDMaskBox* GLDMaskBox::showTipBox(GLDMaskBoxParam* pParam)
         }
 
 
-        // Èç¹ûownerºÍÄÚÈİÏàÍ¬£¬ÈÏÎªÊÇÍ¬Ò»¸ö£¬²»¿É·´¸´µ¯³ö
+        // å¦‚æœownerå’Œå†…å®¹ç›¸åŒï¼Œè®¤ä¸ºæ˜¯åŒä¸€ä¸ªï¼Œä¸å¯åå¤å¼¹å‡º
 //         if (!GLDTipBox::m_pTipBox.isNull())
 //         {
 //             if (pParam->m_wgtOwner == GLDTipBox::m_pTipBox->tipBoxParam().m_wgtOwner

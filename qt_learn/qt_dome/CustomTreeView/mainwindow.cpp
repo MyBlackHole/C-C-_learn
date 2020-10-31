@@ -22,7 +22,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     m_comboBox = new QComboBox(this);
     QStringList strList;
-    strList << QStringLiteral("ÑùÊ½Ò»") << QStringLiteral("ÑùÊ½¶þ") << QStringLiteral("ÑùÊ½Èý");
+    strList << QStringLiteral("æ ·å¼ä¸€") << QStringLiteral("æ ·å¼äºŒ") << QStringLiteral("æ ·å¼ä¸‰");
     for (int i = 0; i < strList.count(); ++i)
     {
         m_comboBox->addItem(strList.at(i));
@@ -55,10 +55,10 @@ MainWindow::MainWindow(QWidget *parent)
     m_closeButton = new QPushButton(this);
     m_closeButton->setFixedSize(27, 22);
     m_closeButton->setObjectName("closeButton");
-    m_closeButton->setToolTip(QStringLiteral("¹Ø±Õ"));
+    m_closeButton->setToolTip(QStringLiteral("å…³é—­"));
 
     m_label->setObjectName("titleLabel");
-    m_label->setText(QStringLiteral("×Ô¶¨ÒåTreeView"));
+    m_label->setText(QStringLiteral("è‡ªå®šä¹‰TreeView"));
 
     QHBoxLayout *titleLayout = new QHBoxLayout();
     titleLayout->addWidget(m_label);
@@ -273,7 +273,7 @@ bool MainWindow::nativeEvent(const QByteArray &eventType, void *message, long *r
         int nX = GET_X_LPARAM(param->lParam) - this->geometry().x();
         int nY = GET_Y_LPARAM(param->lParam) - this->geometry().y();
 
-        //Ö¸¶¨±êÌâÀ¸ÇøÓò
+        //æŒ‡å®šæ ‡é¢˜æ åŒºåŸŸ
         if (this->childAt(nX, nY))
         {
             return false;
@@ -283,7 +283,7 @@ bool MainWindow::nativeEvent(const QByteArray &eventType, void *message, long *r
             *result = HTCAPTION;
         }
 
-        //Èç¹û´°¿Ú×î´ó»¯ÁË£¬Ôò²»Ö§³Öresize
+        //å¦‚æžœçª—å£æœ€å¤§åŒ–äº†ï¼Œåˆ™ä¸æ”¯æŒresize
         if (IsZoomed(hWnd))
             return true;
 
@@ -322,8 +322,8 @@ void MainWindow::treeViewCustomContextMenuRequested(const QPoint &pos)
 
         QAction *expandAllAction = new QAction(m_menu);
         QAction *unExpandAllAction = new QAction(m_menu);
-        expandAllAction->setText(QStringLiteral("È«²¿Õ¹¿ª"));
-        unExpandAllAction->setText(QStringLiteral("È«²¿ÕÛµþ"));
+        expandAllAction->setText(QStringLiteral("å…¨éƒ¨å±•å¼€"));
+        unExpandAllAction->setText(QStringLiteral("å…¨éƒ¨æŠ˜å "));
         m_menu->addAction(expandAllAction);
         m_menu->addAction(unExpandAllAction);
 

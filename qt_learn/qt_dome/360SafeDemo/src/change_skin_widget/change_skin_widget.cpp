@@ -52,14 +52,14 @@ void ChangeSkinWidget::changeSkin(QString pixmap_name, QString skin_name, QStrin
     QString background_name = pixmap_name + "_big";
     this->pixmap_name = background_name;
 
-    //更改皮肤背景
+    //鏇存敼鐨偆鑳屾櫙
     QPixmap pixmap(background_name);
     skin_label->setPixmap(pixmap);
 
-    //更改皮肤名称
+    //鏇存敼鐨偆鍚嶇О
     skin_name_label->setText(skin_name);
 
-    //更改下载次数
+    //鏇存敼涓嬭浇娆℃暟
     download_count_label->setText(tr("download count:") + download_count);
 }
 
@@ -67,7 +67,7 @@ void ChangeSkinWidget::paintEvent(QPaintEvent *)
 {
     if(mouse_enter)
     {
-        //绘制边框
+        //缁樺埗杈规
         QPainter painter(this);
         QPen pen(QColor(210, 225, 230));
         painter.setPen(pen);
@@ -77,7 +77,7 @@ void ChangeSkinWidget::paintEvent(QPaintEvent *)
 
 void ChangeSkinWidget::mousePressEvent(QMouseEvent * event)
 {
-    //只能是鼠标左键移动和改变大小
+    //鍙兘鏄紶鏍囧乏閿Щ鍔ㄥ拰鏀瑰彉澶у皬
     if(event->button() == Qt::LeftButton)
     {
         mouse_press = true;

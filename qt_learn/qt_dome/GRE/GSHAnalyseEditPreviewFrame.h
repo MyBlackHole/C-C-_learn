@@ -1,10 +1,10 @@
 /****************************************************************************************************
 
-  ±¨¸æ±à¼­
+  æŠ¥å‘Šç¼–è¾‘
 
-  ×÷Õß: jiangjb 2015-03-06
-  ±¸×¢: ±¨¸æ±à¼­
-  ÉóºË:
+  ä½œè€…: jiangjb 2015-03-06
+  å¤‡æ³¨: æŠ¥å‘Šç¼–è¾‘
+  å®¡æ ¸:
 
   Copyright (c) 1994-2014 Glodon Corporation
 
@@ -95,13 +95,13 @@ private:
         ginFontColor
     };
 
-    void addMacroToPopMenu(); //½«ºê²åÈëÓÒ¼ü²Ëµ¥
+    void addMacroToPopMenu(); //å°†å®æ’å…¥å³é”®èœå•
     void addMacroItem(const GMap<GString, GString> &macroList, const GString &parentURL);
 
-    void getMacrosInContent(const GString &content, GStrings &macros); // »ñÈ¡ËùÓĞºê
-    void getMacroValue(GString &macro, const GStrings &macroList); // ²»´øºê£¬²»´ø¸ñÊ½µÄÄÚÈİ
-    void macroValueWithPattern(GString &macro, const GStrings &macroList); // ²»´øºê£¬´ø¸ñÊ½µÄÄÚÈİ
-    GString getValueByMacro(const GString &macro); // ¸ù¾İºêÃû»ñÈ¡¶ÔÓ¦µÄÖµ
+    void getMacrosInContent(const GString &content, GStrings &macros); // è·å–æ‰€æœ‰å®
+    void getMacroValue(GString &macro, const GStrings &macroList); // ä¸å¸¦å®ï¼Œä¸å¸¦æ ¼å¼çš„å†…å®¹
+    void macroValueWithPattern(GString &macro, const GStrings &macroList); // ä¸å¸¦å®ï¼Œå¸¦æ ¼å¼çš„å†…å®¹
+    GString getValueByMacro(const GString &macro); // æ ¹æ®å®åè·å–å¯¹åº”çš„å€¼
 
     void attachPlugins();
     void detachPlugins();
@@ -218,11 +218,11 @@ private:
     GLDAction *m_pActCopy;
     GLDAction *m_pActPaste;
 
-    GLDAction *m_pActProjInfo; // µ¥Î»¹¤³ÌĞÅÏ¢
-    GLDAction *m_pActProjCharacter; //¹¤³ÌÌØÕ÷
+    GLDAction *m_pActProjInfo; // å•ä½å·¥ç¨‹ä¿¡æ¯
+    GLDAction *m_pActProjCharacter; //å·¥ç¨‹ç‰¹å¾
 
-    GLDAction *m_pActEntityInfo; //±ê¶Î¹¤³ÌÏîÄ¿ĞÅÏ¢
-    GLDAction *m_pActEntityExtra; //±ê¶Î¹¤³Ì¸½¼ÓĞÅÏ¢
+    GLDAction *m_pActEntityInfo; //æ ‡æ®µå·¥ç¨‹é¡¹ç›®ä¿¡æ¯
+    GLDAction *m_pActEntityExtra; //æ ‡æ®µå·¥ç¨‹é™„åŠ ä¿¡æ¯
 
     bool m_bEditable;
     int  m_eBold;

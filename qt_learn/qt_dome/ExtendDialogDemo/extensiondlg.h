@@ -20,10 +20,10 @@ private slots:
 
 private:
     Ui::extensiondlg *ui;
-    void createBaseInfo();           	//实现基本对话窗体部分
-    void createDetailInfo();            //实现扩展窗体部分
-    QWidget *baseWidget;                //基本对话窗体部分
-    QWidget *detailWidget;            	//扩展窗体部分
+    void createBaseInfo();           	//瀹炵幇鍩烘湰瀵硅瘽绐椾綋閮ㄥ垎
+    void createDetailInfo();            //瀹炵幇鎵╁睍绐椾綋閮ㄥ垎
+    QWidget *baseWidget;                //鍩烘湰瀵硅瘽绐椾綋閮ㄥ垎
+    QWidget *detailWidget;            	//鎵╁睍绐椾綋閮ㄥ垎
 };
 
 #endif // EXTENSIONDLG_H

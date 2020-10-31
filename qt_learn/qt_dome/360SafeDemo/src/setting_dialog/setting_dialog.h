@@ -38,71 +38,71 @@ private:
     void initTab6();
 
 private:
-    QPoint move_point; //ÒÆ¶¯µÄ¾àÀë
-    bool mouse_press; //°´ÏÂÊó±ê×ó¼ü
+    QPoint move_point; //ç§»åŠ¨çš„è·ç¦»
+    bool mouse_press; //æŒ‰ä¸‹é¼ æ ‡å·¦é”®
 
-    QHBoxLayout *title_layout; //±êÌâ²¼¾Ö
-    QLabel *title_icon_label; //±êÌâÍ¼±ê
-    QLabel *title_label; //±êÌâ
-    PushButton *close_button; //¹Ø±Õ°´Å¥
+    QHBoxLayout *title_layout; //æ ‡é¢˜å¸ƒå±€
+    QLabel *title_icon_label; //æ ‡é¢˜å›¾æ ‡
+    QLabel *title_label; //æ ‡é¢˜
+    PushButton *close_button; //å…³é—­æŒ‰é’®
 
-    QHBoxLayout *bottom_layout; //µ×²¿²¼¾Ö
-    QPushButton *ok_button; //È·¶¨°´Å¥
-    QPushButton *cancel_button; //È¡Ïû°´Å¥
+    QHBoxLayout *bottom_layout; //åº•éƒ¨å¸ƒå±€
+    QPushButton *ok_button; //ç¡®å®šæŒ‰é’®
+    QPushButton *cancel_button; //å–æ¶ˆæŒ‰é’®
 
     QTabWidget *tab_widget;
 
-    QWidget *tab1; //Éı¼¶·½Ê½
+    QWidget *tab1; //å‡çº§æ–¹å¼
     QGroupBox *tab1_group_box;
-    QRadioButton *auto_rise_button; //×Ô¶¯Éı¼¶
-    QRadioButton *not_auto_rise_button; //²»×Ô¶¯Éı¼¶
-    QCheckBox *rise_mummy_check_box; //²»Éı¼¶µ«±¸ÓÃÄ¾Âí¿â
-    QCheckBox *game_check_box; //ÓÎÏ·Ê±²»Éı¼¶
-    QCheckBox *g3_check_box; //3GÉÏÍøÊ±²»Éı¼¶
-    QCheckBox *p2p_check_box; //Ê¹ÓÃp2p/p2s¼¼ÊõÎªÉı¼¶³ÌĞò¼ÓËÙ
-    QCheckBox *mummy_check_box; //±¸ÓÃÄ¾Âí¿âÉı¼¶Íê³ÉºóÓÒÏÂ½ÇÌáÊ¾
+    QRadioButton *auto_rise_button; //è‡ªåŠ¨å‡çº§
+    QRadioButton *not_auto_rise_button; //ä¸è‡ªåŠ¨å‡çº§
+    QCheckBox *rise_mummy_check_box; //ä¸å‡çº§ä½†å¤‡ç”¨æœ¨é©¬åº“
+    QCheckBox *game_check_box; //æ¸¸æˆæ—¶ä¸å‡çº§
+    QCheckBox *g3_check_box; //3Gä¸Šç½‘æ—¶ä¸å‡çº§
+    QCheckBox *p2p_check_box; //ä½¿ç”¨p2p/p2sæŠ€æœ¯ä¸ºå‡çº§ç¨‹åºåŠ é€Ÿ
+    QCheckBox *mummy_check_box; //å¤‡ç”¨æœ¨é©¬åº“å‡çº§å®Œæˆåå³ä¸‹è§’æç¤º
 
-    QWidget *tab2; //¸ß¼¶ÉèÖÃ
+    QWidget *tab2; //é«˜çº§è®¾ç½®
     QGroupBox *tab2_group_box1;
     QGroupBox *tab2_group_box2;
     QGroupBox *tab2_group_box3;
-    QCheckBox *auto_start_check_box; //¿ª»ú×ÔÆô¶¯
-    QCheckBox *remove_own_check_box; //½â³ıÕ¼ÓĞ
-    QCheckBox *strong_remove_check_box; //Ç¿Á¦É¾³ı
-    QCheckBox *mummy_kill_check_box; //Ä¾ÂíÔÆ²éÉ±
-    QCheckBox *display_count_check_box; //ÏÔÊ¾Èí¼şÉı¼¶Êı
+    QCheckBox *auto_start_check_box; //å¼€æœºè‡ªå¯åŠ¨
+    QCheckBox *remove_own_check_box; //è§£é™¤å æœ‰
+    QCheckBox *strong_remove_check_box; //å¼ºåŠ›åˆ é™¤
+    QCheckBox *mummy_kill_check_box; //æœ¨é©¬äº‘æŸ¥æ€
+    QCheckBox *display_count_check_box; //æ˜¾ç¤ºè½¯ä»¶å‡çº§æ•°
 
-    QWidget *tab3; //ÌåÑéÉèÖÃ
+    QWidget *tab3; //ä½“éªŒè®¾ç½®
     QGroupBox *tab3_group_box1;
     QGroupBox *tab3_group_box2;
-    QRadioButton *auto_check_button; //Ã¿´ÎÆô¶¯×Ô¶¯Ìå¼ì
-    QRadioButton *first_check_button; //Ê×´Î¿ªÆôÌå¼ì
-    QRadioButton *hand_check_button; //ÊÖ¶¯½øĞĞÌå¼ì
-    QRadioButton *select_quit_button; //Ñ¡ÔñÍË³ö·½Ê½
-    QRadioButton *backstage_mode_button; //ºóÌ¨Ä£Ê½
-    QRadioButton *immediacy_close_button; //Ö±½Ó¹Ø±Õ
+    QRadioButton *auto_check_button; //æ¯æ¬¡å¯åŠ¨è‡ªåŠ¨ä½“æ£€
+    QRadioButton *first_check_button; //é¦–æ¬¡å¼€å¯ä½“æ£€
+    QRadioButton *hand_check_button; //æ‰‹åŠ¨è¿›è¡Œä½“æ£€
+    QRadioButton *select_quit_button; //é€‰æ‹©é€€å‡ºæ–¹å¼
+    QRadioButton *backstage_mode_button; //åå°æ¨¡å¼
+    QRadioButton *immediacy_close_button; //ç›´æ¥å…³é—­
 
-    QWidget *tab4; //ÓÃ»§ÉèÖÃ
+    QWidget *tab4; //ç”¨æˆ·è®¾ç½®
     QGroupBox *tab4_group_box;
-    QCheckBox *diaplay_experience_check_box; //Íê³ÉÈÎÎñÏÔÊ¾»ñÈ¡¾­ÑéÖµµÄ¶¯Ì¬ÌáĞÑ
-    QCheckBox *diaplay_login_check_box; //×Ô¶¯µÇÂ¼ºóÏÔÊ¾µÇÂ¼ÌáÊ¾´°¿Ú
-    QCheckBox *tray_quit_check_box; //ÍĞÅÌÍË³öµÇÂ¼ºóÏÔÊ¾ÌáÊ¾´°¿Ú
-    QCheckBox *new_character_check_box; //ÓĞĞÂÌØÈ¨Ê±ÏÔÊ¾Í¨Öª´°¿Ú
-    QCheckBox *rise_remind_check_box; //Éı¼¶ÌáĞÑÍ¨Öª´°¿Ú
+    QCheckBox *diaplay_experience_check_box; //å®Œæˆä»»åŠ¡æ˜¾ç¤ºè·å–ç»éªŒå€¼çš„åŠ¨æ€æé†’
+    QCheckBox *diaplay_login_check_box; //è‡ªåŠ¨ç™»å½•åæ˜¾ç¤ºç™»å½•æç¤ºçª—å£
+    QCheckBox *tray_quit_check_box; //æ‰˜ç›˜é€€å‡ºç™»å½•åæ˜¾ç¤ºæç¤ºçª—å£
+    QCheckBox *new_character_check_box; //æœ‰æ–°ç‰¹æƒæ—¶æ˜¾ç¤ºé€šçŸ¥çª—å£
+    QCheckBox *rise_remind_check_box; //å‡çº§æé†’é€šçŸ¥çª—å£
 
-    QWidget *tab5; //¸ÄÉÆ¼Æ»®
+    QWidget *tab5; //æ”¹å–„è®¡åˆ’
     QGroupBox *tab5_group_box;
-    QCheckBox *improve_plan_check_box;  //²Î¼Ó¡°360ÓÃ»§Ìå¼ì¸ÄÉÆ¼Æ»®¡±
-    QPushButton *understand_detail_button; //ÁË½âÏêÇé
+    QCheckBox *improve_plan_check_box;  //å‚åŠ â€œ360ç”¨æˆ·ä½“æ£€æ”¹å–„è®¡åˆ’â€
+    QPushButton *understand_detail_button; //äº†è§£è¯¦æƒ…
 
-    QWidget *tab6; //ÔÆ°²È«¼Æ»®
+    QWidget *tab6; //äº‘å®‰å…¨è®¡åˆ’
     QGroupBox *tab6_group_box1;
     QGroupBox *tab6_group_box2;
-    QLabel *file_safe_label; //ÎÄ¼ş°²È«³ĞÅµ
-    QLabel *internet_safe_label; //ÍøÖ·°²È«³ĞÅµ
-    QCheckBox *file_safe_check_box; //¼ÓÈë360¡°ÎÄ¼şÔÆ°²È«¼Æ»®¡±
-    QCheckBox *internet_safe_check_box; //¼ÓÈë360¡°ÍøÖ·ÔÆ°²È«¼Æ»®¡±
-    QPushButton *look_privacy_button; //²é¿´360ÓÃ»§ÒşË½±£»¤³ĞÅµ
+    QLabel *file_safe_label; //æ–‡ä»¶å®‰å…¨æ‰¿è¯º
+    QLabel *internet_safe_label; //ç½‘å€å®‰å…¨æ‰¿è¯º
+    QCheckBox *file_safe_check_box; //åŠ å…¥360â€œæ–‡ä»¶äº‘å®‰å…¨è®¡åˆ’â€
+    QCheckBox *internet_safe_check_box; //åŠ å…¥360â€œç½‘å€äº‘å®‰å…¨è®¡åˆ’â€
+    QPushButton *look_privacy_button; //æŸ¥çœ‹360ç”¨æˆ·éšç§ä¿æŠ¤æ‰¿è¯º
 
 };
 

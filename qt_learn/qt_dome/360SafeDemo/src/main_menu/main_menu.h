@@ -1,10 +1,10 @@
 /**
-* @ÎÄ¼şÃû   main_menu.h
-* @°æ±¾ĞÅÏ¢ copyright  2012-2013 Sugon. All rights reserved.
-* @¹¦ÄÜÃèÊö
-*           MainMenuÀà°üº¬Ö÷²Ëµ¥£¬Ö÷Òª°üÀ¨£º¹ØÓÚÎÒÃÇ¡¢ÍË³öµÈ
-* @×÷Õß     ÍõÁÁ<wangliang@sugon.com>
-* @ÈÕÆÚ     2012-01-07
+* @æ–‡ä»¶å   main_menu.h
+* @ç‰ˆæœ¬ä¿¡æ¯ copyright  2012-2013 Sugon. All rights reserved.
+* @åŠŸèƒ½æè¿°
+*           MainMenuç±»åŒ…å«ä¸»èœå•ï¼Œä¸»è¦åŒ…æ‹¬ï¼šå…³äºæˆ‘ä»¬ã€é€€å‡ºç­‰
+* @ä½œè€…     ç‹äº®<wangliang@sugon.com>
+* @æ—¥æœŸ     2012-01-07
 */
 
 #ifndef MAINMENU_H
@@ -30,15 +30,15 @@ private:
     void createActions();
 
 private:
-    QAction *action_setting;        //ÉèÖÃ
-    QAction *action_new_character;  //ĞÂ°æÌØĞÔ
-    QAction *action_check_update;   //¼ì²é¸üĞÂ
-    QAction *action_change_company; //ÇĞ»»ÎªÆóÒµ°æ
-    QAction *action_help_online;    //ÔÚÏß°ïÖú
-    QAction *action_platform_help;  //ÂÛÌ³ÇóÖú
-    QAction *action_login_home;     //360ÍøÕ¾
-    QAction *action_protect;        //ÒşË½±£»¤
-    QAction *action_about_us;       //¹ØÓÚÎÒÃÇ
+    QAction *action_setting;        //è®¾ç½®
+    QAction *action_new_character;  //æ–°ç‰ˆç‰¹æ€§
+    QAction *action_check_update;   //æ£€æŸ¥æ›´æ–°
+    QAction *action_change_company; //åˆ‡æ¢ä¸ºä¼ä¸šç‰ˆ
+    QAction *action_help_online;    //åœ¨çº¿å¸®åŠ©
+    QAction *action_platform_help;  //è®ºå›æ±‚åŠ©
+    QAction *action_login_home;     //360ç½‘ç«™
+    QAction *action_protect;        //éšç§ä¿æŠ¤
+    QAction *action_about_us;       //å…³äºæˆ‘ä»¬
 };
 
 #endif //MAINMENU_H

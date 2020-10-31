@@ -7,7 +7,7 @@ class QLabel;
 class ScanButtonWidget : public QWidget
 {
     Q_OBJECT
-    //×Ô¶¨ÒåÊôĞÔ£¬ÓÃÓÚÑùÊ½±í
+    //è‡ªå®šä¹‰å±æ€§ï¼Œç”¨äºæ ·å¼è¡¨
     Q_PROPERTY(QString animPix READ animPix WRITE setAnimPix DESIGNABLE true SCRIPTABLE true)
     Q_PROPERTY(int animNum READ animNum WRITE setAnimNum DESIGNABLE true SCRIPTABLE true)
     Q_PROPERTY(QString normalPix READ normalPix WRITE setNormalPix DESIGNABLE true SCRIPTABLE true)

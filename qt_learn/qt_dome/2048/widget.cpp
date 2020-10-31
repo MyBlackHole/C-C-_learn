@@ -3,9 +3,9 @@
 Widget::Widget(QWidget *parent)
     : QWidget(parent)
 {
-    // ³õÊ¼»¯×î¸ß·ÖÎª0
+    // åˆå§‹åŒ–æœ€é«˜åˆ†ä¸º0
     highScore = 0;
-    // ¶ÁÈ¡´æ´¢×î¸ß·ÖµÄÎÄ¼þ
+    // è¯»å–å­˜å‚¨æœ€é«˜åˆ†çš„æ–‡ä»¶
     QFile file("score.j");
     if (file.open(QIODevice::ReadOnly))
     {
@@ -13,47 +13,47 @@ Widget::Widget(QWidget *parent)
         file.close();
     }
 
-    // ¹¹ÔìÒ»¸öÓÎÏ·²¿¼þ¶ÔÏó
+    // æž„é€ ä¸€ä¸ªæ¸¸æˆéƒ¨ä»¶å¯¹è±¡
     gameWidget = new GameWidget(this);
     gameWidget->setGeometry(2, 200, 400, 400);
     connect(gameWidget, SIGNAL(ScoreInc(int)), this, SLOT(onScoreInc(int)));
     connect(gameWidget, SIGNAL(GameOver()), this, SLOT(onGameOver()));
     connect(gameWidget, SIGNAL(win()), this, SLOT(onWin()));
 
-    // ¹¹ÔìÒ»¸ö×ÖÌå¶ÔÏó
+    // æž„é€ ä¸€ä¸ªå­—ä½“å¯¹è±¡
     QFont font;
     font.setFamily("Consolas");
     font.setBold(true);
     font.setPixelSize(25);
 
-    // ¹¹ÔìÒ»¸ö°´Å¥¶ÔÏó
+    // æž„é€ ä¸€ä¸ªæŒ‰é’®å¯¹è±¡
     restartBtn = new QPushButton("Restart", this);
     restartBtn->setGeometry(100, 120, 200, 50);
     restartBtn->setFont(font);
     restartBtn->setStyleSheet(QString(BTNSTYLESHEET).arg(3).arg(15));
     connect(restartBtn, SIGNAL(clicked()), gameWidget, SLOT(restart()));
 
-    // ¹¹ÔìÒ»¸ö±êÇ©¶ÔÏó
+    // æž„é€ ä¸€ä¸ªæ ‡ç­¾å¯¹è±¡
     highScoreLbl = new QLabel(QString("High Score:\n%1").arg(highScore),this);
     highScoreLbl->setGeometry(209, 20, 180, 70);
     highScoreLbl->setFont(font);
     highScoreLbl->setAlignment(Qt::AlignCenter);
     highScoreLbl->setStyleSheet(QString(LBLSTYLESHEET).arg(5).arg(20));
 
-    // ¹¹ÔìÒ»¸ö±êÇ©¶ÔÏó
+    // æž„é€ ä¸€ä¸ªæ ‡ç­¾å¯¹è±¡
     scoreLbl = new QLabel("Score:\n0", this);
     scoreLbl->setGeometry(15, 20, 180, 70);
     scoreLbl->setFont(font);
     scoreLbl->setAlignment(Qt::AlignCenter);
     scoreLbl->setStyleSheet(QString(LBLSTYLESHEET).arg(5).arg(20));
 
-    // ÖØÖÃ´°¿Ú´óÐ¡
+    // é‡ç½®çª—å£å¤§å°
     //resize(404, 606);
 }
 
 Widget::~Widget()
 {
-    // ÊÍ·ÅÏà¹Ø¶ÔÏó
+    // é‡Šæ”¾ç›¸å…³å¯¹è±¡
     delete restartBtn;
     delete scoreLbl;
     delete highScoreLbl;
@@ -62,16 +62,16 @@ Widget::~Widget()
 
 void Widget::onScoreInc(int score)
 {
-    // ¸üÐÂ·ÖÊýÏÔÊ¾
+    // æ›´æ–°åˆ†æ•°æ˜¾ç¤º
     scoreLbl->setText(QString("Score:\n%1").arg(score));
-    // Èç¹ûµ±Ç°·ÖÊý¸ßÓÚ×î¸ß·Ö
+    // å¦‚æžœå½“å‰åˆ†æ•°é«˜äºŽæœ€é«˜åˆ†
     if (score > highScore)
     {
-        // ¸üÐÂ×î¸ß·Ö
+        // æ›´æ–°æœ€é«˜åˆ†
         highScore = score;
         highScoreLbl->setText(QString("High Score:\n%1").arg(highScore));
 
-        // ½«ÐÂµÄ×î¸ß·Ö´æÈëÎÄ¼þ
+        // å°†æ–°çš„æœ€é«˜åˆ†å­˜å…¥æ–‡ä»¶
         QFile file("score.j");
         file.open(QIODevice::WriteOnly);
         file.write((char *)&highScore, sizeof(highScore));
@@ -91,10 +91,10 @@ void Widget::onWin()
 
 void Widget::resizeEvent(QResizeEvent *)
 {
-    // ¼ÆËã¿í¶ÈºÍ¸ß¶ÈµÄËõ·Å±ÈÀý
+    // è®¡ç®—å®½åº¦å’Œé«˜åº¦çš„ç¼©æ”¾æ¯”ä¾‹
     ratioW = width() / 404.0;
     ratioH = height() / 606.0;
-    // ¹¹ÔìÒ»¸ö×ÖÌå¶ÔÏó
+    // æž„é€ ä¸€ä¸ªå­—ä½“å¯¹è±¡
     QFont font;
     font.setFamily("Consolas");
     font.setBold(true);
@@ -105,7 +105,7 @@ void Widget::resizeEvent(QResizeEvent *)
     restartBtn->setStyleSheet(QString(BTNSTYLESHEET).arg(3 * ratioW).arg(15 * ratioW));
     highScoreLbl->setStyleSheet(QString(LBLSTYLESHEET).arg(5 * ratioW).arg(20 * ratioW));
     scoreLbl->setStyleSheet(QString(LBLSTYLESHEET).arg(5 * ratioW).arg(20 * ratioW));
-    // ÖØÖÃ×Ó²¿¼þ´óÐ¡ºÍÎ»ÖÃ
+    // é‡ç½®å­éƒ¨ä»¶å¤§å°å’Œä½ç½®
     gameWidget->setGeometry(2 * ratioW, 200 * ratioH, 400 * ratioW, 400 * ratioH);
     restartBtn->setGeometry(100 * ratioW, 120 * ratioH, 200 * ratioW, 50 * ratioH);
     highScoreLbl->setGeometry(209 * ratioW, 20 * ratioH, 180 * ratioW, 70 * ratioH);

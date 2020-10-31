@@ -4,39 +4,39 @@
 InputDlg::InputDlg(QWidget *parent) :
     QDialog(parent)
 {
-    setWindowTitle(QStringLiteral("±ê×¼ÊäÈë¶Ô»°¿òµÄÊµÀý"));
+    setWindowTitle(QStringLiteral("æ ‡å‡†è¾“å…¥å¯¹è¯æ¡†çš„å®žä¾‹"));
 
     nameLabel1 =new QLabel;
-    nameLabel1->setText(QStringLiteral("Ãû×Ö:"));
+    nameLabel1->setText(QStringLiteral("åå­—:"));
     nameLabel2 =new QLabel;
-    nameLabel2->setText(QStringLiteral("ÕÅÈý"));                    	//ÐÕÃûµÄ³õÊ¼Öµ
+    nameLabel2->setText(QStringLiteral("å¼ ä¸‰"));                    	//å§“åçš„åˆå§‹å€¼
     nameLabel2->setFrameStyle(QFrame::Panel|QFrame::Sunken);
     nameBtn =new QPushButton;
-    nameBtn->setText(QStringLiteral("ÐÞ¸ÄÐÕÃû"));
+    nameBtn->setText(QStringLiteral("ä¿®æ”¹å§“å"));
 
     sexLabel1 =new QLabel;
-    sexLabel1->setText(QStringLiteral("ÐÔ±ð:"));
+    sexLabel1->setText(QStringLiteral("æ€§åˆ«:"));
     sexLabel2 =new QLabel;
-    sexLabel2->setText(QStringLiteral("ÄÐ"));                       	//ÐÔ±ðµÄ³õÊ¼Öµ
+    sexLabel2->setText(QStringLiteral("ç”·"));                       	//æ€§åˆ«çš„åˆå§‹å€¼
     sexLabel2->setFrameStyle(QFrame::Panel|QFrame::Sunken);
     sexBtn =new QPushButton;
-    sexBtn->setText(QStringLiteral("ÐÞ¸ÄÐÔ±ð"));
+    sexBtn->setText(QStringLiteral("ä¿®æ”¹æ€§åˆ«"));
 
     ageLabel1 =new QLabel;
-    ageLabel1->setText(QStringLiteral("ÄêÁä:"));
+    ageLabel1->setText(QStringLiteral("å¹´é¾„:"));
     ageLabel2 =new QLabel;
-    ageLabel2->setText(QStringLiteral("21"));                       //ÄêÁäµÄ³õÊ¼Öµ
+    ageLabel2->setText(QStringLiteral("21"));                       //å¹´é¾„çš„åˆå§‹å€¼
     ageLabel2->setFrameStyle(QFrame::Panel|QFrame::Sunken);
     ageBtn =new QPushButton;
-    ageBtn->setText(QStringLiteral("ÐÞ¸ÄÄêÁä"));
+    ageBtn->setText(QStringLiteral("ä¿®æ”¹å¹´é¾„"));
 
     scoreLabel1 =new QLabel;
-    scoreLabel1->setText(QStringLiteral("³É¼¨:"));
+    scoreLabel1->setText(QStringLiteral("æˆç»©:"));
     scoreLabel2 =new QLabel;
-    scoreLabel2->setText(QStringLiteral("80"));                 	//³É¼¨µÄ³õÊ¼Öµ
+    scoreLabel2->setText(QStringLiteral("80"));                 	//æˆç»©çš„åˆå§‹å€¼
     scoreLabel2->setFrameStyle(QFrame::Panel|QFrame::Sunken);
     scoreBtn =new QPushButton;
-    scoreBtn->setText(QStringLiteral("ÐÞ¸Ä³É¼¨"));
+    scoreBtn->setText(QStringLiteral("ä¿®æ”¹æˆç»©"));
 
     mainLayout =new QGridLayout(this);
     mainLayout->addWidget(nameLabel1,0,0);
@@ -67,7 +67,7 @@ InputDlg::InputDlg(QWidget *parent) :
 void InputDlg::ChangeName()
 {
     bool ok;
-    QString text=QInputDialog::getText(this,QStringLiteral("±ê×¼×Ö·û´®ÊäÈë¶Ô»°¿ò"),QStringLiteral("ÇëÊäÈëÐÕÃû£º"), QLineEdit::Normal,nameLabel2->text(),&ok);
+    QString text=QInputDialog::getText(this,QStringLiteral("æ ‡å‡†å­—ç¬¦ä¸²è¾“å…¥å¯¹è¯æ¡†"),QStringLiteral("è¯·è¾“å…¥å§“åï¼š"), QLineEdit::Normal,nameLabel2->text(),&ok);
     if (ok && !text.isEmpty())
         nameLabel2->setText(text);
 }

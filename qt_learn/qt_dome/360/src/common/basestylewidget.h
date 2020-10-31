@@ -1,4 +1,4 @@
-//���ֱ�Ӽ̳�QWidget�Ĵ��ڲ���ʹ��qss��ʽ��
+//解决直接继承QWidget的窗口不能使用qss样式表
 
 #ifndef BASESTYLEWIDGET_H
 #define BASESTYLEWIDGET_H

@@ -10,7 +10,7 @@ class myHelper: public QObject
 
 public:
 
-    //ÉèÖÃÎª¿ª»úÆô¶¯
+    //è®¾ç½®ä¸ºå¼€æœºå¯åŠ¨
     static void AutoRunWithSystem(bool IsAutoRun, QString AppName, QString AppPath)
     {
         QSettings *reg = new QSettings(
@@ -27,7 +27,7 @@ public:
         }
     }
 
-    //ÉèÖÃ±àÂëÎªUTF8
+    //è®¾ç½®ç¼–ç ä¸ºUTF8
     static void SetUTF8Code()
     {
 #if (QT_VERSION <= QT_VERSION_CHECK(5,0,0))
@@ -38,7 +38,7 @@ public:
 #endif
     }
 
-    //ÉèÖÃÆ¤·ôÑùÊ½
+    //è®¾ç½®çš®è‚¤æ ·å¼
     static void SetStyle(const QString &styleName)
     {
         QFile file(QString(":/qss/%1").arg(styleName));
@@ -48,7 +48,7 @@ public:
         qApp->setPalette(QPalette(QColor("#F0F0F0")));
     }
 
-    //¼ÓÔØÖĞÎÄ×Ö·û
+    //åŠ è½½ä¸­æ–‡å­—ç¬¦
     static void SetChinese()
     {
         QTranslator *translator = new QTranslator(qApp);
@@ -56,14 +56,14 @@ public:
         qApp->installTranslator(translator);
     }
 
-    //ÅĞ¶ÏÊÇ·ñÊÇIPµØÖ·
+    //åˆ¤æ–­æ˜¯å¦æ˜¯IPåœ°å€
     static bool IsIP(QString IP)
     {
         QRegExp RegExp("((2[0-4]\\d|25[0-5]|[01]?\\d\\d?)\\.){3}(2[0-4]\\d|25[0-5]|[01]?\\d\\d?)");
         return RegExp.exactMatch(IP);
     }
 
-    //ÑÓÊ±
+    //å»¶æ—¶
     static void Sleep(int sec)
     {
         QTime dieTime = QTime::currentTime().addMSecs(sec);
@@ -73,7 +73,7 @@ public:
         }
     }
 
-    //´°Ìå¾ÓÖĞÏÔÊ¾
+    //çª—ä½“å±…ä¸­æ˜¾ç¤º
     static void FormInCenter(QWidget *frm)
     {
         int frmX = frm->width();

@@ -20,18 +20,18 @@ MainWindow::MainWindow(QWidget *parent) :
     actionSeparator = new QAction(this);
     actionSeparator->setSeparator(true);
     UpdateMenus();
-    //ÓĞ×Ó´°¿Ú±»¼¤»î£¬Ôò¸üĞÂ²Ëµ¥À¸
+    //æœ‰å­çª—å£è¢«æ¿€æ´»ï¼Œåˆ™æ›´æ–°èœå•æ 
     connect(ui->mdiArea, SIGNAL(subWindowActivated(QMdiSubWindow*)), this, SLOT(UpdateMenus()));
 
-    window_mapper = new QSignalMapper(this);//´´½¨ĞÅºÅ·¢ÉúÆ÷
-    connect(window_mapper, SIGNAL(mapped(QWidget*)), this, SLOT(set_active_sub_window(QWidget*)));//Í¨¹ıĞÅºÅ·¢ÉúÆ÷ÉèÖÃ»î¶¯´°¿Ú
+    window_mapper = new QSignalMapper(this);//åˆ›å»ºä¿¡å·å‘ç”Ÿå™¨
+    connect(window_mapper, SIGNAL(mapped(QWidget*)), this, SLOT(set_active_sub_window(QWidget*)));//é€šè¿‡ä¿¡å·å‘ç”Ÿå™¨è®¾ç½®æ´»åŠ¨çª—å£
 
-    UpdateWindowMenu();//¸üĞÂ´°¿Ú×Ó²Ëµ¥
-    connect(ui->menuW, SIGNAL(aboutToShow()), this, SLOT(UpdateWindowMenu()));//µ±´°¿Ú×Ó²Ëµ¥½«Òª³öÏÖÊ±£¬¾Í´¥·¢¸üĞÂ´°¿Ú×Ó²Ëµ¥
+    UpdateWindowMenu();//æ›´æ–°çª—å£å­èœå•
+    connect(ui->menuW, SIGNAL(aboutToShow()), this, SLOT(UpdateWindowMenu()));//å½“çª—å£å­èœå•å°†è¦å‡ºç°æ—¶ï¼Œå°±è§¦å‘æ›´æ–°çª—å£å­èœå•
 
-    read_settings();//ÒòÎªÔÚÍË³ö´°¿ÚÊ±£¬Ö´ĞĞÁËwrite_settings()º¯Êı£¬¼´±£´æÁËÍË³ö´°¿ÚÊ±µÄ´°¿ÚÎ»ÖÃ£¬³ß´çµÈĞÅÏ¢¡£Òò´ËÏÂ´Î´ò¿ª¸Ã³ÌĞòÊ±£¬ÆäÎ»ÖÃ³ß´ç
-                    //µÈĞÅÏ¢»á±£Áô
-    init_window();//³õÊ¼»¯´°¿Ú
+    read_settings();//å› ä¸ºåœ¨é€€å‡ºçª—å£æ—¶ï¼Œæ‰§è¡Œäº†write_settings()å‡½æ•°ï¼Œå³ä¿å­˜äº†é€€å‡ºçª—å£æ—¶çš„çª—å£ä½ç½®ï¼Œå°ºå¯¸ç­‰ä¿¡æ¯ã€‚å› æ­¤ä¸‹æ¬¡æ‰“å¼€è¯¥ç¨‹åºæ—¶ï¼Œå…¶ä½ç½®å°ºå¯¸
+                    //ç­‰ä¿¡æ¯ä¼šä¿ç•™
+    init_window();//åˆå§‹åŒ–çª—å£
 }
 
 MainWindow::~MainWindow()
@@ -44,36 +44,36 @@ void MainWindow::on_actionNew_triggered()
 //    MyMdi *new_mdi = new MyMdi();
 //   ui->mdiArea->addSubWindow(new_mdi);
 
-    /*ÎªÊ²Ã´²»ÄÜÊ¹ÓÃÉÏÃæµÄ·½·¨ÄØ£¿ÒòÎªÉÏÃæµÄ·½·¨Ã»ÓĞÉæ¼°µ½ÎÄµµÄÚÈİ¸Ä±äÊ±£¬±ÈÈçÑ¡ÖĞÁËÎÄ×Ö£¬ÓĞ¹ı³·Ïú²Ù×÷µÈ¡£
-     ¼´Ê¹ÎÒÃÇÓÖUpdateMenus()º¯Êı£¬µ«ÊÇ¹ØÁªËüµÄconnectº¯ÊıµÄĞÅºÅÎªµ±ÓĞĞÂµÄ»î¶¯´°¿Ú³öÏÖÊ±£¬ËùÒÔÒ»µ©ĞÂ
-     µÄ»î¶¯´°¿Ú³öÏÖºó£¬ºóÃæ¸ÃÎÄµµÄÚÈİµÄ¸Ä±ä¾Í²»»á´¥·¢²Ëµ¥À¸ºÍ¹¤¾ßÀ¸¶ÔÓ¦actionµÄ±ä»¯ÁË¡£
+    /*ä¸ºä»€ä¹ˆä¸èƒ½ä½¿ç”¨ä¸Šé¢çš„æ–¹æ³•å‘¢ï¼Ÿå› ä¸ºä¸Šé¢çš„æ–¹æ³•æ²¡æœ‰æ¶‰åŠåˆ°æ–‡æ¡£å†…å®¹æ”¹å˜æ—¶ï¼Œæ¯”å¦‚é€‰ä¸­äº†æ–‡å­—ï¼Œæœ‰è¿‡æ’¤é”€æ“ä½œç­‰ã€‚
+     å³ä½¿æˆ‘ä»¬åˆUpdateMenus()å‡½æ•°ï¼Œä½†æ˜¯å…³è”å®ƒçš„connectå‡½æ•°çš„ä¿¡å·ä¸ºå½“æœ‰æ–°çš„æ´»åŠ¨çª—å£å‡ºç°æ—¶ï¼Œæ‰€ä»¥ä¸€æ—¦æ–°
+     çš„æ´»åŠ¨çª—å£å‡ºç°åï¼Œåé¢è¯¥æ–‡æ¡£å†…å®¹çš„æ”¹å˜å°±ä¸ä¼šè§¦å‘èœå•æ å’Œå·¥å…·æ å¯¹åº”actionçš„å˜åŒ–äº†ã€‚
     */
     MyMdi *new_mdi = CreateMyMdi();
-    new_mdi->NewFile();//ĞÂ½¨ÎÄ¼ş
+    new_mdi->NewFile();//æ–°å»ºæ–‡ä»¶
     new_mdi->show();
 }
 
 void MainWindow::on_actionOpen_triggered()
 {
-    QString file_name = QFileDialog::getOpenFileName(this);//ÊÖ¶¯Ñ¡ÔñĞèÒª´ò¿ªµÄÎÄ¼ş,ÆäÊµ·µ»ØµÄfile_nameÊÇ°üº¬Â·¾¶ÃûµÄÎÄ¼şÃû
+    QString file_name = QFileDialog::getOpenFileName(this);//æ‰‹åŠ¨é€‰æ‹©éœ€è¦æ‰“å¼€çš„æ–‡ä»¶,å…¶å®è¿”å›çš„file_nameæ˜¯åŒ…å«è·¯å¾„åçš„æ–‡ä»¶å
     if(!file_name.isEmpty())
         {
             QMdiSubWindow *existing_window = FindMdiChild(file_name);
-            if(existing_window) //Èç¹û¸ÃÎÄ¼ş¶ÔÓ¦´°¿ÚÒÑ¾­´ò¿ª
+            if(existing_window) //å¦‚æœè¯¥æ–‡ä»¶å¯¹åº”çª—å£å·²ç»æ‰“å¼€
             {
-                set_active_sub_window(existing_window);//ÉèÖÃ¸Ã´°¿ÚÎª»î¶¯´°¿Ú,ËäÈ»set_active_sub_windowÊÇ¸ÃÀàµÄ³ÉÔ±º¯Êı£¬µ«ÊÇ²»ÄÜÊ¹ÓÃ
-                                                        //ui->À´µ÷ÓÃ£¬Ã°Ê§ui->µ÷ÓÃµÄ¶¼ÊÇ¸ú½çÃæÏà¹Ø×Ô¶¯Éú³ÉµÄÒ»Ğ©Á¿
+                set_active_sub_window(existing_window);//è®¾ç½®è¯¥çª—å£ä¸ºæ´»åŠ¨çª—å£,è™½ç„¶set_active_sub_windowæ˜¯è¯¥ç±»çš„æˆå‘˜å‡½æ•°ï¼Œä½†æ˜¯ä¸èƒ½ä½¿ç”¨
+                                                        //ui->æ¥è°ƒç”¨ï¼Œå†’å¤±ui->è°ƒç”¨çš„éƒ½æ˜¯è·Ÿç•Œé¢ç›¸å…³è‡ªåŠ¨ç”Ÿæˆçš„ä¸€äº›é‡
                 return ;
             }
-            MyMdi *open_window = CreateMyMdi();//·ñÔòĞÂ½¨×Ó´°¿Ú,ÇÒ¼ÓÈëµ½¶àÎÄµµÈİÆ÷ÖĞ
+            MyMdi *open_window = CreateMyMdi();//å¦åˆ™æ–°å»ºå­çª—å£,ä¸”åŠ å…¥åˆ°å¤šæ–‡æ¡£å®¹å™¨ä¸­
             if(open_window->LoadFile(file_name))
                 {
-                    ui->statusBar->showMessage(QStringLiteral("´ò¿ªÎÄ¼ş³É¹¦"), 2000);//×´Ì¬À¸ÏÔÊ¾´ò¿ªÎÄ¼ş³É¹¦£¬³ÖĞø2Ãë
+                    ui->statusBar->showMessage(QStringLiteral("æ‰“å¼€æ–‡ä»¶æˆåŠŸ"), 2000);//çŠ¶æ€æ æ˜¾ç¤ºæ‰“å¼€æ–‡ä»¶æˆåŠŸï¼ŒæŒç»­2ç§’
                     open_window->show();
                 }
             else
                 {
-                    open_window->close();//´ò²»¿ª¸ÃÎÄ¼şÊ±£¬ÔòÏú»ÙĞÂ½¨µÄ´°¿Ú
+                    open_window->close();//æ‰“ä¸å¼€è¯¥æ–‡ä»¶æ—¶ï¼Œåˆ™é”€æ¯æ–°å»ºçš„çª—å£
                 }
         }
 }
@@ -83,11 +83,11 @@ MyMdi* MainWindow::CreateMyMdi()
     MyMdi *child = new MyMdi();
     ui->mdiArea->addSubWindow(child);
 
-    //¸ù¾İÊÇ·ñ¿É¸´ÖÆÀ´ÉèÖÃ¼ôÇĞ¸´ÖÆ¶¯×÷ÊÇ·ñ¿ÉÓÃ
+    //æ ¹æ®æ˜¯å¦å¯å¤åˆ¶æ¥è®¾ç½®å‰ªåˆ‡å¤åˆ¶åŠ¨ä½œæ˜¯å¦å¯ç”¨
     connect(child, SIGNAL(copyAvailable(bool)), ui->actionCopy, SLOT(setEnabled(bool)));
     connect(child, SIGNAL(copyAvailable(bool)), ui->actionCut, SLOT(setEnabled(bool)));
 
-    //¸ù¾İÎÄµµÊ±·ñ¿ÉÓÃ³·ÏúºÍ»Ö¸´À´ÉèÖÃÏàÓ¦µÄ³·Ïú»Ö¸´¶¯×÷ÊÇ·ñ¿ÉÓÃ
+    //æ ¹æ®æ–‡æ¡£æ—¶å¦å¯ç”¨æ’¤é”€å’Œæ¢å¤æ¥è®¾ç½®ç›¸åº”çš„æ’¤é”€æ¢å¤åŠ¨ä½œæ˜¯å¦å¯ç”¨
     connect(child->document(), SIGNAL(undoAvailable(bool)), ui->actionUndo, SLOT(setEnabled(bool)));
     connect(child->document(), SIGNAL(redoAvailable(bool)), ui->actionRedo, SLOT(setEnabled(bool)));
 
@@ -97,137 +97,137 @@ MyMdi* MainWindow::CreateMyMdi()
 
 QMdiSubWindow* MainWindow::FindMdiChild(const QString &file_name)
 {
-    QString canonical_file_path = QFileInfo(file_name).canonicalFilePath();//½âÊÍ¹ıºóµÄ¾ø¶ÔÂ·¾¶
+    QString canonical_file_path = QFileInfo(file_name).canonicalFilePath();//è§£é‡Šè¿‡åçš„ç»å¯¹è·¯å¾„
     foreach(QMdiSubWindow *window, ui->mdiArea->subWindowList())
         {
-            MyMdi *my_mdi = qobject_cast<MyMdi *>(window->widget());//qobject_castÎª½øĞĞÇ¿ÖÆÀàĞÍ×ª»»
-            if(my_mdi->CurrentFilePath() == canonical_file_path)//Èç¹ûÒÑ¾­´æÔÚ¸Ã´°¿Ú£¬Ôò·µ»Ø¡£±È½ÏµÄÊÇ¾ø¶ÔÂ·¾¶Ãû+ÎÄ¼şÃû
+            MyMdi *my_mdi = qobject_cast<MyMdi *>(window->widget());//qobject_castä¸ºè¿›è¡Œå¼ºåˆ¶ç±»å‹è½¬æ¢
+            if(my_mdi->CurrentFilePath() == canonical_file_path)//å¦‚æœå·²ç»å­˜åœ¨è¯¥çª—å£ï¼Œåˆ™è¿”å›ã€‚æ¯”è¾ƒçš„æ˜¯ç»å¯¹è·¯å¾„å+æ–‡ä»¶å
                 return window;
         }
-    return 0;//Ã»ÕÒµ½£¬Ôò·µ»Ø0
+    return 0;//æ²¡æ‰¾åˆ°ï¼Œåˆ™è¿”å›0
 }
 
 void MainWindow::set_active_sub_window(QWidget *window)
 {
     if(!window)
         return;
-    ui->mdiArea->setActiveSubWindow(qobject_cast<QMdiSubWindow*>(window));//½«µ±Ç°´°¿ÚÉèÖÃÎª¶àÎÄµµÖĞµÄ»î¶¯´°¿Ú
+    ui->mdiArea->setActiveSubWindow(qobject_cast<QMdiSubWindow*>(window));//å°†å½“å‰çª—å£è®¾ç½®ä¸ºå¤šæ–‡æ¡£ä¸­çš„æ´»åŠ¨çª—å£
 }
 
 MyMdi* MainWindow::GetActiveWindow()
 {
-//    //»ñµÃ×Ó´°¿Úºó»¹ĞèÒª»ñµÃÆäwidget()
+//    //è·å¾—å­çª—å£åè¿˜éœ€è¦è·å¾—å…¶widget()
 //    MyMdi *active_window = qobject_cast<MyMdi*>(ui->mdiArea->activeSubWindow()->widget());
 //    if(active_window)
 //        return active_window;
 //    else
-//        return 0;//ËäÈ»·µ»ØÀàĞÍÊÇÀàµÄÖ¸Õë£¬µ«ÊÇÕâÀïÒ²¿ÉÒÔ·µ»Ø0£¬±íÊ¾µÄÊÇ¿ÕÖ¸Õë¡£
-    /*ÉÏÃæµÄ·½·¨ÔÚºóÃæ»á±¨ÄÚ´æ´íÎó*/
+//        return 0;//è™½ç„¶è¿”å›ç±»å‹æ˜¯ç±»çš„æŒ‡é’ˆï¼Œä½†æ˜¯è¿™é‡Œä¹Ÿå¯ä»¥è¿”å›0ï¼Œè¡¨ç¤ºçš„æ˜¯ç©ºæŒ‡é’ˆã€‚
+    /*ä¸Šé¢çš„æ–¹æ³•åœ¨åé¢ä¼šæŠ¥å†…å­˜é”™è¯¯*/
     if(QMdiSubWindow *active_sub_window = ui->mdiArea->activeSubWindow())
-        return qobject_cast<MyMdi*>(active_sub_window->widget());//ÎªÊ²Ã´»¹Òªµ÷ÓÃwidget()ÄØ£¿
+        return qobject_cast<MyMdi*>(active_sub_window->widget());//ä¸ºä»€ä¹ˆè¿˜è¦è°ƒç”¨widget()å‘¢ï¼Ÿ
     else
         return 0;
 }
 
 void MainWindow::on_actionExit_triggered()
 {
-    qApp->closeAllWindows();//qAppÎªÈ«¾ÖÖ¸Õë£¬¹Ø±ÕËùÓĞ´°¿Ú
+    qApp->closeAllWindows();//qAppä¸ºå…¨å±€æŒ‡é’ˆï¼Œå…³é—­æ‰€æœ‰çª—å£
 }
 
 void MainWindow::on_actionSave_triggered()
 {
     if(GetActiveWindow() && GetActiveWindow()->Save())
-        ui->statusBar->showMessage(QStringLiteral("±£´æÎÄ¼ş³É¹¦"), 2000);//×´Ì¬À¸ÏÔÊ¾±£´æ³É¹¦×ÖÑù2Ãë
+        ui->statusBar->showMessage(QStringLiteral("ä¿å­˜æ–‡ä»¶æˆåŠŸ"), 2000);//çŠ¶æ€æ æ˜¾ç¤ºä¿å­˜æˆåŠŸå­—æ ·2ç§’
 
 }
 
 void MainWindow::on_actionSaveAs_triggered()
 {
     if(GetActiveWindow() && GetActiveWindow()->SaveAs())
-        ui->statusBar->showMessage(QStringLiteral("±£´æÎÄ¼ş³É¹¦"), 2000);//×´Ì¬À¸ÏÔÊ¾±£´æ³É¹¦×ÖÑù2Ãë
+        ui->statusBar->showMessage(QStringLiteral("ä¿å­˜æ–‡ä»¶æˆåŠŸ"), 2000);//çŠ¶æ€æ æ˜¾ç¤ºä¿å­˜æˆåŠŸå­—æ ·2ç§’
 }
 
 void MainWindow::on_actionCut_triggered()
 {
     if(GetActiveWindow())
-        GetActiveWindow()->cut();//Ö±½Óµ÷ÓÃQTextEditÕâ¸öÀàµÄcut()º¯Êı
+        GetActiveWindow()->cut();//ç›´æ¥è°ƒç”¨QTextEditè¿™ä¸ªç±»çš„cut()å‡½æ•°
 }
 
 void MainWindow::on_actionCopy_triggered()
 {
     if(GetActiveWindow())
-        GetActiveWindow()->copy();//¸´ÖÆ
+        GetActiveWindow()->copy();//å¤åˆ¶
 }
 
 void MainWindow::on_actionPaste_triggered()
 {
     if(GetActiveWindow())
-        GetActiveWindow()->paste();//Õ³Ìù
+        GetActiveWindow()->paste();//ç²˜è´´
 }
 
 void MainWindow::on_actionUndo_triggered()
 {
     if(GetActiveWindow())
-        GetActiveWindow()->undo();//³·Ïú
+        GetActiveWindow()->undo();//æ’¤é”€
 }
 
 void MainWindow::on_actionRedo_triggered()
 {
     if(GetActiveWindow())
-        GetActiveWindow()->redo();//»Ö¸´
+        GetActiveWindow()->redo();//æ¢å¤
 }
 
 void MainWindow::on_actionClose_triggered()
 {
-    ui->mdiArea->closeActiveSubWindow();//¹Ø±Õµ±Ç°»î¶¯´°¿Ú
+    ui->mdiArea->closeActiveSubWindow();//å…³é—­å½“å‰æ´»åŠ¨çª—å£
 }
 
 void MainWindow::on_actionCloseAll_triggered()
 {
-    ui->mdiArea->closeAllSubWindows();//¹Ø±ÕËùÓĞ×Ó´°¿Ú
+    ui->mdiArea->closeAllSubWindows();//å…³é—­æ‰€æœ‰å­çª—å£
 }
 
 void MainWindow::on_actionTile_triggered()
 {
-    ui->mdiArea->tileSubWindows();//Æ½ÆÌ´°¿Ú
+    ui->mdiArea->tileSubWindows();//å¹³é“ºçª—å£
 }
 
 void MainWindow::on_actionCascade_triggered()
 {
-    ui->mdiArea->cascadeSubWindows();//ÖØµş´°¿Ú
+    ui->mdiArea->cascadeSubWindows();//é‡å çª—å£
 }
 
 void MainWindow::on_actionNext_triggered()
 {
-    ui->mdiArea->activateNextSubWindow();//ÏÂÒ»¸ö´°¿Ú
+    ui->mdiArea->activateNextSubWindow();//ä¸‹ä¸€ä¸ªçª—å£
 }
 
 void MainWindow::on_actionPrevious_triggered()
 {
-    ui->mdiArea->activatePreviousSubWindow();//ÉÏÒ»¸ö´°¿Ú
+    ui->mdiArea->activatePreviousSubWindow();//ä¸Šä¸€ä¸ªçª—å£
 }
 
 void MainWindow::on_actionAbout_triggered()
 {
-    QMessageBox::about(this, QStringLiteral("¹ØÓÚ±¾Èí¼ş"), QStringLiteral("²Î¿¼www.yafeilinux.comÍøÕ¾×öµÄÒ»¸öÊµÑé"));
+    QMessageBox::about(this, QStringLiteral("å…³äºæœ¬è½¯ä»¶"), QStringLiteral("å‚è€ƒwww.yafeilinux.comç½‘ç«™åšçš„ä¸€ä¸ªå®éªŒ"));
 }
 
 void MainWindow::on_actionAboutQt_triggered()
 {
-    qApp->aboutQt();//ÕâÀïµÄqAppÊÇQApplication¶ÔÏóµÄÈ«¾ÖÖ¸Õë
+    qApp->aboutQt();//è¿™é‡Œçš„qAppæ˜¯QApplicationå¯¹è±¡çš„å…¨å±€æŒ‡é’ˆ
 }
 
 void MainWindow::UpdateMenus()
 {
-    bool has_active_window; //Èç¹ûÓĞ»î¶¯´°¿Ú£¬ÔòÎª1£¬Ã»ÓĞÔòÎª0
+    bool has_active_window; //å¦‚æœæœ‰æ´»åŠ¨çª—å£ï¼Œåˆ™ä¸º1ï¼Œæ²¡æœ‰åˆ™ä¸º0
     if(GetActiveWindow())
        has_active_window = true;
     else has_active_window = false;
 
-    //ÉèÖÃ¼ä¸ôÆ÷ÊÇ·ñÏÔÊ¾£¬Ã²ËÆÃ»ÓĞĞ§¹û£¿
+    //è®¾ç½®é—´éš”å™¨æ˜¯å¦æ˜¾ç¤ºï¼Œè²Œä¼¼æ²¡æœ‰æ•ˆæœï¼Ÿ
    // actionSeparator->setVisible(has_active_window);
 
-    //ÏÂÃæÊÇ¸ù¾İÊÇ·ñ´æÔÚ»î¶¯´°¿ÚÀ´ÉèÖÃ¸÷¸ö¶¯×÷ÊÇ·ñ¿ÉÓÃ
+    //ä¸‹é¢æ˜¯æ ¹æ®æ˜¯å¦å­˜åœ¨æ´»åŠ¨çª—å£æ¥è®¾ç½®å„ä¸ªåŠ¨ä½œæ˜¯å¦å¯ç”¨
     ui->actionSave->setEnabled(has_active_window);
     ui->actionSaveAs->setEnabled(has_active_window);
     ui->actionPaste->setEnabled(has_active_window);
@@ -238,32 +238,32 @@ void MainWindow::UpdateMenus()
     ui->actionNext->setEnabled(has_active_window);
     ui->actionPrevious->setEnabled(has_active_window);
 
-    //Ö»ÓĞµ±ÓĞ»î¶¯´°¿Ú£¬ÇÒÓĞÎÄ×Ö±»Ñ¡ÖĞÊ±£¬¼ôÇĞºÍ¸´ÖÆ¹¦ÄÜ²Å¿ÉÒÔÊ¹ÓÃ
+    //åªæœ‰å½“æœ‰æ´»åŠ¨çª—å£ï¼Œä¸”æœ‰æ–‡å­—è¢«é€‰ä¸­æ—¶ï¼Œå‰ªåˆ‡å’Œå¤åˆ¶åŠŸèƒ½æ‰å¯ä»¥ä½¿ç”¨
     bool has_text_selection;
-  //  QTextEdit->textCursor().hasSelection()ÓÃÀ´ÅĞ¶ÏÊÇ·ñÓĞÎÄ±¾±»Ñ¡ÖĞ
+  //  QTextEdit->textCursor().hasSelection()ç”¨æ¥åˆ¤æ–­æ˜¯å¦æœ‰æ–‡æœ¬è¢«é€‰ä¸­
     has_text_selection = (GetActiveWindow() && GetActiveWindow()->textCursor().hasSelection());
     ui->actionCut->setEnabled(has_text_selection);
     ui->actionCopy->setEnabled(has_text_selection);
 
-    //ÓĞ»î¶¯´°¿Ú£¬ÇÒÏµÍ³ÅĞ¶Ï¿ÉÒÔÖ´ĞĞ³·Ïú²Ù×÷Ê±²ÅÏÔÊ¾³·Ïú¿ÉÓÃ,ÅĞ¶Ï»Ö¸´²Ù×÷¿ÉÖ´ĞĞÊ±»Ö¸´²Ù×÷²Å¿ÉÓÃ
+    //æœ‰æ´»åŠ¨çª—å£ï¼Œä¸”ç³»ç»Ÿåˆ¤æ–­å¯ä»¥æ‰§è¡Œæ’¤é”€æ“ä½œæ—¶æ‰æ˜¾ç¤ºæ’¤é”€å¯ç”¨,åˆ¤æ–­æ¢å¤æ“ä½œå¯æ‰§è¡Œæ—¶æ¢å¤æ“ä½œæ‰å¯ç”¨
     ui->actionUndo->setEnabled(GetActiveWindow() && GetActiveWindow()->document()->isUndoAvailable());
     ui->actionRedo->setEnabled(GetActiveWindow() && GetActiveWindow()->document()->isRedoAvailable());
 }
 
-//×´Ì¬À¸ÉÏÏÔÊ¾¹â±êµÄĞĞºÅºÍÁĞºÅ
+//çŠ¶æ€æ ä¸Šæ˜¾ç¤ºå…‰æ ‡çš„è¡Œå·å’Œåˆ—å·
 void MainWindow::ShowTextRowCol()
 {
     if(GetActiveWindow())
         {
-            ui->statusBar->showMessage(QStringLiteral("%1ĞĞ %2ÁĞ").arg(GetActiveWindow()->textCursor().blockNumber()+1).
+            ui->statusBar->showMessage(QStringLiteral("%1è¡Œ %2åˆ—").arg(GetActiveWindow()->textCursor().blockNumber()+1).
                                        arg(GetActiveWindow()->textCursor().columnNumber()+1), 2000);
         }
 }
 
 void MainWindow::UpdateWindowMenu()
 {
-    ui->menuW->clear();//Çå¿ÕËùÓĞ²Ëµ¥À¸
-    /*ÖØĞÂ¼ÓÔØÒÑÓĞµÄ²Ëµ¥*/
+    ui->menuW->clear();//æ¸…ç©ºæ‰€æœ‰èœå•æ 
+    /*é‡æ–°åŠ è½½å·²æœ‰çš„èœå•*/
     ui->menuW->addAction(ui->actionClose);
     ui->menuW->addAction(ui->actionCloseAll);
     ui->menuW->addSeparator();
@@ -272,7 +272,7 @@ void MainWindow::UpdateWindowMenu()
     ui->menuW->addSeparator();
     ui->menuW->addAction(ui->actionNext);
     ui->menuW->addAction(ui->actionPrevious);
-    //¼ÓÔØ¼ä¸ôÆ÷
+    //åŠ è½½é—´éš”å™¨
     ui->menuW->addAction(actionSeparator);
 
     QList<QMdiSubWindow *> windows = ui->mdiArea->subWindowList();
@@ -282,17 +282,17 @@ void MainWindow::UpdateWindowMenu()
         {
             MyMdi *child = qobject_cast<MyMdi*>(windows.at(i)->widget());
             QString text;
-            if(i < 1)//Õâ¸öÊ±ºò±ä»¯Êı×Ö¾ÍÊÇÆä¿ì½İ¼ü
-                text = QStringLiteral("&% 1%2").arg(i+1).arg(child->get_current_file_name());//ÄÚÈİÇ°Ãæ¼ÓÁË¡°&¡±±íÊ¾¿ÉÒÔÊ¹ÓÃ¿ì½İ¼ü£¬ÎªµÚÒ»¸ö×ÖÄ¸»òÊı×Ö
+            if(i < 1)//è¿™ä¸ªæ—¶å€™å˜åŒ–æ•°å­—å°±æ˜¯å…¶å¿«æ·é”®
+                text = QStringLiteral("&% 1%2").arg(i+1).arg(child->get_current_file_name());//å†…å®¹å‰é¢åŠ äº†â€œ&â€è¡¨ç¤ºå¯ä»¥ä½¿ç”¨å¿«æ·é”®ï¼Œä¸ºç¬¬ä¸€ä¸ªå­—æ¯æˆ–æ•°å­—
             else
                 text = QStringLiteral("%1 %2").arg(i+1).arg(child->get_current_file_name());
 
-            QAction *action = ui->menuW->addAction(text);//Ìí¼ÓĞÂµÄ²Ëµ¥¶¯×÷
+            QAction *action = ui->menuW->addAction(text);//æ·»åŠ æ–°çš„èœå•åŠ¨ä½œ
             action->setCheckable(true);
-            action->setChecked(child == GetActiveWindow());//Ñ¡ÖĞµ±Ç°µÄ»î¶¯´°¿Ú
-            connect(action, SIGNAL(triggered()), window_mapper, SLOT(map()));//Ñ¡ÖĞaction»á´¥·¢²Ûº¯Êı·¢ËÍmapped()ĞÅºÅ
-            //¸Ãº¯ÊıµÄ×÷ÓÃÊÇÉèÖÃÒ»¸öÓ³Éä£¬µ±ÔÚÔËĞĞactionµÄĞÅºÅº¯Êımap()Ê±£¬¸Ãº¯Êı»á×Ô¶¯·¢ËÍĞÅºÅmapped()£¬²¢ÇÒ»áÒÔmapped(windows.at(i))À´·¢ËÍ
-            //´ËÊ±»á´¥·¢ÔÚ¹¹Ôìº¯ÊıÖĞÉèÖÃµÄÁ¬½Ó£¬Æä²Ûº¯ÊıÎªÉèÖÃ»î¶¯´°¿Ú
+            action->setChecked(child == GetActiveWindow());//é€‰ä¸­å½“å‰çš„æ´»åŠ¨çª—å£
+            connect(action, SIGNAL(triggered()), window_mapper, SLOT(map()));//é€‰ä¸­actionä¼šè§¦å‘æ§½å‡½æ•°å‘é€mapped()ä¿¡å·
+            //è¯¥å‡½æ•°çš„ä½œç”¨æ˜¯è®¾ç½®ä¸€ä¸ªæ˜ å°„ï¼Œå½“åœ¨è¿è¡Œactionçš„ä¿¡å·å‡½æ•°map()æ—¶ï¼Œè¯¥å‡½æ•°ä¼šè‡ªåŠ¨å‘é€ä¿¡å·mapped()ï¼Œå¹¶ä¸”ä¼šä»¥mapped(windows.at(i))æ¥å‘é€
+            //æ­¤æ—¶ä¼šè§¦å‘åœ¨æ„é€ å‡½æ•°ä¸­è®¾ç½®çš„è¿æ¥ï¼Œå…¶æ§½å‡½æ•°ä¸ºè®¾ç½®æ´»åŠ¨çª—å£
             window_mapper->setMapping(action, windows.at(i));
         }
 }
@@ -300,68 +300,68 @@ void MainWindow::UpdateWindowMenu()
 void MainWindow::init_window()
 {
     setWindowTitle(QStringLiteral("Simple Mutidocument Editor"));
-    ui->mainToolBar->setWindowTitle(QStringLiteral("¹¤¾ßÀ¸"));//ÉèÖÃ¹¤¾ßÀ¸µÄ±êÌâÃû³Æ£¬ÓÒ»÷Ê±²Å¿ÉÒÔ¿´µ½
+    ui->mainToolBar->setWindowTitle(QStringLiteral("å·¥å…·æ "));//è®¾ç½®å·¥å…·æ çš„æ ‡é¢˜åç§°ï¼Œå³å‡»æ—¶æ‰å¯ä»¥çœ‹åˆ°
 
-    //µ±ĞèÒªµÄÊ±ºò£¬ÉèÖÃË®Æ½´¹Ö±¹ö¶¯Ìõ
+    //å½“éœ€è¦çš„æ—¶å€™ï¼Œè®¾ç½®æ°´å¹³å‚ç›´æ»šåŠ¨æ¡
     ui->mdiArea->setHorizontalScrollBarPolicy(Qt::ScrollBarAsNeeded);
     ui->mdiArea->setVerticalScrollBarPolicy(Qt::ScrollBarAsNeeded);
 
-    ui->statusBar->showMessage(QStringLiteral("»¶Ó­Ê¹ÓÃ¶àÎÄµµ±à¼­Æ÷"));
+    ui->statusBar->showMessage(QStringLiteral("æ¬¢è¿ä½¿ç”¨å¤šæ–‡æ¡£ç¼–è¾‘å™¨"));
 
     QLabel *label = new QLabel(this);
-    label->setFrameStyle(QFrame::Box | QFrame::Sunken);//ÉèÖÃlabelµÄĞÎ×´ºÍÒõÓ°Ä£Ê½µÄ,ÕâÀï²ÉÓÃµÄboxĞÎ×´ºÍ°¼ÏİÄ£Ê½
-    label->setText(QStringLiteral("<a href = \"www.cnblogs.com/tornadomeet\">www.cnblogs.com/tornadomeet</a>"));//ÉèÖÃÎÄ±¾ÄÚÈİ
-    label->setTextFormat(Qt::RichText);//ÉèÖÃÎÄ±¾¸ñÊ½Îª¸»ÎÄ±¾¸ñÊ½£¬ÓÖ³Æ¶àÎÄ±¾¸ñÊ½£¬ÓÃÓÚ¿çÆ½Ì¨Ê¹ÓÃµÄ
-    label->setOpenExternalLinks(true);//ÔËĞĞ´ò¿ªlabelÉÏµÄÁ´½Ó
+    label->setFrameStyle(QFrame::Box | QFrame::Sunken);//è®¾ç½®labelçš„å½¢çŠ¶å’Œé˜´å½±æ¨¡å¼çš„,è¿™é‡Œé‡‡ç”¨çš„boxå½¢çŠ¶å’Œå‡¹é™·æ¨¡å¼
+    label->setText(QStringLiteral("<a href = \"www.cnblogs.com/tornadomeet\">www.cnblogs.com/tornadomeet</a>"));//è®¾ç½®æ–‡æœ¬å†…å®¹
+    label->setTextFormat(Qt::RichText);//è®¾ç½®æ–‡æœ¬æ ¼å¼ä¸ºå¯Œæ–‡æœ¬æ ¼å¼ï¼Œåˆç§°å¤šæ–‡æœ¬æ ¼å¼ï¼Œç”¨äºè·¨å¹³å°ä½¿ç”¨çš„
+    label->setOpenExternalLinks(true);//è¿è¡Œæ‰“å¼€labelä¸Šçš„é“¾æ¥
 
-    ui->statusBar->addPermanentWidget(label);//½«label¸½¼Óµ½×´Ì¬À¸ÉÏ£¬ÓÀ¾ÃĞÔµÄ
+    ui->statusBar->addPermanentWidget(label);//å°†labelé™„åŠ åˆ°çŠ¶æ€æ ä¸Šï¼Œæ°¸ä¹…æ€§çš„
 
-    ui->actionNew->setStatusTip(QStringLiteral("´´½¨Ò»¸öÎÄ¼ş"));
-    ui->actionOpen->setStatusTip(QStringLiteral("´ò¿ªÒ»¸öÒÑ¾­´æÔÚµÄÎÄ¼ş"));
-    ui->actionSave->setStatusTip(QStringLiteral("±£´æÎÄµµµ½Ó²ÅÌ"));
-    ui->actionSaveAs->setStatusTip(QStringLiteral("ÒÔĞÂµÄÃû³Æ±£´æÎÄµµ"));
-    ui->actionExit->setStatusTip(QStringLiteral("ÍË³öÓ¦ÓÃ³ÌĞò"));
-    ui->actionUndo->setStatusTip(QStringLiteral("³·ÏúÏÈÇ°µÄ²Ù×÷"));
-    ui->actionRedo->setStatusTip(QStringLiteral("»Ö¸´ÏÈÇ°µÄ²Ù×÷"));
-    ui->actionCut->setStatusTip(QStringLiteral("¼ôÇĞÑ¡ÖĞµÄÄÚÈİµ½¼ôÌù°å"));
-    ui->actionCopy->setStatusTip(QStringLiteral("¸´ÖÆÑ¡ÖĞµÄÄÚÈİµ½¼ôÌù°å"));
-    ui->actionPaste->setStatusTip(QStringLiteral("Õ³Ìù¼ôÌù°åµÄÄÚÈİµ½µ±Ç°Î»ÖÃ"));
-    ui->actionClose->setStatusTip(QStringLiteral("¹Ø±Õ»î¶¯´°¿Ú"));
-    ui->actionCloseAll->setStatusTip(QStringLiteral("¹Ø±ÕËùÓĞ´°¿Ú"));
-    ui->actionTile->setStatusTip(QStringLiteral("Æ½ÆÌËùÓĞ´°¿Ú"));
-    ui->actionCascade->setStatusTip(QStringLiteral("²ãµşËùÓĞ´°¿Ú"));
-    ui->actionNext->setStatusTip(QStringLiteral("½«½¹µãÒÆ¶¯µ½ÏÂÒ»¸ö´°¿Ú"));
-    ui->actionPrevious->setStatusTip(QStringLiteral("½«½¹µãÒÆ¶¯µ½Ç°Ò»¸ö´°¿Ú"));
-    ui->actionAbout->setStatusTip(QStringLiteral("ÏÔÊ¾±¾Èí¼şµÄ½éÉÜ"));
-    ui->actionAboutQt->setStatusTip(QStringLiteral("ÏÔÊ¾QtµÄ½éÉÜ"));
+    ui->actionNew->setStatusTip(QStringLiteral("åˆ›å»ºä¸€ä¸ªæ–‡ä»¶"));
+    ui->actionOpen->setStatusTip(QStringLiteral("æ‰“å¼€ä¸€ä¸ªå·²ç»å­˜åœ¨çš„æ–‡ä»¶"));
+    ui->actionSave->setStatusTip(QStringLiteral("ä¿å­˜æ–‡æ¡£åˆ°ç¡¬ç›˜"));
+    ui->actionSaveAs->setStatusTip(QStringLiteral("ä»¥æ–°çš„åç§°ä¿å­˜æ–‡æ¡£"));
+    ui->actionExit->setStatusTip(QStringLiteral("é€€å‡ºåº”ç”¨ç¨‹åº"));
+    ui->actionUndo->setStatusTip(QStringLiteral("æ’¤é”€å…ˆå‰çš„æ“ä½œ"));
+    ui->actionRedo->setStatusTip(QStringLiteral("æ¢å¤å…ˆå‰çš„æ“ä½œ"));
+    ui->actionCut->setStatusTip(QStringLiteral("å‰ªåˆ‡é€‰ä¸­çš„å†…å®¹åˆ°å‰ªè´´æ¿"));
+    ui->actionCopy->setStatusTip(QStringLiteral("å¤åˆ¶é€‰ä¸­çš„å†…å®¹åˆ°å‰ªè´´æ¿"));
+    ui->actionPaste->setStatusTip(QStringLiteral("ç²˜è´´å‰ªè´´æ¿çš„å†…å®¹åˆ°å½“å‰ä½ç½®"));
+    ui->actionClose->setStatusTip(QStringLiteral("å…³é—­æ´»åŠ¨çª—å£"));
+    ui->actionCloseAll->setStatusTip(QStringLiteral("å…³é—­æ‰€æœ‰çª—å£"));
+    ui->actionTile->setStatusTip(QStringLiteral("å¹³é“ºæ‰€æœ‰çª—å£"));
+    ui->actionCascade->setStatusTip(QStringLiteral("å±‚å æ‰€æœ‰çª—å£"));
+    ui->actionNext->setStatusTip(QStringLiteral("å°†ç„¦ç‚¹ç§»åŠ¨åˆ°ä¸‹ä¸€ä¸ªçª—å£"));
+    ui->actionPrevious->setStatusTip(QStringLiteral("å°†ç„¦ç‚¹ç§»åŠ¨åˆ°å‰ä¸€ä¸ªçª—å£"));
+    ui->actionAbout->setStatusTip(QStringLiteral("æ˜¾ç¤ºæœ¬è½¯ä»¶çš„ä»‹ç»"));
+    ui->actionAboutQt->setStatusTip(QStringLiteral("æ˜¾ç¤ºQtçš„ä»‹ç»"));
 
 }
 
 void MainWindow::write_settings()
 {
-    QSettings settings("Qt", "MyMdi");//µÚÒ»¸öÎª¹«Ë¾µÄÃû×Ö£¬µÚ¶ş¸öÎªÈí¼şµÄÃû×Ö
-    settings.setValue("pos", pos());//Ğ´Èë¸Ã´°¿ÚÏà¶ÔÓÚÆä¸¸´°¿ÚµÄÎ»ÖÃĞÅÏ¢
-    settings.setValue("size", size());//Ğ´Èë´°¿Ú´óĞ¡ĞÅÏ¢
+    QSettings settings("Qt", "MyMdi");//ç¬¬ä¸€ä¸ªä¸ºå…¬å¸çš„åå­—ï¼Œç¬¬äºŒä¸ªä¸ºè½¯ä»¶çš„åå­—
+    settings.setValue("pos", pos());//å†™å…¥è¯¥çª—å£ç›¸å¯¹äºå…¶çˆ¶çª—å£çš„ä½ç½®ä¿¡æ¯
+    settings.setValue("size", size());//å†™å…¥çª—å£å¤§å°ä¿¡æ¯
 }
 
 void MainWindow::read_settings()
 {
     QSettings settings("Qt", "MyMdi");
-    //settings.value()µÚ¶ş¸ö²ÎÊıÎªÄ¬ÈÏÖµ£¬¼´Èç¹ûkey£º¡°pos¡±²»´æÔÚ£¬Ôò·µ»ØÄ¬ÈÏÖµ
+    //settings.value()ç¬¬äºŒä¸ªå‚æ•°ä¸ºé»˜è®¤å€¼ï¼Œå³å¦‚æœkeyï¼šâ€œposâ€ä¸å­˜åœ¨ï¼Œåˆ™è¿”å›é»˜è®¤å€¼
     QPoint pos = settings.value("pos", QPoint(200, 200)).toPoint();
     QSize size = settings.value("size", QSize(400, 400)).toSize();
-    move(pos); //ÔÚ¹¹Ôìº¯ÊıÖĞ²Åµ÷ÓÃread_settings()º¯Êı£¬Òò´ËÕâÀïÖØĞÂÒÆ¶¯´°¿ÚÎ»ÖÃºÍÉèÖÃ´°¿Ú´óĞ¡
+    move(pos); //åœ¨æ„é€ å‡½æ•°ä¸­æ‰è°ƒç”¨read_settings()å‡½æ•°ï¼Œå› æ­¤è¿™é‡Œé‡æ–°ç§»åŠ¨çª—å£ä½ç½®å’Œè®¾ç½®çª—å£å¤§å°
     resize(size);
 }
 
 void MainWindow::closeEvent(QCloseEvent *event)
 {
     ui->mdiArea->closeAllSubWindows();
-    if(ui->mdiArea->currentSubWindow())//Èç¹û»¹ÓĞ´°¿ÚÃ»¹Ø±Õ£¬ÔòºöÂÔ¸ÃÊÂ¼ş¡£Ó¦¸ÃÊÇÉÏÃæµÄÓï¾äÃ»ÓĞÈ«²¿¹Ø±Õ³É¹¦¡£
+    if(ui->mdiArea->currentSubWindow())//å¦‚æœè¿˜æœ‰çª—å£æ²¡å…³é—­ï¼Œåˆ™å¿½ç•¥è¯¥äº‹ä»¶ã€‚åº”è¯¥æ˜¯ä¸Šé¢çš„è¯­å¥æ²¡æœ‰å…¨éƒ¨å…³é—­æˆåŠŸã€‚
         event->ignore();
     else
     {
-        write_settings();//¹Ø±ÕÇ°Ğ´Èë´°¿ÚÉèÖÃ
-        event->accept();//¹Ø±Õ
+        write_settings();//å…³é—­å‰å†™å…¥çª—å£è®¾ç½®
+        event->accept();//å…³é—­
     }
 }

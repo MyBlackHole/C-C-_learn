@@ -90,7 +90,7 @@ bool ItemDelegate::editorEvent(QEvent *event, QAbstractItemModel *model, const Q
         }
         QCursor cursor(Qt::PointingHandCursor);
         QApplication::setOverrideCursor(cursor);
-        QString strText = bExpanded ? QStringLiteral("ÕÛµþ") : QStringLiteral("Õ¹¿ª");
+        QString strText = bExpanded ? QStringLiteral("æŠ˜å ") : QStringLiteral("å±•å¼€");
         QToolTip::showText(mouseEvent->globalPos(), strText);
     }
     else

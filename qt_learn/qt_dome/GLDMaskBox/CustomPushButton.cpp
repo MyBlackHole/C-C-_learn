@@ -7,10 +7,10 @@ CustomPushButton::CustomPushButton(QString imagePath, QWidget *parent)
     : QPushButton(parent)
     , m_imagePath(imagePath)
 {
-    //ÉèÖÃ±³¾°Í¸Ã÷
+    //è®¾ç½®èƒŒæ™¯é€æ˜
     setAttribute(Qt::WA_TranslucentBackground);
 
-    //¼ÓÔØÍ¼Ïñ
+    //åŠ è½½å›¾åƒ
     pic.load(m_imagePath);
 
     resize(pic.size());
@@ -22,6 +22,6 @@ void CustomPushButton::paintEvent(QPaintEvent *event)
 
     QPainter painter(this);
 
-    //»æÖÆÍ¼Ïñ
+    //ç»˜åˆ¶å›¾åƒ
     painter.drawPixmap(0, 0, pic);
 }

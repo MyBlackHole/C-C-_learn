@@ -74,7 +74,7 @@ void MainTopWidget::initUI()
     m_scoreWidget = new MainScoreWidget(this);
     m_scoreWidget->setButtonStatus(SCORE_NO_BUTTON);
     m_scoreWidget->setScoreStatus(SCORE_QUESTION);
-    m_scoreWidget->setTextInfo(QStringLiteral("建议体检"), QStringLiteral("建议每天进行体检"));
+    m_scoreWidget->setTextInfo(QStringLiteral("寤鸿浣撴"), QStringLiteral("寤鸿姣忓ぉ杩涜浣撴"));
     m_scoreWidget->setFixedWidth(width());
 
     m_bottomWidget = new TopBottomWidget(this);
@@ -92,7 +92,7 @@ void MainTopWidget::initTopTitleWidget()
     QLabel *logoLabel = new QLabel;
     logoLabel->setPixmap(QPixmap(":/main/logo"));
     QLabel *textLabel = new QLabel;
-    textLabel->setText(QStringLiteral("360安全卫士 10.0 Beta"));
+    textLabel->setText(QStringLiteral("360瀹夊叏鍗＋ 10.0 Beta"));
     textLabel->adjustSize();
     StaticButton *updateButton = new StaticButton(":/main/update_btn");
     QHBoxLayout *hLayout = new QHBoxLayout;

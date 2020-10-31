@@ -14,12 +14,12 @@ protected:
     void mousePressEvent(QMouseEvent *event);
     void mouseReleaseEvent(QMouseEvent *event);
     void mouseMoveEvent(QMouseEvent *event);
-    //¹©×ÓÀà¼Ì³Ğ
+    //ä¾›å­ç±»ç»§æ‰¿
     virtual void paintEvent(QPaintEvent *event);
 
 private:
-    QPoint m_movePoint; //ÒÆ¶¯µÄ¾àÀë
-    bool m_mousePress; //°´ÏÂÊó±ê×ó¼ü
+    QPoint m_movePoint; //ç§»åŠ¨çš„è·ç¦»
+    bool m_mousePress; //æŒ‰ä¸‹é¼ æ ‡å·¦é”®
 };
 
 #endif // SHADOWWIDGET_H

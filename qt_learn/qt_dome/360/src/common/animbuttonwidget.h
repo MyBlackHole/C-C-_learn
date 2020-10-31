@@ -12,7 +12,7 @@ class AnimButtonWidget : public QWidget
 public:
     explicit AnimButtonWidget(QWidget *parent = 0);
     void setAnimInfo(int perLength = 4, int milliseconds = 50);
-    void setLineInfo(int linelength, const QColor &color);//Èç¹ûÉèÖÃÒÔdrawlineĞÎÊ½
+    void setLineInfo(int linelength, const QColor &color);//å¦‚æœè®¾ç½®ä»¥drawlineå½¢å¼
     void setPixInfo(const QString &pix);
 
 public slots:
@@ -28,7 +28,7 @@ protected:
 
 private:
     QTimer *m_timer;
-    int m_perLength;//Ã¿´ÎÒÆ¶¯µÄ¾àÀë
+    int m_perLength;//æ¯æ¬¡ç§»åŠ¨çš„è·ç¦»
     int m_lineLength;
     bool m_isRightOri;
     bool m_isPix;

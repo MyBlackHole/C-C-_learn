@@ -7,7 +7,7 @@
 
 
 /**
- * @brief Í¨ÓÃÊ÷ĞÎ½á¹¹Àà
+ * @brief é€šç”¨æ ‘å½¢ç»“æ„ç±»
  */
 class TreeItem
 {
@@ -24,19 +24,19 @@ public:
     TreeItem *parent();
 
     /**
-     * ¸ù¾İµ±Ç°½Úµã×´Ì¬,·µ»ØÏàÓ¦µÄÍ¼±ê
+     * æ ¹æ®å½“å‰èŠ‚ç‚¹çŠ¶æ€,è¿”å›ç›¸åº”çš„å›¾æ ‡
      */
     QIcon icon() const;
     void setIcon(bool status);
 
 private:
-    // ¸¸½áµã
+    // çˆ¶ç»“ç‚¹
     TreeItem *parentItem;
-    // ×Ó½áµãÁĞ±í
+    // å­ç»“ç‚¹åˆ—è¡¨
     QList<TreeItem*> childItems;
-    // ×Ó½Úµã¶ÔÓ¦Êı¾İ
+    // å­èŠ‚ç‚¹å¯¹åº”æ•°æ®
     QList<QVariant> itemData;
-    // ÓÃÀ´±êÊ¶µ±Ç°Í¼±êÊÇ¿ª/ºÏ×´Ì¬
+    // ç”¨æ¥æ ‡è¯†å½“å‰å›¾æ ‡æ˜¯å¼€/åˆçŠ¶æ€
     bool isOpen;
 };
 

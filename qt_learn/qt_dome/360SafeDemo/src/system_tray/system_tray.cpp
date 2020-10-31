@@ -19,7 +19,7 @@ SystemTray::~SystemTray()
 
 void SystemTray::translateLanguage()
 {
-    //·ÅÔÚÍĞÅÌÍ¼±êÉÏÊ±ºòÏÔÊ¾
+    //æ”¾åœ¨æ‰˜ç›˜å›¾æ ‡ä¸Šæ—¶å€™æ˜¾ç¤º
     this->setToolTip(tr("360 safe"));
 
     action_open->setText(tr("open"));
@@ -56,7 +56,7 @@ void SystemTray::createAction()
     action_separate = new QAction(this);
     action_logout = new QAction(this);
 
-    //Ìí¼Ó²Ëµ¥Ïî
+    //æ·»åŠ èœå•é¡¹
     tray_menu->addAction(action_open);
     tray_menu->addAction(action_help_center);
     tray_menu->addSeparator();
@@ -74,7 +74,7 @@ void SystemTray::createAction()
     tray_menu->addAction(action_separate);
     tray_menu->addAction(action_logout);
 
-    //ÉèÖÃĞÅºÅÁ¬½Ó
+    //è®¾ç½®ä¿¡å·è¿æ¥
     /*QObject::connect(action_show, SIGNAL(triggered(bool)), this, SIGNAL(showWidget()));
     QObject::connect(action_quit, SIGNAL(triggered(bool)), this, SIGNAL(logoutWidget()));
     QObject::connect(action_setting, SIGNAL(triggered(bool)), this, SIGNAL(setUp()));

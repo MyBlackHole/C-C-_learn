@@ -14,7 +14,7 @@ TagTreeModel::~TagTreeModel()
 
 void TagTreeModel::updateData()
 {
-    // ·ÏÆú¾ÉµÄÄ£ĞÍÊı¾İ
+    // åºŸå¼ƒæ—§çš„æ¨¡å‹æ•°æ®
     if(rootItem)
     {
         delete rootItem;
@@ -27,7 +27,7 @@ void TagTreeModel::updateData()
     rootItem = new TreeItem(rootData);
     setupModelData(rootItem);
 
-    // Ë¢ĞÂÄ£ĞÍ
+    // åˆ·æ–°æ¨¡å‹
     // reset();
 }
 
@@ -38,14 +38,14 @@ QVariant TagTreeModel::data(const QModelIndex &index, int role) const
         return QVariant();
     }
 
-    // Ìí¼ÓÍ¼±ê
+    // æ·»åŠ å›¾æ ‡
     if(role == Qt::DecorationRole && index.column() == 0)
     {
         TreeItem *item = static_cast<TreeItem*>(index.internalPointer());
         return item->icon();
     }
 
-    // ÏÔÊ¾½ÚµãÊı¾İÖµ
+    // æ˜¾ç¤ºèŠ‚ç‚¹æ•°æ®å€¼
     if(role == Qt::DisplayRole)
     {
         TreeItem *item = static_cast<TreeItem*>(index.internalPointer());
@@ -97,7 +97,7 @@ QModelIndex TagTreeModel::index(int row, int column,const QModelIndex &parent) c
 
     if(childItem)
     {
-        // Õ¹¿ªÊ÷ĞÎ,Îª×Ó½Úµã½¨Á¢Ë÷Òı
+        // å±•å¼€æ ‘å½¢,ä¸ºå­èŠ‚ç‚¹å»ºç«‹ç´¢å¼•
         return createIndex(row,column,childItem);
     }
     else
@@ -117,13 +117,13 @@ QModelIndex TagTreeModel::parent(const QModelIndex &index) const
     TreeItem *childItem = static_cast<TreeItem*>(index.internalPointer());
     TreeItem *parentItem = childItem->parent();
 
-    // ¶¥²ã½Úµã,Ö±½Ó·µ»Ø¿ÕË÷Òı
+    // é¡¶å±‚èŠ‚ç‚¹,ç›´æ¥è¿”å›ç©ºç´¢å¼•
     if(parentItem == rootItem)
     {
         return QModelIndex();
     }
 
-    // Îª¸¸½áµã½¨Á¢Ë÷Òı
+    // ä¸ºçˆ¶ç»“ç‚¹å»ºç«‹ç´¢å¼•
     return createIndex(parentItem->row(),0,parentItem);
 }
 
@@ -140,7 +140,7 @@ int TagTreeModel::rowCount(const QModelIndex &parent) const
         parentItem = static_cast<TreeItem*>(parent.internalPointer());
     }
 
-    return parentItem->childCount(); // ·µ»Ø¸¸½áµãÏÂ×Ó½áµãÊıÄ¿
+    return parentItem->childCount(); // è¿”å›çˆ¶ç»“ç‚¹ä¸‹å­ç»“ç‚¹æ•°ç›®
 }
 
 int TagTreeModel::columnCount(const QModelIndex &parent ) const
@@ -149,7 +149,7 @@ int TagTreeModel::columnCount(const QModelIndex &parent ) const
     return rootItem->columnCount();
 }
 
-// ÉèÖÃÄ£ĞÍÊı¾İ,¹¹½¨°üº¬10¸ö¸ù½áµã,Ã¿¸ö¸ù½áµã°üº¬Á½¸ö×Ó½ÚµãµÄÊ÷ĞÎ½á¹¹
+// è®¾ç½®æ¨¡å‹æ•°æ®,æ„å»ºåŒ…å«10ä¸ªæ ¹ç»“ç‚¹,æ¯ä¸ªæ ¹ç»“ç‚¹åŒ…å«ä¸¤ä¸ªå­èŠ‚ç‚¹çš„æ ‘å½¢ç»“æ„
 void TagTreeModel::setupModelData(TreeItem *parent)
 {
     for(int i = 0; i < 10; i++)
@@ -157,7 +157,7 @@ void TagTreeModel::setupModelData(TreeItem *parent)
         QList<QVariant> datas;
         datas << QString("equirement-%1").arg(i+1) << QString("type-%1").arg(i+1);
 
-        // Ö÷½áµãÏÂ¹ÒÁ½¸öº¢×Ó½Úµã
+        // ä¸»ç»“ç‚¹ä¸‹æŒ‚ä¸¤ä¸ªå­©å­èŠ‚ç‚¹
         TreeItem *primary = new TreeItem(datas,parent);
         parent->appendChild(primary);
 

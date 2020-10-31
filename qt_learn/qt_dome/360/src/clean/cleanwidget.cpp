@@ -20,7 +20,7 @@ void CleanWidget::initUI()
     m_topBackWidget->setButtonInfo(":/safe/return");
     m_stackStatusWidget->setStaticIcon(":/clean/top_scan");
     m_stackStatusWidget->setNormalButton(":/clean/btn_top_scan");
-//    m_stackStatusWidget->setTextInfo(QStringLiteral("ÒÑÑ¡Ôñ6ÏîÇåÀíÀàÐÍ"), QStringLiteral("¾­³£ÇåÀí,ÈÃµçÄÔ±£³Ö×î¼Ñ×´Ì¬"));
+//    m_stackStatusWidget->setTextInfo(QStringLiteral("å·²é€‰æ‹©6é¡¹æ¸…ç†ç±»åž‹"), QStringLiteral("ç»å¸¸æ¸…ç†,è®©ç”µè„‘ä¿æŒæœ€ä½³çŠ¶æ€"));
     m_topBackWidget->setFixedHeight(150);
     connect(m_topBackWidget, SIGNAL(buttonClicked()), this, SIGNAL(goToMain()));
     m_scanBottomWidget = new CleanScanBottom;

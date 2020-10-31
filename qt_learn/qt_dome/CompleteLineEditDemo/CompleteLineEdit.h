@@ -17,17 +17,17 @@ public:
     CompleteLineEdit(QStringList words, QWidget *parent = 0);
 
 public slots:
-    void setComplete(const QString &text); // ¶¯Ì¬µÄÏÔÊ¾Íê³ÉÁĞ±í
-    void completeText(const QModelIndex &index); // µã»÷Íê³ÉÁĞ±íÖĞµÄÏî£¬Ê¹ÓÃ´ËÏî×Ô¶¯Íê³ÉÊäÈëµÄµ¥´Ê
+    void setComplete(const QString &text); // åŠ¨æ€çš„æ˜¾ç¤ºå®Œæˆåˆ—è¡¨
+    void completeText(const QModelIndex &index); // ç‚¹å‡»å®Œæˆåˆ—è¡¨ä¸­çš„é¡¹ï¼Œä½¿ç”¨æ­¤é¡¹è‡ªåŠ¨å®Œæˆè¾“å…¥çš„å•è¯
 
 protected:
     virtual void keyPressEvent(QKeyEvent *e);
     virtual void focusOutEvent(QFocusEvent *e);
 
 private:
-    QStringList words; // Õû¸öÍê³ÉÁĞ±íµÄµ¥´Ê
-    QListView *listView; // Íê³ÉÁĞ±í
-    QStringListModel *model; // Íê³ÉÁĞ±íµÄmodel
+    QStringList words; // æ•´ä¸ªå®Œæˆåˆ—è¡¨çš„å•è¯
+    QListView *listView; // å®Œæˆåˆ—è¡¨
+    QStringListModel *model; // å®Œæˆåˆ—è¡¨çš„model
 };
 
 #endif // COMPLETELINEEDIT_H

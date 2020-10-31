@@ -17,45 +17,45 @@ Dialog::Dialog(QWidget *parent) :
     // set the dialog border round
     //this->setMask(roundedRect(this->rect(), 8));
 
-    setWindowTitle(QStringLiteral("¸÷ÖÖ±ê×¼¶Ô»°¿òµÄÊµÀı"));
-    fileBtn = new QPushButton;                                    //¸÷¸ö¿Ø¼ş¶ÔÏóµÄ³õÊ¼»¯
-    fileBtn->setText(QStringLiteral("ÎÄ¼ş±ê×¼¶Ô»°¿òÊµÀı"));
-    fileLineEdit = new QLineEdit;                                 //ÓÃÀ´ÏÔÊ¾Ñ¡ÔñµÄÎÄ¼şÃû
-    mainLayout = new QGridLayout(this);                           //²¼¾ÖÉè¼Æ
+    setWindowTitle(QStringLiteral("å„ç§æ ‡å‡†å¯¹è¯æ¡†çš„å®ä¾‹"));
+    fileBtn = new QPushButton;                                    //å„ä¸ªæ§ä»¶å¯¹è±¡çš„åˆå§‹åŒ–
+    fileBtn->setText(QStringLiteral("æ–‡ä»¶æ ‡å‡†å¯¹è¯æ¡†å®ä¾‹"));
+    fileLineEdit = new QLineEdit;                                 //ç”¨æ¥æ˜¾ç¤ºé€‰æ‹©çš„æ–‡ä»¶å
+    mainLayout = new QGridLayout(this);                           //å¸ƒå±€è®¾è®¡
     mainLayout->addWidget(fileBtn,0,0);
     mainLayout->addWidget(fileLineEdit,0,1);
-    connect(fileBtn, SIGNAL(clicked()), this, SLOT(showFile()));   //ÊÂ¼ş¹ØÁª
+    connect(fileBtn, SIGNAL(clicked()), this, SLOT(showFile()));   //äº‹ä»¶å…³è”
 
-    colorBtn = new QPushButton;                                   //´´½¨¸÷¸ö¿Ø¼şµÄ¶ÔÏó
-    colorBtn->setText(QStringLiteral("ÑÕÉ«±ê×¼¶Ô»°¿òÊµÀı"));
+    colorBtn = new QPushButton;                                   //åˆ›å»ºå„ä¸ªæ§ä»¶çš„å¯¹è±¡
+    colorBtn->setText(QStringLiteral("é¢œè‰²æ ‡å‡†å¯¹è¯æ¡†å®ä¾‹"));
     colorFrame = new QFrame;
     colorFrame->setFrameShape(QFrame::Box);
     colorFrame->setAutoFillBackground(true);
-    mainLayout->addWidget(colorBtn,1,0);                        //²¼¾ÖÉè¼Æ
+    mainLayout->addWidget(colorBtn,1,0);                        //å¸ƒå±€è®¾è®¡
     mainLayout->addWidget(colorFrame,1,1);
-    connect(colorBtn, SIGNAL(clicked()), this, SLOT(showColor())); //ÊÂ¼ş¹ØÁª
+    connect(colorBtn, SIGNAL(clicked()), this, SLOT(showColor())); //äº‹ä»¶å…³è”
 
-    fontBtn = new QPushButton;                                	//´´½¨¿Ø¼şµÄ¶ÔÏó
-    fontBtn->setText(QStringLiteral("×ÖÌå±ê×¼¶Ô»°¿òÊµÀı"));
-    fontLineEdit = new QLineEdit;                              	//ÏÔÊ¾¸ü¸ÄµÄ×Ö·û´®
+    fontBtn = new QPushButton;                                	//åˆ›å»ºæ§ä»¶çš„å¯¹è±¡
+    fontBtn->setText(QStringLiteral("å­—ä½“æ ‡å‡†å¯¹è¯æ¡†å®ä¾‹"));
+    fontLineEdit = new QLineEdit;                              	//æ˜¾ç¤ºæ›´æ”¹çš„å­—ç¬¦ä¸²
     fontLineEdit->setText(QStringLiteral("Welcome!"));
-    mainLayout->addWidget(fontBtn,2,0);                         //²¼¾ÖÉè¼Æ
+    mainLayout->addWidget(fontBtn,2,0);                         //å¸ƒå±€è®¾è®¡
     mainLayout->addWidget(fontLineEdit,2,1);
-    connect(fontBtn, SIGNAL(clicked()), this, SLOT(showFont()));   //ÊÂ¼ş¹ØÁª
+    connect(fontBtn, SIGNAL(clicked()), this, SLOT(showFont()));   //äº‹ä»¶å…³è”
 
-    inputBtn = new QPushButton;                                  //´´½¨¿Ø¼şµÄ¶ÔÏó
-    inputBtn->setText(QStringLiteral("±ê×¼ÊäÈë¶Ô»°¿òÊµÀı"));
-    mainLayout->addWidget(inputBtn,3,0);                        //²¼¾ÖÉè¼Æ
+    inputBtn = new QPushButton;                                  //åˆ›å»ºæ§ä»¶çš„å¯¹è±¡
+    inputBtn->setText(QStringLiteral("æ ‡å‡†è¾“å…¥å¯¹è¯æ¡†å®ä¾‹"));
+    mainLayout->addWidget(inputBtn,3,0);                        //å¸ƒå±€è®¾è®¡
     connect(inputBtn,SIGNAL(clicked()),this,SLOT(showInputDlg()));
-    //ÊÂ¼ş¹ØÁª
+    //äº‹ä»¶å…³è”
 
-    MsgBtn = new QPushButton;                                    //´´½¨¿Ø¼ş¶ÔÏó
-    MsgBtn->setText(QStringLiteral("±ê×¼ÏûÏ¢¶Ô»°¿òÊµÀı"));
+    MsgBtn = new QPushButton;                                    //åˆ›å»ºæ§ä»¶å¯¹è±¡
+    MsgBtn->setText(QStringLiteral("æ ‡å‡†æ¶ˆæ¯å¯¹è¯æ¡†å®ä¾‹"));
     mainLayout->addWidget(MsgBtn,3,1);
     connect(MsgBtn,SIGNAL(clicked()),this,SLOT(showMsgDlg()));
 
     CustomBtn = new QPushButton;
-    CustomBtn->setText(QStringLiteral("ÓÃ»§×Ô¶¨ÒåÏûÏ¢¶Ô»°¿òÊµÀı"));
+    CustomBtn->setText(QStringLiteral("ç”¨æˆ·è‡ªå®šä¹‰æ¶ˆæ¯å¯¹è¯æ¡†å®ä¾‹"));
     label = new QLabel;
     label->setFrameStyle(QFrame::Panel|QFrame::Sunken);
     mainLayout->addWidget(CustomBtn,4,0);
@@ -112,13 +112,13 @@ void Dialog::showCustomDlg()
     label->setText(QStringLiteral("Custom Message Box"));
 
     QMessageBox customMsgBox;
-    customMsgBox.setWindowTitle(QStringLiteral("ÓÃ»§×Ô¶¨ÒåÏûÏ¢¿ò"));	//ÉèÖÃÏûÏ¢¿òµÄ±êÌâ
+    customMsgBox.setWindowTitle(QStringLiteral("ç”¨æˆ·è‡ªå®šä¹‰æ¶ˆæ¯æ¡†"));	//è®¾ç½®æ¶ˆæ¯æ¡†çš„æ ‡é¢˜
 
     QPushButton *yesBtn = customMsgBox.addButton(QStringLiteral("Yes"), QMessageBox::ActionRole);
     QPushButton *noBtn = customMsgBox.addButton(QStringLiteral("No"), QMessageBox::ActionRole);
     QPushButton *cancelBtn = customMsgBox.addButton(QMessageBox::Cancel);
 
-    customMsgBox.setText(QStringLiteral("ÕâÊÇÒ»¸öÓÃ»§×Ô¶¨ÒåÏûÏ¢¿ò!"));
+    customMsgBox.setText(QStringLiteral("è¿™æ˜¯ä¸€ä¸ªç”¨æˆ·è‡ªå®šä¹‰æ¶ˆæ¯æ¡†!"));
     customMsgBox.setIconPixmap(QPixmap("Qt.png"));
     customMsgBox.exec();
 

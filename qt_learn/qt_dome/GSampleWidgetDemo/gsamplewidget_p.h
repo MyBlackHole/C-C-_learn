@@ -50,9 +50,9 @@ public:
     QAction *actionLock;
     QAction *actionUnlock;
 
-    GHoverDelayObject *hoverDelay;  //Êó±êĞüÍ£ÑÓÊ±ÀàÖ¸Õë
+    GHoverDelayObject *hoverDelay;  //é¼ æ ‡æ‚¬åœå»¶æ—¶ç±»æŒ‡é’ˆ
 
-    bool isLock;    //ÊÇ·ñËø¶¨£¬²»ÄÜĞŞ¸Ä
+    bool isLock;    //æ˜¯å¦é”å®šï¼Œä¸èƒ½ä¿®æ”¹
 
     QList<QAction *> rightMenuActions;
 

@@ -24,10 +24,10 @@ int main(int argc, char *argv[])
 
     tableView.setStyle(new CustomProxyStyle);
 
-    model.setHeaderData(0, Qt::Horizontal, QStringLiteral("姓名"));
-    model.setHeaderData(1, Qt::Horizontal, QStringLiteral("出生日期"));
-    model.setHeaderData(2, Qt::Horizontal, QStringLiteral("职业"));
-    model.setHeaderData(3, Qt::Horizontal, QStringLiteral("工龄"));
+    model.setHeaderData(0, Qt::Horizontal, QStringLiteral("濮撳悕"));
+    model.setHeaderData(1, Qt::Horizontal, QStringLiteral("鍑虹敓鏃ユ湡"));
+    model.setHeaderData(2, Qt::Horizontal, QStringLiteral("鑱屼笟"));
+    model.setHeaderData(3, Qt::Horizontal, QStringLiteral("宸ラ緞"));
 
     QFile file("test.txt");
     if(file.open(QFile::ReadOnly|QFile::Text))

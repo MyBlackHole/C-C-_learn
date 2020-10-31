@@ -113,7 +113,7 @@ HEADERS  += \
 RESOURCES += \
     resource/360.qrc
 
-#复制视频文件
+#澶嶅埗瑙嗛鏂囦欢
 win32{
     COPY = copy /y
     MKDIR = mkdir

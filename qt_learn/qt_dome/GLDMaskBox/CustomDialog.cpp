@@ -12,20 +12,20 @@ Dialog::Dialog(QWidget *parent, Qt::WindowFlags flags)
     : QDialog(parent, flags)
 {
     m_pPreButton = new QPushButton(this);
-    m_pPreButton->setText(QStringLiteral("ÉÏÒ»²½"));
+    m_pPreButton->setText(QStringLiteral("ä¸Šä¸€æ­¥"));
 
     m_pNextButton = new QPushButton(this);
-    m_pNextButton->setText(QStringLiteral("ÏÂÒ»²½"));
+    m_pNextButton->setText(QStringLiteral("ä¸‹ä¸€æ­¥"));
 
     m_pPreButton->setGeometry(60, 90, 68, 30);
     m_pNextButton->setGeometry(600, 180, 68, 30);
 
     setObjectName("dsb");
 
-    QString strErrMsg = QStringLiteral("Ò»¸ö±£»¤Ö¸Õë QPointer,ĞĞÎªÀàËÆÕı³£µÄC++Ö¸Õë£¬Ö»²»¹ıÆäÔÚÒıÓÃ¶ÔÏóÉ¾³ıÖ®ºó»á×Ô¶¯ÉèÖÃÎª0. T±ØĞëÊÇQObjectµÄ×ÓÀà\
-                                        ±£»¤Ö¸ÕëÔÚÄãÒª±£´æ±ğÈË´´½¨µÄQObject¶ÔÏó£¬ÇÒÓĞ¿ÉÄÜÆäÒÑ¾­±»É¾³ı¶øÄãÈÔÈ»³ÖÓĞÆäÒıÓÃµÄÊ±ºò·Ç³£ÓĞÓÃ¡£");
+    QString strErrMsg = QStringLiteral("ä¸€ä¸ªä¿æŠ¤æŒ‡é’ˆ QPointer,è¡Œä¸ºç±»ä¼¼æ­£å¸¸çš„C++æŒ‡é’ˆï¼Œåªä¸è¿‡å…¶åœ¨å¼•ç”¨å¯¹è±¡åˆ é™¤ä¹‹åä¼šè‡ªåŠ¨è®¾ç½®ä¸º0. Tå¿…é¡»æ˜¯QObjectçš„å­ç±»\
+                                        ä¿æŠ¤æŒ‡é’ˆåœ¨ä½ è¦ä¿å­˜åˆ«äººåˆ›å»ºçš„QObjectå¯¹è±¡ï¼Œä¸”æœ‰å¯èƒ½å…¶å·²ç»è¢«åˆ é™¤è€Œä½ ä»ç„¶æŒæœ‰å…¶å¼•ç”¨çš„æ—¶å€™éå¸¸æœ‰ç”¨ã€‚");
 
-    GLDMaskBox::showTipBox(m_pPreButton, QStringLiteral("ÎŞËùÎ½"), strErrMsg);
+    GLDMaskBox::showTipBox(m_pPreButton, QStringLiteral("æ— æ‰€è°“"), strErrMsg);
 
 
     setWindowFlags(windowFlags() /*| Qt::FramelessWindowHint*/ | Qt::WindowMinMaxButtonsHint);

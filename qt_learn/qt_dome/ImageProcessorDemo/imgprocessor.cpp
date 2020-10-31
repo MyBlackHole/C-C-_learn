@@ -21,13 +21,13 @@ ImgProcessor::ImgProcessor(QWidget *parent)
 
     showWidget = new ShowWidget(this);
     setCentralWidget(showWidget);
-    //ÔÚ¹¤¾ßÀ¸ÉÏÇ¶Èë¿Ø¼þ
-    //ÉèÖÃ×ÖÌå
-    fontLabel1 = new QLabel(QStringLiteral("×ÖÌå:"));
+    //åœ¨å·¥å…·æ ä¸ŠåµŒå…¥æŽ§ä»¶
+    //è®¾ç½®å­—ä½“
+    fontLabel1 = new QLabel(QStringLiteral("å­—ä½“:"));
     fontComboBox = new QFontComboBox;
     fontComboBox->setFontFilters(QFontComboBox::ScalableFonts);
 
-    fontLabel2 = new QLabel(QStringLiteral("×ÖºÅ:"));
+    fontLabel2 = new QLabel(QStringLiteral("å­—å·:"));
     sizeComboBox = new QComboBox;
     QFontDatabase db;
     foreach(int size,db.standardSizes())
@@ -50,8 +50,8 @@ ImgProcessor::ImgProcessor(QWidget *parent)
     colorBtn->setIcon(QIcon(":/images/color.png"));
     colorBtn->setCheckable(true);
 
-    //ÅÅÐò
-    listLabel = new QLabel(QStringLiteral("ÅÅÐò"));
+    //æŽ’åº
+    listLabel = new QLabel(QStringLiteral("æŽ’åº"));
     listComboBox = new QComboBox;
     listComboBox->addItem("Standard");
     listComboBox->addItem("QTextListFormat::ListDisc");
@@ -95,122 +95,122 @@ ImgProcessor::~ImgProcessor()
 
 void ImgProcessor::createActions()
 {
-    //"´ò¿ª"¶¯×÷
-    openFileAction = new QAction(QIcon(":/images/open.png"),QStringLiteral("´ò¿ª"),this);
+    //"æ‰“å¼€"åŠ¨ä½œ
+    openFileAction = new QAction(QIcon(":/images/open.png"),QStringLiteral("æ‰“å¼€"),this);
     openFileAction->setShortcut(QStringLiteral("Ctrl+O"));
-    openFileAction->setStatusTip(QStringLiteral("´ò¿ªÒ»¸öÎÄ¼þ"));
+    openFileAction->setStatusTip(QStringLiteral("æ‰“å¼€ä¸€ä¸ªæ–‡ä»¶"));
     connect(openFileAction,SIGNAL(triggered()),this,SLOT(ShowOpenFile()));
 
-    //"ÐÂ½¨"¶¯×÷
-    NewFileAction = new QAction(QIcon(":/images/new.png"),QStringLiteral("ÐÂ½¨"),this);
+    //"æ–°å»º"åŠ¨ä½œ
+    NewFileAction = new QAction(QIcon(":/images/new.png"),QStringLiteral("æ–°å»º"),this);
     NewFileAction->setShortcut(QStringLiteral("Ctrl+N"));
-    NewFileAction->setStatusTip(QStringLiteral("ÐÂ½¨Ò»¸öÎÄ¼þ"));
+    NewFileAction->setStatusTip(QStringLiteral("æ–°å»ºä¸€ä¸ªæ–‡ä»¶"));
     connect(NewFileAction,SIGNAL(triggered()),this,SLOT(ShowNewFile()));
 
-    //"ÍË³ö"¶¯×÷
-    exitAction = new QAction(QStringLiteral("ÍË³ö"),this);
+    //"é€€å‡º"åŠ¨ä½œ
+    exitAction = new QAction(QStringLiteral("é€€å‡º"),this);
     exitAction->setShortcut(QStringLiteral("Ctrl+Q"));
-    exitAction->setStatusTip(QStringLiteral("ÍË³ö³ÌÐò"));
+    exitAction->setStatusTip(QStringLiteral("é€€å‡ºç¨‹åº"));
     connect(exitAction,SIGNAL(triggered()),this,SLOT(close()));
 
-    //"¸´ÖÆ"¶¯×÷
-    copyAction = new QAction(QIcon(":/images/copy.png"),QStringLiteral("¸´ÖÆ"),this);
+    //"å¤åˆ¶"åŠ¨ä½œ
+    copyAction = new QAction(QIcon(":/images/copy.png"),QStringLiteral("å¤åˆ¶"),this);
     copyAction->setShortcut(QStringLiteral("Ctrl+C"));
-    copyAction->setStatusTip(QStringLiteral("¸´ÖÆÎÄ¼þ"));
+    copyAction->setStatusTip(QStringLiteral("å¤åˆ¶æ–‡ä»¶"));
     connect(copyAction,SIGNAL(triggered()),showWidget->text,SLOT(copy()));
 
-    //"¼ôÇÐ"¶¯×÷
-    cutAction = new QAction(QIcon(":/images/cut.png"),QStringLiteral("¼ôÇÐ"),this);
+    //"å‰ªåˆ‡"åŠ¨ä½œ
+    cutAction = new QAction(QIcon(":/images/cut.png"),QStringLiteral("å‰ªåˆ‡"),this);
     cutAction->setShortcut(QStringLiteral("Ctrl+X"));
-    cutAction->setStatusTip(QStringLiteral("¼ôÇÐÎÄ¼þ"));
+    cutAction->setStatusTip(QStringLiteral("å‰ªåˆ‡æ–‡ä»¶"));
     connect(cutAction,SIGNAL(triggered()),showWidget->text,SLOT(cut()));
 
-    //"Õ³Ìù"¶¯×÷
-    pasteAction = new QAction(QIcon(":/images/paste.png"),QStringLiteral("Õ³Ìù"),this);
+    //"ç²˜è´´"åŠ¨ä½œ
+    pasteAction = new QAction(QIcon(":/images/paste.png"),QStringLiteral("ç²˜è´´"),this);
     pasteAction->setShortcut(QStringLiteral("Ctrl+V"));
-    pasteAction->setStatusTip(QStringLiteral("Õ³ÌùÎÄ¼þ"));
+    pasteAction->setStatusTip(QStringLiteral("ç²˜è´´æ–‡ä»¶"));
     connect(pasteAction,SIGNAL(triggered()),showWidget->text,SLOT(paste()));
 
-    //"¹ØÓÚ"¶¯×÷
-    aboutAction = new QAction(QStringLiteral("¹ØÓÚ"),this);
+    //"å…³äºŽ"åŠ¨ä½œ
+    aboutAction = new QAction(QStringLiteral("å…³äºŽ"),this);
     connect(aboutAction,SIGNAL(triggered()),this,SLOT(QApplication::aboutQt()));
 
-    //"´òÓ¡ÎÄ±¾"¶¯×÷
-    PrintTextAction = new QAction(QIcon(":/images/printText.png"),QStringLiteral("´òÓ¡ÎÄ±¾"), this);
-    PrintTextAction->setStatusTip(QStringLiteral("´òÓ¡Ò»¸öÎÄ±¾"));
+    //"æ‰“å°æ–‡æœ¬"åŠ¨ä½œ
+    PrintTextAction = new QAction(QIcon(":/images/printText.png"),QStringLiteral("æ‰“å°æ–‡æœ¬"), this);
+    PrintTextAction->setStatusTip(QStringLiteral("æ‰“å°ä¸€ä¸ªæ–‡æœ¬"));
     connect(PrintTextAction,SIGNAL(triggered()),this,SLOT(ShowPrintText()));
 
-    //"´òÓ¡Í¼Ïñ"¶¯×÷
-    PrintImageAction = new QAction(QIcon(":/images/printImage.png"),QStringLiteral("´òÓ¡Í¼Ïñ"), this);
-    PrintImageAction->setStatusTip(QStringLiteral("´òÓ¡Ò»·ùÍ¼Ïñ"));
+    //"æ‰“å°å›¾åƒ"åŠ¨ä½œ
+    PrintImageAction = new QAction(QIcon(":/images/printImage.png"),QStringLiteral("æ‰“å°å›¾åƒ"), this);
+    PrintImageAction->setStatusTip(QStringLiteral("æ‰“å°ä¸€å¹…å›¾åƒ"));
     connect(PrintImageAction,SIGNAL(triggered()),this,SLOT(ShowPrintImage()));
 
-    //"·Å´ó"¶¯×÷
-    zoomInAction = new QAction(QIcon(":/images/zoomin.png"),QStringLiteral("·Å´ó"),this);
-    zoomInAction->setStatusTip(QStringLiteral("·Å´óÒ»ÕÅÍ¼Æ¬"));
+    //"æ”¾å¤§"åŠ¨ä½œ
+    zoomInAction = new QAction(QIcon(":/images/zoomin.png"),QStringLiteral("æ”¾å¤§"),this);
+    zoomInAction->setStatusTip(QStringLiteral("æ”¾å¤§ä¸€å¼ å›¾ç‰‡"));
     connect(zoomInAction,SIGNAL(triggered()),this,SLOT(ShowZoomIn()));
 
-    //"ËõÐ¡"¶¯×÷
-    zoomOutAction = new QAction(QIcon(":/images/zoomout.png"),QStringLiteral("ËõÐ¡"),this);
-    zoomOutAction->setStatusTip(QStringLiteral("ËõÐ¡Ò»ÕÅÍ¼Æ¬"));
+    //"ç¼©å°"åŠ¨ä½œ
+    zoomOutAction = new QAction(QIcon(":/images/zoomout.png"),QStringLiteral("ç¼©å°"),this);
+    zoomOutAction->setStatusTip(QStringLiteral("ç¼©å°ä¸€å¼ å›¾ç‰‡"));
     connect(zoomOutAction,SIGNAL(triggered()),this,SLOT(ShowZoomOut()));
 
-    //ÊµÏÖÍ¼ÏñÐý×ªµÄ¶¯×÷£¨Action£©
-    //Ðý×ª90¡ã
-    rotate90Action = new QAction(QIcon(":/images/rotate90.png"),QStringLiteral("Ðý×ª90¡ã"),this);
-    rotate90Action->setStatusTip(QStringLiteral("½«Ò»·ùÍ¼Ðý×ª90¡ã"));
+    //å®žçŽ°å›¾åƒæ—‹è½¬çš„åŠ¨ä½œï¼ˆActionï¼‰
+    //æ—‹è½¬90Â°
+    rotate90Action = new QAction(QIcon(":/images/rotate90.png"),QStringLiteral("æ—‹è½¬90Â°"),this);
+    rotate90Action->setStatusTip(QStringLiteral("å°†ä¸€å¹…å›¾æ—‹è½¬90Â°"));
     connect(rotate90Action,SIGNAL(triggered()),this,SLOT(ShowRotate90()));
 
-    //Ðý×ª180¡ã
-    rotate180Action = new QAction(QIcon(":/images/rotate180.png"),QStringLiteral("Ðý×ª180¡ã"), this);
-    rotate180Action->setStatusTip(QStringLiteral("½«Ò»·ùÍ¼Ðý×ª180¡ã"));
+    //æ—‹è½¬180Â°
+    rotate180Action = new QAction(QIcon(":/images/rotate180.png"),QStringLiteral("æ—‹è½¬180Â°"), this);
+    rotate180Action->setStatusTip(QStringLiteral("å°†ä¸€å¹…å›¾æ—‹è½¬180Â°"));
     connect(rotate180Action,SIGNAL(triggered()),this,SLOT(ShowRotate180()));
 
-    //Ðý×ª270¡ã
-    rotate270Action = new QAction(QIcon(":/images/rotate270.png"),QStringLiteral("Ðý×ª270¡ã"), this);
-    rotate270Action->setStatusTip(QStringLiteral("½«Ò»·ùÍ¼Ðý×ª270¡ã"));
+    //æ—‹è½¬270Â°
+    rotate270Action = new QAction(QIcon(":/images/rotate270.png"),QStringLiteral("æ—‹è½¬270Â°"), this);
+    rotate270Action->setStatusTip(QStringLiteral("å°†ä¸€å¹…å›¾æ—‹è½¬270Â°"));
     connect(rotate270Action,SIGNAL(triggered()),this,SLOT(ShowRotate270()));
 
-    //ÊµÏÖÍ¼Ïñ¾µÏñµÄ¶¯×÷£¨Action£©
-    //×ÝÏò¾µÏñ
-    mirrorVerticalAction = new QAction(QStringLiteral ("×ÝÏò¾µÏñ"),this);
-    mirrorVerticalAction->setStatusTip(QStringLiteral("¶ÔÒ»ÕÅÍ¼×÷×ÝÏò¾µÏñ"));
+    //å®žçŽ°å›¾åƒé•œåƒçš„åŠ¨ä½œï¼ˆActionï¼‰
+    //çºµå‘é•œåƒ
+    mirrorVerticalAction = new QAction(QStringLiteral ("çºµå‘é•œåƒ"),this);
+    mirrorVerticalAction->setStatusTip(QStringLiteral("å¯¹ä¸€å¼ å›¾ä½œçºµå‘é•œåƒ"));
     connect(mirrorVerticalAction,SIGNAL(triggered()),this,SLOT(ShowMirrorVertical()));
 
-    //ºáÏò¾µÏñ
-    mirrorHorizontalAction = new QAction(QStringLiteral("ºáÏò¾µÏñ"),this);
-    mirrorHorizontalAction->setStatusTip(QStringLiteral("¶ÔÒ»ÕÅÍ¼×÷ºáÏò¾µÏñ"));
+    //æ¨ªå‘é•œåƒ
+    mirrorHorizontalAction = new QAction(QStringLiteral("æ¨ªå‘é•œåƒ"),this);
+    mirrorHorizontalAction->setStatusTip(QStringLiteral("å¯¹ä¸€å¼ å›¾ä½œæ¨ªå‘é•œåƒ"));
     connect(mirrorHorizontalAction,SIGNAL(triggered()),this,SLOT(ShowMirrorHorizontal()));
 
-    //ÅÅÐò:×ó¶ÔÆë¡¢ÓÒ¶ÔÆë¡¢¾ÓÖÐºÍÁ½¶Ë¶ÔÆë
+    //æŽ’åº:å·¦å¯¹é½ã€å³å¯¹é½ã€å±…ä¸­å’Œä¸¤ç«¯å¯¹é½
     actGrp = new QActionGroup(this);
 
-    leftAction = new QAction(QIcon(":/images/left.png"),"×ó¶ÔÆë",actGrp);
+    leftAction = new QAction(QIcon(":/images/left.png"),"å·¦å¯¹é½",actGrp);
     leftAction->setCheckable(true);
 
-    rightAction = new QAction(QIcon(":/images/right.png"),"ÓÒ¶ÔÆë",actGrp);
+    rightAction = new QAction(QIcon(":/images/right.png"),"å³å¯¹é½",actGrp);
     rightAction->setCheckable(true);
 
-    centerAction = new QAction(QIcon(":/images/center.png"),"¾ÓÖÐ",actGrp);
+    centerAction = new QAction(QIcon(":/images/center.png"),"å±…ä¸­",actGrp);
     centerAction->setCheckable(true);
 
-    justifyAction = new QAction(QIcon(":/images/justify.png"),"Á½¶Ë¶ÔÆë",actGrp);
+    justifyAction = new QAction(QIcon(":/images/justify.png"),"ä¸¤ç«¯å¯¹é½",actGrp);
     justifyAction->setCheckable(true);
 
     connect(actGrp,SIGNAL(triggered(QAction*)),this,SLOT(ShowAlignment(QAction*)));
 
-    //ÊµÏÖ³·ÏúºÍÖØ×öµÄ¶¯×÷£¨Action£©
-    //³·ÏúºÍÖØ×ö
-    undoAction = new QAction(QIcon(":/images/undo.png"),"³·Ïú",this);
+    //å®žçŽ°æ’¤é”€å’Œé‡åšçš„åŠ¨ä½œï¼ˆActionï¼‰
+    //æ’¤é”€å’Œé‡åš
+    undoAction = new QAction(QIcon(":/images/undo.png"),"æ’¤é”€",this);
     connect(undoAction,SIGNAL(triggered()),showWidget->text,SLOT(undo()));
-    redoAction = new QAction(QIcon(":/images/redo.png"),"ÖØ×ö",this);
+    redoAction = new QAction(QIcon(":/images/redo.png"),"é‡åš",this);
     connect(redoAction,SIGNAL(triggered()),showWidget->text,SLOT(redo()));
 }
 
 void ImgProcessor::createMenus()
 {
-    //ÎÄ¼þ²Ëµ¥
-    fileMenu = menuBar()->addMenu(QStringLiteral("ÎÄ¼þ"));
+    //æ–‡ä»¶èœå•
+    fileMenu = menuBar()->addMenu(QStringLiteral("æ–‡ä»¶"));
     fileMenu->addAction(openFileAction);
     fileMenu->addAction(NewFileAction);
     fileMenu->addAction(PrintTextAction);
@@ -218,8 +218,8 @@ void ImgProcessor::createMenus()
     fileMenu->addSeparator();
     fileMenu->addAction(exitAction);
 
-    //Ëõ·Å²Ëµ¥
-    zoomMenu =menuBar()->addMenu(QStringLiteral("±à¼­"));
+    //ç¼©æ”¾èœå•
+    zoomMenu =menuBar()->addMenu(QStringLiteral("ç¼–è¾‘"));
     zoomMenu->addAction(copyAction);
     zoomMenu->addAction(cutAction);
     zoomMenu->addAction(pasteAction);
@@ -228,28 +228,28 @@ void ImgProcessor::createMenus()
     zoomMenu->addAction(zoomInAction);
     zoomMenu->addAction(zoomOutAction);
 
-    //Ðý×ª²Ëµ¥
-    rotateMenu =menuBar()->addMenu(QStringLiteral("Ðý×ª"));
+    //æ—‹è½¬èœå•
+    rotateMenu =menuBar()->addMenu(QStringLiteral("æ—‹è½¬"));
     rotateMenu->addAction(rotate90Action);
     rotateMenu->addAction(rotate180Action);
     rotateMenu->addAction(rotate270Action);
 
-    //¾µÏñ²Ëµ¥
-    mirrorMenu =menuBar()->addMenu(QStringLiteral("¾µÏñ"));
+    //é•œåƒèœå•
+    mirrorMenu =menuBar()->addMenu(QStringLiteral("é•œåƒ"));
     mirrorMenu->addAction(mirrorVerticalAction);
     mirrorMenu->addAction(mirrorHorizontalAction);
 }
 
 void ImgProcessor::createToolBars()
 {
-    //ÎÄ¼þ¹¤¾ßÌõ
+    //æ–‡ä»¶å·¥å…·æ¡
     fileTool =addToolBar("File");
     fileTool->addAction(openFileAction);
     fileTool->addAction(NewFileAction);
     fileTool->addAction(PrintTextAction);
     fileTool->addAction(PrintImageAction);
 
-    //±à¼­¹¤¾ßÌõ
+    //ç¼–è¾‘å·¥å…·æ¡
     zoomTool =addToolBar("Edit");
     zoomTool->addAction(copyAction);
     zoomTool->addAction(cutAction);
@@ -258,18 +258,18 @@ void ImgProcessor::createToolBars()
     zoomTool->addAction(zoomInAction);
     zoomTool->addAction(zoomOutAction);
 
-    //Ðý×ª¹¤¾ßÌõ
+    //æ—‹è½¬å·¥å…·æ¡
     rotateTool =addToolBar("rotate");
     rotateTool->addAction(rotate90Action);
     rotateTool->addAction(rotate180Action);
     rotateTool->addAction(rotate270Action);
 
-    //³·ÏúºÍÖØ×ö¹¤¾ßÌõ
+    //æ’¤é”€å’Œé‡åšå·¥å…·æ¡
     doToolBar =addToolBar("doEdit");
     doToolBar->addAction(undoAction);
     doToolBar->addAction(redoAction);
 
-    //×ÖÌå¹¤¾ßÌõ
+    //å­—ä½“å·¥å…·æ¡
     fontToolBar =addToolBar("Font");
     fontToolBar->addWidget(fontLabel1);
     fontToolBar->addWidget(fontComboBox);
@@ -282,7 +282,7 @@ void ImgProcessor::createToolBars()
     fontToolBar->addSeparator();
     fontToolBar->addWidget(colorBtn);
 
-    //ÅÅÐò¹¤¾ßÌõ
+    //æŽ’åºå·¥å…·æ¡
     listToolBar =addToolBar("list");
     listToolBar->addWidget(listLabel);
     listToolBar->addWidget(listComboBox);
@@ -298,7 +298,7 @@ void ImgProcessor::ShowNewFile()
 
 void ImgProcessor::ShowOpenFile()
 {
-    fileName =QFileDialog::getOpenFileName(this,"´ò¿ª");
+    fileName =QFileDialog::getOpenFileName(this,"æ‰“å¼€");
     if(!fileName.isEmpty())
     {
         if(showWidget->text->document()->isEmpty())
@@ -425,11 +425,11 @@ void ImgProcessor::ShowMirrorHorizontal()
     showWidget->imageLabel->setPixmap(QPixmap::fromImage(img));
 }
 
-void ImgProcessor::ShowFontComboBox(QString comboStr)       //ÉèÖÃ×ÖÌå
+void ImgProcessor::ShowFontComboBox(QString comboStr)       //è®¾ç½®å­—ä½“
 {
     QTextCharFormat fmt;
     fmt.setFontFamily(comboStr);
-    mergeFormat(fmt);                       //°ÑÐÂµÄ¸ñÊ½Ó¦ÓÃµ½¹â±êÑ¡ÇøÄÚµÄ×Ö·û
+    mergeFormat(fmt);                       //æŠŠæ–°çš„æ ¼å¼åº”ç”¨åˆ°å…‰æ ‡é€‰åŒºå†…çš„å­—ç¬¦
 }
 
 void ImgProcessor::mergeFormat(QTextCharFormat format)
@@ -441,35 +441,35 @@ void ImgProcessor::mergeFormat(QTextCharFormat format)
     showWidget->text->mergeCurrentCharFormat(format);
 }
 
-void ImgProcessor::ShowSizeSpinBox(QString spinValue)       //ÉèÖÃ×ÖºÅ
+void ImgProcessor::ShowSizeSpinBox(QString spinValue)       //è®¾ç½®å­—å·
 {
     QTextCharFormat fmt;
     fmt.setFontPointSize(spinValue.toFloat());
     showWidget->text->mergeCurrentCharFormat(fmt);
 }
 
-void ImgProcessor::ShowBoldBtn()                            //ÉèÖÃÎÄ×ÖÏÔÊ¾¼Ó´Ö
+void ImgProcessor::ShowBoldBtn()                            //è®¾ç½®æ–‡å­—æ˜¾ç¤ºåŠ ç²—
 {
     QTextCharFormat fmt;
     fmt.setFontWeight(boldBtn->isChecked()?QFont::Bold:QFont::Normal);
     showWidget->text->mergeCurrentCharFormat(fmt);
 }
 
-void ImgProcessor::ShowItalicBtn()                          //ÉèÖÃÎÄ×ÖÏÔÊ¾Ð±Ìå
+void ImgProcessor::ShowItalicBtn()                          //è®¾ç½®æ–‡å­—æ˜¾ç¤ºæ–œä½“
 {
     QTextCharFormat fmt;
     fmt.setFontItalic(italicBtn->isChecked());
     showWidget->text->mergeCurrentCharFormat(fmt);
 }
 
-void ImgProcessor::ShowUnderlineBtn()                       //ÉèÖÃÎÄ×Ö¼ÓÏÂ»­Ïß
+void ImgProcessor::ShowUnderlineBtn()                       //è®¾ç½®æ–‡å­—åŠ ä¸‹ç”»çº¿
 {
     QTextCharFormat fmt;
     fmt.setFontUnderline(underlineBtn->isChecked());
     showWidget->text->mergeCurrentCharFormat(fmt);
 }
 
-void ImgProcessor::ShowColorBtn()                           //ÉèÖÃÎÄ×ÖÑÕÉ«
+void ImgProcessor::ShowColorBtn()                           //è®¾ç½®æ–‡å­—é¢œè‰²
 {
     QColor color=QColorDialog::getColor(Qt::red,this);
     if(color.isValid())
@@ -520,7 +520,7 @@ void ImgProcessor::ShowList(int index)
     if(index!=0)
     {
         QTextListFormat::Style style=QTextListFormat::ListDisc;
-        switch(index)                           //ÉèÖÃstyleÊôÐÔÖµ
+        switch(index)                           //è®¾ç½®styleå±žæ€§å€¼
         {
         default:
         case 1:
@@ -540,7 +540,7 @@ void ImgProcessor::ShowList(int index)
         case 8:
             style=QTextListFormat::ListUpperRoman; break;
         }
-        cursor.beginEditBlock();                //ÉèÖÃËõ½øÖµ
+        cursor.beginEditBlock();                //è®¾ç½®ç¼©è¿›å€¼
 
         QTextBlockFormat blockFmt=cursor.blockFormat();
         QTextListFormat listFmt;

@@ -19,21 +19,21 @@ private:
     void createAction();
 
 private:
-    QMenu *tray_menu; //ÍĞÅÌ²Ëµ¥
+    QMenu *tray_menu; //æ‰˜ç›˜èœå•
 
-    QAction *action_open; //´ò¿ª360°²È«ÎÀÊ¿
-    QAction *action_help_center; //ÇóÖúÖĞĞÄ
-    QAction *action_kill_mummy; //²éÉ±Ä¾Âí
-    QAction *action_clear; //ÇåÀíÀ¬»ø
-    QAction *action_optimize; //Ò»¼üÓÅ»¯
-    QAction *action_fireproof; //¼ì²é¸üĞÂ
-    QAction *action_show_speed; //ÏÔÊ¾¼ÓËÙÇò
-    QAction *action_soft_manage; //Èí¼ş¹Ü¼Ò
-    QAction *action_safe_notice; //°²È«Í¨Öª
-    QAction *action_rise; //Éı¼¶
-    QAction *action_login; //360ÓÃ»§µÇÂ¼
-    QAction *action_separate; //¸ôÀëÉ³Ïä
-    QAction *action_logout; //ÍË³ö
+    QAction *action_open; //æ‰“å¼€360å®‰å…¨å«å£«
+    QAction *action_help_center; //æ±‚åŠ©ä¸­å¿ƒ
+    QAction *action_kill_mummy; //æŸ¥æ€æœ¨é©¬
+    QAction *action_clear; //æ¸…ç†åƒåœ¾
+    QAction *action_optimize; //ä¸€é”®ä¼˜åŒ–
+    QAction *action_fireproof; //æ£€æŸ¥æ›´æ–°
+    QAction *action_show_speed; //æ˜¾ç¤ºåŠ é€Ÿçƒ
+    QAction *action_soft_manage; //è½¯ä»¶ç®¡å®¶
+    QAction *action_safe_notice; //å®‰å…¨é€šçŸ¥
+    QAction *action_rise; //å‡çº§
+    QAction *action_login; //360ç”¨æˆ·ç™»å½•
+    QAction *action_separate; //éš”ç¦»æ²™ç®±
+    QAction *action_logout; //é€€å‡º
 
 };
 

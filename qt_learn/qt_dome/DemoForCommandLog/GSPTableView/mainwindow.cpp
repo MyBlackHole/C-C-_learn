@@ -15,22 +15,22 @@ MainWindow::MainWindow(QWidget *parent) :
     loadData();
     loadMenu();
     bool bEnableRedo = false;
-    GString strLogFile = exePath() + "log.log"; //ÃüÁîÈÕÖ¾Ãû
-    if (fileExists(strLogFile)) //¶ÔlogÎÄ¼ş½øĞĞ¼ì²é£¬Èç¹û´æÔÚµÄ»°£¬½øĞĞ»Ö¸´
+    GString strLogFile = exePath() + "log.log"; //å‘½ä»¤æ—¥å¿—å
+    if (fileExists(strLogFile)) //å¯¹logæ–‡ä»¶è¿›è¡Œæ£€æŸ¥ï¼Œå¦‚æœå­˜åœ¨çš„è¯ï¼Œè¿›è¡Œæ¢å¤
     {
         bEnableRedo = true;
     }
-    m_commandLog = new GSPFileCommandLog(exePath() + "Log.log", m_model); //´´½¨ÈÕÖ¾ÎÄ¼ş
-    m_model.fetchCommand();//½«Ö®Ç°µÄÃüÁî²»ÔÙ´¦Àí
+    m_commandLog = new GSPFileCommandLog(exePath() + "Log.log", m_model); //åˆ›å»ºæ—¥å¿—æ–‡ä»¶
+    m_model.fetchCommand();//å°†ä¹‹å‰çš„å‘½ä»¤ä¸å†å¤„ç†
     if (bEnableRedo)
     {
-        m_model.beginUpdate();//¿ªÊ¼¸üĞÂ£¬»Ö¸´Êı¾İ±È½Ï´óµÄ»°£¬Í³Ò»¼ÆËã
+        m_model.beginUpdate();//å¼€å§‹æ›´æ–°ï¼Œæ¢å¤æ•°æ®æ¯”è¾ƒå¤§çš„è¯ï¼Œç»Ÿä¸€è®¡ç®—
         try
         {
-            m_model.beginIgnoreFieldConstraint();//ºöÂÔ×Ö¶ÎÔ¼Êø¼ì²é£¬»Ö¸´Íê³ÉÔÙ¼ì²é
+            m_model.beginIgnoreFieldConstraint();//å¿½ç•¥å­—æ®µçº¦æŸæ£€æŸ¥ï¼Œæ¢å¤å®Œæˆå†æ£€æŸ¥
             try
             {
-                m_commandLog->redoFromSavePoint();//°Ñ±£´æµãºóÃæµÄÃüÁîÖØĞÂ×öÒ»±é£¬Ö´ĞĞ»Ö¸´
+                m_commandLog->redoFromSavePoint();//æŠŠä¿å­˜ç‚¹åé¢çš„å‘½ä»¤é‡æ–°åšä¸€éï¼Œæ‰§è¡Œæ¢å¤
             }
             catch (...)
             {
@@ -48,7 +48,7 @@ MainWindow::MainWindow(QWidget *parent) :
     }
 }
 
-//Ö´ĞĞdetachÊÂ¼ş
+//æ‰§è¡Œdetachäº‹ä»¶
 MainWindow::~MainWindow()
 {
     m_dataSource->queryCellValueEventList().remove(m_eventHandle);
@@ -64,10 +64,10 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-//¼ÓÔØÊı¾İ²¢°ó¶¨½çÃæ
+//åŠ è½½æ•°æ®å¹¶ç»‘å®šç•Œé¢
 void MainWindow::loadData()
 {
-    m_model = gspEngine().createModel(true);//²ÎÊıÎªtrue,ÕâÑù²ÅÓĞÃüÁîÈÕÖ¾
+    m_model = gspEngine().createModel(true);//å‚æ•°ä¸ºtrue,è¿™æ ·æ‰æœ‰å‘½ä»¤æ—¥å¿—
     GSPModelPersistent(m_model).loadFromFile(exePath() + "Test1.GSP", false, false);
 
     GSPViews iViews;
@@ -92,7 +92,7 @@ void MainWindow::loadData()
     m_dataSource->queryCellValueEventList().push_back(m_eventHandle);
     m_dataSource->queryCellAttributeEventList().push_back(m_eventHandle);
 
-    //×¢²á´¥·¢Æ÷
+    //æ³¨å†Œè§¦å‘å™¨
 //    GSPTable iTable = m_model[0].findTable("Test");
 //    m_afterInsertRecord = new TestAfterInsertRecord();
 //    if (! iTable.tableSchema().recordEventContainer().afterInsertEventList().exist(m_afterInsertRecord))
@@ -143,7 +143,7 @@ void MainWindow::loadMenu()
     ui->mainToolBar->addAction(acRedo);
 }
 
-//¶¯Ì¬ĞŞ¸ÄGSF
+//åŠ¨æ€ä¿®æ”¹GSF
 void MainWindow::buildGridSetting()
 {
     GSPGridSetting *oGridSetting = m_dataSourceModel->gridDataSource()->gridSetting();
@@ -163,7 +163,7 @@ void MainWindow::buildGridSetting()
     oGridSetting->setDesignState(false);
 }
 
-//×Ô¶¨Òåº¯ÊıÖ´ĞĞ
+//è‡ªå®šä¹‰å‡½æ•°æ‰§è¡Œ
 void MainWindow::testFunction()
 {
     MyFunction *oFun = new MyFunction();
@@ -176,18 +176,18 @@ void MainWindow::testFunction()
     QMessageBox::information(NULL, "Result", strValue, QMessageBox::Ok);
 }
 
-//²åÈëÒ»ÌõÊı¾İ
+//æ’å…¥ä¸€æ¡æ•°æ®
 void MainWindow::doDebug()
 {
     GSPTable iTable = m_model[0].findTable("Test");
     GSPRecord iRecord = iTable.newRecord();
     iTable.append(iRecord);
-    m_commandLog->logCommand(m_model.fetchCommand());//ÔÚÏàÓ¦µÄµØ·½Ğ´ÈëÃüÁî
+    m_commandLog->logCommand(m_model.fetchCommand());//åœ¨ç›¸åº”çš„åœ°æ–¹å†™å…¥å‘½ä»¤
 }
 
 void MainWindow::doSave()
 {
-    m_commandLog->markSavePoint();//Èç¹ûÄãÈ·¶¨±£´æÁËÎÄ¼şºó£¬¿ÉÒÔµ÷Ò»¸öÕâ¸ö£¬µÈÏÂ´Î»Ö¸´µÄÊ±ºò¾Í´ÓÕâÀï¿ªÊ¼»Ö¸´
+    m_commandLog->markSavePoint();//å¦‚æœä½ ç¡®å®šä¿å­˜äº†æ–‡ä»¶åï¼Œå¯ä»¥è°ƒä¸€ä¸ªè¿™ä¸ªï¼Œç­‰ä¸‹æ¬¡æ¢å¤çš„æ—¶å€™å°±ä»è¿™é‡Œå¼€å§‹æ¢å¤
 }
 
 void MainWindow::doUndo()
@@ -206,7 +206,7 @@ void MainWindow::doRedo()
     }
 }
 
-//ÉèÖÃ±à¼­·½Ê½
+//è®¾ç½®ç¼–è¾‘æ–¹å¼
 GEditStyle MyDelegate::editStyle(GSPCustomRowNode *rowNode, int dataCol, bool &readOnly) const
 {
     if (3 == dataCol)
@@ -219,7 +219,7 @@ GEditStyle MyDelegate::editStyle(GSPCustomRowNode *rowNode, int dataCol, bool &r
     }
 }
 
-//queryCell¸Ä±äÖµ
+//queryCellæ”¹å˜å€¼
 void TestEventHandle::onQueryCellValue(GSPCustomRowNode *rowNode, int col, GSPField field, GSPRecord record, GVariant &value, bool &handled)
 {
     G_UNUSED(handled);
@@ -239,7 +239,7 @@ void TestEventHandle::onQueryCellValue(GSPCustomRowNode *rowNode, int col, GSPFi
     }
 }
 
-//ÉèÖÃqueryCellAttribute
+//è®¾ç½®queryCellAttribute
 void TestEventHandle::onQueryCellAttribute(GSPCustomRowNode *rowNode, int col, GSPField field, GSPRecord record, int role, GVariant &attribute, bool &handled)
 {
     G_UNUSED(handled);
@@ -260,7 +260,7 @@ void TestEventHandle::onQueryCellAttribute(GSPCustomRowNode *rowNode, int col, G
     }
 }
 
-//²åÈëºó´¥·¢ÒıÇæµÄÊÂ¼ş
+//æ’å…¥åè§¦å‘å¼•æ“çš„äº‹ä»¶
 void TestAfterInsertRecord::afterInsertRecord(GSPRecord &record)
 {
     G_UNUSED(record);

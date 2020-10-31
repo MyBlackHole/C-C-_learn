@@ -10,10 +10,10 @@ bool Util::writeInit(QString path, QString user_key, QString user_value)
     }
     else
     {
-        //´´½¨ÅäÖÃÎÄ¼þ²Ù×÷¶ÔÏó
+        //åˆ›å»ºé…ç½®æ–‡ä»¶æ“ä½œå¯¹è±¡
         QSettings *config = new QSettings(path, QSettings::IniFormat);
 
-        //½«ÐÅÏ¢Ð´ÈëÅäÖÃÎÄ¼þ
+        //å°†ä¿¡æ¯å†™å…¥é…ç½®æ–‡ä»¶
         config->beginGroup("config");
         config->setValue(user_key, user_value);
         config->endGroup();
@@ -31,10 +31,10 @@ bool Util::readInit(QString path, QString user_key, QString &user_value)
     }
     else
     {
-        //´´½¨ÅäÖÃÎÄ¼þ²Ù×÷¶ÔÏó
+        //åˆ›å»ºé…ç½®æ–‡ä»¶æ“ä½œå¯¹è±¡
         QSettings *config = new QSettings(path, QSettings::IniFormat);
 
-        //¶ÁÈ¡ÓÃ»§ÅäÖÃÐÅÏ¢
+        //è¯»å–ç”¨æˆ·é…ç½®ä¿¡æ¯
         user_value = config->value(QString("config/") + user_key).toString();
 
         return true;

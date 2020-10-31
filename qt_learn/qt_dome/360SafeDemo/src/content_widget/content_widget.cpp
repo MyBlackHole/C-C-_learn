@@ -45,7 +45,7 @@ ContentWidget::ContentWidget(QWidget *parent)
     main_splitter->addWidget(left_widget);
     main_splitter->addWidget(right_splitter);
 
-    //½ûÖ¹ÍÏ¶¯
+    //ç¦æ­¢æ‹–åŠ¨
     for(int i = 0; i<right_splitter->count();i++)
     {
         QSplitterHandle *handle = right_splitter->handle(i);
@@ -248,7 +248,7 @@ void ContentWidget::initRightCenter()
     triggerman_button->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
     net_shop_button->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
 
-    //ÉèÖÃÍ¼±ê
+    //è®¾ç½®å›¾æ ‡
     QPixmap fireproof_pixmap(":/contentWidget/fireproof");
     fireproof_button->setIcon(fireproof_pixmap);
     fireproof_button->setIconSize(fireproof_pixmap.size());

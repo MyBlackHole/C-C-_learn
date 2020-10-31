@@ -22,7 +22,7 @@ DelegateDemo::DelegateDemo(QWidget *parent) :
     QVBoxLayout *pLayout = new QVBoxLayout(this);
     pLayout->addWidget(m_tableView);
 
-    m_debugButton = new QPushButton(QStringLiteral("²âÊÔ"));
+    m_debugButton = new QPushButton(QStringLiteral("æµ‹è¯•"));
     connect(m_debugButton, SIGNAL(clicked()), this, SLOT(debug()));
 
     pLayout->addWidget(m_debugButton);

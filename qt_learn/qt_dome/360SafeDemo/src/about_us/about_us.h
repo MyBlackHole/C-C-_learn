@@ -23,18 +23,18 @@ protected:
     void paintEvent(QPaintEvent *event);
 
 private:
-    QPoint move_point;        //ÒÆ¶¯µÄ¾àÀë
-    bool mouse_press;         //°´ÏÂÊó±ê×ó¼ü
-    QLabel *title_label;      //±êÌâ
-    QLabel *title_icon_label; //±êÌâÍ¼±ê
-    QLabel *title_info_label; //360°²È«ÎÀÊ¿
-    QLabel *info_label;       //É±Ä¾Âí¡¢·ÀµÁºÅ¡¢µçÄÔ¼ÓËÙ
-    QLabel *version_label;    //Ö÷³ÌĞò°æ±¾
-    QLabel *mummy_label;      //±¸ÓÃÄ¾Âí¿â
-    QLabel *copyright_label;  //°æ±¾ĞÅÏ¢
-    QLabel *icon_label;       //Í¼±ê
-    PushButton *close_button; //¹Ø±Õ°´Å¥
-    QPushButton *ok_button;   //È·¶¨°´Å¥
+    QPoint move_point;        //ç§»åŠ¨çš„è·ç¦»
+    bool mouse_press;         //æŒ‰ä¸‹é¼ æ ‡å·¦é”®
+    QLabel *title_label;      //æ ‡é¢˜
+    QLabel *title_icon_label; //æ ‡é¢˜å›¾æ ‡
+    QLabel *title_info_label; //360å®‰å…¨å«å£«
+    QLabel *info_label;       //æ€æœ¨é©¬ã€é˜²ç›—å·ã€ç”µè„‘åŠ é€Ÿ
+    QLabel *version_label;    //ä¸»ç¨‹åºç‰ˆæœ¬
+    QLabel *mummy_label;      //å¤‡ç”¨æœ¨é©¬åº“
+    QLabel *copyright_label;  //ç‰ˆæœ¬ä¿¡æ¯
+    QLabel *icon_label;       //å›¾æ ‡
+    PushButton *close_button; //å…³é—­æŒ‰é’®
+    QPushButton *ok_button;   //ç¡®å®šæŒ‰é’®
 };
 
 #endif  //ABOUTUS_H

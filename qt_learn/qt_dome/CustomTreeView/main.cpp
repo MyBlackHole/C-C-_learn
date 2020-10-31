@@ -10,10 +10,10 @@ int main(int argc, char *argv[])
     mainWindow.show();
 
     QFont font = app.font();
-    font.setFamily(QStringLiteral("Î¢ÈíÑÅºÚ"));
+    font.setFamily(QStringLiteral("å¾®è½¯é›…é»‘"));
     app.setFont(font);
 
-    // ¼ÓÔØQSSÑùÊ½±í
+    // åŠ è½½QSSæ ·å¼è¡¨
     QString strFile = QCoreApplication::applicationDirPath() + "/Resources/Style.qss";
     QFile qss(strFile);
     qss.open(QFile::ReadOnly);

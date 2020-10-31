@@ -2,7 +2,7 @@
  * \file GLDRichTextEdit.h
  *
  * \author xg
- * \date °ËÔÂ 2014
+ * \date å…«æœˆ 2014
  *
  * 
  */
@@ -36,7 +36,7 @@ public:
         Justify
     };
 
-    // ÎÄ±¾ĞĞµü´úÆ÷
+    // æ–‡æœ¬è¡Œè¿­ä»£å™¨
     friend class TextRowIterator;
     class TextRowIterator
     {
@@ -112,20 +112,20 @@ public:
     bool canRedo();
 
     void open(const QString &fileName);
-    int save(); // ·µ»Ø0±íÊ¾³É¹¦
+    int save(); // è¿”å›0è¡¨ç¤ºæˆåŠŸ
     void saveAs(const QString &fileName, bool userSaveAsFileName);
 
     /**
-     * @brief saveToBuf ±£´æµ½¶ş½øÖÆÁ÷
-     * @param byteArray ¶ş½øÖÆÁ÷
-     * @return 1--³É¹¦ 0--Ê§°Ü
+     * @brief saveToBuf ä¿å­˜åˆ°äºŒè¿›åˆ¶æµ
+     * @param byteArray äºŒè¿›åˆ¶æµ
+     * @return 1--æˆåŠŸ 0--å¤±è´¥
      */
     int saveToBuf(QByteArray &byteArray);
 
     /**
-     * @brief readFromBuf ¶Á¶ş½øÖÆÁ÷µ½ÎÄ¼ş
-     * @param byteArray ¶ş½øÖÆÁ÷
-     * @return 1--³É¹¦ 0--Ê§°Ü
+     * @brief readFromBuf è¯»äºŒè¿›åˆ¶æµåˆ°æ–‡ä»¶
+     * @param byteArray äºŒè¿›åˆ¶æµ
+     * @return 1--æˆåŠŸ 0--å¤±è´¥
      */
     int readFromBuf(QByteArray &byteArray);
 
@@ -151,61 +151,61 @@ public:
     void moveTextCursorNext();
 
     /*!
-    * @brief    ·µ»ØĞĞÊı [1, n]±ÕÇø¼ä
-    * @return   Èç¹û½öÓĞÒ»ĞĞÇĞµÚÒ»ĞĞÃ»ÓĞÊı¾İ·µ»Ø0
+    * @brief    è¿”å›è¡Œæ•° [1, n]é—­åŒºé—´
+    * @return   å¦‚æœä»…æœ‰ä¸€è¡Œåˆ‡ç¬¬ä¸€è¡Œæ²¡æœ‰æ•°æ®è¿”å›0
     */
     int getLineCount() const;
 
     /*!
-     * @brief    ĞĞµü´úÆ÷
-     * @param    [i]textRowIndex ÎÄ±¾ĞĞºÅ
-     * @return   GLDRichTextEditRow * ·µ»ØĞĞË÷Òı
-     * ×¢Òâ      ½öÕë¶Ôµ±Ç°ĞĞ
+     * @brief    è¡Œè¿­ä»£å™¨
+     * @param    [i]textRowIndex æ–‡æœ¬è¡Œå·
+     * @return   GLDRichTextEditRow * è¿”å›è¡Œç´¢å¼•
+     * æ³¨æ„      ä»…é’ˆå¯¹å½“å‰è¡Œ
      */
     TextRowIterator getRowIterator(_In_ int textRowIndex);
 
      /*!
-      * @brief    »ñÈ¡Á¬ĞøµÄ±íÆğÊ¼Î»ÖÃºÍ½áÊø [start, end)
-      * @param    [i]start ·µ»ØÁ¬Ğø±íµÄÆğÊ¼Î»ÖÃ
-      * @param    [i]end   ·µ»ØÁ¬Ğø±íµÄ½áÊøÎ»ÖÃ
-      * @param    [i]textRowIndex ÎÄ±¾ĞĞË÷Òı
-      * @return   bool Èç¹ûÓĞtableĞĞ ·µ»Øtrue·ñÔò·µ»Øfalse
+      * @brief    è·å–è¿ç»­çš„è¡¨èµ·å§‹ä½ç½®å’Œç»“æŸ [start, end)
+      * @param    [i]start è¿”å›è¿ç»­è¡¨çš„èµ·å§‹ä½ç½®
+      * @param    [i]end   è¿”å›è¿ç»­è¡¨çš„ç»“æŸä½ç½®
+      * @param    [i]textRowIndex æ–‡æœ¬è¡Œç´¢å¼•
+      * @return   bool å¦‚æœæœ‰tableè¡Œ è¿”å›trueå¦åˆ™è¿”å›false
       */
      bool getSeriesTableIterator(_Out_ TextRowIterator &start, _Out_ TextRowIterator &end,
                                  _In_ int textRowIndex = 0);
 
      /*!
-     * @brief    ²éÕÒÌæ»»
-     * @param    [i]find ²éÕÒµÄ×Ö·û´®
-     * @param    [i]bCase ÊÇ·ñ´óĞ´
-     * @param    [i]bWord Õû¸öµ¥´Ê
-     * @param    [i]bNext ÏòÏÂ
-     * @param    [i]replace Ìæ»»ÎÄ±¾
-     * @param    [i]findAndImReplace ÕÒµ½ÊÇ·ñÂíÉÏÌæ»»
-     * @return   Ìæ»»³É¹¦·µ»Øtrue
+     * @brief    æŸ¥æ‰¾æ›¿æ¢
+     * @param    [i]find æŸ¥æ‰¾çš„å­—ç¬¦ä¸²
+     * @param    [i]bCase æ˜¯å¦å¤§å†™
+     * @param    [i]bWord æ•´ä¸ªå•è¯
+     * @param    [i]bNext å‘ä¸‹
+     * @param    [i]replace æ›¿æ¢æ–‡æœ¬
+     * @param    [i]findAndImReplace æ‰¾åˆ°æ˜¯å¦é©¬ä¸Šæ›¿æ¢
+     * @return   æ›¿æ¢æˆåŠŸè¿”å›true
      */
      bool replaceSelectText(const QString &find, bool bCase, bool bWord,
                             bool bNext, const QString &replace, bool findAndImReplace);
 
      /*!
-     * @brief    ²éÕÒÌæ»»
-     * @param    [i]find ²éÕÒµÄ×Ö·û´®
-     * @param    [i]isCase ÊÇ·ñ´óĞ´
-     * @param    [i]isWord Õû¸öµ¥´Ê
-     * @param    [i]isNext ÏòÏÂ
-     * @param    [i]replace Ìæ»»Í¼Æ¬
-     * @param    [i]findAndImReplace ÕÒµ½ÊÇ·ñÂíÉÏÌæ»»
-     * @return   Ìæ»»³É¹¦·µ»Øtrue
+     * @brief    æŸ¥æ‰¾æ›¿æ¢
+     * @param    [i]find æŸ¥æ‰¾çš„å­—ç¬¦ä¸²
+     * @param    [i]isCase æ˜¯å¦å¤§å†™
+     * @param    [i]isWord æ•´ä¸ªå•è¯
+     * @param    [i]isNext å‘ä¸‹
+     * @param    [i]replace æ›¿æ¢å›¾ç‰‡
+     * @param    [i]findAndImReplace æ‰¾åˆ°æ˜¯å¦é©¬ä¸Šæ›¿æ¢
+     * @return   æ›¿æ¢æˆåŠŸè¿”å›true
      */
      bool replaceSelectTextToImage(const QString &find, bool isCase, bool isWord,
                                    bool isNext, const QString &imageFileName,
                                    bool findAndImReplace, int w, int h, bool bMonochrome);
 
      /*!
-      * @brief    ²åÈë±êÌâ
-      * @param    [i]title ±êÌâÎÄ±¾
-      * @param    [i]Num   ±êÌâºÅ
-      * @param    [i]align ¶ÔÆë·½Ê½
+      * @brief    æ’å…¥æ ‡é¢˜
+      * @param    [i]title æ ‡é¢˜æ–‡æœ¬
+      * @param    [i]Num   æ ‡é¢˜å·
+      * @param    [i]align å¯¹é½æ–¹å¼
       * @return   void
       */
      void insertTitleHead(const QString &titleText, int num, GLDRichTextEdit::Align align);
@@ -280,7 +280,7 @@ public slots:
 
     void setReadOnly(bool value);
 
-    // Ö§³ÖËõ·Å±ÈÀıÔÚ 10% ~ 600% Ö®¼ä
+    // æ”¯æŒç¼©æ”¾æ¯”ä¾‹åœ¨ 10% ~ 600% ä¹‹é—´
     void setZoomFactor(bool bIsZoomIn);
 
     void setZoomFactorValue(const double &zoomFactor);
@@ -297,10 +297,10 @@ public slots:
     void setTextCursorToTail();
     
     /*!
-     * @brief    Ñ¡ÔñÖĞbeginTextµ½endTextµÄÎÄ±¾°üÀ¨beginText, endText
+     * @brief    é€‰æ‹©ä¸­beginTextåˆ°endTextçš„æ–‡æœ¬åŒ…æ‹¬beginText, endText
      * @param    [i]beginText
      * @param    [i]endText
-     , @param    [i]bCase ÊÇ·ñÇø·Ö´óĞ¡Ğ´
+     , @param    [i]bCase æ˜¯å¦åŒºåˆ†å¤§å°å†™
      * @return   bool
      */
     bool selectRegionText(const QString &beginText, const QString &endText, bool bCase);
@@ -321,7 +321,7 @@ public:
     int m_nScrollWidth;
 
 private:
-    double m_dZoomFactor;//±ÈÀıµÄËõ·Å
+    double m_dZoomFactor;//æ¯”ä¾‹çš„ç¼©æ”¾
     static double s_PreZoom;
     bool m_bCanUndo;
     bool m_bCanRedo;

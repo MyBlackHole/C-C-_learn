@@ -1,5 +1,5 @@
 /*
- * ÎÆÀí±³¾°£¬ÔÚÖ÷½çÃæºÍ·ÖÒ³ÃæÖÐ£¬ÓÃÓÚÓÐ·ÖÊýÐèÇóÐèÒª¶¯Ì¬¸Ä±ä±³¾°µÄÇé¿ö¡£
+ * çº¹ç†èƒŒæ™¯ï¼Œåœ¨ä¸»ç•Œé¢å’Œåˆ†é¡µé¢ä¸­ï¼Œç”¨äºŽæœ‰åˆ†æ•°éœ€æ±‚éœ€è¦åŠ¨æ€æ”¹å˜èƒŒæ™¯çš„æƒ…å†µã€‚
  *
  * */
 
@@ -16,7 +16,7 @@ class WenliWidget : public BaseStyleWidget
 {
     Q_OBJECT
     Q_PROPERTY(QColor color READ color WRITE setColor)
-    //×¢²áÊôÐÔÎªÑùÊ½±íÌá¹©×Ô¶¨ÒåÖµ
+    //æ³¨å†Œå±žæ€§ä¸ºæ ·å¼è¡¨æä¾›è‡ªå®šä¹‰å€¼
     Q_PROPERTY(QString backPix READ backPix WRITE setBackPix DESIGNABLE true SCRIPTABLE true)
 
 public:

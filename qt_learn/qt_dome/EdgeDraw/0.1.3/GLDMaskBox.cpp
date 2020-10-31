@@ -245,7 +245,7 @@ QPoint GLDMaskBox::calcPosOfOwner()
 
     do
     {
-        // ¼ÆËãownerÎ»ÖÃ¶ÔÓ¦ÆÁÄ»ÖĞĞÄµÄÏóÏŞ
+        // è®¡ç®—ownerä½ç½®å¯¹åº”å±å¹•ä¸­å¿ƒçš„è±¡é™
         if (!m_pClippedWgt)
         {
             break;
@@ -257,34 +257,34 @@ QPoint GLDMaskBox::calcPosOfOwner()
 
         if (ptDelta.x() >= 0 && ptDelta.y() <= 0)
         {
-            // µÚÒ»ÏóÏŞ
+            // ç¬¬ä¸€è±¡é™
             pt = QPoint(ptGlobalOwnerCenter.x() - m_pClippedWgt->width()/2,
                             ptGlobalOwnerCenter.y() + m_pClippedWgt->height()/2);
             pt += QPoint(-this->width()/2, 0);
         }
         else if (ptDelta.x() <= 0 && ptDelta.y() <= 0)
         {
-            // µÚ¶şÏóÏŞ
+            // ç¬¬äºŒè±¡é™
             pt = QPoint(ptGlobalOwnerCenter.x() + m_pClippedWgt->width()/2,
                             ptGlobalOwnerCenter.y() + m_pClippedWgt->height()/2);
             pt += QPoint(-this->width()/2, 0);
         }
         else if (ptDelta.x() <= 0 && ptDelta.y() >= 0)
         {
-            // µÚÈıÏóÏŞ
+            // ç¬¬ä¸‰è±¡é™
             pt = QPoint(ptGlobalOwnerCenter.x() + m_pClippedWgt->width()/2,
                             ptGlobalOwnerCenter.y() - m_pClippedWgt->height()/2);
             pt += QPoint(-this->width()/2, -this->height());
         }
         else if (ptDelta.x() >= 0 && ptDelta.y() >= 0)
         {
-            // µÚËÄÏóÏŞ
+            // ç¬¬å››è±¡é™
             pt = QPoint(ptGlobalOwnerCenter.x() - m_pClippedWgt->width()/2,
                         ptGlobalOwnerCenter.y() - m_pClippedWgt->height()/2);
             pt += QPoint(-this->width()/2, -this->height());
         }
 
-        // ³¬³öÆÁÄ»·¶Î§µÄĞ£×¼
+        // è¶…å‡ºå±å¹•èŒƒå›´çš„æ ¡å‡†
         QRect rcThis(pt, pt + QPoint(this->width(), this->height()));
         QRect rcScreen = QApplication::desktop()->screenGeometry();
 
@@ -360,7 +360,7 @@ QPoint GLDMaskBox::calcPosOfTipInfo()
 
     do
     {
-        // ¼ÆËãownerÎ»ÖÃ¶ÔÓ¦ÆÁÄ»ÖĞĞÄµÄÏóÏŞ
+        // è®¡ç®—ownerä½ç½®å¯¹åº”å±å¹•ä¸­å¿ƒçš„è±¡é™
         if (!m_pClippedWgt)
         {
             break;
@@ -375,13 +375,13 @@ QPoint GLDMaskBox::calcPosOfTipInfo()
 
         if ((ptDelta.x() >= 0 && ptDelta.y() <= 0) || (ptDelta.x() <= 0 && ptDelta.y() <= 0))
         {
-            // µÚÒ»ÏóÏŞ»òµÚ¶şÏóÏŞ
+            // ç¬¬ä¸€è±¡é™æˆ–ç¬¬äºŒè±¡é™
             pt = QPoint(ptParentOwnerTopLeft.x() + m_pClippedWgt->width() / 2,
                 ptParentOwnerTopLeft.y() + m_pClippedWgt->height());
         }
         else
         {
-            // µÚÈıÏóÏŞ»òµÚËÄÏóÏŞ
+            // ç¬¬ä¸‰è±¡é™æˆ–ç¬¬å››è±¡é™
             // pt = QPoint(ptParentOwnerTopLeft.x() + m_pClippedWgt->width() / 2,
             //      ptParentOwnerTopLeft.y());
             pt = QPoint(ptParentOwnerTopLeft.x() + m_pClippedWgt->width() / 2,
@@ -408,8 +408,8 @@ bool GLDMaskBox::getMaskShow(const QString &prefix, const QString &key)
     {
         if (strValue == "true")
         {
-            // Õâ¸öº¯ÊıÊÇÔÚ×îÖÕ·¢²¼µÄÊ±ºò´ò¿ª£¬ÄÇÃ´ÃÉ°æÖ»»áÔÚµÚÒ»´ÎÆô¶¯µÄÊ±ºò±»µ÷ÓÃ
-            // ÔİÊ±ÔÚ²âÊÔ¹¦ÄÜÖĞ£¬ÏÈ×¢µô£¬·½±ãµ÷ÊÔ
+            // è¿™ä¸ªå‡½æ•°æ˜¯åœ¨æœ€ç»ˆå‘å¸ƒçš„æ—¶å€™æ‰“å¼€ï¼Œé‚£ä¹ˆè’™ç‰ˆåªä¼šåœ¨ç¬¬ä¸€æ¬¡å¯åŠ¨çš„æ—¶å€™è¢«è°ƒç”¨
+            // æš‚æ—¶åœ¨æµ‹è¯•åŠŸèƒ½ä¸­ï¼Œå…ˆæ³¨æ‰ï¼Œæ–¹ä¾¿è°ƒè¯•
             // setValue(prefix, key);
             return true;
         }

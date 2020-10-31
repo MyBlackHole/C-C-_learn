@@ -30,8 +30,8 @@ static QWidget* topParentWidget(QWidget* pWgt)
     return widget;
 }
 
-// Êı¾İ²ÎÊıÀà
-// ×¢Òâ£ºÈç¹ûÎÄ×ÖÖĞÒª¼ÓÈëÁ´½Ó£¬Çë×ñÑ­htmlµÄ¶¨Òå£¬ÀıÈç£º<a href=\"http://www.baidu.com/\">title</a>
+// æ•°æ®å‚æ•°ç±»
+// æ³¨æ„ï¼šå¦‚æœæ–‡å­—ä¸­è¦åŠ å…¥é“¾æ¥ï¼Œè¯·éµå¾ªhtmlçš„å®šä¹‰ï¼Œä¾‹å¦‚ï¼š<a href=\"http://www.baidu.com/\">title</a>
 class GLDMaskBoxParam
 {
 public:
@@ -41,11 +41,11 @@ public:
         : m_strWarnIcon(exePath() + "/images/Msg/warring.png")
         , m_strCloseIcon(exePath() + "/images/Msg/close.png")
         , m_sizeIcon(16, 16)
-        , m_strTitle(TRANS_STRING("ÌáÊ¾"))
-        , m_titleFont(QFont(TRANS_STRING("Î¢ÈíÑÅºÚ"), 12, QFont::Bold))
+        , m_strTitle(TRANS_STRING("æç¤º"))
+        , m_titleFont(QFont(TRANS_STRING("å¾®è½¯é›…é»‘"), 12, QFont::Bold))
         , m_titleColor(Qt::blue)
-        , m_strBody(TRANS_STRING("ÌáÊ¾"))
-        , m_bodyFont(QFont(TRANS_STRING("Î¢ÈíÑÅºÚ"), 9, QFont::Normal))
+        , m_strBody(TRANS_STRING("æç¤º"))
+        , m_bodyFont(QFont(TRANS_STRING("å¾®è½¯é›…é»‘"), 9, QFont::Normal))
         , m_bodyColor(QColor("#434343"))
         , m_nRowHeight(20)
         , m_nTimeRemain(8000)
@@ -82,33 +82,33 @@ public:
         return *this;
     }
 
-    QString  m_strWarnIcon;      // Í¼±êÈ«Â·¾¶
-    QString  m_strCloseIcon;     // ¹Ø±ÕÍ¼±êÂ·¾¶
-    QSize    m_sizeIcon;         // Í¼±êµÄ´óĞ¡
+    QString  m_strWarnIcon;      // å›¾æ ‡å…¨è·¯å¾„
+    QString  m_strCloseIcon;     // å…³é—­å›¾æ ‡è·¯å¾„
+    QSize    m_sizeIcon;         // å›¾æ ‡çš„å¤§å°
 
-    QString  m_strTitle;         // titileÎÄ×Ö
-    QFont    m_titleFont;        // titleÎÄ×Ö×ÖÌå
-    QColor   m_titleColor;       // titileÎÄ×ÖÑÕÉ«
+    QString  m_strTitle;         // titileæ–‡å­—
+    QFont    m_titleFont;        // titleæ–‡å­—å­—ä½“
+    QColor   m_titleColor;       // titileæ–‡å­—é¢œè‰²
 
-    QString  m_strBody;          // ÕıÎÄÎÄ×Ö
-    QFont    m_bodyFont;         // ÕıÎÄÎÄ×Ö×ÖÌå
-    QColor   m_bodyColor;        // ÕıÎÄÎÄ×ÖÑÕÉ«
-    int      m_nRowHeight;       // ÕıÎÄĞĞ¸ß
+    QString  m_strBody;          // æ­£æ–‡æ–‡å­—
+    QFont    m_bodyFont;         // æ­£æ–‡æ–‡å­—å­—ä½“
+    QColor   m_bodyColor;        // æ­£æ–‡æ–‡å­—é¢œè‰²
+    int      m_nRowHeight;       // æ­£æ–‡è¡Œé«˜
 
-    int      m_nTimeRemain;      // Í£ÁôÊ±¼ä(milliseconds)
-    int      m_nTimeFadeOut;     // µ­³öÊ±¼ä(milliseconds)
+    int      m_nTimeRemain;      // åœç•™æ—¶é—´(milliseconds)
+    int      m_nTimeFadeOut;     // æ·¡å‡ºæ—¶é—´(milliseconds)
 
-    //QSize m_sizeMinTipBox;     // tipbox¿Ø¼şµÄ´óĞ¡
-    //QSize m_sizeMaxTipBox;     // tipboxµÄ×î´ó´óĞ¡£¨»»ĞĞÒÀ¾İ£©
+    //QSize m_sizeMinTipBox;     // tipboxæ§ä»¶çš„å¤§å°
+    //QSize m_sizeMaxTipBox;     // tipboxçš„æœ€å¤§å¤§å°ï¼ˆæ¢è¡Œä¾æ®ï¼‰
 
-    //bool m_bIsWin;             // [±£Áô]ÊÇ·ñÊÇ¶ÀÁ¢´°¿Ú(²»ÊÜÍâÎ§´°ÌåµÄÔ¼Êø£¬Èç¹ûÊÇfalse£¬Ôò×Ô¶¯½«ownerµÄ¸¸ÉèÖÃÎª×ÔÉíµÄ¸¸)
+    //bool m_bIsWin;             // [ä¿ç•™]æ˜¯å¦æ˜¯ç‹¬ç«‹çª—å£(ä¸å—å¤–å›´çª—ä½“çš„çº¦æŸï¼Œå¦‚æœæ˜¯falseï¼Œåˆ™è‡ªåŠ¨å°†ownerçš„çˆ¶è®¾ç½®ä¸ºè‡ªèº«çš„çˆ¶)
 
-    int      m_nMaxWidth;        // ×î´ó¿í¶È,»»ĞĞÒÀ¾İ
-    QSize    m_arrowSize;        // ¼ıÍ·´óĞ¡(×÷ÎªÄÚÈİlayoutµÄÍâ±ß¾à)
+    int      m_nMaxWidth;        // æœ€å¤§å®½åº¦,æ¢è¡Œä¾æ®
+    QSize    m_arrowSize;        // ç®­å¤´å¤§å°(ä½œä¸ºå†…å®¹layoutçš„å¤–è¾¹è·)
 
-    QWidget* m_wgtOwner;         // ±»Ö¸ÏòµÄwidget
+    QWidget* m_wgtOwner;         // è¢«æŒ‡å‘çš„widget
 
-    bool     m_bIsOverTimeShow;  // ÊÇ·ñ³¬Ê±ÏÔÊ¾,Ä¬ÈÏfalse
+    bool     m_bIsOverTimeShow;  // æ˜¯å¦è¶…æ—¶æ˜¾ç¤º,é»˜è®¤false
 
 };
 
@@ -132,7 +132,7 @@ public:
     GLDMaskBoxParam& tipBoxParam();
 
     /**
-     * @brief Á¢¼´¹Ø±Õ,²¢Ïú»Ù
+     * @brief ç«‹å³å…³é—­,å¹¶é”€æ¯
      */
     virtual void immediateCloseThis();
 
@@ -148,7 +148,7 @@ protected:
     virtual bool eventFilter(QObject *obj, QEvent *ev);
 
     /**
-     * @brief ½¨Á¢Ô²½Ç¾ØĞÎµÄtip path
+     * @brief å»ºç«‹åœ†è§’çŸ©å½¢çš„tip path
      * @return
      */
     virtual QPainterPath buildPathRoundRectTip();
@@ -158,13 +158,13 @@ protected:
 
     GLDMaskBoxParam          m_oTipBoxParam;
 
-    QLabel*                 m_labelIco;                       // Í¼±ê
-    QLabel*                 m_labelTextTitle;                 // ±êÌâÎÄ×ÖÇø
-    QLabel*                 m_labelTextBody;                  // ÄÚÈİÎÄ×ÖÇø
-    QTimer*                 m_timerClose;                     // ¹Ø±Õ¶¨Ê±Æ÷
-    QPushButton*            m_btnClose;                       // ¹Ø±Õ°´Å¥
-    QPropertyAnimation*     m_animFadeOut;                    // ½¥ÒşĞ§¹û¶¯»­
-    QGraphicsOpacityEffect* m_effectOpacity;                  // ½¥ÒşĞ§¹û
+    QLabel*                 m_labelIco;                       // å›¾æ ‡
+    QLabel*                 m_labelTextTitle;                 // æ ‡é¢˜æ–‡å­—åŒº
+    QLabel*                 m_labelTextBody;                  // å†…å®¹æ–‡å­—åŒº
+    QTimer*                 m_timerClose;                     // å…³é—­å®šæ—¶å™¨
+    QPushButton*            m_btnClose;                       // å…³é—­æŒ‰é’®
+    QPropertyAnimation*     m_animFadeOut;                    // æ¸éšæ•ˆæœåŠ¨ç”»
+    QGraphicsOpacityEffect* m_effectOpacity;                  // æ¸éšæ•ˆæœ
 
 private:
     explicit GLDMaskBox(GLDMaskBoxParam & oTipBoxParam, QWidget *parent = 0);

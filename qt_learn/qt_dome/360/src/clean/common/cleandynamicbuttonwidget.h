@@ -9,7 +9,7 @@ class DynamicButton;
 class CleanDynamicButtonWidget : public QWidget
 {
     Q_OBJECT
-    //×Ô¶¨ÒåÊôĞÔ£¬ÓÃÓÚÑùÊ½±í
+    //è‡ªå®šä¹‰å±æ€§ï¼Œç”¨äºæ ·å¼è¡¨
     Q_PROPERTY(QString normalAnimInfo READ normalAnimInfo \
                WRITE setNormalAnimInfo DESIGNABLE true SCRIPTABLE true)
     Q_PROPERTY(QString title READ title \

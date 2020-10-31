@@ -140,7 +140,7 @@ void MainWindow::loadDataToTableView()
 {
 	m_model = new QStandardItemModel(this);
 
-	//¹¹Ôì²¿ÃÅÊı¾İ
+	//æ„é€ éƒ¨é—¨æ•°æ®
 	for (int i = 1; i <= 10; ++i)
 	{
 		QList<QStandardItem*> empt;
@@ -173,12 +173,12 @@ void MainWindow::loadDataToTableView()
 		simbol_Col3Data->setData(0, Qt::EditRole);
         empt.append(simbol_Col3Data);
 
-		//ÏÂÀ­Ñ¡Ôñ¿ò
+		//ä¸‹æ‹‰é€‰æ‹©æ¡†
 		QStandardItem *pDropDown = new QStandardItem();
 		pDropDown->setData("java");
         empt.append(pDropDown);
 
-		//Ôö¼Óµ½²¿ÃÅÁĞ±íÖĞ
+		//å¢åŠ åˆ°éƒ¨é—¨åˆ—è¡¨ä¸­
 //		rowNoItem->appendRow(pSimbolCols);
 //		empt.append(rowNoItem);
 		m_model->appendRow(empt);
@@ -188,7 +188,7 @@ void MainWindow::loadDataToTableView()
 	m_model->setHeaderData(1, Qt::Horizontal, "Simbol_Col1");
 	m_model->setHeaderData(2, Qt::Horizontal, "Simbol_Col2");
 	m_model->setHeaderData(3, Qt::Horizontal, "Simbol_Col3");
-	m_model->setHeaderData(4, Qt::Horizontal, TRANS_STRING("ÏÂÀ­Ñ¡Ôñ¿ò"));
+	m_model->setHeaderData(4, Qt::Horizontal, TRANS_STRING("ä¸‹æ‹‰é€‰æ‹©æ¡†"));
 
 	m_model->setData(m_model->index(0, 0), "ToolTip", Qt::ToolTipRole);
 }

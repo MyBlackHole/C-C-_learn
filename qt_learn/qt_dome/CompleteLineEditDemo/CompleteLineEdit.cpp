@@ -33,7 +33,7 @@ void CompleteLineEdit::keyPressEvent(QKeyEvent *e)
 
         if (Qt::Key_Down == key)
         {
-            // °´ÏòÏÂ·½Ïò¼üÊ±,ÒÆ¶¯¹â±êÑ¡ÖĞÏÂÒ»¸öÍê³ÉÁĞ±íÖĞµÄÏî
+            // æŒ‰å‘ä¸‹æ–¹å‘é”®æ—¶,ç§»åŠ¨å…‰æ ‡é€‰ä¸­ä¸‹ä¸€ä¸ªå®Œæˆåˆ—è¡¨ä¸­çš„é¡¹
             int row = currentIndex.row() + 1;
             if (row >= count)
             {
@@ -45,7 +45,7 @@ void CompleteLineEdit::keyPressEvent(QKeyEvent *e)
         }
         else if (Qt::Key_Up == key)
         {
-            // °´ÏòÏÂ·½Ïò¼üÊ±,ÒÆ¶¯¹â±êÑ¡ÖĞÉÏÒ»¸öÍê³ÉÁĞ±íÖĞµÄÏî
+            // æŒ‰å‘ä¸‹æ–¹å‘é”®æ—¶,ç§»åŠ¨å…‰æ ‡é€‰ä¸­ä¸Šä¸€ä¸ªå®Œæˆåˆ—è¡¨ä¸­çš„é¡¹
             int row = currentIndex.row() - 1;
             if (row < 0)
             {
@@ -57,12 +57,12 @@ void CompleteLineEdit::keyPressEvent(QKeyEvent *e)
         }
         else if (Qt::Key_Escape == key)
         {
-            // °´ÏÂEsc¼üÊ±,Òş²ØÍê³ÉÁĞ±í
+            // æŒ‰ä¸‹Escé”®æ—¶,éšè—å®Œæˆåˆ—è¡¨
             listView->hide();
         }
         else if (Qt::Key_Enter == key || Qt::Key_Return == key)
         {
-            // °´ÏÂ»Ø³µ¼üÊ±,Ê¹ÓÃÍê³ÉÁĞ±íÖĞÑ¡ÖĞµÄÏî,²¢Òş²ØÍê³ÉÁĞ±í
+            // æŒ‰ä¸‹å›è½¦é”®æ—¶,ä½¿ç”¨å®Œæˆåˆ—è¡¨ä¸­é€‰ä¸­çš„é¡¹,å¹¶éšè—å®Œæˆåˆ—è¡¨
             if (currentIndex.isValid())
             {
                 QString text = listView->currentIndex().data().toString();
@@ -73,7 +73,7 @@ void CompleteLineEdit::keyPressEvent(QKeyEvent *e)
         }
         else
         {
-            // ÆäËûÇé¿ö,Òş²ØÍê³ÉÁĞ±í,²¢Ê¹ÓÃQLineEditµÄ¼üÅÌ°´ÏÂÊÂ¼ş
+            // å…¶ä»–æƒ…å†µ,éšè—å®Œæˆåˆ—è¡¨,å¹¶ä½¿ç”¨QLineEditçš„é”®ç›˜æŒ‰ä¸‹äº‹ä»¶
             listView->hide();
             QLineEdit::keyPressEvent(e);
         }
@@ -97,7 +97,7 @@ void CompleteLineEdit::setComplete(const QString &text)
         return;
     }
 
-    // Èç¹ûÍêÕûµÄÍê³ÉÁĞ±íÖĞµÄÄ³¸öµ¥´Ê°üº¬ÊäÈëµÄÎÄ±¾,Ôò¼ÓÈëÒªÏÔÊ¾µÄÍê³ÉÁĞ±í´®ÖĞ
+    // å¦‚æœå®Œæ•´çš„å®Œæˆåˆ—è¡¨ä¸­çš„æŸä¸ªå•è¯åŒ…å«è¾“å…¥çš„æ–‡æœ¬,åˆ™åŠ å…¥è¦æ˜¾ç¤ºçš„å®Œæˆåˆ—è¡¨ä¸²ä¸­
     QStringList sl;
     foreach(QString word, words)
     {

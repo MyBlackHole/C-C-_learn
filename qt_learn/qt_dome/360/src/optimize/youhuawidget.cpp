@@ -18,8 +18,8 @@ void YouhuaWidget::initUI()
     m_topBackWidget->setButtonInfo(":/safe/return");
     m_stackStatusWidget->setStaticIcon(":/youhua/logo");
     m_stackStatusWidget->setNormalButton(":/youhua/start");
-    m_stackStatusWidget->setTextInfo("Ò»¼üÓÅ»¯£¬ÈÃµçÄÔ¿ìÈçÉÁµç", \
-                                         "È«ÃæÌáÉýµçÄÔ¿ª»úËÙ¶È¡¢ÏµÍ³ËÙ¶È¡¢ÉÏÍøËÙ¶È¡¢Ó²ÅÌËÙ¶È");
+    m_stackStatusWidget->setTextInfo("ä¸€é”®ä¼˜åŒ–ï¼Œè®©ç”µè„‘å¿«å¦‚é—ªç”µ", \
+                                         "å…¨é¢æå‡ç”µè„‘å¼€æœºé€Ÿåº¦ã€ç³»ç»Ÿé€Ÿåº¦ã€ä¸Šç½‘é€Ÿåº¦ã€ç¡¬ç›˜é€Ÿåº¦");
     m_topBackWidget->setFixedHeight(150);
     connect(m_topBackWidget, SIGNAL(buttonClicked()), this, SIGNAL(goToMain()));
     m_scanBottomWidget = new YouhuaScanBottom;

@@ -24,14 +24,14 @@ void getDataThread::run()
 
     if(request_type == 1)
     {
-        //GETÇëÇó
+        //GETè¯·æ±‚
         request.setUrl(request_url);
         reply = nam->get(request);
         qDebug("getDataThread run\n");
     }
     else
     {
-        //POSTÇëÇó
+        //POSTè¯·æ±‚
         request.setUrl(request_url);
         request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
 

@@ -13,11 +13,11 @@ public:
     void mouseMoveEvent(QMouseEvent *);
 
 public slots:
-    void showTime();                 	//ÏÔÊ¾µ±Ç°µÄÊ±¼ä
+    void showTime();                 	//æ˜¾ç¤ºå½“å‰çš„æ—¶é—´
 
 private:
-    QPoint dragPosition;            	//±£´æÊó±êµãÏà¶Ôµç×ÓÊ±ÖÓ´°Ìå×óÉÏ½ÇµÄÆ«ÒÆÖµ
-    bool showColon;                  	//ÓÃÓÚÏÔÊ¾Ê±¼äÊ±ÊÇ·ñÏÔÊ¾¡°£º¡±
+    QPoint dragPosition;            	//ä¿å­˜é¼ æ ‡ç‚¹ç›¸å¯¹ç”µå­æ—¶é’Ÿçª—ä½“å·¦ä¸Šè§’çš„åç§»å€¼
+    bool showColon;                  	//ç”¨äºæ˜¾ç¤ºæ—¶é—´æ—¶æ˜¯å¦æ˜¾ç¤ºâ€œï¼šâ€
 };
 
 #endif // DIGICLOCK_H

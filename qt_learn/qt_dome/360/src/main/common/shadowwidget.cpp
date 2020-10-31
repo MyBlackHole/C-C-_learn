@@ -15,7 +15,7 @@ ShadowWidget::ShadowWidget(QWidget *parent)
 
 void ShadowWidget::paintEvent(QPaintEvent *)
 {
-    //¼ÓÒõÓ°£¬ÒòÎª±âÆ½»¯È¥µô
+    //åŠ é˜´å½±ï¼Œå› ä¸ºæ‰å¹³åŒ–åŽ»æŽ‰
 //    QPainterPath path;
 //    path.setFillRule(Qt::WindingFill);
 //    path.addRect(10, 10, this->width()-20, this->height()-20);
@@ -39,12 +39,12 @@ void ShadowWidget::paintEvent(QPaintEvent *)
 
 void ShadowWidget::mousePressEvent(QMouseEvent *event)
 {
-    //Ö»ÄÜÊÇÊó±ê×ó¼üÒÆ¶¯ºÍ¸Ä±ä´óÐ¡
+    //åªèƒ½æ˜¯é¼ æ ‡å·¦é”®ç§»åŠ¨å’Œæ”¹å˜å¤§å°
     if(event->button() == Qt::LeftButton)
     {
         m_mousePress = true;
     }
-    //´°¿ÚÒÆ¶¯¾àÀë
+    //çª—å£ç§»åŠ¨è·ç¦»
     m_movePoint = event->globalPos() - pos();
 }
 
@@ -55,7 +55,7 @@ void ShadowWidget::mouseReleaseEvent(QMouseEvent *)
 
 void ShadowWidget::mouseMoveEvent(QMouseEvent *event)
 {
-    //ÒÆ¶¯´°¿Ú
+    //ç§»åŠ¨çª—å£
     if(m_mousePress)
     {
         QPoint movePpos = event->globalPos();

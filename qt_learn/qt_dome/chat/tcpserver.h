@@ -37,11 +37,11 @@ private:
     qint64 bytesWritten;
     qint64 bytesToWrite;
     qint64 loadSize;
-    QByteArray outBlock;//»º´æÒ»´Î·¢ËÍµÄÊı¾İ
+    QByteArray outBlock;//ç¼“å­˜ä¸€æ¬¡å‘é€çš„æ•°æ®
 
     QTcpSocket *clientConnection;
 
-    QTime time;//¼ÆÊ±Æ÷
+    QTime time;//è®¡æ—¶å™¨
 
 private slots:
     void on_serverCloseBtn_clicked();

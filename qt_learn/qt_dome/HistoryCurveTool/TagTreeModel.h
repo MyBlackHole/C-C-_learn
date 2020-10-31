@@ -24,14 +24,14 @@ public:
 
     bool setData(const QModelIndex &index, const QVariant &value, int role);
 
-    // 构建模型数据
+    // 鏋勫缓妯″瀷鏁版嵁
     void setupModelData(TreeItem *parent);
 
-    // 更新模型数据
+    // 鏇存柊妯″瀷鏁版嵁
     void updateData();
 
 private:
-    TreeItem *rootItem; // 最底层顶根节点(一个无效的QModelIndex)
+    TreeItem *rootItem; // 鏈�搴曞眰椤舵牴鑺傜偣(涓�涓棤鏁堢殑QModelIndex)
 };
 
 #endif // TAGTREEMODEL_H

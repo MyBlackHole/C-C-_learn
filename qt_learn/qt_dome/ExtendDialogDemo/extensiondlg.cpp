@@ -20,7 +20,7 @@ extensiondlg::extensiondlg(QWidget *parent) :
     createBaseInfo();
     createDetailInfo();
 
-    QVBoxLayout *layout =new QVBoxLayout(this);                 //²¼¾Ö
+    QVBoxLayout *layout =new QVBoxLayout(this);                 //å¸ƒå±€
     layout->addWidget(baseWidget);
     layout->addWidget(detailWidget);
     layout->setSizeConstraint(QLayout::SetFixedSize);
@@ -36,13 +36,13 @@ void extensiondlg::createBaseInfo()
 {
     baseWidget = new QWidget;
 
-    QLabel *nameLabel = new QLabel(QStringLiteral("ÐÕÃû£º"));
+    QLabel *nameLabel = new QLabel(QStringLiteral("å§“åï¼š"));
     QLineEdit *nameLineEdit = new QLineEdit;
 
-    QLabel *sexLabel = new QLabel(QStringLiteral("ÐÔ±ð£º"));
+    QLabel *sexLabel = new QLabel(QStringLiteral("æ€§åˆ«ï¼š"));
     QComboBox *sexComboBox = new  QComboBox;
-    sexComboBox->insertItem(0,QStringLiteral("Å®"));
-    sexComboBox->insertItem(1,QStringLiteral("ÄÐ"));
+    sexComboBox->insertItem(0,QStringLiteral("å¥³"));
+    sexComboBox->insertItem(1,QStringLiteral("ç”·"));
 
     QGridLayout *LeftLayout = new QGridLayout;
     LeftLayout->addWidget(nameLabel,0,0);
@@ -50,8 +50,8 @@ void extensiondlg::createBaseInfo()
     LeftLayout->addWidget(sexLabel);
     LeftLayout->addWidget(sexComboBox);
 
-    QPushButton *oKBtn = new QPushButton(QStringLiteral("È·¶¨"));
-    QPushButton *detailBtn = new QPushButton(QStringLiteral("ÏêÏ¸"));
+    QPushButton *oKBtn = new QPushButton(QStringLiteral("ç¡®å®š"));
+    QPushButton *detailBtn = new QPushButton(QStringLiteral("è¯¦ç»†"));
     QDialogButtonBox *btnBox = new QDialogButtonBox(Qt::Vertical);
     btnBox->addButton(oKBtn,QDialogButtonBox::ActionRole);
     btnBox->addButton(detailBtn,QDialogButtonBox::ActionRole);
@@ -66,18 +66,18 @@ void extensiondlg::createDetailInfo()
 {
     detailWidget = new QWidget;
 
-    QLabel *ageLabel = new QLabel(QStringLiteral("ÄêÁä£º"));
+    QLabel *ageLabel = new QLabel(QStringLiteral("å¹´é¾„ï¼š"));
     QLineEdit *ageLineEdit = new QLineEdit;
     ageLineEdit->setText(QStringLiteral("30"));
 
-    QLabel *departmentLabel = new QLabel(QStringLiteral("²¿ÃÅ£º"));
+    QLabel *departmentLabel = new QLabel(QStringLiteral("éƒ¨é—¨ï¼š"));
     QComboBox *departmentComBox = new QComboBox;
-    departmentComBox->addItem(QStringLiteral("²¿ÃÅ1"));
-    departmentComBox->addItem(QStringLiteral("²¿ÃÅ2"));
-    departmentComBox->addItem(QStringLiteral("²¿ÃÅ3"));
-    departmentComBox->addItem(QStringLiteral("²¿ÃÅ4"));
+    departmentComBox->addItem(QStringLiteral("éƒ¨é—¨1"));
+    departmentComBox->addItem(QStringLiteral("éƒ¨é—¨2"));
+    departmentComBox->addItem(QStringLiteral("éƒ¨é—¨3"));
+    departmentComBox->addItem(QStringLiteral("éƒ¨é—¨4"));
 
-    QLabel *emailLabel = new QLabel(QStringLiteral("email£º"));
+    QLabel *emailLabel = new QLabel(QStringLiteral("emailï¼š"));
     QLineEdit *emailLineEdit = new QLineEdit;
 
     QGridLayout *mainLayout = new QGridLayout(detailWidget);

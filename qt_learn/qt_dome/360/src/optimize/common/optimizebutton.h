@@ -9,7 +9,7 @@ class SpeedOutButton;
 class OptimizeButton : public QWidget
 {
     Q_OBJECT
-    //×Ô¶¨ÒåÊôÐÔ£¬ÓÃÓÚÑùÊ½±í
+    //è‡ªå®šä¹‰å±žæ€§ï¼Œç”¨äºŽæ ·å¼è¡¨
     Q_PROPERTY(QString iconInfo READ iconInfo \
                WRITE setIconInfo DESIGNABLE true SCRIPTABLE true)
     Q_PROPERTY(QString title READ title \

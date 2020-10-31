@@ -11,8 +11,8 @@ TreeView::TreeView(QWidget *parent)
     this->resizeColumnToContents(0);
     this->setAlternatingRowColors(true);
     this->setGeometry(300, 300, 500, 500);
-    this->setWindowTitle(QStringLiteral("Ê÷ÐÎÕÛµþÕ¹¿ª"));
-    // Ñ¡ÔñÒ»ÐÐÖÐµÄÄ³Ò»¸ö£¬Ä¬ÈÏÑ¡ÖÐÒ»ÐÐ
+    this->setWindowTitle(QStringLiteral("æ ‘å½¢æŠ˜å å±•å¼€"));
+    // é€‰æ‹©ä¸€è¡Œä¸­çš„æŸä¸€ä¸ªï¼Œé»˜è®¤é€‰ä¸­ä¸€è¡Œ
     // this->setSelectionBehavior(QAbstractItemView::SelectItems);
 
     this->setStyleSheet("QTreeView::item{height: 25px;show-decoration-selected: 0;}"

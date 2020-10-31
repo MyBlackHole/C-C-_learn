@@ -18,15 +18,15 @@ CustomToolButton::CustomToolButton(QWidget *parent, int iconsize, int btnWidth, 
 
     m_textDirection = None;
 
-    //¼ÆËã»æÖÆiconµÄrectºÍ»æÖÆÎÄ×ÖµÄrect
+    //è®¡ç®—ç»˜åˆ¶iconçš„rectå’Œç»˜åˆ¶æ–‡å­—çš„rect
     if (textsize == 0)
     {
-        //²»»æÖÆÎÄ×Ö£¬°Ñicon»æÖÆÔÚÖĞ¼ä
+        //ä¸ç»˜åˆ¶æ–‡å­—ï¼ŒæŠŠiconç»˜åˆ¶åœ¨ä¸­é—´
         m_iconrect = QRect((btnWidth - iconsize)/ 2, (btnHeight - iconsize) / 2, iconsize, iconsize);
     }
     else
     {
-        //»æÖÆÎÄ×Ö£¬ĞèÒª¿¼ÂÇÎÄ×ÖµÄ¸ß¶È
+        //ç»˜åˆ¶æ–‡å­—ï¼Œéœ€è¦è€ƒè™‘æ–‡å­—çš„é«˜åº¦
         m_textrect = QRect(0, btnHeight - textsize, btnWidth, textsize);
         m_iconrect = QRect((btnWidth-iconsize)/ 2,(btnHeight - textsize - iconsize) / 2,iconsize, iconsize);
     }
@@ -96,11 +96,11 @@ void CustomToolButton::paintEvent(QPaintEvent *event)
         drawPixmap = m_normalPixmap;
     }
 
-    //»æÖÆ±³¾°
+    //ç»˜åˆ¶èƒŒæ™¯
     QPainter p(this);
     p.drawPixmap(m_iconrect, drawPixmap);
 
-    //»æÖÆÎÄ×Ö
+    //ç»˜åˆ¶æ–‡å­—
     if (m_textDirection == Down)
     {
         p.setPen(Qt::red);

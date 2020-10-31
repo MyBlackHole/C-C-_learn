@@ -15,20 +15,20 @@ MainWidget::MainWidget(QWidget *parent)
 
     ui->setupUi(this);
     ctoolTip = new CToolTip();
-    // ¶¨ÒåÈ«¾ÖµÄToolTip£¬·½±ãÊ¹ÓÃ
+    // å®šä¹‰å…¨å±€çš„ToolTipï¼Œæ–¹ä¾¿ä½¿ç”¨
     g_toolTip = ctoolTip;
 
-    // ±¾ĞĞ´úÂëÖ÷ÒªÕë¶ÔListWidgetItemÓÒ¼üµã»÷Ê±²ÅÉúĞ§µÄ
+    // æœ¬è¡Œä»£ç ä¸»è¦é’ˆå¯¹ListWidgetItemå³é”®ç‚¹å‡»æ—¶æ‰ç”Ÿæ•ˆçš„
     ui->listWidget->setMouseTracking(true);
 
-    // Ìí¼Ó²âÊÔÊı¾İ
+    // æ·»åŠ æµ‹è¯•æ•°æ®
     for (int i = 0; i < 10; i++)
     {
         ItemWidget *itemWidget = new ItemWidget(ui->listWidget);
         itemWidget->setText(QPixmap(QString(":/images/%1").arg(i+1)),
-                            QStringLiteral("±êÌâ"), QStringLiteral("Ğ´µãÊ²Ã´ÄØ: %1?").arg(i));
+                            QStringLiteral("æ ‡é¢˜"), QStringLiteral("å†™ç‚¹ä»€ä¹ˆå‘¢: %1?").arg(i));
         QListWidgetItem *listItem = new QListWidgetItem(ui->listWidget);
-        // ´Ë´¦µÄsizeÈç¹û²»ÉèÖÃ,½çÃæ±»Ñ¹ËõÁË¿´²»³öItemWidgetµÄĞ§¹û,¸ß¶ÈÒ»¶¨ÒªÉèÖÃ
+        // æ­¤å¤„çš„sizeå¦‚æœä¸è®¾ç½®,ç•Œé¢è¢«å‹ç¼©äº†çœ‹ä¸å‡ºItemWidgetçš„æ•ˆæœ,é«˜åº¦ä¸€å®šè¦è®¾ç½®
         listItem->setSizeHint(QSize(200, 40));
         ui->listWidget->setItemWidget(listItem, itemWidget);
     }

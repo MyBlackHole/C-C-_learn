@@ -23,7 +23,7 @@ gameController::gameController(QGraphicsScene &Scene, QObject *parent) :
     scene->addItem(flyBird);
     scene->addWidget(score);
 
-    score->setFont(QFont("Ôì×Ö¹¤·¿ÔÃºÚÌåÑé°æÏËÏ¸Ìå", 13, 4, false));
+    score->setFont(QFont("é€ å­—å·¥æˆ¿æ‚¦é»‘ä½“éªŒç‰ˆçº¤ç»†ä½“", 13, 4, false));
     score->setGeometry(50, 50, 25, 25);
     score->setStyleSheet("background-color:QColor(197, 240, 255, 130)");
     score->setAlignment(Qt::AlignHCenter);
@@ -37,16 +37,16 @@ void gameController::initReadyWidget()
 {
     readyWidget = new QWidget();
     readyAnimation = new QPropertyAnimation(readyWidget, "pos");
-    beginButton = new QPushButton(QStringLiteral("¿ªÊ¼ÓÎÏ·"), readyWidget);
-    quitButton = new QPushButton(QStringLiteral("ÍË³öÓÎÏ·"), readyWidget);
-    restartButton = new QPushButton(QStringLiteral("ÖØÐÂ¿ªÊ¼"), readyWidget);
+    beginButton = new QPushButton(QStringLiteral("å¼€å§‹æ¸¸æˆ"), readyWidget);
+    quitButton = new QPushButton(QStringLiteral("é€€å‡ºæ¸¸æˆ"), readyWidget);
+    restartButton = new QPushButton(QStringLiteral("é‡æ–°å¼€å§‹"), readyWidget);
 
     beginButton->setGeometry(137, 295, 110, 35);
     quitButton->setGeometry(137, 404, 110, 35);
     restartButton->setGeometry(137, 360, 110, 35);
-    beginButton->setFont(QFont("Ôì×Ö¹¤·¿ÔÃºÚÌåÑé°æÏËÏ¸Ìå", 10, 2, false));
-    quitButton->setFont(QFont("Ôì×Ö¹¤·¿ÔÃºÚÌåÑé°æÏËÏ¸Ìå", 10, 2, false));
-    restartButton->setFont(QFont("Ôì×Ö¹¤·¿ÔÃºÚÌåÑé°æÏËÏ¸Ìå", 10, 2, false));
+    beginButton->setFont(QFont("é€ å­—å·¥æˆ¿æ‚¦é»‘ä½“éªŒç‰ˆçº¤ç»†ä½“", 10, 2, false));
+    quitButton->setFont(QFont("é€ å­—å·¥æˆ¿æ‚¦é»‘ä½“éªŒç‰ˆçº¤ç»†ä½“", 10, 2, false));
+    restartButton->setFont(QFont("é€ å­—å·¥æˆ¿æ‚¦é»‘ä½“éªŒç‰ˆçº¤ç»†ä½“", 10, 2, false));
     restartButton->setEnabled(false);
     readyWidget->setStyleSheet("QWidget{background-image:url(:/resource/Resource/ready.png)}");
 

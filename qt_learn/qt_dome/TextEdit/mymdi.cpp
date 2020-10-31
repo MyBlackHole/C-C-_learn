@@ -11,9 +11,9 @@
 #include <QMenu>
 
 MyMdi::MyMdi(QWidget *parent) :
-    QTextEdit(parent)//ÒòÎªMyMdiÊÇ¼Ì³ĞQTextEditÀàµÄ£¬ËùÒÔËü±¾Éí¾ÍÊÇÒ»¸öÎÄ±¾±à¼­Àà£¬¿ÉÒÔ±à¼­ÎÄ×Ö
+    QTextEdit(parent)//å› ä¸ºMyMdiæ˜¯ç»§æ‰¿QTextEditç±»çš„ï¼Œæ‰€ä»¥å®ƒæœ¬èº«å°±æ˜¯ä¸€ä¸ªæ–‡æœ¬ç¼–è¾‘ç±»ï¼Œå¯ä»¥ç¼–è¾‘æ–‡å­—
 {
-    setAttribute(Qt::WA_DeleteOnClose);//¼ÓÈëÁËÕâ¾ä´úÂëºó£¬Ôò¸Ã´°¿Úµ÷ÓÃclose()º¯Êı²»½ö½öÊÇÒş²Ø´°¿Ú¶øÒÑ£¬Í¬Ê±Ò²±»Ïú»Ù
+    setAttribute(Qt::WA_DeleteOnClose);//åŠ å…¥äº†è¿™å¥ä»£ç åï¼Œåˆ™è¯¥çª—å£è°ƒç”¨close()å‡½æ•°ä¸ä»…ä»…æ˜¯éšè—çª—å£è€Œå·²ï¼ŒåŒæ—¶ä¹Ÿè¢«é”€æ¯
     is_saved_ = false;
 }
 
@@ -21,43 +21,43 @@ void MyMdi::NewFile()
 {
     static int sequence_number = 1;
     is_saved_ = false;
-    current_file_path_ = QStringLiteral("Î´ÃüÃûÎÄµµ%1.txt").arg(sequence_number++);
-    setWindowTitle(current_file_path_ + "[*]");//ÉèÖÃÎÄµµÄ¬ÈÏ±êÌâ,¡°[*]¡±ÔÚÄ¬ÈÏÇé¿öÏÂÊÇÊ²Ã´¶¼²»ÏÔÊ¾µÄ£¬Ö»ÓĞµ±µ÷ÓÃsetWindowModified()
-    //º¯ÊıµÄÊ±ºò£¬»á×Ô¶¯ÔÚÓÉ¡°[*]¡±µÄµØ·½¼ÓÉÏ¡°*¡±£¬ºóÃæµÄÎÄ×Ö»á×Ô¶¯ºóÒÆ
-    connect(document(), SIGNAL(contentsChanged()), this, SLOT(documentWasModified()));//ÎÄµµÄÚÈİ·¢Éú¸Ä±äÊ±£¬
-    //´¥·¢²Ûº¯ÊıDocumentWasModified().
+    current_file_path_ = QStringLiteral("æœªå‘½åæ–‡æ¡£%1.txt").arg(sequence_number++);
+    setWindowTitle(current_file_path_ + "[*]");//è®¾ç½®æ–‡æ¡£é»˜è®¤æ ‡é¢˜,â€œ[*]â€åœ¨é»˜è®¤æƒ…å†µä¸‹æ˜¯ä»€ä¹ˆéƒ½ä¸æ˜¾ç¤ºçš„ï¼Œåªæœ‰å½“è°ƒç”¨setWindowModified()
+    //å‡½æ•°çš„æ—¶å€™ï¼Œä¼šè‡ªåŠ¨åœ¨ç”±â€œ[*]â€çš„åœ°æ–¹åŠ ä¸Šâ€œ*â€ï¼Œåé¢çš„æ–‡å­—ä¼šè‡ªåŠ¨åç§»
+    connect(document(), SIGNAL(contentsChanged()), this, SLOT(documentWasModified()));//æ–‡æ¡£å†…å®¹å‘ç”Ÿæ”¹å˜æ—¶ï¼Œ
+    //è§¦å‘æ§½å‡½æ•°DocumentWasModified().
 }
 
 QString MyMdi::CurrentFilePath()
 {
-    return current_file_path_;//current_file_path_ÊÇË½ÓĞ±äÁ¿£¬¶ÔÍâÒş²ØÆğÀ´ÁË£¬µ«ÊÇCurrentFilePath()ÊÇ¹«ÓĞ³ÉÔ±º¯Êı£¬ÏÔÊ¾³öÏÖ
+    return current_file_path_;//current_file_path_æ˜¯ç§æœ‰å˜é‡ï¼Œå¯¹å¤–éšè—èµ·æ¥äº†ï¼Œä½†æ˜¯CurrentFilePath()æ˜¯å…¬æœ‰æˆå‘˜å‡½æ•°ï¼Œæ˜¾ç¤ºå‡ºç°
 }
 
-//ÉèÖÃµ±Ç°ÎÄ¼şµÄÒ»Ğ©ĞÅÏ¢£¬±ÈÈçËµ´°¿Ú±êÌâ£¬¸ÃÎÄ¼şµÄÂ·¾¶ÃûµÈ
+//è®¾ç½®å½“å‰æ–‡ä»¶çš„ä¸€äº›ä¿¡æ¯ï¼Œæ¯”å¦‚è¯´çª—å£æ ‡é¢˜ï¼Œè¯¥æ–‡ä»¶çš„è·¯å¾„åç­‰
 void MyMdi::SetCurrentFile(const QString &file_name)
 {
-    current_file_path_ = QFileInfo(file_name).canonicalFilePath();//µÃµ½½âÊÍ¹ıºóµÄ¾ø¶ÔÂ·¾¶Ãû
-    is_saved_ = true;//ÉèÖÃÎª±»±£´æ¹ı£¬ÒòÎª¸Ãº¯ÊıÊÇ±»LoadFile()º¯Êıµ÷ÓÃµÄ£¬ËùÒÔ¿Ï¶¨¿ÉÒÔ±»µ±×öÊÇ±£´æ¹ıµÄÁË
-    document()->setModified(false);//ÎÄµµÃ»ÓĞ±»¸Ä¹ı
-    setWindowModified(false);//´°¿Ú²»ÏÔÊ¾±»¸ü¸ÄµÄ±êÖ¾
-    setWindowTitle(get_current_file_name() + "[*]");//ÉèÖÃ´°¿Ú±êÌâ
+    current_file_path_ = QFileInfo(file_name).canonicalFilePath();//å¾—åˆ°è§£é‡Šè¿‡åçš„ç»å¯¹è·¯å¾„å
+    is_saved_ = true;//è®¾ç½®ä¸ºè¢«ä¿å­˜è¿‡ï¼Œå› ä¸ºè¯¥å‡½æ•°æ˜¯è¢«LoadFile()å‡½æ•°è°ƒç”¨çš„ï¼Œæ‰€ä»¥è‚¯å®šå¯ä»¥è¢«å½“åšæ˜¯ä¿å­˜è¿‡çš„äº†
+    document()->setModified(false);//æ–‡æ¡£æ²¡æœ‰è¢«æ”¹è¿‡
+    setWindowModified(false);//çª—å£ä¸æ˜¾ç¤ºè¢«æ›´æ”¹çš„æ ‡å¿—
+    setWindowTitle(get_current_file_name() + "[*]");//è®¾ç½®çª—å£æ ‡é¢˜
 }
 
 bool MyMdi::LoadFile(const QString &file_name)
 {
-    QFile file(file_name);//½¨Á¢Ğè´ò¿ªµÄÎÄ¼ş¶ÔÏó
+    QFile file(file_name);//å»ºç«‹éœ€æ‰“å¼€çš„æ–‡ä»¶å¯¹è±¡
     if(!file.open(QFile::ReadOnly | QFile::Text))
     {
-        //´ò¿ªÊ§°ÜÊ±£¬Êä³ö´íÎóĞÅÏ¢
-        QMessageBox::warning(this, "¶àÎÄµµ±à¼­Æ÷", QStringLiteral("ÎŞ·¨¶ÁÈ¡ÎÄ¼ş %1£º\n%2").arg(file_name).arg(file.errorString()));
+        //æ‰“å¼€å¤±è´¥æ—¶ï¼Œè¾“å‡ºé”™è¯¯ä¿¡æ¯
+        QMessageBox::warning(this, "å¤šæ–‡æ¡£ç¼–è¾‘å™¨", QStringLiteral("æ— æ³•è¯»å–æ–‡ä»¶ %1ï¼š\n%2").arg(file_name).arg(file.errorString()));
         return false;
     }
-    QTextStream in(&file);//ÎÄ±¾Á÷
-    QApplication::setOverrideCursor(Qt::WaitCursor);//ÉèÖÃÕû¸öÓ¦ÓÃ³ÌĞòµÄ¹â±êĞÎ×´ÎªµÈ´ıĞÎ×´£¬ÒòÎªÈç¹ûÎÄ¼şµÄÄÚÈİ·Ç³£¶àÊ±¿ÉÒÔÌáĞÑÓÃ»§
-    setPlainText(in.readAll());//¶ÁÈ¡ÎÄ±¾Á÷ÖĞµÄËùÓĞÄÚÈİ£¬²¢ÏÔÊ¾ÔÚÆä´°ÌåÖĞ
-    QApplication::restoreOverrideCursor();//»Ö¸´¿ªÊ¼Ê±µÄ¹â±ê×´Ì¬
-    SetCurrentFile(file_name);//ÉèÖÃ±êÌâÊ²Ã´µÄ
-    //×¢ÒâÕâÀï·¢ÉäĞÅºÅÓÃµÄÊÇcontentsChanged(),¶ø²»ÊÇcontentsChange().
+    QTextStream in(&file);//æ–‡æœ¬æµ
+    QApplication::setOverrideCursor(Qt::WaitCursor);//è®¾ç½®æ•´ä¸ªåº”ç”¨ç¨‹åºçš„å…‰æ ‡å½¢çŠ¶ä¸ºç­‰å¾…å½¢çŠ¶ï¼Œå› ä¸ºå¦‚æœæ–‡ä»¶çš„å†…å®¹éå¸¸å¤šæ—¶å¯ä»¥æé†’ç”¨æˆ·
+    setPlainText(in.readAll());//è¯»å–æ–‡æœ¬æµä¸­çš„æ‰€æœ‰å†…å®¹ï¼Œå¹¶æ˜¾ç¤ºåœ¨å…¶çª—ä½“ä¸­
+    QApplication::restoreOverrideCursor();//æ¢å¤å¼€å§‹æ—¶çš„å…‰æ ‡çŠ¶æ€
+    SetCurrentFile(file_name);//è®¾ç½®æ ‡é¢˜ä»€ä¹ˆçš„
+    //æ³¨æ„è¿™é‡Œå‘å°„ä¿¡å·ç”¨çš„æ˜¯contentsChanged(),è€Œä¸æ˜¯contentsChange().
     connect(document(), SIGNAL(contentsChanged()), this, SLOT(documentWasModified()));
 
     return true;
@@ -65,12 +65,12 @@ bool MyMdi::LoadFile(const QString &file_name)
 
 QString MyMdi::get_current_file_name()
 {
-    return QFileInfo(current_file_path_).fileName();//´Óµ±Ç°ÎÄ¼şÂ·¾¶ÃûÖĞÌáÈ¡ÆäÎÄ¼şÃû
+    return QFileInfo(current_file_path_).fileName();//ä»å½“å‰æ–‡ä»¶è·¯å¾„åä¸­æå–å…¶æ–‡ä»¶å
 }
 
 void MyMdi::documentWasModified()
 {
-    setWindowModified(document()->isModified());//¡°*¡±ÏÔÊ¾³öÀ´
+    setWindowModified(document()->isModified());//â€œ*â€æ˜¾ç¤ºå‡ºæ¥
 }
 
 bool MyMdi::has_saved()
@@ -78,36 +78,36 @@ bool MyMdi::has_saved()
     if(document()->isModified())
     {
         QMessageBox box;
-        box.setWindowTitle(QStringLiteral("¶àÎÄµµ±à¼­Æ÷"));
-        box.setText(QStringLiteral("ÊÇ·ñ±£´æ¶Ô%1µÄ¸ü¸Ä£¿").arg(get_current_file_name()));
-        box.setIcon(QMessageBox::Warning);//¾¯¸æÍ¼±ê
-        //ÏÂÃæÊÇÏûÏ¢boxÉÏÌí¼Ó3¸ö°´Å¥£¬·Ö±ğÎªyes£¬no£¬cancel
-        QPushButton *yes_button = box.addButton(QStringLiteral("ÊÇ"), QMessageBox::YesRole);
-        QPushButton *no_button = box.addButton(QStringLiteral("·ñ"), QMessageBox::NoRole);
-        QPushButton *cancel_button = box.addButton(QStringLiteral("È¡Ïû"), QMessageBox::RejectRole);
-        box.exec();//ÔÚÕâÀïµÈ´ıÓÃ»§Ñ¡Ôñ3¸ö°´Å¥ÖĞµÄÒ»¸ö
+        box.setWindowTitle(QStringLiteral("å¤šæ–‡æ¡£ç¼–è¾‘å™¨"));
+        box.setText(QStringLiteral("æ˜¯å¦ä¿å­˜å¯¹%1çš„æ›´æ”¹ï¼Ÿ").arg(get_current_file_name()));
+        box.setIcon(QMessageBox::Warning);//è­¦å‘Šå›¾æ ‡
+        //ä¸‹é¢æ˜¯æ¶ˆæ¯boxä¸Šæ·»åŠ 3ä¸ªæŒ‰é’®ï¼Œåˆ†åˆ«ä¸ºyesï¼Œnoï¼Œcancel
+        QPushButton *yes_button = box.addButton(QStringLiteral("æ˜¯"), QMessageBox::YesRole);
+        QPushButton *no_button = box.addButton(QStringLiteral("å¦"), QMessageBox::NoRole);
+        QPushButton *cancel_button = box.addButton(QStringLiteral("å–æ¶ˆ"), QMessageBox::RejectRole);
+        box.exec();//åœ¨è¿™é‡Œç­‰å¾…ç”¨æˆ·é€‰æ‹©3ä¸ªæŒ‰é’®ä¸­çš„ä¸€ä¸ª
         if(box.clickedButton() == yes_button)
             return Save();
         else if(box.clickedButton() == no_button)
-            return true;//²»ÓÃ±£´æ£¬Ö±½Ó¹Øµô
+            return true;//ä¸ç”¨ä¿å­˜ï¼Œç›´æ¥å…³æ‰
         else if(box.clickedButton() == cancel_button)
-            return false;//Ê²Ã´¶¼²»×ö
+            return false;//ä»€ä¹ˆéƒ½ä¸åš
 
     }
-    return true;//ÒªÃ´ÒÑ¾­±£´æºÃÁË£¬ÒªÃ´¸ù±¾¾ÍÃ»¸ü¸Ä¹ıÆäÄÚÈİ
+    return true;//è¦ä¹ˆå·²ç»ä¿å­˜å¥½äº†ï¼Œè¦ä¹ˆæ ¹æœ¬å°±æ²¡æ›´æ”¹è¿‡å…¶å†…å®¹
 }
 
 bool MyMdi::Save()
 {
-    if(is_saved_)//ÒÑ¾­±£´æ¹ıÖÁÉÙÒ»´Îºó£¬ÔòËµÃ÷ÎÄ¼şµÄÎÄ¼şÃûµÈÒÑ¾­ÅªºÃÁË£¬Ö±½Ó±£´æÄÚÈİ¼´¿É¡£
+    if(is_saved_)//å·²ç»ä¿å­˜è¿‡è‡³å°‘ä¸€æ¬¡åï¼Œåˆ™è¯´æ˜æ–‡ä»¶çš„æ–‡ä»¶åç­‰å·²ç»å¼„å¥½äº†ï¼Œç›´æ¥ä¿å­˜å†…å®¹å³å¯ã€‚
         return SaveFile(current_file_path_);
-    else return SaveAs();//µÚÒ»´Î±£´æÊ±£¬ĞèÒªµ÷ÓÃSaveAs
+    else return SaveAs();//ç¬¬ä¸€æ¬¡ä¿å­˜æ—¶ï¼Œéœ€è¦è°ƒç”¨SaveAs
 }
 
 bool MyMdi::SaveAs()
 {
-    //·µ»ØµÄÃû×Öfile_nameÊÇ×Ô¼ºÊÖ¶¯ÊäÈëµÄÃû×Ö£¬»òÕßÖ±½Ó²ÉÓÃµÄÊÇÄ¬ÈÏµÄÃû×Ö
-    QString file_name = QFileDialog::getSaveFileName(this, QStringLiteral("Áí´æÎª"), current_file_path_);
+    //è¿”å›çš„åå­—file_nameæ˜¯è‡ªå·±æ‰‹åŠ¨è¾“å…¥çš„åå­—ï¼Œæˆ–è€…ç›´æ¥é‡‡ç”¨çš„æ˜¯é»˜è®¤çš„åå­—
+    QString file_name = QFileDialog::getSaveFileName(this, QStringLiteral("å¦å­˜ä¸º"), current_file_path_);
     if(file_name.isEmpty())
         return false;
 
@@ -117,17 +117,17 @@ bool MyMdi::SaveAs()
 bool MyMdi::SaveFile(const QString &file_name)
 {
     QFile file(file_name);
-    //¼´Ê¹ÊÇĞ´ÈëÎÄ±¾£¬Ò²µÃ½«ÎÄ±¾ÏÈ´ò¿ª
+    //å³ä½¿æ˜¯å†™å…¥æ–‡æœ¬ï¼Œä¹Ÿå¾—å°†æ–‡æœ¬å…ˆæ‰“å¼€
     if(!file.open(QFile::WriteOnly | QFile::Text))
     {
-        QMessageBox::warning(this, "¶àÎÄµµ±à¼­Æ÷", QStringLiteral("ÎŞ·¨Ğ´ÈëÎÄ¼ş %1£º\n%2").arg(file_name).arg(file.errorString()));
+        QMessageBox::warning(this, "å¤šæ–‡æ¡£ç¼–è¾‘å™¨", QStringLiteral("æ— æ³•å†™å…¥æ–‡ä»¶ %1ï¼š\n%2").arg(file_name).arg(file.errorString()));
         return false;
     }
     QTextStream out(&file);
     QApplication::setOverrideCursor(Qt::WaitCursor);
-    out << toPlainText();//ÒÔ´¿ÎÄ±¾·½Ê½Ğ´Èë£¬ºËĞÄº¯Êı
+    out << toPlainText();//ä»¥çº¯æ–‡æœ¬æ–¹å¼å†™å…¥ï¼Œæ ¸å¿ƒå‡½æ•°
     QApplication::restoreOverrideCursor();
-    //·µ»ØÖ®Ç°£¬Ò²½«¸ÃÎÄ¼şµÄ±êÌâ£¬Â·¾¶ÃûµÈÉèÖÃºÃ¡£
+    //è¿”å›ä¹‹å‰ï¼Œä¹Ÿå°†è¯¥æ–‡ä»¶çš„æ ‡é¢˜ï¼Œè·¯å¾„åç­‰è®¾ç½®å¥½ã€‚
     SetCurrentFile(file_name);
     return true;
 }
@@ -136,41 +136,41 @@ void MyMdi::contextMenuEvent(QContextMenuEvent *event)
 {
     QMenu *menu = new QMenu;
 
-    //QKeySequenceÀàÊÇ×¨ÃÅ·â×°¿ì½İ¼üµÄ£¬ÕâÀïÊ¹ÓÃµÄÊÇÄ¬ÈÏµÄ¿ì½İ¼ü²Ù×÷£¬Æä¿ì½İ¼üÎ»"&"ºÅºóÃæÄÇ¸ö×ÖÄ¸
-    QAction *undo = menu->addAction(QStringLiteral("³·Ïú(&U)"), this, SLOT(undo()), QKeySequence::Undo);//Ö±½Óµ÷ÓÃ²Ûº¯Êıundo()
-    undo->setEnabled(document()->isUndoAvailable());//ÒòÎª¸ÃÀàÊÇÒ»¸öwidget£¬ËùÒÔ¿ÉÒÔÖ±½ÓÊ¹ÓÃdocument()º¯Êı
+    //QKeySequenceç±»æ˜¯ä¸“é—¨å°è£…å¿«æ·é”®çš„ï¼Œè¿™é‡Œä½¿ç”¨çš„æ˜¯é»˜è®¤çš„å¿«æ·é”®æ“ä½œï¼Œå…¶å¿«æ·é”®ä½"&"å·åé¢é‚£ä¸ªå­—æ¯
+    QAction *undo = menu->addAction(QStringLiteral("æ’¤é”€(&U)"), this, SLOT(undo()), QKeySequence::Undo);//ç›´æ¥è°ƒç”¨æ§½å‡½æ•°undo()
+    undo->setEnabled(document()->isUndoAvailable());//å› ä¸ºè¯¥ç±»æ˜¯ä¸€ä¸ªwidgetï¼Œæ‰€ä»¥å¯ä»¥ç›´æ¥ä½¿ç”¨document()å‡½æ•°
 
-    QAction *redo = menu->addAction(QStringLiteral("»Ö¸´(&A)"), this, SLOT(redo()), QKeySequence::Redo);
+    QAction *redo = menu->addAction(QStringLiteral("æ¢å¤(&A)"), this, SLOT(redo()), QKeySequence::Redo);
     redo->setEnabled(document()->isRedoAvailable());
 
-    menu->addSeparator();//Ôö¼Ó·Ö¸ô·û
+    menu->addSeparator();//å¢åŠ åˆ†éš”ç¬¦
 
-    QAction *cut = menu->addAction(QStringLiteral("¼ôÇĞ(&T)"), this, SLOT(cut()), QKeySequence::Cut);
+    QAction *cut = menu->addAction(QStringLiteral("å‰ªåˆ‡(&T)"), this, SLOT(cut()), QKeySequence::Cut);
     cut->setEnabled(textCursor().hasSelection());
 
-    QAction *copy = menu->addAction(QStringLiteral("¸´ÖÆ(&C)"), this, SLOT(copy()), QKeySequence::Copy);
+    QAction *copy = menu->addAction(QStringLiteral("å¤åˆ¶(&C)"), this, SLOT(copy()), QKeySequence::Copy);
     copy->setEnabled(textCursor().hasSelection());
 
-    menu->addAction(QStringLiteral("Õ³Ìù&P"), this, SLOT(paste()), QKeySequence::Paste);
+    menu->addAction(QStringLiteral("ç²˜è´´&P"), this, SLOT(paste()), QKeySequence::Paste);
 
-    QAction *clear = menu->addAction(QStringLiteral("Çå¿Õ"), this, SLOT(clear()));
-    clear->setEnabled(!document()->isEmpty());//ÎÄ±¾ÄÚÈİ·Ç¿ÕÊ±¾Í¿ÉÒÔÇå³ı
+    QAction *clear = menu->addAction(QStringLiteral("æ¸…ç©º"), this, SLOT(clear()));
+    clear->setEnabled(!document()->isEmpty());//æ–‡æœ¬å†…å®¹éç©ºæ—¶å°±å¯ä»¥æ¸…é™¤
 
-    menu->addSeparator();//Ôö¼Ó·Ö¸ô·û
+    menu->addSeparator();//å¢åŠ åˆ†éš”ç¬¦
 
-    QAction *select_all = menu->addAction(QStringLiteral("È«Ñ¡"), this, SLOT(selectAll()), QKeySequence::SelectAll);
+    QAction *select_all = menu->addAction(QStringLiteral("å…¨é€‰"), this, SLOT(selectAll()), QKeySequence::SelectAll);
     select_all->setEnabled(!document()->isEmpty());
 
-    menu->exec(event->globalPos());//»ñÈ¡Êó±êÎ»ÖÃ£¬²¢ÏÔÊ¾²Ëµ¥
+    menu->exec(event->globalPos());//è·å–é¼ æ ‡ä½ç½®ï¼Œå¹¶æ˜¾ç¤ºèœå•
 
-    delete menu;//Ïú»ÙÕâ¸ö²Ëµ¥
+    delete menu;//é”€æ¯è¿™ä¸ªèœå•
 }
 
-//¸Ãº¯ÊıÊÇ¶¥²ã´°¿Ú±»¹Ø±ÕÊ±·¢³öµÄÊÂ¼ş£¬ÊÇ¹Ø±Õ´°¿Ú×Ô´øµÄ¹Ø±Õ·ûºÅX
-void MyMdi::closeEvent(QCloseEvent *event)//Òª¼ÇµÃ¼ÓÈë #include <QCloseEvent>
+//è¯¥å‡½æ•°æ˜¯é¡¶å±‚çª—å£è¢«å…³é—­æ—¶å‘å‡ºçš„äº‹ä»¶ï¼Œæ˜¯å…³é—­çª—å£è‡ªå¸¦çš„å…³é—­ç¬¦å·X
+void MyMdi::closeEvent(QCloseEvent *event)//è¦è®°å¾—åŠ å…¥ #include <QCloseEvent>
 {
     if(has_saved())
-        event->accept();//±£´æÍê±ÏºóÖ±½ÓÍË³ö³ÌĞò
+        event->accept();//ä¿å­˜å®Œæ¯•åç›´æ¥é€€å‡ºç¨‹åº
     else
         event->ignore();
 

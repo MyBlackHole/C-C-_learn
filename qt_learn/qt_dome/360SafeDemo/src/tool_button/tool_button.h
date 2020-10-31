@@ -20,8 +20,8 @@ protected:
     void painterInfo(int top_color, int middle_color, int bottom_color);
 
 public:
-    bool mouse_over; //鼠标是否移过
-    bool mouse_press; //鼠标是否按下
+    bool mouse_over; //榧犳爣鏄惁绉昏繃
+    bool mouse_press; //榧犳爣鏄惁鎸変笅
 };
 
 #endif //TOOlBUTTON_H

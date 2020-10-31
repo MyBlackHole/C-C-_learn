@@ -16,23 +16,23 @@ public:
     void SetCurrentFile(const QString &file_name);
     bool Save();
     bool SaveAs();
-    bool SaveFile(const QString &file_name);//ÒòÎªSave()ºÍSaveAs()ÓĞºÜ¶à¹²Í¬µÄ´úÂë£¬ËùÒÔ×îºÃµ¥¶ÀĞ´¸öº¯Êı¹©Æäµ÷ÓÃ¡£
+    bool SaveFile(const QString &file_name);//å› ä¸ºSave()å’ŒSaveAs()æœ‰å¾ˆå¤šå…±åŒçš„ä»£ç ï¼Œæ‰€ä»¥æœ€å¥½å•ç‹¬å†™ä¸ªå‡½æ•°ä¾›å…¶è°ƒç”¨ã€‚
 
 signals:
 
 public slots:
 
 private:
-    QString current_file_path_;//µ±Ç°ÎÄ¼şµÄÎÄ¼şÃû
-    bool is_saved_;  //ÎÄ¼şÊÇ·ñ±£´æ±êÖ¾
+    QString current_file_path_;//å½“å‰æ–‡ä»¶çš„æ–‡ä»¶å
+    bool is_saved_;  //æ–‡ä»¶æ˜¯å¦ä¿å­˜æ ‡å¿—
     bool has_saved();
     void contextMenuEvent(QContextMenuEvent *event);
 
 protected:
-    void closeEvent(QCloseEvent *);//ÖØĞ´¹Ø±ÕÊÂ¼ş
+    void closeEvent(QCloseEvent *);//é‡å†™å…³é—­äº‹ä»¶
 
 private slots:
-    void documentWasModified();//µ±ÎÄµµÄÚÈİ±»¸ÄºóËùĞèÖ´ĞĞµÄ²Ù×÷
+    void documentWasModified();//å½“æ–‡æ¡£å†…å®¹è¢«æ”¹åæ‰€éœ€æ‰§è¡Œçš„æ“ä½œ
 
 };
 

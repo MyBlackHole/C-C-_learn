@@ -4,9 +4,9 @@
 MsgBoxDlg::MsgBoxDlg(QWidget *parent) :
     QDialog(parent)
 {
-    setWindowTitle(QStringLiteral("标准消息对话框的实例"));              //设置对话框的标题
+    setWindowTitle(QStringLiteral("鏍囧噯娑堟伅瀵硅瘽妗嗙殑瀹炰緥"));              //璁剧疆瀵硅瘽妗嗙殑鏍囬
     label = new QLabel;
-    label->setText(QStringLiteral("请选择一种消息框"));
+    label->setText(QStringLiteral("璇烽�夋嫨涓�绉嶆秷鎭"));
 
     questionBtn = new QPushButton;
     questionBtn->setText(QStringLiteral("QuestionMsg"));
@@ -26,7 +26,7 @@ MsgBoxDlg::MsgBoxDlg(QWidget *parent) :
     aboutQtBtn = new QPushButton;
     aboutQtBtn->setText(QStringLiteral("AboutQtMsg"));
 
-    //布局
+    //甯冨眬
     mainLayout = new QGridLayout(this);
     mainLayout->addWidget(label,0,0,1,2);
     mainLayout->addWidget(questionBtn,1,0);
@@ -36,7 +36,7 @@ MsgBoxDlg::MsgBoxDlg(QWidget *parent) :
     mainLayout->addWidget(aboutBtn,3,0);
     mainLayout->addWidget(aboutQtBtn,3,1);
 
-    //事件关联
+    //浜嬩欢鍏宠仈
     connect(questionBtn,SIGNAL(clicked()),this,SLOT(showQuestionMsg()));
     connect(informationBtn,SIGNAL(clicked()),this,SLOT(showInformationMsg()));
     connect(warningBtn,SIGNAL(clicked()),this,SLOT(showWarningMsg()));
@@ -75,7 +75,7 @@ void MsgBoxDlg::showWarningMsg()
 {
     label->setText(QStringLiteral("Warning Message Box"));
     switch(QMessageBox::warning(this,QStringLiteral("Warning Message"),
-         QStringLiteral("您修改的内容还未保存,是否要保存对文档的修改？"),
+         QStringLiteral("鎮ㄤ慨鏀圭殑鍐呭杩樻湭淇濆瓨,鏄惁瑕佷繚瀛樺鏂囨。鐨勪慨鏀癸紵"),
          QMessageBox::Save | QMessageBox::Discard | QMessageBox::Cancel,
          QMessageBox::Save))
     {

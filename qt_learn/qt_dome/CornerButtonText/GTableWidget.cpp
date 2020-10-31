@@ -13,7 +13,7 @@ TableWidget::TableWidget(int rows, int cols, QWidget *parent)
 
     if (btn)
     {
-        btn->setText(QStringLiteral("���䰴ť"));
+        btn->setText(QStringLiteral("角落按钮"));
         btn->installEventFilter(this);
 
         // adjust the width of the vertical header to match the preferred corner button width

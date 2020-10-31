@@ -52,9 +52,9 @@ public:
         return *this;
     }
 
-    QString  m_strTipPath;      // 提示信息
-    QString  m_strBtnPath;      // 按钮
-    QWidget* m_maskWidget;      // 需要显示蒙版的widget
+    QString  m_strTipPath;      // 鎻愮ず淇℃伅
+    QString  m_strBtnPath;      // 鎸夐挳
+    QWidget* m_maskWidget;      // 闇�瑕佹樉绀鸿挋鐗堢殑widget
 };
 
 class GLDMASKSHARED_EXPORT GLDMaskBox : public QWidget
@@ -97,7 +97,7 @@ Q_SIGNALS:
 
 public slots:
     /**
-     * @brief 在测试使用中,使用该函数去关闭
+     * @brief 鍦ㄦ祴璇曚娇鐢ㄤ腑,浣跨敤璇ュ嚱鏁板幓鍏抽棴
      */
     void slotClose();
 

@@ -18,7 +18,7 @@ TitleWidget::TitleWidget(QWidget *parent)
 
     version_title->setStyleSheet("color:white;");
 
-    //ÉèÖÃÍ¼Æ¬
+    //è®¾ç½®å›¾ç‰‡
     skin_button->loadPixmap(":/sysButton/skin_button");
     main_menu_button->loadPixmap(":/sysButton/main_menu");
     min_button->loadPixmap(":/sysButton/min_button");

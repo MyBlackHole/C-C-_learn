@@ -42,7 +42,7 @@
 #include "GSHConsts.h"
 #include "GLDUserActivityIntf.h"
 
-DEFINE_CONSTSTR(c_sDefaultFamily, "ËÎÌå")
+DEFINE_CONSTSTR(c_sDefaultFamily, "å®‹ä½“")
 DEFINE_CONSTSTR(c_sMacroFormat, "{%1}")
 DEFINE_CONSTSTR(c_sMacroWithTitle, "{%1.%2}")
 DEFINE_CONSTSTR(c_sMacroBeginFlag, "{")
@@ -50,29 +50,29 @@ DEFINE_CONSTSTR(c_sMacroEndFlag, "}")
 DEFINE_CONSTSTR(c_sContent, "Content")
 DEFINE_CONSTSTR(c_sPercent, "%")
 
-DEFINE_CONSTSTR(c_sEditToolTip, "ÇĞ»»µ½±à¼­±¨¸æ")
-DEFINE_CONSTSTR(c_sEditPreViewTip, "ÇĞ»»µ½Ô¤ÀÀ±¨¸æ")
-DEFINE_CONSTSTR(c_sUndoToolTip, "³·Ïú(Ctrl+Z)")
-DEFINE_CONSTSTR(c_sRedoToolTip, "ÖØ×ö(Ctrl+Y)")
-DEFINE_CONSTSTR(c_sCutToolTip, "¼ôÇĞ(Ctrl+X)")
-DEFINE_CONSTSTR(c_sCopyToolTip, "¸´ÖÆ(Ctrl+C)")
-DEFINE_CONSTSTR(c_sPasteToolTip, "Õ³Ìù(Ctrl+V)")
-DEFINE_CONSTSTR(c_sFontToolTip, "×ÖÌå")
-DEFINE_CONSTSTR(c_sFontSizeToolTip, "×ÖºÅ")
-DEFINE_CONSTSTR(c_sBoldToolTip, "¼Ó´Ö")
-DEFINE_CONSTSTR(c_sItalicToolTip, "ÇãĞ±")
-DEFINE_CONSTSTR(c_sUnderlineToolTip, "ÏÂ»®Ïß")
-DEFINE_CONSTSTR(c_sStrikeoutToolTip, "É¾³ıÏß")
-DEFINE_CONSTSTR(c_sSubToolTip, "ÉÏ±ê")
-DEFINE_CONSTSTR(c_sSupToolTip, "ÏÂ±ê")
-DEFINE_CONSTSTR(c_sAlignLeftToolTip, "×ó¶ÔÆë")
-DEFINE_CONSTSTR(c_sAlignCenterToolTip, "¾ÓÖĞ")
-DEFINE_CONSTSTR(c_sAlignRightToolTip, "ÓÒ¶ÔÆë")
-DEFINE_CONSTSTR(c_sZoomOutToolTip, "ËõĞ¡")
-DEFINE_CONSTSTR(c_sZoomInToolTip, "·Å´ó")
-DEFINE_CONSTSTR(c_sAutoWidthToolTip, "×ÔÊÊÓ¦¿í¶È")
-DEFINE_CONSTSTR(c_sZoomFactorToolTip, "·Å´ó±ÈÀı")
-DEFINE_CONSTSTR(c_sAnalyseTemplateFile, "GSPFiles/Analyse/Template/·ÖÎö±¨¸æÄ£°å-NO.1.rtf")
+DEFINE_CONSTSTR(c_sEditToolTip, "åˆ‡æ¢åˆ°ç¼–è¾‘æŠ¥å‘Š")
+DEFINE_CONSTSTR(c_sEditPreViewTip, "åˆ‡æ¢åˆ°é¢„è§ˆæŠ¥å‘Š")
+DEFINE_CONSTSTR(c_sUndoToolTip, "æ’¤é”€(Ctrl+Z)")
+DEFINE_CONSTSTR(c_sRedoToolTip, "é‡åš(Ctrl+Y)")
+DEFINE_CONSTSTR(c_sCutToolTip, "å‰ªåˆ‡(Ctrl+X)")
+DEFINE_CONSTSTR(c_sCopyToolTip, "å¤åˆ¶(Ctrl+C)")
+DEFINE_CONSTSTR(c_sPasteToolTip, "ç²˜è´´(Ctrl+V)")
+DEFINE_CONSTSTR(c_sFontToolTip, "å­—ä½“")
+DEFINE_CONSTSTR(c_sFontSizeToolTip, "å­—å·")
+DEFINE_CONSTSTR(c_sBoldToolTip, "åŠ ç²—")
+DEFINE_CONSTSTR(c_sItalicToolTip, "å€¾æ–œ")
+DEFINE_CONSTSTR(c_sUnderlineToolTip, "ä¸‹åˆ’çº¿")
+DEFINE_CONSTSTR(c_sStrikeoutToolTip, "åˆ é™¤çº¿")
+DEFINE_CONSTSTR(c_sSubToolTip, "ä¸Šæ ‡")
+DEFINE_CONSTSTR(c_sSupToolTip, "ä¸‹æ ‡")
+DEFINE_CONSTSTR(c_sAlignLeftToolTip, "å·¦å¯¹é½")
+DEFINE_CONSTSTR(c_sAlignCenterToolTip, "å±…ä¸­")
+DEFINE_CONSTSTR(c_sAlignRightToolTip, "å³å¯¹é½")
+DEFINE_CONSTSTR(c_sZoomOutToolTip, "ç¼©å°")
+DEFINE_CONSTSTR(c_sZoomInToolTip, "æ”¾å¤§")
+DEFINE_CONSTSTR(c_sAutoWidthToolTip, "è‡ªé€‚åº”å®½åº¦")
+DEFINE_CONSTSTR(c_sZoomFactorToolTip, "æ”¾å¤§æ¯”ä¾‹")
+DEFINE_CONSTSTR(c_sAnalyseTemplateFile, "GSPFiles/Analyse/Template/åˆ†ææŠ¥å‘Šæ¨¡æ¿-NO.1.rtf")
 
 static const int c_nDefaultSize = 9;
 
@@ -308,10 +308,10 @@ void GSHAnalyseEditPreviewFrame::macroValueWithPattern(GString &macro, const GSt
 }
 
 /****************************************************************************************************
- ×÷Õß£º yanyq-a 2013-10-21
- ²ÎÊı£º const GString&
- ·µ»Ø£º GString
- ¹¦ÄÜ£º ¸ù¾İºêÃûµÃµ½ºêÖµ£¬Èç¹ûÃ»ÓĞ²éÑ¯µ½¸Ãºê£¬ÔòÆäÖµÎªËü±¾Éí
+ ä½œè€…ï¼š yanyq-a 2013-10-21
+ å‚æ•°ï¼š const GString&
+ è¿”å›ï¼š GString
+ åŠŸèƒ½ï¼š æ ¹æ®å®åå¾—åˆ°å®å€¼ï¼Œå¦‚æœæ²¡æœ‰æŸ¥è¯¢åˆ°è¯¥å®ï¼Œåˆ™å…¶å€¼ä¸ºå®ƒæœ¬èº«
 ****************************************************************************************************/
 GString GSHAnalyseEditPreviewFrame::getValueByMacro(const GString &macro)
 {
@@ -577,13 +577,13 @@ void GSHAnalyseEditPreviewFrame::createItems()
 
     if (MTBid == m_eModelType)
     {
-        m_pActEntityInfo = addAction("Entity_Info", tr("Entity_Info")); // ÏîÄ¿ĞÅÏ¢
-        m_pActEntityExtra = addAction("Entity_Extra", tr("Entity_Extra")); // ¸½¼ÓĞÅÏ¢
+        m_pActEntityInfo = addAction("Entity_Info", tr("Entity_Info")); // é¡¹ç›®ä¿¡æ¯
+        m_pActEntityExtra = addAction("Entity_Extra", tr("Entity_Extra")); // é™„åŠ ä¿¡æ¯
     }
     else
     {
-        m_pActProjInfo = addAction("Proj_Info", tr("Proj_Info")); // ¹¤³ÌĞÅÏ¢
-        m_pActProjCharacter = addAction("Proj_Character", tr("Proj_Character")); // ¹¤³ÌÌØÕ÷
+        m_pActProjInfo = addAction("Proj_Info", tr("Proj_Info")); // å·¥ç¨‹ä¿¡æ¯
+        m_pActProjCharacter = addAction("Proj_Character", tr("Proj_Character")); // å·¥ç¨‹ç‰¹å¾
     }
 }
 
@@ -1028,7 +1028,7 @@ bool GSHAnalyseEditPreviewFrame::needShowField(const GString &fieldName, bool ha
 
 bool GSHAnalyseEditPreviewFrame::getMeasureItemEnable()
 {
-    // ±ê¶Î
+    // æ ‡æ®µ
     if ((m_piJobService == NULL) && (m_piBidService != NULL))
     {
         return true;
@@ -1046,7 +1046,7 @@ bool GSHAnalyseEditPreviewFrame::getMeasureItemEnable()
 
 void GSHAnalyseEditPreviewFrame::savePreviewContents()
 {
-    // todo jiangjb Õâ¿é»ØÍ·ĞèÒªÓÅ»¯
+    // todo jiangjb è¿™å—å›å¤´éœ€è¦ä¼˜åŒ–
     GMap<GString, GString>::iterator oIter = m_oMacroValueHash.begin();
     for (; oIter != m_oMacroValueHash.end(); ++oIter)
     {
@@ -1373,7 +1373,7 @@ void GSHAnalyseEditPreviewFrame::onBtnEditClicked(bool)
     {
         sActionName = "GPS_GSHView";
         sActionUUID = sURL + "|" + sActionName;
-        // ¼ÓÔØÔ¤ÀÀÄ£Ê½
+        // åŠ è½½é¢„è§ˆæ¨¡å¼
         m_pBtnEdit->setIcon(QIcon(":/GSHAnalyse/Icons/Analyse/Edit.png"));
         m_pBtnEdit->setIconSize(QSize(64, 22));
         m_pBtnEdit->setToolTip(c_sEditToolTip);
@@ -1392,7 +1392,7 @@ void GSHAnalyseEditPreviewFrame::onBtnEditClicked(bool)
     {
         sActionName = "GPS_GSHEdit";
         sActionUUID = sURL + "|" + sActionName;
-        // ¼ÓÔØ±à¼­Ä£Ê½
+        // åŠ è½½ç¼–è¾‘æ¨¡å¼
         m_pBtnEdit->setIcon(QIcon(":/GSHAnalyse/Icons/Analyse/Preview.png"));
         m_pBtnEdit->setIconSize(QSize(64, 22));
         m_pBtnEdit->setToolTip(c_sEditPreViewTip);
@@ -1417,7 +1417,7 @@ void GSHAnalyseEditPreviewFrame::onBtnEditClicked(bool)
 
     GString sLog;
     QByteArray oData;
-    // ½øĞĞÓÃ»§ĞĞÎª¼ÇÂ¼
+    // è¿›è¡Œç”¨æˆ·è¡Œä¸ºè®°å½•
     if ((NULL != uiService()) && (NULL != (uiService()->getMainFormIntf()))
             && (NULL != uiService()->getMainFormIntf()->getUserActivityLogger())
             && (uiService()->getService() != NULL))
@@ -1443,7 +1443,7 @@ void GSHAnalyseEditPreviewFrame::onActImportFile()
 {
     GTime startTime = GTime::currentTime();
     GString sPath = GBQIniCfgFile::instance()->readString(scnAnalyse, idnImportFilePath, "");
-    QFileInfo oFileInfo(QFileDialog::getOpenFileName(this, QStringLiteral("Ñ¡ÔñÎÄ¼ş"), sPath, QStringLiteral("*.rtf")));
+    QFileInfo oFileInfo(QFileDialog::getOpenFileName(this, QStringLiteral("é€‰æ‹©æ–‡ä»¶"), sPath, QStringLiteral("*.rtf")));
     if (!oFileInfo.isFile() || 0 != oFileInfo.suffix().compare("rtf", Qt::CaseInsensitive))
     {
         return;
@@ -1466,11 +1466,11 @@ void GSHAnalyseEditPreviewFrame::onActExportFile()
     QString sSelectedFilter;
     QFileInfo oFileInfo(
                 QFileDialog::getSaveFileName(
-                    this, QStringLiteral("Áí´æÎÄ¼ş"), sPath,
-                    QStringLiteral("ÎÄ¼ş (*.rtf);;ÎÄ¼ş (*.txt)%1").arg(sDoc), &sSelectedFilter));
+                    this, QStringLiteral("å¦å­˜æ–‡ä»¶"), sPath,
+                    QStringLiteral("æ–‡ä»¶ (*.rtf);;æ–‡ä»¶ (*.txt)%1").arg(sDoc), &sSelectedFilter));
     QString sFile = oFileInfo.absoluteFilePath();
 
-    if (QStringLiteral("ÎÄ¼ş (*.rtf)") == sSelectedFilter)
+    if (QStringLiteral("æ–‡ä»¶ (*.rtf)") == sSelectedFilter)
     {
         if (!sFile.endsWith(".rtf", Qt::CaseInsensitive))
         {
@@ -1488,7 +1488,7 @@ void GSHAnalyseEditPreviewFrame::onActExportFile()
             loadPreviewData();
         }
     }
-    else if (QStringLiteral("ÎÄ¼ş (*.txt)") == sSelectedFilter)
+    else if (QStringLiteral("æ–‡ä»¶ (*.txt)") == sSelectedFilter)
     {
         if (!sFile.endsWith(".txt", Qt::CaseInsensitive))
         {
@@ -1512,7 +1512,7 @@ void GSHAnalyseEditPreviewFrame::onActExportFile()
         //            sFile += ".doc";
         //        }
 
-        //        // ¿½±´Õ³ÌùµÄ·½Ê½
+        //        // æ‹·è´ç²˜è´´çš„æ–¹å¼
         //        /*QPoint pos = pEdit->getTextCursor();
         //        pEdit->selectAll();
         //        pEdit->copy();
@@ -1520,7 +1520,7 @@ void GSHAnalyseEditPreviewFrame::onActExportFile()
 
         //        if (m_pRichTextEdit->getFileName().isEmpty())
         //        {
-        //            // ÁÙÊ±ÎÄ¼şÄ¿Â¼
+        //            // ä¸´æ—¶æ–‡ä»¶ç›®å½•
         //            QString sTempFile;
         //            QDir oTempDir = QDir::temp();
         //            QString sUid = QUuid::createUuid().toString().replace("-", "_");
@@ -1541,7 +1541,7 @@ void GSHAnalyseEditPreviewFrame::onActExportFile()
         {
             sFile += ".doc";
         }
-            // ÁÙÊ±ÎÄ¼şÄ¿Â¼
+            // ä¸´æ—¶æ–‡ä»¶ç›®å½•
             QString tempFile;
             QDir dirTemp = QDir::temp();
             QString uid = QUuid::createUuid().toString().replace("-", "_");
@@ -1569,7 +1569,7 @@ void GSHAnalyseEditPreviewFrame::generateActionLog(GTime startTime, GTime endTim
     GString m_sURL = getFrameURL();
     GString sActionUUID = m_sURL + "|" + actionName;
 
-    // ½øĞĞÓÃ»§ĞĞÎª¼ÇÂ¼
+    // è¿›è¡Œç”¨æˆ·è¡Œä¸ºè®°å½•
      if ((NULL != uiService()) && (NULL != (uiService()->getMainFormIntf()))
              && (NULL != uiService()->getMainFormIntf()->getUserActivityLogger())
              && (uiService()->getService() != NULL))

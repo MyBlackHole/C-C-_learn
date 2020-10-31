@@ -7,23 +7,23 @@
 ToolButton::ToolButton(QString pic_name, QWidget *parent)
     : QToolButton(parent)
 {
-    //设置文本颜色
+    //璁剧疆鏂囨湰棰滆壊
     QPalette text_palette = palette();
     text_palette.setColor(QPalette::ButtonText, QColor(230, 230, 230));
     setPalette(text_palette);
 
-    //设置文本粗体
+    //璁剧疆鏂囨湰绮椾綋
     QFont &text_font = const_cast<QFont &>(font());
     text_font.setWeight(QFont::Bold);
 
     setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
 
-    //设置图标
+    //璁剧疆鍥炬爣
     QPixmap pixmap(pic_name);
     setIcon(pixmap);
     setIconSize(pixmap.size());
 
-    //设置大小
+    //璁剧疆澶у皬
     setFixedSize(pixmap.width()+25, pixmap.height()+27);
     setAutoRaise(true);
 
@@ -66,7 +66,7 @@ void ToolButton::paintEvent(QPaintEvent *event)
 {
     if(mouse_over)
     {
-        //绘制鼠标移到按钮上的按钮效果
+        //缁樺埗榧犳爣绉诲埌鎸夐挳涓婄殑鎸夐挳鏁堟灉
         painterInfo(0, 100, 150);
     }
     else

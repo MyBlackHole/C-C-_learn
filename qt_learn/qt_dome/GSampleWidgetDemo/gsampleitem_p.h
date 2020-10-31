@@ -12,8 +12,8 @@
 //    QList<int> channels;
 //    QList<int> fluors;
 //    QList<int> chNames;
-//    int nameRow;     //样本名称
-//    int typeRow;     //样本类型
+//    int nameRow;     //鏍锋湰鍚嶇О
+//    int typeRow;     //鏍锋湰绫诲瀷
 //    QList<int> selects;
 //    QList<int> values;
 //    QList<int> valShows;
@@ -33,15 +33,15 @@ class GSampleItemPrivate
 public:
     int fileRow;
     QList<int> headers;
-    QList<_TreeStruct> channelItems;    //通道设置
-    int roxRow;     //参比荧光
+    QList<_TreeStruct> channelItems;    //閫氶亾璁剧疆
+    int roxRow;     //鍙傛瘮鑽у厜
 
-    int lockRow;     //锁定
-    int nameRow;     //样本名称
-    int typeRow;     //样本类型
-    QList<_TreeStruct> sidItems;        //样本编号
-    QList<_TreeStruct> uidItems;        //唯一编码
-    QList<_TreeStruct> useItems;     //使用通道
+    int lockRow;     //閿佸畾
+    int nameRow;     //鏍锋湰鍚嶇О
+    int typeRow;     //鏍锋湰绫诲瀷
+    QList<_TreeStruct> sidItems;        //鏍锋湰缂栧彿
+    QList<_TreeStruct> uidItems;        //鍞竴缂栫爜
+    QList<_TreeStruct> useItems;     //浣跨敤閫氶亾
 };
 
 #endif // GSAMPLEITEM_P_H

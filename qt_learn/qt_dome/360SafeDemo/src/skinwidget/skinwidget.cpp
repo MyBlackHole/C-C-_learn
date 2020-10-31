@@ -15,8 +15,8 @@ skinWidget::skinWidget(QString picName,QWidget *parent) :bkPicName(picName),
                ":/img/skin/classic.jpg"<<":/img/skin/greenWorld.jpg"<<":/img/skin/oldWood.jpg"<<
                ":/img/skin/pinkLove.jpg"<<":/img/skin/redThunder.jpg"<<":/img/skin/sixYears.jpg";
     QStringList tip;
-    tip<<tr("·ßÅ­µÄÐ¡Äñ")<<tr("ÓÅÑÅ¾ôÊ¿")<<tr("À¶É«Ìì¿Õ")<<tr("¾­µäÆ¤·ô")<<
-             tr("ÇàÇàÊÀ½ç")<<tr("¹ÅµäÄ¾ÎÆ")<<tr("·ÛÉ«Ö®Áµ")<<tr("ºìÉ«¾ªÀ×")<<tr("ÎÀÊ¿ÁùÖÜÄê");
+    tip<<tr("æ„¤æ€’çš„å°é¸Ÿ")<<tr("ä¼˜é›…çˆµå£«")<<tr("è“è‰²å¤©ç©º")<<tr("ç»å…¸çš®è‚¤")<<
+             tr("é’é’ä¸–ç•Œ")<<tr("å¤å…¸æœ¨çº¹")<<tr("ç²‰è‰²ä¹‹æ‹")<<tr("çº¢è‰²æƒŠé›·")<<tr("å«å£«å…­å‘¨å¹´");
 
     QGridLayout *gridLayout=new QGridLayout;
     gridLayout->setSpacing(0);
@@ -42,7 +42,7 @@ skinWidget::skinWidget(QString picName,QWidget *parent) :bkPicName(picName),
     connect(signalMapper,SIGNAL(mapped(QString)),this,SLOT(setSkin(QString)));
 
     QVBoxLayout *mainLayout=new QVBoxLayout;
-    mainLayout->addWidget(new QLabel(tr("¸ü»»Æ¤·ô")),0,Qt::AlignHCenter);
+    mainLayout->addWidget(new QLabel(tr("æ›´æ¢çš®è‚¤")),0,Qt::AlignHCenter);
     mainLayout->addLayout(gridLayout);
     setLayout(mainLayout);
 

@@ -11,7 +11,7 @@ namespace Ui {
 }
 
 enum MessageType{Message,NewParticipant,ParticipantLeft,FileName,Refuse};
-//Ã¶¾Ù±äÁ¿±êÖ¾ĞÅÏ¢µÄÀàĞÍ£¬·Ö±ğÎªÏûÏ¢£¬ĞÂÓÃ»§¼ÓÈë£¬ºÍÓÃ»§ÍË³ö
+//æšä¸¾å˜é‡æ ‡å¿—ä¿¡æ¯çš„ç±»å‹ï¼Œåˆ†åˆ«ä¸ºæ¶ˆæ¯ï¼Œæ–°ç”¨æˆ·åŠ å…¥ï¼Œå’Œç”¨æˆ·é€€å‡º
 class Widget : public QWidget
 {
     Q_OBJECT
@@ -31,7 +31,7 @@ protected:
     void hasPendingFile(QString userName,QString serverAddress,
                         QString clientAddress,QString fileName);
 
-     bool eventFilter(QObject *target, QEvent *event);//ÊÂ¼ş¹ıÂËÆ÷
+     bool eventFilter(QObject *target, QEvent *event);//äº‹ä»¶è¿‡æ»¤å™¨
 private:
     Ui::Widget *ui;
     QUdpSocket *udpSocket;
@@ -41,9 +41,9 @@ private:
 
     QString getIP();
 
-    QColor color;//ÑÕÉ«
+    QColor color;//é¢œè‰²
 
-    bool saveFile(const QString& fileName);//±£´æÁÄÌì¼ÇÂ¼
+    bool saveFile(const QString& fileName);//ä¿å­˜èŠå¤©è®°å½•
 private slots:
 
     void on_textUnderline_clicked(bool checked);

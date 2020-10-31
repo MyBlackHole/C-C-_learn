@@ -27,7 +27,7 @@ void MainWindow::initUI()
 {
     this->setFixedSize(900, 600);
     this->setWindowIcon(QIcon(":/main/Logo"));
-    this->setWindowTitle(QStringLiteral("360°²È«ÎÀÊ¿"));
+    this->setWindowTitle(QStringLiteral("360å®‰å…¨å«å£«"));
     m_video = new VideoWidget(this);
     m_stackWidget = new QStackedWidget(this);
     m_stackWidget->setGeometry(rect());

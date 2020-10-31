@@ -8,7 +8,7 @@ class SpeedOutButton;
 class OptimizeButton : public QWidget
 {
     Q_OBJECT
-    //自定义属性，用于样式�?
+    //鑷畾涔夊睘鎬э紝鐢ㄤ簬鏍峰紡琛?
     Q_PROPERTY(QString iconInfo READ iconInfo \
                WRITE setIconInfo DESIGNABLE true SCRIPTABLE true)
     Q_PROPERTY(QString title READ title \

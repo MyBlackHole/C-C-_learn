@@ -11,40 +11,40 @@
 #define LBLSTYLESHEET "QLabel {color: orange;background: #FFFFCC;border: %1px solid orange;border-radius: %2px;}"
 #define BTNSTYLESHEET "QPushButton {color: red;background: lightgray;border: %1px solid darkgray;border-radius: %2px;} QPushButton:pressed{color: white;background: orange;border: %1px solid darkgray;border-radius: %2px;}"
 
-// Ö÷´°¿Ú²¿¼şÀà
+// ä¸»çª—å£éƒ¨ä»¶ç±»
 class Widget : public QWidget
 {
     Q_OBJECT
 
 public:
-    // ¹¹Ôì&Îö¹¹º¯Êı
+    // æ„é€ &ææ„å‡½æ•°
     Widget(QWidget *parent = 0);
     ~Widget();
 
 private:
-    // ¡°restart¡±°´Å¥
+    // â€œrestartâ€æŒ‰é’®
     QPushButton *restartBtn;
-    // ¡°score¡±±êÇ©
+    // â€œscoreâ€æ ‡ç­¾
     QLabel *scoreLbl;
-    // ¡°HightScore¡±±êÇ©
+    // â€œHightScoreâ€æ ‡ç­¾
     QLabel *highScoreLbl;
-    // ÓÎÏ·²¿¼ş
+    // æ¸¸æˆéƒ¨ä»¶
     GameWidget *gameWidget;
-    // ¿í¶ÈºÍ¸ß¶ÈµÄËõ·Å±ÈÀı ÓÃÀ´Ê¹´°¿Ú²¿¼şËæÖ÷´°¿ÚµÄ³ß´ç¸Ä±ä¶ø¸Ä±äÎ»ÖÃÓë³ß´ç
+    // å®½åº¦å’Œé«˜åº¦çš„ç¼©æ”¾æ¯”ä¾‹ ç”¨æ¥ä½¿çª—å£éƒ¨ä»¶éšä¸»çª—å£çš„å°ºå¯¸æ”¹å˜è€Œæ”¹å˜ä½ç½®ä¸å°ºå¯¸
     qreal ratioW, ratioH;
-    // ¼ÇÂ¼×î¸ß·Ö
+    // è®°å½•æœ€é«˜åˆ†
     int highScore;
 
 protected:
-    // ´°¿Ú³ß´ç¸Ä±ä´¥·¢µÄÊÂ¼ş
+    // çª—å£å°ºå¯¸æ”¹å˜è§¦å‘çš„äº‹ä»¶
     void resizeEvent(QResizeEvent *);
 
 public slots:
-    // ´¦Àí·ÖÊıÔö¼ÓĞÅºÅµÄ²Ûº¯Êı
+    // å¤„ç†åˆ†æ•°å¢åŠ ä¿¡å·çš„æ§½å‡½æ•°
     void onScoreInc(int);
-    // ´¦ÀíÓÎÏ·½áÊøĞÅºÅµÄ²Ûº¯Êı
+    // å¤„ç†æ¸¸æˆç»“æŸä¿¡å·çš„æ§½å‡½æ•°
     void onGameOver();
-    // ´¦ÀíÓÎÏ·»ñÊ¤ĞÅºÅµÄ²Ûº¯Êı
+    // å¤„ç†æ¸¸æˆè·èƒœä¿¡å·çš„æ§½å‡½æ•°
     void onWin();
 };
 

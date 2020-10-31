@@ -14,7 +14,7 @@ ItemWidget::ItemWidget(QWidget *parent)
     labelInfo = new QLabel(this);
     labelInfo->setStyleSheet("QLabel{color: gray;}");
 
-    verlayout = new QVBoxLayout();// ´Ë´¦½«²ÎÊýthisÌí¼ÓÉÏºÍ²»Ìí¼ÓÉÏ, ×¢Òâ²é¿´Ð§¹û
+    verlayout = new QVBoxLayout();// æ­¤å¤„å°†å‚æ•°thisæ·»åŠ ä¸Šå’Œä¸æ·»åŠ ä¸Š, æ³¨æ„æŸ¥çœ‹æ•ˆæžœ
     verlayout->setContentsMargins(0, 0, 0, 0);
     verlayout->addWidget(labelName);
     verlayout->addWidget(labelInfo);
@@ -33,13 +33,13 @@ void ItemWidget::setText(QPixmap pixmap, QString name, QString info)
     labelInfo->setText(info);
 }
 
-// ²âÊÔÓÃµÄ
+// æµ‹è¯•ç”¨çš„
 void ItemWidget::setText(QString info)
 {
     labelIcon->setText(info);
 }
 
-// Êó±êÐüÍ£µÄÊ±ºò,ÏÔÊ¾µ±Ç°ÓÃ»§¼òÒªÐÅÏ¢
+// é¼ æ ‡æ‚¬åœçš„æ—¶å€™,æ˜¾ç¤ºå½“å‰ç”¨æˆ·ç®€è¦ä¿¡æ¯
 bool ItemWidget::event(QEvent *e)
 {
     if (e->type() == QEvent::ToolTip)
