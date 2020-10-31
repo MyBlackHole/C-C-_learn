@@ -1,0 +1,24 @@
+<RCC>
+    <qresource prefix="/">
+        <file>img/busy-small.gif</file>
+        <file>img/cross-button.png</file>
+        <file>img/ui-check-boxes.png</file>
+        <file>img/asc.png</file>
+        <file>img/desc.png</file>
+        <file>img/applications-blue.png</file>
+        <file>img/arrow.png</file>
+        <file>img/arrow-090.png</file>
+        <file>img/arrow-180.png</file>
+        <file>img/arrow-circle-315.png</file>
+        <file>img/bookmark.png</file>
+        <file>img/bookmarks.png</file>
+        <file>img/clock-history.png</file>
+        <file>img/ui-menu.png</file>
+        <file>img/edit-alignment-justify.png</file>
+        <file>img/star.png</file>
+        <file>img/star-small.png</file>
+        <file>img/star-small-empty.png</file>
+        <file>img/shortcut.png</file>
+        <file>img/folders.png</file>
+    </qresource>
+</RCC>

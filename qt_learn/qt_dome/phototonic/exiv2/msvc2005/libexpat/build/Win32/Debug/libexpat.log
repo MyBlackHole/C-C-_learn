@@ -1,0 +1,24 @@
+﻿生成启动时间为 2015/7/7 22:59:44。
+     1>项目“D:\gnu\exiv2\msvc2005\libexpat\libexpat.vcxproj”在节点 4 上(Build 个目标)。
+     1>ClCompile:
+         D:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D COMPILED_FROM_DSP /D _LIB /D _MBCS /Gm- /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"build\Win32\Debug\\" /Fd"build\Win32\Debug\vc100.pdb" /FR"build\Win32\Debug\\" /Gd /TC /analyze- /errorReport:prompt ..\..\..\expat\lib\xmlparse.c ..\..\..\expat\lib\xmlrole.c ..\..\..\expat\lib\xmltok.c ..\..\..\expat\lib\xmltok_impl.c ..\..\..\expat\lib\xmltok_ns.c
+         xmlparse.c
+         xmlrole.c
+         xmltok.c
+         xmltok_impl.c
+         xmltok_ns.c
+         正在生成代码...
+       Lib:
+         D:\Program Files\Microsoft Visual Studio 10.0\VC\bin\Lib.exe /OUT:"D:\gnu\exiv2\msvc2005\bin\Win32\Debug\libexpat.lib" /NOLOGO /NODEFAULTLIB:msvcrtd build\Win32\Debug\xmlparse.obj
+         build\Win32\Debug\xmlrole.obj
+         build\Win32\Debug\xmltok.obj
+         build\Win32\Debug\xmltok_impl.obj
+         build\Win32\Debug\xmltok_ns.obj
+         libexpat.vcxproj -> D:\gnu\exiv2\msvc2005\bin\Win32\Debug\libexpat.lib
+       BscMake:
+         D:\Program Files\Microsoft Visual Studio 10.0\VC\bin\bscmake.exe /nologo /o".\Win32\Debug/expat_static.bsc" build\Win32\Debug\xmlparse.sbr build\Win32\Debug\xmlrole.sbr build\Win32\Debug\xmltok.sbr build\Win32\Debug\xmltok_impl.sbr build\Win32\Debug\xmltok_ns.sbr
+     1>已完成生成项目“D:\gnu\exiv2\msvc2005\libexpat\libexpat.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:03.36

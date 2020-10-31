@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<misc>
+    <pathToPlugin>./TstGenerator</pathToPlugin>
+    <Enabled>true</Enabled>
+    <displayname>TstGenerator</displayname>
+    <icon>und</icon>
+</misc>

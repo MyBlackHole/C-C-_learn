@@ -1,0 +1,33 @@
+﻿生成启动时间为 2015/7/7 16:58:46。
+     1>项目“C:\Users\chui\Desktop\phototonic\exiv2-0.25\msvc2005\libexpat\libexpat.vcxproj”在节点 3 上(Build 个目标)。
+     1>PrepareForBuild:
+         正在创建目录“build\Win32\Debug\libexpat.tlog\”。
+       InitializeBuildStatus:
+         正在创建“build\Win32\Debug\libexpat.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         D:\Program Files\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D COMPILED_FROM_DSP /D _LIB /D _MBCS /Gm- /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"build\Win32\Debug\\" /Fd"build\Win32\Debug\vc120.pdb" /FR"build\Win32\Debug\\" /Gd /TC /analyze- /errorReport:prompt ..\..\..\expat\lib\xmlparse.c ..\..\..\expat\lib\xmlrole.c ..\..\..\expat\lib\xmltok.c ..\..\..\expat\lib\xmltok_impl.c ..\..\..\expat\lib\xmltok_ns.c
+         {{xgTaskID=0000001E}}
+         xmlrole.c
+     1>c1 : fatal error C1083: 无法打开源文件: “C:\Users\chui\Desktop\phototonic\expat\lib\xmlrole.c”: No such file or directory
+         {{xgTaskID=00000000}}
+         {{xgTaskID=0000001D}}
+         xmlparse.c
+     1>c1 : fatal error C1083: 无法打开源文件: “C:\Users\chui\Desktop\phototonic\expat\lib\xmlparse.c”: No such file or directory
+         {{xgTaskID=00000000}}
+         {{xgTaskID=0000001F}}
+         xmltok.c
+     1>c1 : fatal error C1083: 无法打开源文件: “C:\Users\chui\Desktop\phototonic\expat\lib\xmltok.c”: No such file or directory
+         {{xgTaskID=00000000}}
+         {{xgTaskID=00000020}}
+         xmltok_impl.c
+     1>c1 : fatal error C1083: 无法打开源文件: “C:\Users\chui\Desktop\phototonic\expat\lib\xmltok_impl.c”: No such file or directory
+         {{xgTaskID=00000000}}
+         {{xgTaskID=00000021}}
+         xmltok_ns.c
+     1>c1 : fatal error C1083: 无法打开源文件: “C:\Users\chui\Desktop\phototonic\expat\lib\xmltok_ns.c”: No such file or directory
+         {{xgTaskID=00000000}}
+     1>已完成生成项目“C:\Users\chui\Desktop\phototonic\exiv2-0.25\msvc2005\libexpat\libexpat.vcxproj”(Build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:04.63

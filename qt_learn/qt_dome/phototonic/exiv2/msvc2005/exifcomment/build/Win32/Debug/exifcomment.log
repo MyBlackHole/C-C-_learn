@@ -1,0 +1,31 @@
+﻿生成启动时间为 2015/7/7 23:01:26。
+     1>项目“D:\gnu\exiv2\msvc2005\exifcomment\exifcomment.vcxproj”在节点 3 上(Build 个目标)。
+     1>ClCompile:
+         D:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ID:\gnu\exiv2\msvc2005\../include /ID:\gnu\exiv2\msvc2005\../include/exiv2 /ID:\gnu\exiv2\msvc2005\../xmpsdk/include /ID:\gnu\exiv2\msvc2005\../../expat/lib /ID:\gnu\exiv2\msvc2005\../../zlib /ID:\gnu\exiv2\msvc2005\/../../curl/include /ID:\gnu\exiv2\msvc2005\/../../libssh/include /ID:\gnu\exiv2\msvc2005\xssl/Win32/Release/include /Zi /nologo /W3 /WX /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D BUILD_GETOPT /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"build/Win32/Debug\\" /Fd"build/Win32/Debug\vc100.pdb" /FR"build/Win32/Debug\\" /Gd /TP /analyze- /errorReport:prompt ..\..\samples\exifcomment.cpp ..\..\src\utils.cpp
+         utils.cpp
+         exifcomment.cpp
+         正在生成代码...
+         D:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ID:\gnu\exiv2\msvc2005\../include /ID:\gnu\exiv2\msvc2005\../include/exiv2 /ID:\gnu\exiv2\msvc2005\../xmpsdk/include /ID:\gnu\exiv2\msvc2005\../../expat/lib /ID:\gnu\exiv2\msvc2005\../../zlib /ID:\gnu\exiv2\msvc2005\/../../curl/include /ID:\gnu\exiv2\msvc2005\/../../libssh/include /ID:\gnu\exiv2\msvc2005\xssl/Win32/Release/include /Zi /nologo /W3 /WX /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D BUILD_GETOPT /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"build/Win32/Debug\\" /Fd"build/Win32/Debug\vc100.pdb" /FR"build/Win32/Debug\\" /Gd /TC /analyze- /errorReport:prompt ..\..\src\getopt_win32.c ..\..\src\localtime.c
+         localtime.c
+         getopt_win32.c
+         正在生成代码...
+       Link:
+         D:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\gnu\exiv2\msvc2005\bin/Win32/Debug\exifcomment.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB:msvcrtd /MANIFEST /ManifestFile:"build/Win32/Debug\exifcomment.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\gnu\exiv2\msvc2005\bin\Win32\Debug\exifcomment.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\gnu\exiv2\msvc2005\bin/Win32/Debug\exifcomment.lib" /MACHINE:X86 build/Win32/Debug\exifcomment.obj
+         build/Win32/Debug\getopt_win32.obj
+         build/Win32/Debug\localtime.obj
+         build/Win32/Debug\utils.obj
+         D:\gnu\exiv2\msvc2005\bin\Win32\Debug\libexpat.lib
+         D:\gnu\exiv2\msvc2005\bin\Win32\Debug\xmpsdk.lib
+         D:\gnu\exiv2\msvc2005\bin\Win32\Debug\zlib1.lib
+         D:\gnu\exiv2\msvc2005\bin\Win32\Debug\libexiv2.lib
+     1>zlib1.lib(uncompr.obj) : warning LNK4075: 忽略“/EDITANDCONTINUE”(由于“/INCREMENTAL:NO”规范)
+         exifcomment.vcxproj -> D:\gnu\exiv2\msvc2005\bin/Win32/Debug\exifcomment.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"D:\gnu\exiv2\msvc2005\bin/Win32/Debug\exifcomment.exe;#1" /manifest build/Win32/Debug\exifcomment.exe.intermediate.manifest
+       BscMake:
+         D:\Program Files\Microsoft Visual Studio 10.0\VC\bin\bscmake.exe /nologo /o"D:\gnu\exiv2\msvc2005\bin/Win32/Debug\exifcomment.bsc" build/Win32/Debug\exifcomment.sbr build/Win32/Debug\getopt_win32.sbr build/Win32/Debug\localtime.sbr build/Win32/Debug\utils.sbr
+     1>已完成生成项目“D:\gnu\exiv2\msvc2005\exifcomment\exifcomment.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:08.46

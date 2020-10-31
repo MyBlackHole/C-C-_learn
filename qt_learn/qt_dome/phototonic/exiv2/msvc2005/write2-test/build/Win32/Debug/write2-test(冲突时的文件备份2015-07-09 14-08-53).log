@@ -1,0 +1,36 @@
+﻿生成启动时间为 2015/7/7 16:59:01。
+     1>项目“C:\Users\chui\Desktop\phototonic\exiv2-0.25\msvc2005\write2-test\write2-test.vcxproj”在节点 15 上(Build 个目标)。
+     1>InitializeBuildStatus:
+         正在创建“build/Win32/Debug\write2-test.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         D:\Program Files\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\chui\Desktop\phototonic\exiv2-0.25\msvc2005\../include" /I"C:\Users\chui\Desktop\phototonic\exiv2-0.25\msvc2005\../include/exiv2" /I"C:\Users\chui\Desktop\phototonic\exiv2-0.25\msvc2005\../xmpsdk/include" /I"C:\Users\chui\Desktop\phototonic\exiv2-0.25\msvc2005\../../expat/lib" /I"C:\Users\chui\Desktop\phototonic\exiv2-0.25\msvc2005\../../zlib" /I"C:\Users\chui\Desktop\phototonic\exiv2-0.25\msvc2005\/../../curl/include" /I"C:\Users\chui\Desktop\phototonic\exiv2-0.25\msvc2005\/../../libssh/include" /I"C:\Users\chui\Desktop\phototonic\exiv2-0.25\msvc2005\xssl/Win32/Release/include" /Zi /nologo /W3 /WX /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D BUILD_GETOPT /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"build/Win32/Debug\\" /Fd"build/Win32/Debug\vc120.pdb" /FR"build/Win32/Debug\\" /Gd /TP /analyze- /errorReport:prompt "..\..\samples\write2-test.cpp" ..\..\src\utils.cpp
+         {{xgTaskID=000000B4}}
+         write2-test.cpp
+         {{xgTaskID=00000000}}
+         {{xgTaskID=000000B5}}
+         utils.cpp
+         {{xgTaskID=00000000}}
+         D:\Program Files\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\chui\Desktop\phototonic\exiv2-0.25\msvc2005\../include" /I"C:\Users\chui\Desktop\phototonic\exiv2-0.25\msvc2005\../include/exiv2" /I"C:\Users\chui\Desktop\phototonic\exiv2-0.25\msvc2005\../xmpsdk/include" /I"C:\Users\chui\Desktop\phototonic\exiv2-0.25\msvc2005\../../expat/lib" /I"C:\Users\chui\Desktop\phototonic\exiv2-0.25\msvc2005\../../zlib" /I"C:\Users\chui\Desktop\phototonic\exiv2-0.25\msvc2005\/../../curl/include" /I"C:\Users\chui\Desktop\phototonic\exiv2-0.25\msvc2005\/../../libssh/include" /I"C:\Users\chui\Desktop\phototonic\exiv2-0.25\msvc2005\xssl/Win32/Release/include" /Zi /nologo /W3 /WX /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D BUILD_GETOPT /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"build/Win32/Debug\\" /Fd"build/Win32/Debug\vc120.pdb" /FR"build/Win32/Debug\\" /Gd /TC /analyze- /errorReport:prompt ..\..\src\getopt_win32.c ..\..\src\localtime.c
+         {{xgTaskID=000000D3}}
+         localtime.c
+         {{xgTaskID=00000000}}
+         {{xgTaskID=000000D2}}
+         getopt_win32.c
+         {{xgTaskID=00000000}}
+       Link:
+         D:\Program Files\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\chui\Desktop\phototonic\exiv2-0.25\msvc2005\bin/Win32/Debug\write2-test.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB:msvcrtd /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\chui\Desktop\phototonic\exiv2-0.25\msvc2005\bin/Win32/Debug\write2-test.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\chui\Desktop\phototonic\exiv2-0.25\msvc2005\bin/Win32/Debug\write2-test.lib" /MACHINE:X86 /SAFESEH "build/Win32/Debug\write2-test.obj"
+         build/Win32/Debug\getopt_win32.obj
+         build/Win32/Debug\localtime.obj
+         build/Win32/Debug\utils.obj
+         "C:\Users\chui\Desktop\phototonic\exiv2-0.25\msvc2005\bin\Win32\Debug\libexpat.lib"
+         "C:\Users\chui\Desktop\phototonic\exiv2-0.25\msvc2005\bin\Win32\Debug\xmpsdk.lib"
+         "C:\Users\chui\Desktop\phototonic\exiv2-0.25\msvc2005\bin\Win32\Debug\zlib1.lib"
+         "C:\Users\chui\Desktop\phototonic\exiv2-0.25\msvc2005\bin\Win32\Debug\libexiv2.lib"
+         {{xgTaskID=000000E7}}
+     1>LINK : fatal error LNK1181: 无法打开输入文件“C:\Users\chui\Desktop\phototonic\exiv2-0.25\msvc2005\bin\Win32\Debug\libexpat.lib”
+         {{xgTaskID=00000000}}
+     1>已完成生成项目“C:\Users\chui\Desktop\phototonic\exiv2-0.25\msvc2005\write2-test\write2-test.vcxproj”(Build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:10.93

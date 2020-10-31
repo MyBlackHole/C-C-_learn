@@ -1,0 +1,62 @@
+﻿生成启动时间为 2015/7/7 16:58:46。
+     1>项目“C:\Users\chui\Desktop\phototonic\exiv2-0.25\msvc2005\xmpsdk\xmpsdk.vcxproj”在节点 4 上(Build 个目标)。
+     1>PrepareForBuild:
+         正在创建目录“.\build\Win32\Debug\xmpsdk.tlog\”。
+       InitializeBuildStatus:
+         正在创建“.\build\Win32\Debug\xmpsdk.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         D:\Program Files\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\chui\Desktop\phototonic\exiv2-0.25\msvc2005\../include" /I"C:\Users\chui\Desktop\phototonic\exiv2-0.25\msvc2005\../include/exiv2" /I"C:\Users\chui\Desktop\phototonic\exiv2-0.25\msvc2005\../xmpsdk/include" /I"C:\Users\chui\Desktop\phototonic\exiv2-0.25\msvc2005\../../expat/lib" /I"C:\Users\chui\Desktop\phototonic\exiv2-0.25\msvc2005\../../zlib" /I"C:\Users\chui\Desktop\phototonic\exiv2-0.25\msvc2005\/../../curl/include" /I"C:\Users\chui\Desktop\phototonic\exiv2-0.25\msvc2005\/../../libssh/include" /I"C:\Users\chui\Desktop\phototonic\exiv2-0.25\msvc2005\xssl/Win32/Release/include" /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D XML_STATIC /D _MBCS /Gm- /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo".\build\Win32\Debug\\" /Fd".\build\Win32\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\xmpsdk\src\ExpatAdapter.cpp ..\..\xmpsdk\src\MD5.cpp ..\..\xmpsdk\src\ParseRDF.cpp ..\..\xmpsdk\src\UnicodeConversions.cpp ..\..\xmpsdk\src\WXMPIterator.cpp ..\..\xmpsdk\src\WXMPMeta.cpp ..\..\xmpsdk\src\WXMPUtils.cpp ..\..\xmpsdk\src\XML_Node.cpp ..\..\xmpsdk\src\XMPCore_Impl.cpp ..\..\xmpsdk\src\XMPIterator.cpp "..\..\xmpsdk\src\XMPMeta-GetSet.cpp" "..\..\xmpsdk\src\XMPMeta-Parse.cpp" "..\..\xmpsdk\src\XMPMeta-Serialize.cpp" ..\..\xmpsdk\src\XMPMeta.cpp "..\..\xmpsdk\src\XMPUtils-FileInfo.cpp" ..\..\xmpsdk\src\XMPUtils.cpp
+         {{xgTaskID=0000000D}}
+         MD5.cpp
+         {{xgTaskID=00000000}}
+         {{xgTaskID=0000000F}}
+         UnicodeConversions.cpp
+         {{xgTaskID=00000000}}
+         {{xgTaskID=00000013}}
+         XML_Node.cpp
+         {{xgTaskID=00000000}}
+         {{xgTaskID=0000000C}}
+         ExpatAdapter.cpp
+     1>C:\Users\chui\Desktop\phototonic\exiv2-0.25\xmpsdk\src\ExpatAdapter.cpp(15): fatal error C1083: 无法打开包括文件: “expat.h”: No such file or directory
+         {{xgTaskID=00000000}}
+         {{xgTaskID=0000000E}}
+         ParseRDF.cpp
+         {{xgTaskID=00000000}}
+         {{xgTaskID=00000012}}
+         WXMPUtils.cpp
+         {{xgTaskID=00000000}}
+         {{xgTaskID=00000010}}
+         WXMPIterator.cpp
+         {{xgTaskID=00000000}}
+         {{xgTaskID=00000011}}
+         WXMPMeta.cpp
+         {{xgTaskID=00000000}}
+         {{xgTaskID=00000014}}
+         XMPCore_Impl.cpp
+         {{xgTaskID=00000000}}
+         {{xgTaskID=00000015}}
+         XMPIterator.cpp
+         {{xgTaskID=00000000}}
+         {{xgTaskID=00000016}}
+         XMPMeta-GetSet.cpp
+         {{xgTaskID=00000000}}
+         {{xgTaskID=00000017}}
+         XMPMeta-Parse.cpp
+         {{xgTaskID=00000000}}
+         {{xgTaskID=00000018}}
+         XMPMeta-Serialize.cpp
+         {{xgTaskID=00000000}}
+         {{xgTaskID=0000001A}}
+         XMPUtils-FileInfo.cpp
+         {{xgTaskID=00000000}}
+         {{xgTaskID=0000001B}}
+         XMPUtils.cpp
+         {{xgTaskID=00000000}}
+         {{xgTaskID=00000019}}
+         XMPMeta.cpp
+         {{xgTaskID=00000000}}
+     1>已完成生成项目“C:\Users\chui\Desktop\phototonic\exiv2-0.25\msvc2005\xmpsdk\xmpsdk.vcxproj”(Build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:04.13

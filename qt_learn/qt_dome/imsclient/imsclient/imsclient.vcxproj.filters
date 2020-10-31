@@ -1,0 +1,1687 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;cxx;c;def</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h</Extensions>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Resource Files\WorkStation">
+      <UniqueIdentifier>{bf2e3f9f-9a8d-4b9c-b66b-b9f042387f2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Weather">
+      <UniqueIdentifier>{d87cb454-a889-4c36-94db-b13c66c5a6e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Release">
+      <UniqueIdentifier>{d064f53a-0be8-4a79-8082-76f32c9c3059}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Debug">
+      <UniqueIdentifier>{b92d3feb-bc6a-42fd-8833-2c7ec544e70d}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="tinyxml">
+      <UniqueIdentifier>{b77bd3a0-fc7a-468e-bbf0-bc680c9b467e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="imsimageaccount.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="imsimagelabel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="imsimagelineedit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="imsresoursce.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="uiapplicationmanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="uiimsbasedialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="uiinterfacemanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="uiloginscreen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="uitabwidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="uiweatherinfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="workstation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\qrc_workstation.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_imsimageaccount.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_imsimagelabel.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_imsimagelineedit.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_uiapplicationmanager.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_uiimsbasedialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_uiinterfacemanager.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_uiloginscreen.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_uitabwidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_uiweatherinfo.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_workstation.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_imsimageaccount.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_imsimagelabel.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_imsimagelineedit.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_uiapplicationmanager.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_uiimsbasedialog.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_uiinterfacemanager.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_uiloginscreen.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_uitabwidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_uiweatherinfo.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_workstation.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tinyxml\tinystr.cpp">
+      <Filter>tinyxml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tinyxml\tinyxml.cpp">
+      <Filter>tinyxml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tinyxml\tinyxmlerror.cpp">
+      <Filter>tinyxml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tinyxml\tinyxmlparser.cpp">
+      <Filter>tinyxml</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="imsdefine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="imsresoursce.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_uiapplicationmanager.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_uiinterfacemanager.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_uiloginscreen.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_uiweatherinfo.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_workstation.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\tinyxml\tinystr.h">
+      <Filter>tinyxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\tinyxml\tinyxml.h">
+      <Filter>tinyxml</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="imsclient.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="imsimageaccount.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="imsimagelabel.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="imsimagelineedit.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="uiapplicationmanager.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="uiimsbasedialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="uiinterfacemanager.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="uiloginscreen.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="uitabwidget.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="uiweatherinfo.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="workstation.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="uiapplicationmanager.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="uiinterfacemanager.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="uiloginscreen.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="uiweatherinfo.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="workstation.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme.css">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="workstation.qrc">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\maintabbar\0.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\maintabbar\15.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\lockPanel\16.ico">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\lockPanel\16_gray.ico">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\lockPanel\20.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\maintabbar\30.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\maintabbar\45.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\maintabbar\60.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\maintabbar\75.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\maintabbar\90.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\maintabbar\add.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\menu\adduser.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\login\afternoon.jpg">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\screenshot\FilterBar\ageing.jpg">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\screenshot\FilterBar\ageing_hightlight.jpg">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\aio_quickbar_cut.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\aio_quickbar_face.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\aio_quickbar_flirtationface.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\aio_quickbar_font.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\aio_quickbar_inputassist.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\aio_quickbar_inputassist_dropdown.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\aio_quickbar_more.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\aio_quickbar_register.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\aio_quickbar_richface.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\aio_quickbar_screen1.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\aio_quickbar_screen2.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\aio_quickbar_sendpic.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\aio_quickbar_sysfont_tab_button.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\aio_quickbar_twitter.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\systembutton\AIO_SetBtn_down.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\systembutton\AIO_SetBtn_highlight.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\systembutton\AIO_SetBtn_highlight_normal.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\systembutton\AIO_SetBtn_normal.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\aio_toobar_add.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\aio_toobar_addhuman.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\aio_toobar_app.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\aio_toobar_block.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\aio_toobar_game.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\menu\aio_toobar_Report.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\maintool\allbtn_down.png.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\maintool\allbtn_highlight.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\maintool\allbtn_highlight.png.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\maintool\allbtn_left_down.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\maintool\allbtn_left_highlight.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\maintool\allbtn_right_down.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\maintool\allbtn_right_highlight.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\AM_MenuICON.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\appmanager\app_bkg_hover.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\appmanager\app_bkg_normal.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\appmanager\app_bkg_push.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\appmanager\app_manager_icon.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\appmanager\appbox_mgr_btn.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\AppMenuExt_DeleteFriend.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\AppMenuExt_ImPeachUin.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\AppMenuExt_MoveToBlackList.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\interface\AreaIcon.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\interface\AreaMainIcon.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\interface\AreaMainIcon_2.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\interface\AreaPresentMgr_RBMenu.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\screenshot\Arrow.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\maintool\arrow_down.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\interface\autograph.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\tray\away.ico">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\state\away.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\tray\away.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\tray\away_16.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\menu\bell_16.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\menu\bellwithscore_16.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\interface\blog.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\Bold.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\screenshot\Brush.PNG">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\systembutton\btn_close_down.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\systembutton\btn_close_highlight.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\systembutton\btn_close_normal.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\systembutton\btn_max_down.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\systembutton\btn_max_highlight.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\systembutton\btn_max_normal.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\systembutton\btn_mini_down.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\systembutton\btn_mini_highlight.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\systembutton\btn_mini_normal.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\systembutton\btn_restore_down.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\systembutton\btn_restore_highlight.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\systembutton\btn_restore_normal.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\systembutton\btn_set_hover.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\systembutton\btn_set_normal.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\systembutton\btn_set_press.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\systembutton\btn_Skin_down.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\systembutton\btn_Skin_highlight.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\systembutton\btn_Skin_normal.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\btnleft_down.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\btnleft_focus_down.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\btnleft_focus_highlight.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\btnleft_focus_normal.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\btnleft_highlight.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\btnleft_normal.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\btnright_down.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\btnright_focus_down.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\btnright_focus_highlight.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\btnright_focus_normal.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\btnright_highlight.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\btnright_normal.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\tray\busy.ico">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\state\busy.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\tray\busy.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\tray\busy_16.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\login\button_login_down.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\login\button_login_hover.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\login\button_login_normal.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\screenshot\CameraToolbar_BtnDown.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\screenshot\CameraToolbar_BtnHover.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\screenshot\CameraToolbar_BtnNormal.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\login\checkbox_hover.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\login\checkbox_normal.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\login\checkbox_press.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\login\checkbox_selected_hover.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\login\checkbox_selected_normal.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\login\checkbox_selected_press.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\screenshot\Circle.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\cityid.xml">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\screenshot\FilterBar\classiclomo.jpg">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\screenshot\FilterBar\classiclomo_hightlight.jpg">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\interface\ClassicThemeBkg.jpg">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\color.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\menu\ContactInfoTabNetGame.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\menu\ContactInfoTabNetGame2.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\menu\contactmgr.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\ContactMgr.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\menu\ContactTipsVASFlagExt_Mail.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\menu\ContactTipsVASFlagExt_QQFlyIsland.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\menu\ContactTipsVASFlagExt_QQFO.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\menu\ContactTipsVASFlagExt_QQSG.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\menu\ContactTipsVASFlagExt_QQTang.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\menu\ContactTipsVASFlagExt_QQTangVip.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\screenshot\FilterBar\copperplate.jpg">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\screenshot\FilterBar\copperplate_hightlight.jpg">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\login\corner_back.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\login\corner_back_hover.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\login\corner_back_press.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\login\corner_left.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\login\corner_left_hover.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\login\corner_left_press.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\login\corner_right_hover.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\login\corner_right_normal_down.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\interface\CoverThemeBkg.jpg">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\menu\crm.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\menu\cutline.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\interface\default.jpg">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\menu\delfolder.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\menu\deluser.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\deta.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\interface\downbtn.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\screenshot\Exit.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\appmanager\fav_app_empty.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\interface\fengmian_1.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\maintool\filemanager.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\screenshot\Filter.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\maintool\find.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\find_old.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\screenshot\Finish.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\Folder.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\maintool\FriendCircleMainToolAreaEntry.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\interface\friendicon.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\screenshot\FilterBar\graying.jpg">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\screenshot\FilterBar\graying_hightlight.jpg">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\group.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\GroupDyncIcon.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\menu\groupmainpage.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\head.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\interface\head_bkg__normal.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\interface\head_bkg_highlight.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\maintabbar\home.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\maintabbar\icon_blog_normal.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\maintabbar\icon_blog_selected.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\interface\icon_blog_selected_Blue.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\maintabbar\icon_contacts_normal.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\maintabbar\icon_contacts_selected.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\interface\icon_contacts_selected_Blue.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\maintabbar\icon_group_normal.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\maintabbar\icon_group_selected.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\interface\icon_group_selected_Blue.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\maintabbar\icon_last_normal.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\maintabbar\icon_last_selected.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\interface\icon_last_selected_Blue.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\maintabbar\icon_search_normal.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\interface\icon_weather_selected_Blue.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\maintabbar\icon_zone_normal.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\maintabbar\icon_zone_selected.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\interface\icon_zone_selected_Blue.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\state\imoffline.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\tray\imoffline.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\tray\imonline.ico">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\state\imonline.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\tray\imonline.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\tray\imonline_16.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\Import.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\state\ImQQAway.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\state\ImQQBusy.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\state\ImQQMute.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\state\ImQQOnline.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\state\ImQQQme.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\login\inputbox.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\login\inputbox_hover.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\tray\invisible.ico">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\tray\invisible.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\state\invisible.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\state\IPhoneQQ_Head_Big.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\Italic.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\interface\jingdian_2.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\login\keyboard.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\screenshot\LargeMagnifier.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\interface\leftdown.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\interface\leftmouseover.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\interface\leftnormal.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\menu\level0.bmp">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\menu\level1.bmp">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\menu\level2.bmp">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\menu\level3.bmp">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\menu\level4.bmp">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\menu\level5.bmp">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\LevelValue.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\login\loading.gif">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\lockPanel\lock.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\lockPanel\lock20.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\lockPanel\lockBg_Highlight.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\lockPanel\lockBg_Pushed.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\login\login_head_bkg.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\screenshot\FilterBar\lomo.jpg">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\screenshot\FilterBar\lomo_hightlight.jpg">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\LV.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\screenshot\Magnifier.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\interface\mail.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\menu\main_gamebtn20_game.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\menu\main_musicbtn20_music.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\maintabbar\main_tab_check.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\maintabbar\main_tab_highlight.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\maintabbar\main_tabbtn_down.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\maintabbar\main_tabbtn_highlight.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\mainmenu_allservices.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\mainmenu_imqqcom.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\mainmenu_NewsOrder.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\menu\MainPanelServiceBarExt_XiaoYou.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\menu\MainPanelServiceBarExt_XiaoYou_2.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\MainPanelVasIcon.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\interface\MaterialAlphaSet.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\menu\menu_arrow.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\menu\menu_bkg.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\menu\menu_bkg_board.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\maintool\menu_btn_highlight.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\maintool\menu_btn_normal.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\menu_changepswd.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\menu\menu_cutling.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\menu_exit.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\menu_filemanager.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\menu\menu_highlight.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\menu_switch.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\maintool\message.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\interface\Messagebox18_highlight.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\interface\middledown.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\interface\middlemouseover.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\interface\middlenormal.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\login\mima.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\login\mima_hover.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\login\mima_press.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\MiniService.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\state\MobilePhoneQQAway.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\state\MobilePhoneQQBusy.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\state\MobilePhoneQQOn.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\state\MobileWapQQAway.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\state\MobileWapQQOn.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\menu\modehead.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\interface\more.PNG">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\appmanager\more_app_btn_down.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\appmanager\more_app_btn_hover.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\appmanager\more_app_btn_normal.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\login\morning.jpg">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\menu\moveuser.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\msg_upload.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\menu\msgmgr.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\msgmgr.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\tray\mute.ico">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\tray\mute.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\state\mute.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\tray\mute_16.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\menu\name.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\interface\news.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\login\night.jpg">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\screenshot\FilterBar\nightfall.jpg">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\screenshot\FilterBar\nightfall_hightlight.jpg">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\login\noon.jpg">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\menu\nopic.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\note0.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\note1.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\tray\offline.ico">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\OnlineUpdate.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\screenshot\FilterBar\original.jpg">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\screenshot\FilterBar\original_hightlight.jpg">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\interface\plus.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\screenshot\FilterBar\polaroid.jpg">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\screenshot\FilterBar\polaroid_hightlight.jpg">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\QA.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\tray\Qme.ico">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\tray\Qme.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\state\Qme.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\tray\Qme_16.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\maintool\QPlusEntranceBtn.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\qq.ico">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\QQ_TempSession.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\menu\QQCenter.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\state\QQForPad_Head_Big.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\menu\QQMusicVip.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\interface\qqshowicon.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\QQVIP_GRAY.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\QQVIP_LIGHT.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\QQZone.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\interface\qzoneicon.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\screenshot\FilterBar\rainbow.jpg">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\screenshot\FilterBar\rainbow_hightlight.jpg">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\recover.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\screenshot\Rectangle.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\menu\rf.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\interface\rightdown.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\interface\rightmouseover.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\interface\rightnormal.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\safe.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\screenshot\Save.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\save_16.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\menu\search_16_with_shadow.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\menu\search_20.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\menu\sendmsg.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\interface\shopping.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\screenshot\SinglePoint.PNG">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\screenshot\FilterBar\sketch.jpg">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\screenshot\FilterBar\sketch_hightlight.jpg">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\SmallVideoDefault.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\interface\soso.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\SoSo.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\screenshot\FilterBar\sunshine.jpg">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\screenshot\FilterBar\sunshine_hightlight.jpg">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\screenshot\FilterBar\sweet.jpg">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\screenshot\FilterBar\sweet_hightlight.jpg">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\maintabbar\tabbtn_bgk_pushed.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\maintabbar\tabbtn_bgk_pushed_hover.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\TencentNet.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\menu\tenpay20.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\screenshot\Text.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\menu\tipicon_paddingDraw.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\maintool\TitleIcon.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\Tools.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\maintool\Tools.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\underline.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\screenshot\Undo.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\lockPanel\unlock20.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\interface\upbtn.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\menu\VASFlagExt_HuaXia2_0.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\menu\video.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\interface\vip_16.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\vip_setup.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\interface\wallet.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\interface\wblogicon.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\interface\weather-back.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\interface\weather-report.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\interface\weather_icon.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\interface\WeatherThemeBkg.jpg">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\state\WebQQAway.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\state\WebQQBusy.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\state\WebQQMute.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\state\WebQQOnline.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\state\WebQQQme.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\WhatsNew.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\interface\White.jpg">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ChatFrame\Wireless.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\login\zhuce.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\login\zhuce_hover.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\login\zhuce_press.png">
+      <Filter>Resource Files\WorkStation</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\16_gray.ico">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\20.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\AddMgr.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\weather\adver.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\app_bkg_hover.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\app_bkg_normal.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\app_bkg_push.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\app_manager_icon.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\app_mouseover.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\weather\big_chance_of_rain.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\weather\big_chance_of_snow.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\weather\big_chance_of_storm.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\weather\big_chance_of_tstorm.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\weather\big_cloudy.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\weather\big_cn_cloudy.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\weather\big_cn_fog.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\weather\big_cn_heavyrain.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\weather\big_cn_heavysnow.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\weather\big_cn_lightrain.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\weather\big_cn_overcast.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\weather\big_cn_showers.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\weather\big_dust.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\weather\big_flurries.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\weather\big_fog.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\weather\big_haze.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\weather\big_icy.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\weather\big_mist.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\weather\big_mostly_cloudy.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\weather\big_mostly_sunny.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\weather\big_partly_cloudy.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\weather\big_rain.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\weather\big_sleet.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\weather\big_smoke.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\weather\big_snow.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\weather\big_storm.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\weather\big_sunny.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\weather\big_thunderstorm.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\weather\chance_of_rain.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\weather\chance_of_snow.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\weather\chance_of_storm.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\weather\chance_of_tstorm.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\weather\cloudy.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\weather\cn_cloudy.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\weather\cn_fog.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\weather\cn_heavyrain.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\weather\cn_heavysnow.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\weather\cn_lightrain.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\weather\cn_overcast.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\weather\cn_showers.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ContactMgr.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ContactTipsVASFlagExt_Mail.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\CustomerCenter.PNG">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\weather\dust.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\fav_app_empty.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\weather\flurries.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\weather\fog.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\friendicon.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\weather\haze.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\weather\icy.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\Import.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\lock20.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\lockBg_Highlight.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\lockBg_Pushed.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\mainmenu_allservices.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\mainmenu_imqqcom.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\mainmenu_NewsOrder.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\MainPanelVasIcon.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\menu_changepswd.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\menu_exit.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\menu_filemanager.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\menu_help.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\menu_switch.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\MiniService.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\weather\mist.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\more_app_btn_down.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\more_app_btn_hover.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\more_app_btn_normal.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\weather\mostly_cloudy.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\weather\mostly_sunny.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\msgmgr.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\OnlineUpdate.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\weather\partly_cloudy.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ProductBlog.PNG">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\QA.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\QQ_TempSession.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\QQZone.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\QuestionAndAdvance.PNG">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\qzoneicon.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\weather\rain.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\recover.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\remove_mouseover.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\safe.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\weather\sleet.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\weather\smoke.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\weather\snow.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\SoSo.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\weather\storm.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\weather\sunny.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\TencentNet.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\weather\thunderstorm.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\unlock20.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\ViewInfo.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\vip_head.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\wblogicon.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\WhatsNew.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\theme\Wireless.png">
+      <Filter>Resource Files\Weather</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

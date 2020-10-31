@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Images/line_selected.jpg</file>
+        <file>Images/line_unselected.jpg</file>
+    </qresource>
+</RCC>

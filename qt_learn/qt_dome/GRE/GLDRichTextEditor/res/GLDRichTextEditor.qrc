@@ -1,0 +1,31 @@
+<RCC>
+    <qresource prefix="/">
+        <file>smallnew.png</file>
+        <file>smallOpen.png</file>
+        <file>smallpaste.png</file>
+        <file>smallSave.png</file>
+        <file>smallSaveAsFile.png</file>
+        <file>smallcut.png</file>
+        <file>smallfind.png</file>
+        <file>smallRedo.png</file>
+        <file>smallreplace.png</file>
+        <file>smallsubscript.png</file>
+        <file>smallsuperscript.png</file>
+        <file>smalltextbold.png</file>
+        <file>smalltextitalic.png</file>
+        <file>smallUndo.png</file>
+        <file>smallcopy.png</file>
+        <file>smallcolors.png</file>
+        <file>smallstrikethrough.png</file>
+        <file>smalltextunder.png</file>
+        <file>smallalignleft.png</file>
+        <file>smallalignright.png</file>
+        <file>smallcenter.png</file>
+        <file>smallinsertpic.png</file>
+        <file>largePageBorders.png</file>
+        <file>smallinserttable.png</file>
+        <file>smallBackgroundColor.png</file>
+        <file>smallZoomIn.png</file>
+        <file>smallZoomOut.png</file>
+    </qresource>
+</RCC>
