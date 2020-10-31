@@ -1,0 +1,10 @@
+debug/main.o
+debug/mainwindow.o
+debug/sudokutable.o
+debug/sudokudata.o
+debug/settingsdialog.o
+debug/cell.o
+debug/qrc_res.o
+debug/moc_mainwindow.o
+debug/moc_sudokutable.o
+debug/moc_settingsdialog.o
