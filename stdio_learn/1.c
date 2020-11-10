@@ -18,8 +18,8 @@ int main() {
 void PrintFError(const char *format, ...) {
     char buf[MAXLINE];
     va_list args;
-            va_start(args, format);
+    va_start(args, format);
     vsnprintf(buf, MAXLINE, format, args);
     perror(buf);
-            va_end(args);
+    va_end(args);
 }
