@@ -8,6 +8,7 @@
 #include <string.h>
 #include <errno.h>
 #include <fcntl.h>
+#include <signal.h>
 
 /*
  * 1
@@ -21,7 +22,28 @@
  * 3
  * sbrk: 内存分配
  * brk: 内存分配
+ *
+ * 4
+ * fork: 创建子进程
+ *
+ * 5
+ * alarm: 定时器 产生SIGALRM
+ * pause: 等待到收到信号为止
  */
+
+void
+func5_1() {
+    printf("func5_1");
+}
+
+void
+func5() {
+    if (signal(SIGALRM, func5_1) == SIG_ERR)
+        printf("signal - %s\n", strerror(errno));
+    alarm(1);
+    pause();
+    exit(0);
+}
 
 void
 func4() {
@@ -106,6 +128,6 @@ func1() {
 
 int
 main() {
-    func4();
+    func5();
 }
 
