@@ -3,7 +3,8 @@
 //
 #include <stdio.h>
 
-int main() {
+int main(int argc, char *argv[]) {
+    printf("%d", argc);
     int input = 8;
     int result = 0;
     __asm__ __volatile__ ("movl %1,%0" : "=r" (result) : "r" (input));

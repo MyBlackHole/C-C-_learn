@@ -24,6 +24,13 @@
  */
 
 
+int func6() {
+    int i = 1000;
+    printf("八进制:%d\n", (i));
+    return 0;
+}
+
+
 int func5() {
     int i = 1000;
     printf("八进制:%o\n", i);
@@ -60,6 +67,6 @@ int func1() {
 
 
 int main() {
-    func5();
+    func6();
     exit(0);
 }

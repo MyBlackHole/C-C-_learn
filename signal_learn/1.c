@@ -18,10 +18,36 @@
  *
  * 3
  * kill: 发送信号给进程或进程组
+ *
+ * 4
+ * sigaction: 检查或修改（或检查并修改）
+ *
  */
 
+
 void
-func3_1() {
+func4_1(int signo) {
+    printf("func4_1");
+}
+
+
+void
+func4() {
+    struct sigaction act;
+    struct sigaction oldact;
+    act.sa_handler = func4_1;
+    act.sa_flags = SA_NODEFER;//| SA_RESETHAND;
+    sigaction(SIGALRM, &act, &oldact);
+    printf("this is the main function\n");
+    pid_t pid = getpid();
+    printf("%d\n", pid);
+    alarm(1);
+    pause();
+//    kill(pid, SIGALRM);
+}
+
+void
+func3_1(int signo) {
     printf("func3_1");
 }
 
@@ -58,6 +84,6 @@ func1() {
 
 int
 main() {
-    func3();
+    func4();
     exit(0);
 }
