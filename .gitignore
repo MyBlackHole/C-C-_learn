@@ -7,3 +7,5 @@ a.out
 cmake-build-debug/
 .idea/
 build/
+.cache/
+.vscode/
