@@ -20,13 +20,18 @@ UINTPTR LOS_Align(UINTPTR addr, UINT32 boundary) {
 
 
 int main(int argc, char *argv[]) {
-    printf("%d", argc);
-    for (int i = 0; i < argc; i++) {
-        printf("%s", argv[i]);
+    int t[2] = {0};
+    printf("%d-%d", t[0], t[1]);
+    if ( 1 ){
+        printf("%d", 0);
     }
-    int input = 8;
-    int c;
-    c = LOS_Align(7, 3);
-    printf("%d", c);
-    return 0;
+//    printf("%d", argc);
+//    for (int i = 0; i < argc; i++) {
+//        printf("%s", argv[i]);
+//    }
+//    int input = 8;
+//    int c;
+//    c = LOS_Align(7, 3);
+//    printf("%d", c);
+//    return 0;
 }
