@@ -7,6 +7,5 @@ int main() {
     ULONG ulNameLen = 256;
     ulRslt = SKF_EnumDev(1, szDevName, &ulNameLen);
     printf("%s", szDevName);
-
     return ulRslt;
 }
