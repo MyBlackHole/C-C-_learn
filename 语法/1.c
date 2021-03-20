@@ -23,6 +23,19 @@
  *
  */
 
+struct test
+{
+    /* data */
+    int a : 2;
+};
+
+int func7() {
+    struct test t;
+    printf("%d\n", t.a);
+    return 0;
+}
+
+
 
 int func6() {
     int i = 1000;
@@ -67,6 +80,6 @@ int func1() {
 
 
 int main() {
-    func6();
+    func7();
     exit(0);
 }
