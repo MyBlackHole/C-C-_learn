@@ -22,6 +22,38 @@
  * 十进制、八进制、十六进制
  *
  */
+struct test1
+{
+    /* data */
+    int a : 2;
+    int b;
+} tt;
+
+
+int func9() {
+    struct test1 ttt;
+    ttt.b = 9;
+    printf("%p\n", &tt);
+    printf("%p\n", &tt.b);
+    unsigned long int count = (unsigned long int)&tt.b - (unsigned long int)&tt;
+    printf("%lu\n", count);
+    printf("%p\n", &ttt);
+    printf("%p\n", &ttt.b);
+    unsigned long int a = (unsigned long int)&ttt;
+    printf("%lu\n", a);
+
+    // int 
+    printf("%d\n", *(int *)((unsigned long int)&ttt + count));
+    return 0;
+}
+
+
+int func8() {
+    printf("%p\n", &tt);
+    printf("%p\n", &tt);
+    printf("%lu\n", sizeof(tt));
+    return 0;
+}
 
 struct test
 {
@@ -80,6 +112,6 @@ int func1() {
 
 
 int main() {
-    func7();
+    func9();
     exit(0);
 }

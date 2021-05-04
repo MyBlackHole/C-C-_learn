@@ -18,13 +18,33 @@ UINTPTR LOS_Align(UINTPTR addr, UINT32 boundary) {
     }
 }
 
+int function(void) {
+    static int i, state = 0;
+    switch (state) {
+        case 0: goto LABEL0;
+        case 1: goto LABEL1;
+    }
+    LABEL0: /* start of function */
+    for (i = 0; i < 10; i++) {
+        state = 1; /* so we will come back to LABEL1 */
+        return i;
+        LABEL1:; /* resume control straight after the return */
+    }
+}
+
+
 
 int main(int argc, char *argv[]) {
-    int t[2] = {0};
-    printf("%d-%d", t[0], t[1]);
-    if ( 1 ){
-        printf("%d", 0);
-    }
+    printf("%d", function());
+    printf("%d", function());
+    printf("%d", function());
+    printf("%d", function());
+
+    // int t[2] = {0};
+    // printf("%d-%d", t[0], t[1]);
+    // if ( 1 ){
+    //     printf("%d", 0);
+    // }
 //    printf("%d", argc);
 //    for (int i = 0; i < argc; i++) {
 //        printf("%s", argv[i]);
