@@ -42,8 +42,11 @@ int func9() {
     unsigned long int a = (unsigned long int)&ttt;
     printf("%lu\n", a);
 
+    ttt.a = 1;
+
     // int 
     printf("%d\n", *(int *)((unsigned long int)&ttt + count));
+    printf("%d\n", ttt.a);
     return 0;
 }
 
@@ -106,7 +109,7 @@ int func2() {
 
 
 int func1() {
-    printf("%d", 0 ? 1 : 2);
+    printf("%d\n", 1 ? 1 : 2);
     return 0;
 }
 

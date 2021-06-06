@@ -35,10 +35,17 @@ int function(void) {
 
 
 int main(int argc, char *argv[]) {
-    printf("%d", function());
-    printf("%d", function());
-    printf("%d", function());
-    printf("%d", function());
+
+    int i = 1 << 1;
+    int j = ~0;
+
+    printf("%d\n", 1 << 1);
+    printf("%u\n", j ^ i);
+
+    // printf("%d", function());
+    // printf("%d", function());
+    // printf("%d", function());
+    // printf("%d", function());
 
     // int t[2] = {0};
     // printf("%d-%d", t[0], t[1]);
